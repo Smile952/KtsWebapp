@@ -1,7 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Включаем обслуживание статических файлов
 app.UseStaticFiles();
 
 app.MapGet("/", async context =>

@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+appsettings.json
+appsettings.Development.json
+package.json
+package-lock.json
