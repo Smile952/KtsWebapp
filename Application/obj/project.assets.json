@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
-      "projectName": "Interface",
-      "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
+      "projectUniqueName": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Application\\Application.csproj",
+      "projectName": "Application",
+      "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Kheragacy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\obj\\",
+      "outputPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,9 +68,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
