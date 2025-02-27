@@ -7,14 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Pages\views\html\Requests\" />
-    <Folder Include="wwwroot\Pages\views\js\" />
-    <Folder Include="wwwroot\Pages\views\css\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Pages\views\html\TypesOfDevelopment.html" />
-    <None Include="wwwroot\Pages\views\html\Requests.html" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
 </Project>
