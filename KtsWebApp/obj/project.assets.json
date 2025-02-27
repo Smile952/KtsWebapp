@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\KtsWebApp.csproj",
-      "projectName": "KtsWebApp",
-      "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\KtsWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
+      "projectName": "Interface",
+      "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
       "packagesPath": "C:\\Users\\Kheragacy\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\obj\\",
       "projectStyle": "PackageReference",
