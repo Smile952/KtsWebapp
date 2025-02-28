@@ -4,7 +4,11 @@ namespace Interface.Controllers
 {
     public class RAController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Registration()
+        {
+            return View();
+        }
+        public IActionResult Authorization()
         {
             return View();
         }

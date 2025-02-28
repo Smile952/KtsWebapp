@@ -31,3 +31,5 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\refint\Inte
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\ref\Interface.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.RazorAssemblyInfo.cache
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.RazorAssemblyInfo.cs

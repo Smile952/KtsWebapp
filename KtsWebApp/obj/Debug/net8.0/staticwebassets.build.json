@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "j5d1k4va6LKbgW0SOyKL41G4kphm7RTsAwDsKoY+w7k=",
+  "Hash": "7Jag/Omu+tgfhFP4j35n3/B6ru2NHn3bqzIDWRj6AHA=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Interface\\wwwroot",
+      "Source": "Interface",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }
