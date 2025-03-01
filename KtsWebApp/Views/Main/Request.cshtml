@@ -1,0 +1,46 @@
+﻿@section Header {
+    <p>КТС - Разработка ПО</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Collapsible wrapper -->
+            
+            <!-- Collapsible wrapper -->
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                </ul>
+            <!-- Right elements -->
+            </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+}
+
+@{
+    Layout = "_LayoutMain";
+}
+
+<div>
+    <div class="row g-3">
+        <h2>Оставьте заявку</h2>
+        <form>
+            <label class="form-label">Ваше имя</label>
+            <input class="form-control" type="text" />
+            <label class="form-label">Ваше email</label>
+            <input class="form-control" type="email" />
+            <label class="form-label">Обращение</label>
+            <input class="form-control" type="text" />
+            <input class="btn btn-primary mb-3" type="submit"/>
+        </form>
+    </div>
+</div>
