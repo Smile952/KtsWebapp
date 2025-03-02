@@ -4,9 +4,25 @@
     <meta charset="utf-8" />
     <title></title>
     <link rel="stylesheet" href="~/css/bootstrapCss/bootstrap.min.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        main {
+            flex: 1 0 auto; 
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="bg-success">
         @RenderSection("Header")
     </header>
 
@@ -14,8 +30,8 @@
         @RenderBody()
     </main>
 
-    <footer>
-        <div> Все права защищены кунг-фу пандой</div>
+    <footer class="bg-success text-center">
+        <div class="text-white"> © 2025 КТС. Все права защищены Кунг-Фу пандой.</div>
     </footer>
 </body>
 </html>

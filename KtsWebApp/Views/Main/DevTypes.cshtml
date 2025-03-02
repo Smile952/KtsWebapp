@@ -1,36 +1,53 @@
-﻿@section Header{
-    <div>
-        <p>КТС - Разработка ПО</p>
-        <div>
-            <p>Заявка</p>
-            <p>Портфолио</p>
-            <p>Контакты</p>
+﻿@section Header {
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="h3 mb-0 text-white">КТС - Заявка</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Главная</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Портфолио</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 }
-
 @{
     Layout = "_LayoutMain";
 }
 
 <div>
     <div>
-        <div>
-            <h1>Добро пожаловть в КТС</h1>
-            <p class="lead">Мы предлагаем широкий спектр услуг по разработке программного обеспечения. От веб-приложения до облачного хранилища - мы поможем воплотить ваши идеи в жизнь</p>
-            <button>Создать заявку</button>
+        <div class="my-4">
+            <h2 class="h2 mb-3">Добро пожаловть в КТС</h2>
+            <p class="lead mb-3">Мы предлагаем широкий спектр услуг по разработке программного обеспечения. От веб-приложения до облачного хранилища - мы поможем воплотить ваши идеи в жизнь</p>
+            <button class="btn btn-success">Создать заявку</button>
         </div>
-        <div>
-            <div>Веб разработка</div>
-            <div>Создание современных сайтов и приложений</div>
-        </div>
-        <div>
-            <div>Модибльная разработка</div>
-            <div>Рзаработка приложений для Android и iOS</div>
-        </div>
-        <div>
-            <div>DevOps и облако</div>
-            <div>Настройка инфраструктуры и автоматизация процессов</div>
+        <div class="row">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Веб-разработка</h3>
+                        <p class="card-text">Создание современных веб-сайтов и приложений.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Мобильная разработка</h3>
+                        <p class="card-text">Разработка приложений для iOS и Android.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">DevOps и облако</h3>
+                        <p class="card-text">Настройка инфраструктуры и автоматизация процессов.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
