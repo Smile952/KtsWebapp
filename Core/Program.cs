@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Core.Context;
+using Microsoft.EntityFrameworkCore;
+
+
+using(ApplicationContext db = new ApplicationContext())
+{
+    
+}

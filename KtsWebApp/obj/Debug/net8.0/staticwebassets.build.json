@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IAjuhXpeXZpz0UpDCxgzfbLjZnFD3ybvIHjn591dQ0A=",
+  "Hash": "exwJMZJ9p1YD9+Z05fWL5KgyLybMGFTEvaxkw7cpBGo=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s35ty4nyc5",
-      "Integrity": "GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=",
+      "Fingerprint": "zub09dkrxp",
+      "Integrity": "CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "46ein0sx1k",
-      "Integrity": "PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=",
+      "Fingerprint": "43atpzeawx",
+      "Integrity": "sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap.min.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "37tfw0ft22",
-      "Integrity": "j5E4XIj1p1kNnDi0x1teX9RXoh1/FNlPvCML9YmRh2Q=",
+      "Fingerprint": "ynyaa8k90p",
+      "Integrity": "/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap.rtl.css"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pk9g2wxc8p",
-      "Integrity": "h5lE7Nm8SkeIpBHHYxN99spP3VuGFKl5NZgsocil7zk=",
+      "Fingerprint": "c63t5i9ira",
+      "Integrity": "rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap.rtl.min.css"
@@ -199,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bqjiyaj88i",
-      "Integrity": "Yy5/hBqRmmU2MJ1TKwP2aXoTO6+OjzrLmJIsC2Wy4H8=",
+      "Fingerprint": "t1cqhe9u97",
+      "Integrity": "f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-grid.css"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "erw9l3u2r3",
-      "Integrity": "5nDHMGiyfZHl3UXePuhLDQR9ncPfBR1HJeZLXyJNV24=",
+      "Fingerprint": "sejl45xvog",
+      "Integrity": "hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-grid.min.css"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d7shbmvgxk",
-      "Integrity": "CZxoF8zjaLlyVkcvVCDlc8CeQR1w1RMrvgYx30cs8kM=",
+      "Fingerprint": "xvp3kq03qx",
+      "Integrity": "M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.css"
@@ -325,8 +325,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k8d9w2qqmf",
-      "Integrity": "vMxTcvkC4Ly7LiAT3G8yEy9EpTr7Fge4SczWp07/p3k=",
+      "Fingerprint": "22vffe00uq",
+      "Integrity": "+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.min.css"
@@ -367,8 +367,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ub07r2b239",
-      "Integrity": "lo9YI82OF03vojdu+XOR3+DRrLIpMhpzZNmHbM5CDMA=",
+      "Fingerprint": "qesaa3a1fm",
+      "Integrity": "rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-reboot.css"
@@ -409,8 +409,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b7pk76d08c",
-      "Integrity": "l8vt5oozv958eMd9TFsPAWgl9JJK9YKfbVSs8mchQ84=",
+      "Fingerprint": "tmc1g35s3z",
+      "Integrity": "y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-reboot.min.css"
@@ -451,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rzd6atqjts",
-      "Integrity": "V8psnHoJS/MPlCXWwc/J3tGtp9c3gGFRmqsIQgpn+Gg=",
+      "Fingerprint": "rxsg74s51o",
+      "Integrity": "gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-reboot.rtl.css"
@@ -493,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dxx9fxp4il",
-      "Integrity": "/8jh8hcEMFKyS6goWqnNu7t3EzZPCGdQZgO6sCkI8tI=",
+      "Fingerprint": "q9ht133ko3",
+      "Integrity": "UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-reboot.rtl.min.css"
@@ -535,8 +535,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "khv3u5hwcm",
-      "Integrity": "2BubgNUPlQSF/0wLFcRXQ/Yjzk9vsUbDAeK2QM+h+yo=",
+      "Fingerprint": "gye83jo8yx",
+      "Integrity": "uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.css"
@@ -577,8 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lcd1t2u6c8",
-      "Integrity": "KyE9xbKO9CuYx0HXpIKgsWIvXkAfITtiQ172j26wmRs=",
+      "Fingerprint": "wl58j5mj3v",
+      "Integrity": "ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.min.css"
@@ -619,8 +619,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tdbxkamptv",
-      "Integrity": "H6wkBbSwjua2veJoThJo4uy161jp+DOiZTloUlcZ6qQ=",
+      "Fingerprint": "d4r6k3f320",
+      "Integrity": "MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.css"
@@ -661,8 +661,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "06098lyss8",
-      "Integrity": "GAUum6FjwQ8HrXGaoFRnHTqQQLpljXGavT7mBX8E9qU=",
+      "Fingerprint": "keugtjm085",
+      "Integrity": "7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css"
@@ -703,8 +703,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6cfz1n2cew",
-      "Integrity": "mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=",
+      "Fingerprint": "4094rpi4f9",
+      "Integrity": "bNojyBU9M3Cv/K4YqdKkq4xeaAkchkkS7HXP7554z9Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js"
@@ -745,8 +745,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "493y06b0oq",
-      "Integrity": "CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+      "Fingerprint": "hd3gran6i8",
+      "Integrity": "6zfk2L8R3wCgRbZzpkEi7UYC2bc6fYGIgFfNeqyOWnQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.bundle.min.js"
@@ -787,8 +787,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vr1egmr9el",
-      "Integrity": "exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=",
+      "Fingerprint": "ltid2c489k",
+      "Integrity": "idJzCWndWIhl4ZZvXbuLRTe5wquRfykXbEiDpO7ZsFk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.esm.js"
@@ -829,8 +829,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jj8uyg4cgr",
-      "Integrity": "QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+      "Fingerprint": "8vyfqsqgz1",
+      "Integrity": "REjSeieVKd00nAKwd6dv7MMhuVKvKctPmLI4iDRs/cc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.esm.min.js"
@@ -871,8 +871,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "notf2xhcfb",
-      "Integrity": "+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=",
+      "Fingerprint": "u9q1upor1n",
+      "Integrity": "vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.js"
@@ -913,8 +913,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "63fj8s7r0e",
-      "Integrity": "3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+      "Fingerprint": "4d85u1mtcx",
+      "Integrity": "aCTIqw9op0XQGYnNe1649V7fnihACD48OP3M8BP2xVM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.min.js"
@@ -953,7 +953,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "281046"
+          "Value": "293102"
         },
         {
           "Name": "Content-Type",
@@ -961,11 +961,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
+          "Value": "\"CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -975,7 +975,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
+          "Value": "sha256-CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ="
         }
       ]
     },
@@ -1002,7 +1002,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1039,7 +1039,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1062,7 +1062,7 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap.min.46ein0sx1k.css",
+      "Route": "css/bootstrapCss/bootstrap.min.43atpzeawx.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1072,7 +1072,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "232803"
+          "Value": "232808"
         },
         {
           "Name": "Content-Type",
@@ -1080,11 +1080,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
+          "Value": "\"sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1094,7 +1094,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "46ein0sx1k"
+          "Value": "43atpzeawx"
         },
         {
           "Name": "label",
@@ -1102,7 +1102,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
+          "Value": "sha256-sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs="
         }
       ]
     },
@@ -1117,7 +1117,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "232803"
+          "Value": "232808"
         },
         {
           "Name": "Content-Type",
@@ -1125,11 +1125,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
+          "Value": "\"sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1139,7 +1139,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
+          "Value": "sha256-sKIQRfQriISuQ9l/44b1zHfQniGXJhGonVtB2LlSuIs="
         }
       ]
     },
@@ -1166,7 +1166,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1203,7 +1203,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1226,51 +1226,6 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap.rtl.37tfw0ft22.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "280259"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j5E4XIj1p1kNnDi0x1teX9RXoh1/FNlPvCML9YmRh2Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "37tfw0ft22"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap.rtl.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-j5E4XIj1p1kNnDi0x1teX9RXoh1/FNlPvCML9YmRh2Q="
-        }
-      ]
-    },
-    {
       "Route": "css/bootstrapCss/bootstrap.rtl.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.css",
       "Selectors": [],
@@ -1281,7 +1236,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "280259"
+          "Value": "292288"
         },
         {
           "Name": "Content-Type",
@@ -1289,11 +1244,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j5E4XIj1p1kNnDi0x1teX9RXoh1/FNlPvCML9YmRh2Q=\""
+          "Value": "\"/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1303,7 +1258,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j5E4XIj1p1kNnDi0x1teX9RXoh1/FNlPvCML9YmRh2Q="
+          "Value": "sha256-/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38="
         }
       ]
     },
@@ -1330,7 +1285,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1375,7 +1330,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1390,6 +1345,51 @@
       ]
     },
     {
+      "Route": "css/bootstrapCss/bootstrap.rtl.min.c63t5i9ira.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c63t5i9ira"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrapCss/bootstrap.rtl.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA="
+        }
+      ]
+    },
+    {
       "Route": "css/bootstrapCss/bootstrap.rtl.min.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.min.css",
       "Selectors": [],
@@ -1400,7 +1400,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "232911"
+          "Value": "232916"
         },
         {
           "Name": "Content-Type",
@@ -1408,11 +1408,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h5lE7Nm8SkeIpBHHYxN99spP3VuGFKl5NZgsocil7zk=\""
+          "Value": "\"rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1422,7 +1422,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-h5lE7Nm8SkeIpBHHYxN99spP3VuGFKl5NZgsocil7zk="
+          "Value": "sha256-rI1w2GDxZPCr77bpZIGQ8mUvMVtEr+gBtahl5RIPJpA="
         }
       ]
     },
@@ -1449,7 +1449,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1494,7 +1494,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1509,8 +1509,8 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap.rtl.min.pk9g2wxc8p.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.min.css",
+      "Route": "css/bootstrapCss/bootstrap.rtl.ynyaa8k90p.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1519,7 +1519,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "232911"
+          "Value": "292288"
         },
         {
           "Name": "Content-Type",
@@ -1527,11 +1527,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h5lE7Nm8SkeIpBHHYxN99spP3VuGFKl5NZgsocil7zk=\""
+          "Value": "\"/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1541,20 +1541,20 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pk9g2wxc8p"
+          "Value": "ynyaa8k90p"
         },
         {
           "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap.rtl.min.css"
+          "Value": "css/bootstrapCss/bootstrap.rtl.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-h5lE7Nm8SkeIpBHHYxN99spP3VuGFKl5NZgsocil7zk="
+          "Value": "sha256-/rceNUMI0RlFJugRzjua815bgXwawEJBGBPh4Vx3r38="
         }
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap.s35ty4nyc5.css",
+      "Route": "css/bootstrapCss/bootstrap.zub09dkrxp.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1564,7 +1564,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "281046"
+          "Value": "293102"
         },
         {
           "Name": "Content-Type",
@@ -1572,11 +1572,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
+          "Value": "\"CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1586,7 +1586,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "s35ty4nyc5"
+          "Value": "zub09dkrxp"
         },
         {
           "Name": "label",
@@ -1594,52 +1594,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
-        }
-      ]
-    },
-    {
-      "Route": "css/bootstrapCss/bootstrap-grid.bqjiyaj88i.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "70329"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Yy5/hBqRmmU2MJ1TKwP2aXoTO6+OjzrLmJIsC2Wy4H8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bqjiyaj88i"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-grid.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Yy5/hBqRmmU2MJ1TKwP2aXoTO6+OjzrLmJIsC2Wy4H8="
+          "Value": "sha256-CzmECrtXV8BSk/+8SG+Rw7Fr+3hCt2bS2bEkS4YD3PQ="
         }
       ]
     },
@@ -1654,7 +1609,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70329"
+          "Value": "74413"
         },
         {
           "Name": "Content-Type",
@@ -1662,11 +1617,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Yy5/hBqRmmU2MJ1TKwP2aXoTO6+OjzrLmJIsC2Wy4H8=\""
+          "Value": "\"f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1676,7 +1631,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Yy5/hBqRmmU2MJ1TKwP2aXoTO6+OjzrLmJIsC2Wy4H8="
+          "Value": "sha256-f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ="
         }
       ]
     },
@@ -1703,7 +1658,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1748,7 +1703,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1773,7 +1728,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51795"
+          "Value": "51800"
         },
         {
           "Name": "Content-Type",
@@ -1781,11 +1736,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5nDHMGiyfZHl3UXePuhLDQR9ncPfBR1HJeZLXyJNV24=\""
+          "Value": "\"hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1795,7 +1750,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5nDHMGiyfZHl3UXePuhLDQR9ncPfBR1HJeZLXyJNV24="
+          "Value": "sha256-hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY="
         }
       ]
     },
@@ -1822,7 +1777,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1867,7 +1822,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1882,7 +1837,7 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-grid.min.erw9l3u2r3.css",
+      "Route": "css/bootstrapCss/bootstrap-grid.min.sejl45xvog.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1892,7 +1847,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51795"
+          "Value": "51800"
         },
         {
           "Name": "Content-Type",
@@ -1900,11 +1855,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5nDHMGiyfZHl3UXePuhLDQR9ncPfBR1HJeZLXyJNV24=\""
+          "Value": "\"hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1914,7 +1869,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "erw9l3u2r3"
+          "Value": "sejl45xvog"
         },
         {
           "Name": "label",
@@ -1922,7 +1877,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5nDHMGiyfZHl3UXePuhLDQR9ncPfBR1HJeZLXyJNV24="
+          "Value": "sha256-hN2ttMG/K3wQlFrN3SbQ1YF4tIJHCE4oYP+QibT3vOY="
         }
       ]
     },
@@ -1937,7 +1892,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70403"
+          "Value": "74486"
         },
         {
           "Name": "Content-Type",
@@ -1945,11 +1900,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CZxoF8zjaLlyVkcvVCDlc8CeQR1w1RMrvgYx30cs8kM=\""
+          "Value": "\"M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1959,7 +1914,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CZxoF8zjaLlyVkcvVCDlc8CeQR1w1RMrvgYx30cs8kM="
+          "Value": "sha256-M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc="
         }
       ]
     },
@@ -1986,7 +1941,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2031,7 +1986,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2046,8 +2001,8 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-grid.rtl.d7shbmvgxk.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.css",
+      "Route": "css/bootstrapCss/bootstrap-grid.rtl.min.22vffe00uq.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2056,7 +2011,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "70403"
+          "Value": "51875"
         },
         {
           "Name": "Content-Type",
@@ -2064,11 +2019,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CZxoF8zjaLlyVkcvVCDlc8CeQR1w1RMrvgYx30cs8kM=\""
+          "Value": "\"+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2078,15 +2033,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d7shbmvgxk"
+          "Value": "22vffe00uq"
         },
         {
           "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-grid.rtl.css"
+          "Value": "css/bootstrapCss/bootstrap-grid.rtl.min.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CZxoF8zjaLlyVkcvVCDlc8CeQR1w1RMrvgYx30cs8kM="
+          "Value": "sha256-+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E="
         }
       ]
     },
@@ -2101,7 +2056,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51870"
+          "Value": "51875"
         },
         {
           "Name": "Content-Type",
@@ -2109,11 +2064,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vMxTcvkC4Ly7LiAT3G8yEy9EpTr7Fge4SczWp07/p3k=\""
+          "Value": "\"+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2123,7 +2078,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vMxTcvkC4Ly7LiAT3G8yEy9EpTr7Fge4SczWp07/p3k="
+          "Value": "sha256-+rGG3u63SMkHL80Ga42LAawPUj7i8vaR2Kuenqlta2E="
         }
       ]
     },
@@ -2150,7 +2105,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2195,7 +2150,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2210,8 +2165,8 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-grid.rtl.min.k8d9w2qqmf.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.min.css",
+      "Route": "css/bootstrapCss/bootstrap-grid.rtl.xvp3kq03qx.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2220,7 +2175,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "51870"
+          "Value": "74486"
         },
         {
           "Name": "Content-Type",
@@ -2228,11 +2183,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vMxTcvkC4Ly7LiAT3G8yEy9EpTr7Fge4SczWp07/p3k=\""
+          "Value": "\"M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2242,15 +2197,60 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k8d9w2qqmf"
+          "Value": "xvp3kq03qx"
         },
         {
           "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-grid.rtl.min.css"
+          "Value": "css/bootstrapCss/bootstrap-grid.rtl.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vMxTcvkC4Ly7LiAT3G8yEy9EpTr7Fge4SczWp07/p3k="
+          "Value": "sha256-M15fHTKfMK6cTars5c28PNhN6hD0qeUb3HPzOdoPwCc="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrapCss/bootstrap-grid.t1cqhe9u97.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-grid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74413"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t1cqhe9u97"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrapCss/bootstrap-grid.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f4c8YV1qrr6RSiVYWMQT7R5W2OkT+iXmE5H69/uRvGQ="
         }
       ]
     },
@@ -2265,7 +2265,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12065"
+          "Value": "12661"
         },
         {
           "Name": "Content-Type",
@@ -2273,11 +2273,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lo9YI82OF03vojdu+XOR3+DRrLIpMhpzZNmHbM5CDMA=\""
+          "Value": "\"rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2287,7 +2287,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lo9YI82OF03vojdu+XOR3+DRrLIpMhpzZNmHbM5CDMA="
+          "Value": "sha256-rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE="
         }
       ]
     },
@@ -2314,7 +2314,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2359,7 +2359,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2374,51 +2374,6 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-reboot.min.b7pk76d08c.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10126"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"l8vt5oozv958eMd9TFsPAWgl9JJK9YKfbVSs8mchQ84=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "b7pk76d08c"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-reboot.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-l8vt5oozv958eMd9TFsPAWgl9JJK9YKfbVSs8mchQ84="
-        }
-      ]
-    },
-    {
       "Route": "css/bootstrapCss/bootstrap-reboot.min.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.min.css",
       "Selectors": [],
@@ -2429,7 +2384,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10126"
+          "Value": "10131"
         },
         {
           "Name": "Content-Type",
@@ -2437,11 +2392,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"l8vt5oozv958eMd9TFsPAWgl9JJK9YKfbVSs8mchQ84=\""
+          "Value": "\"y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2451,7 +2406,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-l8vt5oozv958eMd9TFsPAWgl9JJK9YKfbVSs8mchQ84="
+          "Value": "sha256-y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM="
         }
       ]
     },
@@ -2478,7 +2433,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2523,7 +2478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2538,6 +2493,96 @@
       ]
     },
     {
+      "Route": "css/bootstrapCss/bootstrap-reboot.min.tmc1g35s3z.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10131"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tmc1g35s3z"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrapCss/bootstrap-reboot.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y72bT5TKmFmfvw3bNEzPRNZa/8595xtseZIcBUV0PdM="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrapCss/bootstrap-reboot.qesaa3a1fm.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12661"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qesaa3a1fm"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrapCss/bootstrap-reboot.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rjusxCRzKjztCcfgOVduAc3e3Z7KvimJGokJSeADNmE="
+        }
+      ]
+    },
+    {
       "Route": "css/bootstrapCss/bootstrap-reboot.rtl.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.rtl.css",
       "Selectors": [],
@@ -2548,7 +2593,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12058"
+          "Value": "12651"
         },
         {
           "Name": "Content-Type",
@@ -2556,11 +2601,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"V8psnHoJS/MPlCXWwc/J3tGtp9c3gGFRmqsIQgpn+Gg=\""
+          "Value": "\"gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2570,7 +2615,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-V8psnHoJS/MPlCXWwc/J3tGtp9c3gGFRmqsIQgpn+Gg="
+          "Value": "sha256-gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI="
         }
       ]
     },
@@ -2597,7 +2642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2642,7 +2687,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2667,7 +2712,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10198"
+          "Value": "10203"
         },
         {
           "Name": "Content-Type",
@@ -2675,11 +2720,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/8jh8hcEMFKyS6goWqnNu7t3EzZPCGdQZgO6sCkI8tI=\""
+          "Value": "\"UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2689,7 +2734,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/8jh8hcEMFKyS6goWqnNu7t3EzZPCGdQZgO6sCkI8tI="
+          "Value": "sha256-UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8="
         }
       ]
     },
@@ -2716,7 +2761,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2761,7 +2806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2776,7 +2821,7 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-reboot.rtl.min.dxx9fxp4il.css",
+      "Route": "css/bootstrapCss/bootstrap-reboot.rtl.min.q9ht133ko3.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2786,7 +2831,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10198"
+          "Value": "10203"
         },
         {
           "Name": "Content-Type",
@@ -2794,11 +2839,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/8jh8hcEMFKyS6goWqnNu7t3EzZPCGdQZgO6sCkI8tI=\""
+          "Value": "\"UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2808,7 +2853,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dxx9fxp4il"
+          "Value": "q9ht133ko3"
         },
         {
           "Name": "label",
@@ -2816,12 +2861,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/8jh8hcEMFKyS6goWqnNu7t3EzZPCGdQZgO6sCkI8tI="
+          "Value": "sha256-UkajePbMzGj8y73Imkd3dWWnLJr0v2CrBCLMrVMleP8="
         }
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-reboot.rtl.rzd6atqjts.css",
+      "Route": "css/bootstrapCss/bootstrap-reboot.rtl.rxsg74s51o.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2831,7 +2876,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12058"
+          "Value": "12651"
         },
         {
           "Name": "Content-Type",
@@ -2839,11 +2884,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"V8psnHoJS/MPlCXWwc/J3tGtp9c3gGFRmqsIQgpn+Gg=\""
+          "Value": "\"gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2853,7 +2898,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rzd6atqjts"
+          "Value": "rxsg74s51o"
         },
         {
           "Name": "label",
@@ -2861,52 +2906,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-V8psnHoJS/MPlCXWwc/J3tGtp9c3gGFRmqsIQgpn+Gg="
-        }
-      ]
-    },
-    {
-      "Route": "css/bootstrapCss/bootstrap-reboot.ub07r2b239.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-reboot.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12065"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"lo9YI82OF03vojdu+XOR3+DRrLIpMhpzZNmHbM5CDMA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ub07r2b239"
-        },
-        {
-          "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-reboot.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-lo9YI82OF03vojdu+XOR3+DRrLIpMhpzZNmHbM5CDMA="
+          "Value": "sha256-gRKIHVkBgnCPUs/hmZsXynZ9ZJpvsE77idtljDkrWGI="
         }
       ]
     },
@@ -2921,7 +2921,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107823"
+          "Value": "113224"
         },
         {
           "Name": "Content-Type",
@@ -2929,11 +2929,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2BubgNUPlQSF/0wLFcRXQ/Yjzk9vsUbDAeK2QM+h+yo=\""
+          "Value": "\"uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2943,7 +2943,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2BubgNUPlQSF/0wLFcRXQ/Yjzk9vsUbDAeK2QM+h+yo="
+          "Value": "sha256-uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE="
         }
       ]
     },
@@ -2970,7 +2970,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3007,7 +3007,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3030,7 +3030,7 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-utilities.khv3u5hwcm.css",
+      "Route": "css/bootstrapCss/bootstrap-utilities.gye83jo8yx.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3040,7 +3040,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107823"
+          "Value": "113224"
         },
         {
           "Name": "Content-Type",
@@ -3048,11 +3048,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2BubgNUPlQSF/0wLFcRXQ/Yjzk9vsUbDAeK2QM+h+yo=\""
+          "Value": "\"uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3062,7 +3062,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "khv3u5hwcm"
+          "Value": "gye83jo8yx"
         },
         {
           "Name": "label",
@@ -3070,7 +3070,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2BubgNUPlQSF/0wLFcRXQ/Yjzk9vsUbDAeK2QM+h+yo="
+          "Value": "sha256-uIzOR4gILoNjCGNryIsWnkEGO3BSwRa/MLjr73tDodE="
         }
       ]
     },
@@ -3085,7 +3085,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "85352"
+          "Value": "85357"
         },
         {
           "Name": "Content-Type",
@@ -3093,11 +3093,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KyE9xbKO9CuYx0HXpIKgsWIvXkAfITtiQ172j26wmRs=\""
+          "Value": "\"ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3107,7 +3107,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KyE9xbKO9CuYx0HXpIKgsWIvXkAfITtiQ172j26wmRs="
+          "Value": "sha256-ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo="
         }
       ]
     },
@@ -3134,7 +3134,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3179,7 +3179,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3194,7 +3194,7 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-utilities.min.lcd1t2u6c8.css",
+      "Route": "css/bootstrapCss/bootstrap-utilities.min.wl58j5mj3v.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3204,7 +3204,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "85352"
+          "Value": "85357"
         },
         {
           "Name": "Content-Type",
@@ -3212,11 +3212,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KyE9xbKO9CuYx0HXpIKgsWIvXkAfITtiQ172j26wmRs=\""
+          "Value": "\"ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3226,7 +3226,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lcd1t2u6c8"
+          "Value": "wl58j5mj3v"
         },
         {
           "Name": "label",
@@ -3234,7 +3234,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KyE9xbKO9CuYx0HXpIKgsWIvXkAfITtiQ172j26wmRs="
+          "Value": "sha256-ZBXbYF8OZrF1GDOLMLvW/zRPtx1RfeMDYj5D2Wb/9jo="
         }
       ]
     },
@@ -3249,7 +3249,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107691"
+          "Value": "113083"
         },
         {
           "Name": "Content-Type",
@@ -3257,11 +3257,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H6wkBbSwjua2veJoThJo4uy161jp+DOiZTloUlcZ6qQ=\""
+          "Value": "\"MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3271,7 +3271,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-H6wkBbSwjua2veJoThJo4uy161jp+DOiZTloUlcZ6qQ="
+          "Value": "sha256-MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI="
         }
       ]
     },
@@ -3298,7 +3298,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3343,7 +3343,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3358,8 +3358,8 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-utilities.rtl.min.06098lyss8.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css",
+      "Route": "css/bootstrapCss/bootstrap-utilities.rtl.d4r6k3f320.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3368,7 +3368,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "85281"
+          "Value": "113083"
         },
         {
           "Name": "Content-Type",
@@ -3376,11 +3376,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GAUum6FjwQ8HrXGaoFRnHTqQQLpljXGavT7mBX8E9qU=\""
+          "Value": "\"MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3390,15 +3390,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "06098lyss8"
+          "Value": "d4r6k3f320"
         },
         {
           "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-utilities.rtl.min.css"
+          "Value": "css/bootstrapCss/bootstrap-utilities.rtl.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-GAUum6FjwQ8HrXGaoFRnHTqQQLpljXGavT7mBX8E9qU="
+          "Value": "sha256-MwFckg8YbY2WrveNQnXkfULkprYhFOq+t1BH92A7GsI="
         }
       ]
     },
@@ -3413,7 +3413,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "85281"
+          "Value": "85286"
         },
         {
           "Name": "Content-Type",
@@ -3421,11 +3421,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GAUum6FjwQ8HrXGaoFRnHTqQQLpljXGavT7mBX8E9qU=\""
+          "Value": "\"7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3435,7 +3435,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GAUum6FjwQ8HrXGaoFRnHTqQQLpljXGavT7mBX8E9qU="
+          "Value": "sha256-7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U="
         }
       ]
     },
@@ -3462,7 +3462,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3499,7 +3499,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3522,8 +3522,8 @@
       ]
     },
     {
-      "Route": "css/bootstrapCss/bootstrap-utilities.rtl.tdbxkamptv.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.css",
+      "Route": "css/bootstrapCss/bootstrap-utilities.rtl.min.keugtjm085.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3532,7 +3532,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107691"
+          "Value": "85286"
         },
         {
           "Name": "Content-Type",
@@ -3540,11 +3540,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"H6wkBbSwjua2veJoThJo4uy161jp+DOiZTloUlcZ6qQ=\""
+          "Value": "\"7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3554,20 +3554,20 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "tdbxkamptv"
+          "Value": "keugtjm085"
         },
         {
           "Name": "label",
-          "Value": "css/bootstrapCss/bootstrap-utilities.rtl.css"
+          "Value": "css/bootstrapCss/bootstrap-utilities.rtl.min.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-H6wkBbSwjua2veJoThJo4uy161jp+DOiZTloUlcZ6qQ="
+          "Value": "sha256-7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U="
         }
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.bundle.6cfz1n2cew.js",
+      "Route": "js/bootstrapJs/bootstrap.bundle.4094rpi4f9.js",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3577,7 +3577,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "207819"
+          "Value": "214133"
         },
         {
           "Name": "Content-Type",
@@ -3585,11 +3585,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=\""
+          "Value": "\"bNojyBU9M3Cv/K4YqdKkq4xeaAkchkkS7HXP7554z9Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3599,7 +3599,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6cfz1n2cew"
+          "Value": "4094rpi4f9"
         },
         {
           "Name": "label",
@@ -3607,7 +3607,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM="
+          "Value": "sha256-bNojyBU9M3Cv/K4YqdKkq4xeaAkchkkS7HXP7554z9Y="
         }
       ]
     },
@@ -3622,7 +3622,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "207819"
+          "Value": "214133"
         },
         {
           "Name": "Content-Type",
@@ -3630,11 +3630,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=\""
+          "Value": "\"bNojyBU9M3Cv/K4YqdKkq4xeaAkchkkS7HXP7554z9Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3644,7 +3644,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM="
+          "Value": "sha256-bNojyBU9M3Cv/K4YqdKkq4xeaAkchkkS7HXP7554z9Y="
         }
       ]
     },
@@ -3671,7 +3671,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3716,7 +3716,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3731,7 +3731,7 @@
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.bundle.min.493y06b0oq.js",
+      "Route": "js/bootstrapJs/bootstrap.bundle.min.hd3gran6i8.js",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3741,7 +3741,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "80721"
+          "Value": "80727"
         },
         {
           "Name": "Content-Type",
@@ -3749,11 +3749,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=\""
+          "Value": "\"6zfk2L8R3wCgRbZzpkEi7UYC2bc6fYGIgFfNeqyOWnQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3763,7 +3763,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "493y06b0oq"
+          "Value": "hd3gran6i8"
         },
         {
           "Name": "label",
@@ -3771,7 +3771,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw="
+          "Value": "sha256-6zfk2L8R3wCgRbZzpkEi7UYC2bc6fYGIgFfNeqyOWnQ="
         }
       ]
     },
@@ -3786,7 +3786,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "80721"
+          "Value": "80727"
         },
         {
           "Name": "Content-Type",
@@ -3794,11 +3794,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=\""
+          "Value": "\"6zfk2L8R3wCgRbZzpkEi7UYC2bc6fYGIgFfNeqyOWnQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3808,7 +3808,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw="
+          "Value": "sha256-6zfk2L8R3wCgRbZzpkEi7UYC2bc6fYGIgFfNeqyOWnQ="
         }
       ]
     },
@@ -3835,7 +3835,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3880,7 +3880,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3905,7 +3905,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "135829"
+          "Value": "140276"
         },
         {
           "Name": "Content-Type",
@@ -3913,11 +3913,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=\""
+          "Value": "\"idJzCWndWIhl4ZZvXbuLRTe5wquRfykXbEiDpO7ZsFk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3927,7 +3927,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA="
+          "Value": "sha256-idJzCWndWIhl4ZZvXbuLRTe5wquRfykXbEiDpO7ZsFk="
         }
       ]
     },
@@ -3954,7 +3954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3999,7 +3999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4014,8 +4014,8 @@
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.esm.min.jj8uyg4cgr.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.esm.min.js",
+      "Route": "js/bootstrapJs/bootstrap.esm.ltid2c489k.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4024,7 +4024,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73935"
+          "Value": "140276"
         },
         {
           "Name": "Content-Type",
@@ -4032,11 +4032,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=\""
+          "Value": "\"idJzCWndWIhl4ZZvXbuLRTe5wquRfykXbEiDpO7ZsFk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4046,7 +4046,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jj8uyg4cgr"
+          "Value": "ltid2c489k"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrapJs/bootstrap.esm.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-idJzCWndWIhl4ZZvXbuLRTe5wquRfykXbEiDpO7ZsFk="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrapJs/bootstrap.esm.min.8vyfqsqgz1.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.esm.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"REjSeieVKd00nAKwd6dv7MMhuVKvKctPmLI4iDRs/cc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8vyfqsqgz1"
         },
         {
           "Name": "label",
@@ -4054,7 +4099,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ="
+          "Value": "sha256-REjSeieVKd00nAKwd6dv7MMhuVKvKctPmLI4iDRs/cc="
         }
       ]
     },
@@ -4069,7 +4114,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "73935"
+          "Value": "73941"
         },
         {
           "Name": "Content-Type",
@@ -4077,11 +4122,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=\""
+          "Value": "\"REjSeieVKd00nAKwd6dv7MMhuVKvKctPmLI4iDRs/cc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4091,7 +4136,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ="
+          "Value": "sha256-REjSeieVKd00nAKwd6dv7MMhuVKvKctPmLI4iDRs/cc="
         }
       ]
     },
@@ -4118,7 +4163,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4155,7 +4200,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4178,51 +4223,6 @@
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.esm.vr1egmr9el.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.esm.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "135829"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vr1egmr9el"
-        },
-        {
-          "Name": "label",
-          "Value": "js/bootstrapJs/bootstrap.esm.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA="
-        }
-      ]
-    },
-    {
       "Route": "js/bootstrapJs/bootstrap.js",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.js",
       "Selectors": [],
@@ -4233,7 +4233,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "145401"
+          "Value": "149895"
         },
         {
           "Name": "Content-Type",
@@ -4241,11 +4241,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=\""
+          "Value": "\"vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4255,7 +4255,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac="
+          "Value": "sha256-vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA="
         }
       ]
     },
@@ -4282,7 +4282,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4327,7 +4327,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4342,7 +4342,7 @@
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.min.63fj8s7r0e.js",
+      "Route": "js/bootstrapJs/bootstrap.min.4d85u1mtcx.js",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4352,7 +4352,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "60635"
+          "Value": "60641"
         },
         {
           "Name": "Content-Type",
@@ -4360,11 +4360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=\""
+          "Value": "\"aCTIqw9op0XQGYnNe1649V7fnihACD48OP3M8BP2xVM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4374,7 +4374,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "63fj8s7r0e"
+          "Value": "4d85u1mtcx"
         },
         {
           "Name": "label",
@@ -4382,7 +4382,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ="
+          "Value": "sha256-aCTIqw9op0XQGYnNe1649V7fnihACD48OP3M8BP2xVM="
         }
       ]
     },
@@ -4397,7 +4397,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "60635"
+          "Value": "60641"
         },
         {
           "Name": "Content-Type",
@@ -4405,11 +4405,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=\""
+          "Value": "\"aCTIqw9op0XQGYnNe1649V7fnihACD48OP3M8BP2xVM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4419,7 +4419,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ="
+          "Value": "sha256-aCTIqw9op0XQGYnNe1649V7fnihACD48OP3M8BP2xVM="
         }
       ]
     },
@@ -4446,7 +4446,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4491,7 +4491,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:23 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4506,7 +4506,7 @@
       ]
     },
     {
-      "Route": "js/bootstrapJs/bootstrap.notf2xhcfb.js",
+      "Route": "js/bootstrapJs/bootstrap.u9q1upor1n.js",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4516,7 +4516,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "145401"
+          "Value": "149895"
         },
         {
           "Name": "Content-Type",
@@ -4524,11 +4524,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=\""
+          "Value": "\"vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 09:02:22 GMT"
+          "Value": "Sun, 02 Mar 2025 08:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4538,7 +4538,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "notf2xhcfb"
+          "Value": "u9q1upor1n"
         },
         {
           "Name": "label",
@@ -4546,7 +4546,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac="
+          "Value": "sha256-vqK8KwEVuWidx0Ddm5m5LyBriPDPl9TcjrKZQhkFSVA="
         }
       ]
     }
