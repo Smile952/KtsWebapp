@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Models
 {
-    class OrdersTypeEnum
+    public class OrdersTypeEnum
     {
         public int Id { get; set; }
         public string OrderName { get; set; } = string.Empty;
