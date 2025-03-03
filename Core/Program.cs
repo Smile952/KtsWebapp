@@ -1,8 +1,7 @@
-﻿using Core.Context;
-using Microsoft.EntityFrameworkCore;
-
-
-using(ApplicationContext db = new ApplicationContext())
+﻿class Program
 {
-    
+    static void Main(string[] args)
+    {
+        Console.WriteLine(args.Length);
+    }
 }
