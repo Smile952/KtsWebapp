@@ -1,15 +1,9 @@
-﻿using Core.Repository;
-using Infrastructure.DTOs;
-
+﻿//TODO: use models from core to create crud repo in application with using dto
 namespace Application.Services
 {
-    abstract class OrderService : IOrderRepository
+    abstract class OrderService
     {
         public abstract void Create();
-        public override void Create(RequestDTO dTO)
-        {
-            throw new NotImplementedException();
-        }
 
         public abstract void Delete(int id);
 
