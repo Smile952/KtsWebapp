@@ -1,11 +1,12 @@
-﻿//TODO: use models from core to create crud repo in application with using dto
+﻿
+using Application.Services.Common;
 using Core.Models;
 using Core.Repository;
 using Infrastructure.DTOs;
 
 namespace Application.Services
 {
-    abstract class OrderService
+    public class OrderService
     {
         OrderRepository repository;
         public OrderService(OrderRepository repo)
@@ -14,7 +15,7 @@ namespace Application.Services
         }
         public void Create(RequestDTO dto)
         {
-
+            repository.Create(DtoToModel.ToModel(dto));
         }
 
         public List<RequestDTO> Read()
@@ -22,22 +23,14 @@ namespace Application.Services
             return new List<RequestDTO>();
         }
 
-        public RequestDTO ReadById(int id)
+        public RequestDTO? ReadById(int id)
         {
-            RequestDTO dto = new RequestDTO();
-            return ToDTO(repository.ReadById(id));
+            return ModelToDto.ToDTO(repository.ReadById(id));
         }
 
-        public RequestDTO ToDTO(Order order)
+        public void Update(RequestDTO dto)
         {
-            return new RequestDTO()
-            {
-                Id = order.Id,
-                userId = order.userId,
-                EmployeeId = order.EmployeeId,
-                OrderContent = order.OrderContent,
-                OrderTypeId = order.OrderTypeId
-            };
-        }
+            repository.Update(DtoToModel.ToModel(dto));
+        } 
     }
 }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.DTOs
 {
-    class RequestDTO
+    public class RequestDTO
     {
-        public int Id { get; set; }
         public int userId { get; set; }
         public int EmployeeId { get; set; }
         public int OrderTypeId { get; set; }

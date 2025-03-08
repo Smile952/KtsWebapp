@@ -12,9 +12,9 @@ namespace Core.Repository
             this.context = context;
         }
 
-        public void Create(Order order)
+        public void Create(Order dto)
         {
-            context.Order.Add(order);
+            context.Order.Add(dto);
             context.SaveChanges();
         }
 
@@ -22,9 +22,16 @@ namespace Core.Repository
         {
             return context.Order.ToList();
         }
-        public Order ReadById(int id)
+        public Order? ReadById(int id)
         {
             return context.Order.Find(id);
+        }
+        public void Update(Order order)
+        {
+            var data = context.Order.Find(order.Id);
+            data.OrderTypeId = order.OrderTypeId;
+            data.OrderContent = order.OrderContent;
+            context.SaveChanges();
         }
     }
 }

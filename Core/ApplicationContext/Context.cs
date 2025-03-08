@@ -5,12 +5,14 @@ namespace Core.ApplicationContext
 {
     public class Context : DbContext
     {
-        public DbSet<Order> Order;
-        DbSet<OrdersTypeEnum> OrdersTypeEnum;
-        
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrdersTypeEnum> OrdersTypeEnum { get; set; }
+        public DbSet<Employee> Employee {get; set;}
+        public DbSet<User> User {get; set;}
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-6KQLPSL;TrustServerCertificate=true;Database=KTS;User Id=DESKTOP-6KQLPSL\\Kheragacy");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-6KQLPSL;TrustServerCertificate=true;Database=KTS;User Id=DESKTOP-6KQLPSL\\Kheragacy;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -30,8 +32,6 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<User>().HasMany(x => x.Orders).WithOne(x => x.User);
 
             base.OnModelCreating(modelBuilder);
-
-
         }
     }
 }
