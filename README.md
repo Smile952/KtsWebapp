@@ -19,3 +19,5 @@
 ## Author
 - [Kheragacy aka Шелепов Денис](https://github.com/Smile952)
 
+## 📝 License
+Проект распространяется под лицензией MIT. Подробнее в [LICENSE](https://github.com/Smile952/KtsWebapp/blob/master/LICENSE).
