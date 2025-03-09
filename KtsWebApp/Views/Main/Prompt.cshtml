@@ -1,4 +1,4 @@
-﻿@section Header {
+﻿@section Header {                                                    
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="h3 mb-0 text-white">КТС - Разработка ПО</h1>
@@ -20,22 +20,21 @@
 <div>
     <div class="row g-3">
         <h2 class="h2 mb-3">Оставьте заявку</h2>
-        <form class="bg-white p-4 rounded shadow">
-            <div class="mb-3">
-                <label class="form-label">Ваше имя</label>
-                <input class="form-control" type="text" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Ваше email</label>
-                <input class="form-control" type="email" />
-            </div>
+
+        <form class="bg-white p-4 rounded shadow" method="post" action="/Main/RequestHandler">
+            <fieldset>
+                <input type="radio" name="DevType" value="1"/>
+                <input type="radio" name="DevType" value="2"/>
+                <input type="radio" name="DevType" value="3"/>
+            </fieldset>
             <div class="mb-3">
                 <label class="form-label">Обращение</label>
-                <input class="form-control" type="text" />
+                <input class="form-control" type="text" name="content"/>
             </div>
             <div class="d-flex justify-content-end">
                 <input class="btn btn-outline-success mb-3" type="submit"/>
             </div>
         </form>
+    
     </div>
 </div>

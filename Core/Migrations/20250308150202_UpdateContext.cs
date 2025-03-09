@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Core.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class UpdateContext : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -40,7 +40,7 @@ namespace Core.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -53,11 +53,11 @@ namespace Core.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_User", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Orders",
+                name: "Order",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -70,39 +70,39 @@ namespace Core.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.PrimaryKey("PK_Order", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Orders_Employee_EmployeeId",
+                        name: "FK_Order_Employee_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Employee",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_OrdersTypeEnum_OrdersTypeEnumId",
+                        name: "FK_Order_OrdersTypeEnum_OrdersTypeEnumId",
                         column: x => x.OrdersTypeEnumId,
                         principalTable: "OrdersTypeEnum",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Orders_Users_userId",
+                        name: "FK_Order_User_userId",
                         column: x => x.userId,
-                        principalTable: "Users",
+                        principalTable: "User",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_EmployeeId",
-                table: "Orders",
+                name: "IX_Order_EmployeeId",
+                table: "Order",
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_OrdersTypeEnumId",
-                table: "Orders",
+                name: "IX_Order_OrdersTypeEnumId",
+                table: "Order",
                 column: "OrdersTypeEnumId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_userId",
-                table: "Orders",
+                name: "IX_Order_userId",
+                table: "Order",
                 column: "userId");
         }
 
@@ -110,7 +110,7 @@ namespace Core.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Orders");
+                name: "Order");
 
             migrationBuilder.DropTable(
                 name: "Employee");
@@ -119,7 +119,7 @@ namespace Core.Migrations
                 name: "OrdersTypeEnum");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
         }
     }
 }

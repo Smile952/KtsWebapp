@@ -1,8 +1,35 @@
-﻿using Core.Migrations;
+﻿
+using Application.Services.Common;
+using Core.Repository;
+using Application.DTOs;
 
 namespace Application.Services
 {
-    class OrderService 
+    public class OrderService
     {
+        OrderRepository repository;
+        public OrderService(OrderRepository repo)
+        {
+            repository = repo;
+        }
+        public void Create(RequestDTO dto)
+        {
+            repository.Create(DtoToModel.ToModel(dto));
+        }
+
+        public List<RequestDTO> Read()
+        {
+            return new List<RequestDTO>();
+        }
+
+        public RequestDTO? ReadById(int id)
+        {
+            return ModelToDto.ToDTO(repository.ReadById(id));
+        }
+
+        public void Update(RequestDTO dto)
+        {
+            repository.Update(DtoToModel.ToModel(dto));
+        } 
     }
 }
