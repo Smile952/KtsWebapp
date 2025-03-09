@@ -1,5 +1,4 @@
 ﻿using Core.Models;
-using Microsoft.EntityFrameworkCore;
 using Core.ApplicationContext;
 
 namespace Core.Repository

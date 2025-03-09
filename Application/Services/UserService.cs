@@ -1,35 +1,34 @@
-﻿
+﻿using Application.DTOs;
 using Application.Services.Common;
 using Core.Repository;
-using Application.DTOs;
 
 namespace Application.Services
 {
-    public class OrderService
+    public class UserService
     {
-        OrderRepository repository;
-        public OrderService(OrderRepository repo)
+        UserRepository repository;
+        public UserService(UserRepository repo)
         {
             repository = repo;
         }
-        public void Create(RequestDTO dto)
+        public void Create(UserDTO dto)
         {
             repository.Create(DtoToModel.ToModel(dto));
         }
 
-        public List<RequestDTO> Read()
+        public List<UserDTO> Read()
         {
-            return new List<RequestDTO>();
+            return new List<UserDTO>();
         }
 
-        public RequestDTO? ReadById(int id)
+        public UserDTO? ReadById(int id)
         {
             return ModelToDto.ToDTO(repository.ReadById(id));
         }
 
-        public void Update(RequestDTO dto)
+        public void Update(UserDTO dto)
         {
             repository.Update(DtoToModel.ToModel(dto));
-        } 
+        }
     }
 }

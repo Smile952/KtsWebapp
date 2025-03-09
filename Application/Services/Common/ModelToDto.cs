@@ -1,10 +1,5 @@
-﻿using Core.Models;
-using Infrastructure.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.DTOs;
+using Core.Models;
 
 namespace Application.Services.Common
 {
@@ -18,6 +13,27 @@ namespace Application.Services.Common
                 EmployeeId = order.EmployeeId,
                 OrderContent = order.OrderContent,
                 OrderTypeId = order.OrderTypeId
+            };
+        }
+
+        public static EmployeeDTO ToDTO(Employee employee)
+        {
+            return new EmployeeDTO()
+            {
+                Name = employee.Name,
+                Password = employee.Password,
+                Post = employee.Post
+            };
+        }
+        public static UserDTO ToDTO(User user)
+        {
+            return new UserDTO()
+            {
+                Name = user.Name,
+                UserName = user.Username,
+                Age = user.age,
+                Password = user.password,
+                RegistrationDate = user.registrationDate
             };
         }
     }

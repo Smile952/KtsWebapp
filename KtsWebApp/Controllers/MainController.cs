@@ -1,7 +1,7 @@
 ﻿using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
-using Infrastructure.DTOs;
+using Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
@@ -18,11 +18,10 @@ namespace Interface.Controllers
             return View();
         }
 
-        public IActionResult RequestHandler()
+        public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service)
         {
             int dev = Int32.Parse(Request.Form["DevType"]);
             string? content = Request.Form["content"];
-            OrderService service = new OrderService(new OrderRepository(new Context()));
             service.Create(new RequestDTO() { EmployeeId = 1, userId = 1, OrderTypeId = dev, OrderContent = content });
             return Redirect("/Main/DevTypes");
         }
