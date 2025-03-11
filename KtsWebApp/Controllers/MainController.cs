@@ -8,13 +8,16 @@ namespace Interface.Controllers
 {
     public class MainController : Controller
     {
+        [HttpGet("/")]
         public IActionResult DevTypes()
         {
+            
             return View();
         }
-        [HttpGet("/")]
+        
         public IActionResult Prompt()
         {
+            ViewData["DevType"] = TempData["type"];
             return View();
         }
 
@@ -24,6 +27,13 @@ namespace Interface.Controllers
             string? content = Request.Form["content"];
             service.Create(new RequestDTO() { EmployeeId = 1, userId = 1, OrderTypeId = dev, OrderContent = content ?? ""});
             return Redirect("/Main/DevTypes");
+        }
+
+        public IActionResult TransferHandler()
+        {
+            string? type = Request.Query["DevType"];
+            TempData["type"] = type;
+            return RedirectToAction("Prompt", "Main");
         }
     }
 }
