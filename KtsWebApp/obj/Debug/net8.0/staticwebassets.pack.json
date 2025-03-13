@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\css\\styles\\RadioButtons.css"
     },
     {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\WholeStyle.css",
+      "PackagePath": "staticwebassets\\css\\styles\\WholeStyle.css"
+    },
+    {
       "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\js\\bootstrapJs\\bootstrap.bundle.js"
     },

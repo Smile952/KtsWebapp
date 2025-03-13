@@ -1,5 +1,8 @@
 ﻿.form-check-input:checked {
     background-color: #90EE90;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .form-check-input {
@@ -11,9 +14,23 @@
     border: none;
     outline: none;
 }
+.form-check-inline:hover {
+    background-color: #90EE90;
+    border-color: #90EE90;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+    border-color: white;
+    border-width: 0px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-check-inline {
+    padding-right: 20px;
+    padding-left: 10px;
+}
 
 .form-check-input:hover {
-    background-color: #90EE90; 
+    background-color: #90EE90;
     border-color: #90EE90;
 }
 

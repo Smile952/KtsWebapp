@@ -2641,7 +2641,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "460"
+          "Value": "831"
         },
         {
           "Name": "Content-Type",
@@ -2649,22 +2649,22 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\""
+          "Value": "\"ExTnSn/5/3MNpDKdLH3kfwAFmtiIOBkg9a5NAz6N0ik=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 13:59:47 GMT"
+          "Value": "Thu, 13 Mar 2025 14:31:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="
+          "Value": "sha256-ExTnSn/5/3MNpDKdLH3kfwAFmtiIOBkg9a5NAz6N0ik="
         }
       ]
     },
     {
-      "Route": "css/styles/RadioButtons.e2lpymt5tz.css",
+      "Route": "css/styles/RadioButtons.n7wgp5ux79.css",
       "AssetFile": "css/styles/RadioButtons.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2678,7 +2678,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "460"
+          "Value": "831"
         },
         {
           "Name": "Content-Type",
@@ -2686,25 +2686,107 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\""
+          "Value": "\"ExTnSn/5/3MNpDKdLH3kfwAFmtiIOBkg9a5NAz6N0ik=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 13:59:47 GMT"
+          "Value": "Thu, 13 Mar 2025 14:31:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e2lpymt5tz"
+          "Value": "n7wgp5ux79"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="
+          "Value": "sha256-ExTnSn/5/3MNpDKdLH3kfwAFmtiIOBkg9a5NAz6N0ik="
         },
         {
           "Name": "label",
           "Value": "css/styles/RadioButtons.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/WholeStyle.css",
+      "AssetFile": "css/styles/WholeStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/WholeStyle.eycv1vhzw3.css",
+      "AssetFile": "css/styles/WholeStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eycv1vhzw3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/WholeStyle.css"
         }
       ]
     },

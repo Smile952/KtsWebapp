@@ -31,6 +31,7 @@ wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.css.map
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css.map
 wwwroot\css\styles\RadioButtons.css
+wwwroot\css\styles\WholeStyle.css
 wwwroot\js\bootstrapJs\bootstrap.bundle.js
 wwwroot\js\bootstrapJs\bootstrap.bundle.js.map
 wwwroot\js\bootstrapJs\bootstrap.bundle.min.js
