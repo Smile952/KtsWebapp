@@ -384,6 +384,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zub09dkrxp"},{"Name":"integrity","Value":"sha256-CzmECrtXV8BSk/\u002B8SG\u002BRw7Fr\u002B3hCt2bS2bEkS4YD3PQ="},{"Name":"label","Value":"_content/Interface/css/bootstrapCss/bootstrap.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"293102"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022CzmECrtXV8BSk/\u002B8SG\u002BRw7Fr\u002B3hCt2bS2bEkS4YD3PQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 02 Mar 2025 08:11:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Interface/css/styles/RadioButtons.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\styles\RadioButtons.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5sA453a3\u002BMpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"460"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225sA453a3\u002BMpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Mar 2025 13:59:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Interface/css/styles/RadioButtons.e2lpymt5tz.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\styles\RadioButtons.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e2lpymt5tz"},{"Name":"integrity","Value":"sha256-5sA453a3\u002BMpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="},{"Name":"label","Value":"_content/Interface/css/styles/RadioButtons.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"460"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225sA453a3\u002BMpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Mar 2025 13:59:47 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Interface/js/bootstrapJs/bootstrap.bundle.4094rpi4f9.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\bootstrapJs\bootstrap.bundle.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

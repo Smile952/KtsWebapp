@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "exwJMZJ9p1YD9+Z05fWL5KgyLybMGFTEvaxkw7cpBGo=",
+  "Hash": "oEVK+j2t5rTbPjcko2scqeMPYFjs3dtD7VYOe1KFsXg=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -687,6 +687,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/RadioButtons#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e2lpymt5tz",
+      "Integrity": "5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\RadioButtons.css"
     },
     {
       "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js",
@@ -3563,6 +3584,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-7MYEMUFgHEc1CjrfAK/TlV30POxgoxXk2b+vAs/143U="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/RadioButtons.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 13:59:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/RadioButtons.e2lpymt5tz.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "460"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 13:59:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e2lpymt5tz"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/RadioButtons.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5sA453a3+MpCrRTmR54FC6PzN136IYM3ruDzzN5eqR4="
         }
       ]
     },
