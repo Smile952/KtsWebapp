@@ -48,9 +48,7 @@
         <script>
             window.onload = function(){
                 let radios = document.getElementsByName('DevType');
-                console.log(radios.item(@type-1));
-                radios.forEach(r => console.log(r))
-                radios[@type-1].checked  = true;
+                if(@type != 0) radios[@type-1].checked  = true;
             }
         </script>
     </div>
