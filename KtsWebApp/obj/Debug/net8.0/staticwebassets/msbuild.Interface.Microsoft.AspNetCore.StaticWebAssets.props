@@ -588,8 +588,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n7wgp5ux79</Fingerprint>
-      <Integrity>ExTnSn/5/3MNpDKdLH3kfwAFmtiIOBkg9a5NAz6N0ik=</Integrity>
+      <Fingerprint>9c1evex3jd</Fingerprint>
+      <Integrity>SUXc/ucVm5Frdq/34tSsQMHCAn5BzrALLYD0P3J+WQk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\styles\RadioButtons.css'))</OriginalItemSpec>
