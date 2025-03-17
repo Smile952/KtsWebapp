@@ -185,6 +185,18 @@
       "PackagePath": "staticwebassets\\js\\bootstrapJs\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Registration.js",
+      "PackagePath": "staticwebassets\\js\\components\\Registration.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\dist\\bundle.js",
+      "PackagePath": "staticwebassets\\js\\dist\\bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Interface.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

@@ -44,3 +44,6 @@ wwwroot\js\bootstrapJs\bootstrap.js
 wwwroot\js\bootstrapJs\bootstrap.js.map
 wwwroot\js\bootstrapJs\bootstrap.min.js
 wwwroot\js\bootstrapJs\bootstrap.min.js.map
+wwwroot\js\components\Registration.js
+wwwroot\js\dist\bundle.js
+wwwroot\js\index.js
