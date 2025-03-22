@@ -1,0 +1,47 @@
+.header {
+    background-color: #C7CED3;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content {
+    margin: 0 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+}
+
+.title {
+    font-size: 3.1vh;
+    font-weight: thin;
+    color: #3E496A;
+    white-space: nowrap;
+}
+
+.link-block {
+    display: flex;
+}
+
+.nav {
+    gap: 1.5vw;
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    font-size: 2vh;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: inherit;
+    color: #3E496A;
+}
+
+.nav-link:visited {
+    color: #4862b3;
+}

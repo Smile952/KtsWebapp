@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FOkjPp+Uh3/UQpWaEzPFGLz3/35JfB+EHmOdhGDuKS4=",
+  "Hash": "AI3rwQnycNpR0BgMqN1Rk0htAwxZdMEPjQI9qcrlgz4=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -689,6 +689,132 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ietogmyc4u",
+      "Integrity": "2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/Block#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyjx89twm7",
+      "Integrity": "u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Block.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Button.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/Button#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyjx89twm7",
+      "Integrity": "u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Button.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Footer.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/Footer#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyjx89twm7",
+      "Integrity": "u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Footer.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Header.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/Header#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5s4omwydt6",
+      "Integrity": "yxs4fM8xutPc/Zd8E0KXGct1Cf7aSYgd1yiRiAG96Z8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Header.css"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Main.css",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "css/styles/Main#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eycv1vhzw3",
+      "Integrity": "VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Main.css"
+    },
+    {
       "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
       "SourceId": "Interface",
       "SourceType": "Discovered",
@@ -710,12 +836,12 @@
       "OriginalItemSpec": "wwwroot\\css\\styles\\RadioButtons.css"
     },
     {
-      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\WholeStyle.css",
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Text.css",
       "SourceId": "Interface",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
       "BasePath": "_content/Interface",
-      "RelativePath": "css/styles/WholeStyle#[.{fingerprint}]?.css",
+      "RelativePath": "css/styles/Text#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -724,11 +850,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "eycv1vhzw3",
-      "Integrity": "VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=",
+      "Fingerprint": "dyjx89twm7",
+      "Integrity": "u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\styles\\WholeStyle.css"
+      "OriginalItemSpec": "wwwroot\\css\\styles\\Text.css"
     },
     {
       "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js",
@@ -983,12 +1109,12 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrapJs\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Registration.js",
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Block.js",
       "SourceId": "Interface",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
       "BasePath": "_content/Interface",
-      "RelativePath": "js/components/Registration#[.{fingerprint}]?.js",
+      "RelativePath": "js/components/Common/Block#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -997,19 +1123,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "na4xe2u857",
-      "Integrity": "AXZVdZECHTLfkDgJsTYN3QXT2D3qrbay63hgZpByvew=",
+      "Fingerprint": "3r8b2a0bt1",
+      "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\components\\Registration.js"
+      "OriginalItemSpec": "wwwroot\\js\\components\\Common\\Block.js"
     },
     {
-      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\dist\\bundle.js",
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Button.js",
       "SourceId": "Interface",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
       "BasePath": "_content/Interface",
-      "RelativePath": "js/dist/bundle#[.{fingerprint}]?.js",
+      "RelativePath": "js/components/Common/Button#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1018,19 +1144,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "kzj3pg2xoq",
-      "Integrity": "EB/uGW7xCdaZW88JCH19AA0KZiflAu88ULt6UqaiXy8=",
+      "Fingerprint": "3r8b2a0bt1",
+      "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\dist\\bundle.js"
+      "OriginalItemSpec": "wwwroot\\js\\components\\Common\\Button.js"
     },
     {
-      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\index.js",
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Footer.js",
       "SourceId": "Interface",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
       "BasePath": "_content/Interface",
-      "RelativePath": "js/index#[.{fingerprint}]?.js",
+      "RelativePath": "js/components/Common/Footer#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1039,11 +1165,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "53mq1dyi4m",
-      "Integrity": "r3g8Kv4ZGJrY/EWKfJDjoOgrJCMitmcKiUeNw+sH3xA=",
+      "Fingerprint": "3r8b2a0bt1",
+      "Integrity": "8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\index.js"
+      "OriginalItemSpec": "wwwroot\\js\\components\\Common\\Footer.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Header.js",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "js/components/Common/Header#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ard7roz0g4",
+      "Integrity": "mjM49KBTYSaGI34jrWlcJn4MbX7jsK1oeBN7a7mNuG0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\components\\Common\\Header.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Pages\\Registration.js",
+      "SourceId": "Interface",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
+      "BasePath": "_content/Interface",
+      "RelativePath": "js/components/Pages/Registration#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6a511dx9xj",
+      "Integrity": "/hXjvMfqpTIYPit4DaozoM6oMSjLzNpc0yx1uqnXfxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\components\\Pages\\Registration.js"
     }
   ],
   "Endpoints": [
@@ -3672,6 +3840,498 @@
       ]
     },
     {
+      "Route": "css/index.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 16:14:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/index.ietogmyc4u.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Mar 2025 16:14:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ietogmyc4u"
+        },
+        {
+          "Name": "label",
+          "Value": "css/index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Block.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Block.dyjx89twm7.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyjx89twm7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/Block.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Button.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Button.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Button.dyjx89twm7.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Button.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyjx89twm7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/Button.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Footer.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Footer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Footer.dyjx89twm7.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Footer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:05:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyjx89twm7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/Footer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Header.5s4omwydt6.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Header.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yxs4fM8xutPc/Zd8E0KXGct1Cf7aSYgd1yiRiAG96Z8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:48:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5s4omwydt6"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/Header.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yxs4fM8xutPc/Zd8E0KXGct1Cf7aSYgd1yiRiAG96Z8="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Header.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Header.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yxs4fM8xutPc/Zd8E0KXGct1Cf7aSYgd1yiRiAG96Z8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:48:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yxs4fM8xutPc/Zd8E0KXGct1Cf7aSYgd1yiRiAG96Z8="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Main.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles/Main.eycv1vhzw3.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eycv1vhzw3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles/Main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+        }
+      ]
+    },
+    {
       "Route": "css/styles/RadioButtons.9c1evex3jd.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
       "Selectors": [],
@@ -3754,8 +4414,8 @@
       ]
     },
     {
-      "Route": "css/styles/WholeStyle.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\WholeStyle.css",
+      "Route": "css/styles/Text.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Text.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3764,7 +4424,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "331"
+          "Value": "14"
         },
         {
           "Name": "Content-Type",
@@ -3772,11 +4432,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+          "Value": "Mon, 17 Mar 2025 14:05:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3786,13 +4446,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
         }
       ]
     },
     {
-      "Route": "css/styles/WholeStyle.eycv1vhzw3.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\WholeStyle.css",
+      "Route": "css/styles/Text.dyjx89twm7.css",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Text.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3801,7 +4461,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "331"
+          "Value": "14"
         },
         {
           "Name": "Content-Type",
@@ -3809,11 +4469,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw=\""
+          "Value": "\"u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+          "Value": "Mon, 17 Mar 2025 14:05:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3823,15 +4483,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "eycv1vhzw3"
+          "Value": "dyjx89twm7"
         },
         {
           "Name": "label",
-          "Value": "css/styles/WholeStyle.css"
+          "Value": "css/styles/Text.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VqDIVAM2UicshDtdJYf81f55twi2B0mudbQJlk4I0rw="
+          "Value": "sha256-u4DszuiY1WLPnENub5+KbAlwyJCcCHdKlyaXaKLaRqk="
         }
       ]
     },
@@ -4820,8 +5480,8 @@
       ]
     },
     {
-      "Route": "js/components/Registration.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Registration.js",
+      "Route": "js/components/Common/Block.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Block.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4830,7 +5490,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1066"
+          "Value": "3"
         },
         {
           "Name": "Content-Type",
@@ -4838,48 +5498,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AXZVdZECHTLfkDgJsTYN3QXT2D3qrbay63hgZpByvew=\""
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:35:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-AXZVdZECHTLfkDgJsTYN3QXT2D3qrbay63hgZpByvew="
-        }
-      ]
-    },
-    {
-      "Route": "js/components/Registration.na4xe2u857.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Registration.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1066"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AXZVdZECHTLfkDgJsTYN3QXT2D3qrbay63hgZpByvew=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:35:42 GMT"
+          "Value": "Mon, 17 Mar 2025 14:04:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4889,21 +5512,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "na4xe2u857"
+          "Value": "3r8b2a0bt1"
         },
         {
           "Name": "label",
-          "Value": "js/components/Registration.js"
+          "Value": "js/components/Common/Block.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-AXZVdZECHTLfkDgJsTYN3QXT2D3qrbay63hgZpByvew="
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
     {
-      "Route": "js/dist/bundle.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\dist\\bundle.js",
+      "Route": "js/components/Common/Block.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Block.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4912,7 +5535,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1078839"
+          "Value": "3"
         },
         {
           "Name": "Content-Type",
@@ -4920,11 +5543,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EB/uGW7xCdaZW88JCH19AA0KZiflAu88ULt6UqaiXy8=\""
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:36:43 GMT"
+          "Value": "Mon, 17 Mar 2025 14:04:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4934,13 +5557,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EB/uGW7xCdaZW88JCH19AA0KZiflAu88ULt6UqaiXy8="
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
     {
-      "Route": "js/dist/bundle.kzj3pg2xoq.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\dist\\bundle.js",
+      "Route": "js/components/Common/Button.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Button.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4949,7 +5572,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1078839"
+          "Value": "3"
         },
         {
           "Name": "Content-Type",
@@ -4957,11 +5580,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EB/uGW7xCdaZW88JCH19AA0KZiflAu88ULt6UqaiXy8=\""
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:36:43 GMT"
+          "Value": "Mon, 17 Mar 2025 14:04:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4971,21 +5594,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "kzj3pg2xoq"
+          "Value": "3r8b2a0bt1"
         },
         {
           "Name": "label",
-          "Value": "js/dist/bundle.js"
+          "Value": "js/components/Common/Button.js"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EB/uGW7xCdaZW88JCH19AA0KZiflAu88ULt6UqaiXy8="
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
         }
       ]
     },
     {
-      "Route": "js/index.53mq1dyi4m.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\index.js",
+      "Route": "js/components/Common/Button.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Button.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4994,7 +5617,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "299"
+          "Value": "3"
         },
         {
           "Name": "Content-Type",
@@ -5002,56 +5625,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"r3g8Kv4ZGJrY/EWKfJDjoOgrJCMitmcKiUeNw+sH3xA=\""
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:36:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "53mq1dyi4m"
-        },
-        {
-          "Name": "label",
-          "Value": "js/index.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-r3g8Kv4ZGJrY/EWKfJDjoOgrJCMitmcKiUeNw+sH3xA="
-        }
-      ]
-    },
-    {
-      "Route": "js/index.js",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\index.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "299"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"r3g8Kv4ZGJrY/EWKfJDjoOgrJCMitmcKiUeNw+sH3xA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 16:36:37 GMT"
+          "Value": "Mon, 17 Mar 2025 14:04:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5061,7 +5639,253 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-r3g8Kv4ZGJrY/EWKfJDjoOgrJCMitmcKiUeNw+sH3xA="
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Common/Footer.3r8b2a0bt1.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Footer.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:03:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3r8b2a0bt1"
+        },
+        {
+          "Name": "label",
+          "Value": "js/components/Common/Footer.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Common/Footer.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Footer.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:03:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Common/Header.ard7roz0g4.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Header.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1277"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjM49KBTYSaGI34jrWlcJn4MbX7jsK1oeBN7a7mNuG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:46:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ard7roz0g4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/components/Common/Header.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjM49KBTYSaGI34jrWlcJn4MbX7jsK1oeBN7a7mNuG0="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Common/Header.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Header.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1277"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjM49KBTYSaGI34jrWlcJn4MbX7jsK1oeBN7a7mNuG0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 18:46:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjM49KBTYSaGI34jrWlcJn4MbX7jsK1oeBN7a7mNuG0="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Pages/Registration.6a511dx9xj.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Pages\\Registration.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/hXjvMfqpTIYPit4DaozoM6oMSjLzNpc0yx1uqnXfxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:10:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6a511dx9xj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/components/Pages/Registration.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/hXjvMfqpTIYPit4DaozoM6oMSjLzNpc0yx1uqnXfxo="
+        }
+      ]
+    },
+    {
+      "Route": "js/components/Pages/Registration.js",
+      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Pages\\Registration.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/hXjvMfqpTIYPit4DaozoM6oMSjLzNpc0yx1uqnXfxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 14:10:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/hXjvMfqpTIYPit4DaozoM6oMSjLzNpc0yx1uqnXfxo="
         }
       ]
     }
