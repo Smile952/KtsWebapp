@@ -30,7 +30,6 @@ wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.css
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.css.map
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css.map
-wwwroot\css\index.css
 wwwroot\css\styles\Block.css
 wwwroot\css\styles\Button.css
 wwwroot\css\styles\Footer.css

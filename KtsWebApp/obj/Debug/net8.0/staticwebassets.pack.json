@@ -129,10 +129,6 @@
       "PackagePath": "staticwebassets\\css\\bootstrapCss\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
-      "PackagePath": "staticwebassets\\css\\index.css"
-    },
-    {
       "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
       "PackagePath": "staticwebassets\\css\\styles\\Block.css"
     },

@@ -6,34 +6,38 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class MainController : Controller
     {
-        [HttpGet("/")]
-        public IActionResult DevTypes()
-        {
-            
-            return View();
-        }
-        
-        public IActionResult Prompt()
-        {
-            ViewData["DevType"] = TempData["type"];
-            return View();
-        }
-
+        [HttpPost("request")]
         public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service)
         {
-            int dev = Int32.Parse((string?)Request.Form["DevType"] ?? "0");
-            string? content = Request.Form["content"];
-            service.Create(new RequestDTO() { EmployeeId = 1, userId = 1, OrderTypeId = dev, OrderContent = content ?? ""});
-            return Redirect("/");
-        }
-
-        public IActionResult TransferHandler()
-        {
-            string? type = Request.Query["DevType"];
-            TempData["type"] = type;
-            return RedirectToAction("Prompt", "Main");
+            try
+            {
+                if (!int.TryParse(Request.Form["devType"], out int dev))
+                {
+                    return BadRequest(new { error = "Invalid Development type input" });
+                }
+                string? content = Request.Form["text"];
+                if (string.IsNullOrEmpty(content))
+                {
+                    return BadRequest(new { error = "Empty content text" });
+                }
+                service.Create(new RequestDTO()
+                {
+                    EmployeeId = 1,
+                    userId = 1,
+                    OrderTypeId = dev,
+                    OrderContent = content
+                });
+                Console.WriteLine(content);
+                return Ok(new { message = "Request succefully created" });
+            }
+            catch (Exception e) 
+            {
+                return StatusCode(500, new { error = "Internal serveer error" });
+            }
         }
     }
 }

@@ -2,7 +2,17 @@ using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("localhost:3000");
+                      });
+});
 
 builder.Services.AddScoped<Context>();
 builder.Services.AddScoped<OrderRepository>();
@@ -12,9 +22,6 @@ var app = builder.Build();
 
 
 app.UseStaticFiles();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();

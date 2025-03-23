@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AI3rwQnycNpR0BgMqN1Rk0htAwxZdMEPjQI9qcrlgz4=",
+  "Hash": "eDg7ueJrP309aFaKErfh57dlJf6jwmDbmZXiJEi3b/I=",
   "Source": "Interface",
   "BasePath": "_content/Interface",
   "Mode": "Default",
@@ -687,27 +687,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrapCss\\bootstrap-utilities.rtl.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
-      "SourceId": "Interface",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\",
-      "BasePath": "_content/Interface",
-      "RelativePath": "css/index#[.{fingerprint}]?.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "ietogmyc4u",
-      "Integrity": "2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
       "Identity": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
@@ -3840,88 +3819,6 @@
       ]
     },
     {
-      "Route": "css/index.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "366"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 16:14:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/index.ietogmyc4u.css",
-      "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\index.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "366"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 16:14:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ietogmyc4u"
-        },
-        {
-          "Name": "label",
-          "Value": "css/index.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2vIsKWyAHT1TMIM2HMWfvcIuW/5SiqS60Zc7VMxUSKQ="
-        }
-      ]
-    },
-    {
       "Route": "css/styles/Block.css",
       "AssetFile": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
       "Selectors": [],
@@ -3944,7 +3841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:10 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3981,7 +3878,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:10 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4026,7 +3923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:53 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4063,7 +3960,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:53 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4108,7 +4005,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:28 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4145,7 +4042,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:28 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4190,7 +4087,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 18:48:12 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4235,7 +4132,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 18:48:12 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4272,7 +4169,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4309,7 +4206,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 14:21:13 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4436,7 +4333,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:41 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4473,7 +4370,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:05:41 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5502,7 +5399,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:04:16 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5547,7 +5444,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:04:16 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5584,7 +5481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:04:04 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5629,7 +5526,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:04:04 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5666,7 +5563,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:03:49 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5711,7 +5608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:03:49 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5748,7 +5645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 18:46:46 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5793,7 +5690,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 18:46:46 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5830,7 +5727,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:10:58 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5875,7 +5772,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 14:10:58 GMT"
+          "Value": "Sat, 22 Mar 2025 06:38:03 GMT"
         },
         {
           "Name": "Cache-Control",
