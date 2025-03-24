@@ -1,9 +1,10 @@
-import './Request.css'
-import './RadioButtons.css'
-import { Button } from '../Button/Button.js'
+import './Request.css';
+import './RadioButtons.css';
+import { Button } from '../Button/Button.js';
 
 function sendData(formData) {
-    fetch('https://localhost:8080/api/main/request', {
+
+    fetch('https://localhost:8080/api/Main/request', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -14,17 +15,27 @@ function sendData(formData) {
             text: formData.get('text')
         })
     })
-
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
+        .then(data => console.log('Успех:', data))
+        .catch(error => console.error('Ошибка:', error));
 }
 
-
 export function Request() {
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Предотвращаем стандартную отправку формы
+        const formData = new FormData(e.target);
+        sendData(formData);
+    };
+
     return (
         <div className="request">
             <div className="title-request mb-3">
                 <h1 className="title-request-text">Оставьте заявку</h1>
             </div>
-            <form id="form" className='mb-3' action={sendData}>
+            <form id="form" className="mb-3" onSubmit={handleSubmit}>
                 <div className="radio-buttons">
                     <fieldset>
                         <div className="form-check-inline">
@@ -35,7 +46,7 @@ export function Request() {
                                 value="1"
                                 id="radioWebSites"
                             />
-                            <label className="form-check-label" htmlFor="radioWebSites" value="1">Web sites</label>
+                            <label className="form-check-label" htmlFor="radioWebSites">Web sites</label>
                         </div>
                         <div className="form-check-inline">
                             <input
@@ -45,7 +56,7 @@ export function Request() {
                                 value="2"
                                 id="AI"
                             />
-                            <label className="form-check-label" htmlFor="AI" >Android/iOS</label>
+                            <label className="form-check-label" htmlFor="AI">Android/iOS</label>
                         </div>
                         <div className="form-check-inline">
                             <input
@@ -62,8 +73,8 @@ export function Request() {
                 <div className="back-block-request">
                     <div className="text-field-request">
                         <input
-                            type='text'
-                            className='text-field-request-text'
+                            type="text"
+                            className="text-field-request-text"
                             name="text"
                         />
                     </div>
@@ -71,5 +82,5 @@ export function Request() {
                 </div>
             </form>
         </div>
-    )
+    );
 }

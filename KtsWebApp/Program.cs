@@ -2,26 +2,32 @@ using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+var cors = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
+    options.AddPolicy(name: cors,
                       policy =>
                       {
-                          policy.WithOrigins("localhost:3000");
+                          policy.WithOrigins("http://localhost:3000")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod(); 
                       });
 });
 
 builder.Services.AddScoped<Context>();
 builder.Services.AddScoped<OrderRepository>();
 builder.Services.AddKeyedScoped<OrderService>("service");
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+
 var app = builder.Build();
-
-
+app.UseRouting(); // Добавляем маршрутизацию
+app.UseCors(cors); // CORS после маршрутизации
 app.UseStaticFiles();
-app.UseCors(MyAllowSpecificOrigins);
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); // Подключаем контроллеры
+});
 
 app.Run();
