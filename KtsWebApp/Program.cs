@@ -8,12 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: cors,
-                      policy =>
-                      {
-                          policy.WithOrigins("http://localhost:3000")
-                                            .AllowAnyHeader()
-                                            .AllowAnyMethod();
-                      });
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
 });
 
 builder.Services.AddScoped<Context>();
@@ -22,11 +22,13 @@ builder.Services.AddKeyedScoped<OrderService>("service");
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
 app.UseRouting(); 
 app.UseCors(cors); 
 app.UseStaticFiles();
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllers();
+    endpoints.MapControllers(); 
 });
+
 app.Run();
