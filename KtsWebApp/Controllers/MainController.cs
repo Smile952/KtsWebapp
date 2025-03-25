@@ -6,38 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class MainController : Controller
     {
-        [HttpPost("request")]
-        public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service)
+        public class RequestInput
         {
-            try
+            public int DevType { get; set; }
+            public string Text { get; set; } = string.Empty;
+        }
+
+        [HttpPost("request")]
+        public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service, [FromBody] RequestInput input)
+        {
+            service.Create(new RequestDTO()
             {
-                if (!int.TryParse(Request.Form["devType"], out int dev))
-                {
-                    return BadRequest(new { error = "Invalid Development type input" });
-                }
-                string? content = Request.Form["text"];
-                if (string.IsNullOrEmpty(content))
-                {
-                    return BadRequest(new { error = "Empty content text" });
-                }
-                service.Create(new RequestDTO()
-                {
-                    EmployeeId = 1,
-                    userId = 1,
-                    OrderTypeId = dev,
-                    OrderContent = content
-                });
-                Console.WriteLine(content);
-                return Ok(new { message = "Request succefully created" });
-            }
-            catch (Exception e) 
-            {
-                return StatusCode(500, new { error = "Internal serveer error" });
-            }
+                EmployeeId = 1,
+                userId = 1,
+                OrderTypeId = input.DevType,
+                OrderContent = input.Text
+            });
+            Console.WriteLine("i feel good");
+            return Ok(new { message = "Success!" });
         }
     }
 }
