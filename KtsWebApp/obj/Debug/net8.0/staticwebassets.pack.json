@@ -129,12 +129,32 @@
       "PackagePath": "staticwebassets\\css\\bootstrapCss\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Block.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Block.css"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Button.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Button.css"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Footer.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Footer.css"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Header.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Header.css"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Main.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Main.css"
+    },
+    {
       "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\RadioButtons.css",
       "PackagePath": "staticwebassets\\css\\styles\\RadioButtons.css"
     },
     {
-      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\WholeStyle.css",
-      "PackagePath": "staticwebassets\\css\\styles\\WholeStyle.css"
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\css\\styles\\Text.css",
+      "PackagePath": "staticwebassets\\css\\styles\\Text.css"
     },
     {
       "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.bundle.js",
@@ -183,6 +203,26 @@
     {
       "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\bootstrapJs\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\js\\bootstrapJs\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Block.js",
+      "PackagePath": "staticwebassets\\js\\components\\Common\\Block.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Button.js",
+      "PackagePath": "staticwebassets\\js\\components\\Common\\Button.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Footer.js",
+      "PackagePath": "staticwebassets\\js\\components\\Common\\Footer.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Common\\Header.js",
+      "PackagePath": "staticwebassets\\js\\components\\Common\\Header.js"
+    },
+    {
+      "Id": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\wwwroot\\js\\components\\Pages\\Registration.js",
+      "PackagePath": "staticwebassets\\js\\components\\Pages\\Registration.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Interface.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

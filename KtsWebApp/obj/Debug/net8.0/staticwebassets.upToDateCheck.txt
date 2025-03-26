@@ -30,8 +30,13 @@ wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.css
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.css.map
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css
 wwwroot\css\bootstrapCss\bootstrap-utilities.rtl.min.css.map
+wwwroot\css\styles\Block.css
+wwwroot\css\styles\Button.css
+wwwroot\css\styles\Footer.css
+wwwroot\css\styles\Header.css
+wwwroot\css\styles\Main.css
 wwwroot\css\styles\RadioButtons.css
-wwwroot\css\styles\WholeStyle.css
+wwwroot\css\styles\Text.css
 wwwroot\js\bootstrapJs\bootstrap.bundle.js
 wwwroot\js\bootstrapJs\bootstrap.bundle.js.map
 wwwroot\js\bootstrapJs\bootstrap.bundle.min.js
@@ -44,3 +49,8 @@ wwwroot\js\bootstrapJs\bootstrap.js
 wwwroot\js\bootstrapJs\bootstrap.js.map
 wwwroot\js\bootstrapJs\bootstrap.min.js
 wwwroot\js\bootstrapJs\bootstrap.min.js.map
+wwwroot\js\components\Common\Block.js
+wwwroot\js\components\Common\Button.js
+wwwroot\js\components\Common\Footer.js
+wwwroot\js\components\Common\Header.js
+wwwroot\js\components\Pages\Registration.js
