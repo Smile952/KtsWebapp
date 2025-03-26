@@ -1,11 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Services.Common;
 using Core.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Services
 {

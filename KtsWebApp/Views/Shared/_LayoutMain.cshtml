@@ -5,13 +5,14 @@
     <title></title>
     <link rel="stylesheet" href="~/css/bootstrapCss/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/styles/RadioButtons.css"/>
-    <link rel="stylesheet" href="~/css/styles/WholeStyle.css"/>
+    <link rel="stylesheet" href="~/css/styles/Main.css"/>
 </head>
 <body>
     <header class="bg-success">
         @RenderSection("Header")
     </header>
 
+    <script src="~/js/dist/bundle.js"></script>
     <main>
         @RenderBody()
     </main>
@@ -19,5 +20,6 @@
     <footer class="bg-success text-center">
         <div class="text-white"> © 2025 КТС. Все права защищены Кунг-Фу пандой.</div>
     </footer>
+    
 </body>
 </html>

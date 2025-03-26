@@ -99,3 +99,6 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Core.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Application.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Core.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.csproj.Up2Date
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\package-lock.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\package.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\public\manifest.json

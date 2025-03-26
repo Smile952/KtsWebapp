@@ -6,34 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
 {
+
+    [ApiController]
+    [Route("api/[controller]")]
     public class MainController : Controller
     {
-        [HttpGet("/")]
-        public IActionResult DevTypes()
+        public class RequestInput
         {
-            
-            return View();
-        }
-        
-        public IActionResult Prompt()
-        {
-            ViewData["DevType"] = TempData["type"];
-            return View();
+            public int DevType { get; set; }
+            public string Text { get; set; } = string.Empty;
         }
 
-        public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service)
+        [HttpPost("request")]
+        public IActionResult RequestHandler([FromKeyedServices("service")] OrderService service, [FromBody] RequestInput input)
         {
-            int dev = Int32.Parse((string?)Request.Form["DevType"] ?? "0");
-            string? content = Request.Form["content"];
-            service.Create(new RequestDTO() { EmployeeId = 1, userId = 1, OrderTypeId = dev, OrderContent = content ?? ""});
-            return Redirect("/Main/DevTypes");
-        }
-
-        public IActionResult TransferHandler()
-        {
-            string? type = Request.Query["DevType"];
-            TempData["type"] = type;
-            return RedirectToAction("Prompt", "Main");
+            service.Create(new RequestDTO()
+            {
+                EmployeeId = 1,
+                userId = 1,
+                OrderTypeId = input.DevType,
+                OrderContent = input.Text
+            });
+            Console.WriteLine("i feel good");
+            return Ok(new { message = "Success!" });
         }
     }
 }
