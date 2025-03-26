@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Core.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20250308150202_UpdateContext")]
-    partial class UpdateContext
+    [Migration("20250326150614_Refactoring_Database3")]
+    partial class Refactoring_Database3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,10 +65,7 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("OrdersTypeEnumId")
+                    b.Property<int>("OrdersTypeEnumId")
                         .HasColumnType("int");
 
                     b.Property<int>("userId")
@@ -143,7 +140,9 @@ namespace Core.Migrations
 
                     b.HasOne("Core.Models.OrdersTypeEnum", "OrdersTypeEnum")
                         .WithMany("Orders")
-                        .HasForeignKey("OrdersTypeEnumId");
+                        .HasForeignKey("OrdersTypeEnumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Core.Models.User", "User")
                         .WithMany("Orders")

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Core.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateContext : Migration
+    public partial class Refactoring_Database3 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -64,9 +64,8 @@ namespace Core.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     userId = table.Column<int>(type: "int", nullable: false),
                     EmployeeId = table.Column<int>(type: "int", nullable: false),
-                    OrderTypeId = table.Column<int>(type: "int", nullable: false),
-                    OrderContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OrdersTypeEnumId = table.Column<int>(type: "int", nullable: true)
+                    OrdersTypeEnumId = table.Column<int>(type: "int", nullable: false),
+                    OrderContent = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -81,7 +80,8 @@ namespace Core.Migrations
                         name: "FK_Order_OrdersTypeEnum_OrdersTypeEnumId",
                         column: x => x.OrdersTypeEnumId,
                         principalTable: "OrdersTypeEnum",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Order_User_userId",
                         column: x => x.userId,

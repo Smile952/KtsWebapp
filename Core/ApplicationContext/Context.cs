@@ -19,17 +19,37 @@ namespace Core.ApplicationContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Employee>().HasKey(x => x.Id);
-            modelBuilder.Entity<Order>().HasKey(x => x.Id);
-            modelBuilder.Entity<OrdersTypeEnum>().HasKey(x => x.Id);
-            modelBuilder.Entity<User>().HasKey(x => x.Id);
+            modelBuilder.Entity<Employee>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<Order>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<OrdersTypeEnum>()
+                .HasKey(x => x.Id);
+            modelBuilder.Entity<User>()
+                .HasKey(x => x.Id);
 
-            modelBuilder.Entity<Employee>().HasMany(x => x.Orders).WithOne(x => x.Employee);
-            modelBuilder.Entity<Order>().HasOne(x => x.Employee).WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>().HasOne(x => x.User).WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>().HasOne(x => x.OrdersTypeEnum).WithMany(x => x.Orders);
-            modelBuilder.Entity<OrdersTypeEnum>().HasMany(x => x.Orders).WithOne(x => x.OrdersTypeEnum);
-            modelBuilder.Entity<User>().HasMany(x => x.Orders).WithOne(x => x.User);
+            modelBuilder.Entity<Employee>()
+                .HasMany(x => x.Orders)
+                .WithOne(x => x.Employee);
+            modelBuilder.Entity<Order>()
+                .HasOne(x => x.Employee)
+                .WithMany(x => x.Orders);
+            modelBuilder.Entity<Order>()
+                .HasOne(x => x.User)
+                .WithMany(x => x.Orders);
+            modelBuilder.Entity<Order>()
+                .HasOne(x => x.OrdersTypeEnum)
+                .WithMany(x => x.Orders);
+            modelBuilder.Entity<OrdersTypeEnum>()
+                .HasMany(x => x.Orders)
+                .WithOne(x => x.OrdersTypeEnum);
+            modelBuilder.Entity<User>()
+                .HasMany(x => x.Orders)
+                .WithOne(x => x.User);
+
+            modelBuilder.Entity<User>()
+                .HasIndex(x => x.Email)
+                .IsUnique();
 
             base.OnModelCreating(modelBuilder);
         }

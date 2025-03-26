@@ -11,7 +11,7 @@ namespace Core.Models
         public int Id { get; set; }
         public int userId { get; set; }
         public int EmployeeId { get; set; }
-        public int OrderTypeId { get; set; }
+        public int OrdersTypeEnumId { get; set; }
         public string OrderContent { get; set; } = string.Empty;
         public User? User { get; set; }
         public Employee? Employee { get; set; }
