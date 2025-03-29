@@ -1,6 +1,4 @@
 ﻿using Application.Services;
-using Core.ApplicationContext;
-using Core.Repository;
 using Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +22,7 @@ namespace Interface.Controllers
             {
                 EmployeeId = 1,
                 userId = 1,
-                OrderTypeId = input.DevType,
+                OrderTypeEnumId = input.DevType,
                 OrderContent = input.Text
             });
             Console.WriteLine("i feel good");

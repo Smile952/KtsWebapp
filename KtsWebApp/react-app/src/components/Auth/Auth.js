@@ -1,7 +1,7 @@
 import { Button } from '../Button/Button'
-import './Autorization.css'
+import './Auth.css'
 
-export function Autorization() {
+export function Auth() {
     return (
         <div className='autorization'>
             <div className="autorization-back">

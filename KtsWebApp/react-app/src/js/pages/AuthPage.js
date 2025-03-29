@@ -1,12 +1,13 @@
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
-import { Autorization } from "../../components/Autorization/Autorization";
+import { Auth } from "../../components/Auth/Auth";
 
-export function AutorizationPage() {
+export function AuthPage() {
+
     return (
         <div>
             <Header text={["КТС-Авторизация"]} />
-            <Autorization />
+            <Auth />
             <Footer />
         </div>
     )

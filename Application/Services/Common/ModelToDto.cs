@@ -12,7 +12,7 @@ namespace Application.Services.Common
                 userId = order.userId,
                 EmployeeId = order.EmployeeId,
                 OrderContent = order.OrderContent,
-                OrderTypeId = order.OrderTypeId
+                OrderTypeEnumId = order.OrdersTypeEnumId
             };
         }
 
@@ -30,7 +30,7 @@ namespace Application.Services.Common
             return new UserDTO()
             {
                 Name = user.Name,
-                UserName = user.Username,
+                Email = user.Email,
                 Age = user.age,
                 Password = user.password,
                 RegistrationDate = user.registrationDate

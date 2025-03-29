@@ -10,7 +10,7 @@ namespace Application.Services.Common
             { 
                 userId = dto.userId, 
                 EmployeeId = dto.EmployeeId, 
-                OrderTypeId = dto.OrderTypeId, 
+                OrdersTypeEnumId = dto.OrderTypeEnumId, 
                 OrderContent = dto.OrderContent
             };
 
@@ -19,7 +19,7 @@ namespace Application.Services.Common
             return new User()
             {
                 Name = dto.Name,
-                Username = dto.UserName,
+                Email = dto.Email,
                 age = dto.Age,
                 password = dto.Password,
                 registrationDate = dto.RegistrationDate

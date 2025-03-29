@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "prettier-sql": "^5.1.1"
+  }
+}

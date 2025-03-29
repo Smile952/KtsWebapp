@@ -18,7 +18,9 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<Context>();
 builder.Services.AddScoped<OrderRepository>();
-builder.Services.AddKeyedScoped<OrderService>("service");
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddKeyedScoped<OrderService>("OrderService");
+builder.Services.AddKeyedScoped<UserService>("UserService");
 builder.Services.AddControllers();
 
 var app = builder.Build();
