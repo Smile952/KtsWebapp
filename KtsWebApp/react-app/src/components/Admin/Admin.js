@@ -1,0 +1,32 @@
+export function Admin() {
+    return (
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h5>Заявки</h5>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h5>Пользователи</h5>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h5>Сотрудники</h5>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
