@@ -17,8 +17,16 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<Context>();
+
 builder.Services.AddScoped<OrderRepository>();
-builder.Services.AddKeyedScoped<OrderService>("service");
+builder.Services.AddKeyedScoped<OrderService>("order_service");
+
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddKeyedScoped<UserService>("user_service");
+
+builder.Services.AddScoped<EmployeeRepository>();
+builder.Services.AddKeyedScoped<EmployeeService>("employee_service");
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

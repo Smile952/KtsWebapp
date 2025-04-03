@@ -4,7 +4,7 @@ using Core.Repository;
 
 namespace Application.Services
 {
-    class EmployeeService
+    public class EmployeeService
     {
         EmployeeRepository repository;
         public EmployeeService(EmployeeRepository repo)
