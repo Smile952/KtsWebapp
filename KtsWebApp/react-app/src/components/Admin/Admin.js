@@ -1,29 +1,29 @@
 export function Admin() {
     return (
-        <div>
+        <div className='admin'>
             <div>
                 <div>
-                    <div>
-                        <h5>Заявки</h5>
+                    <div className="admin-title">
+                        <h5 className="admin-title-block">Заявки</h5>
                     </div>
-                    <div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h5>Пользователи</h5>
-                    </div>
-                    <div>
-                        <div></div>
+                    <div className="admin-content">
+                        <div className="admin-content-block"></div>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <h5>Сотрудники</h5>
+                    <div className="admin-title">
+                        <h5 className="admin-title-block">Пользователи</h5>
                     </div>
-                    <div>
-                        <div></div>
+                    <div className="admin-content">
+                        <div className="admin-content-block"></div>
+                    </div>
+                </div>
+                <div>
+                    <div className="admin-title">
+                        <h5 className="admin-title-block">Сотрудники</h5>
+                    </div>
+                    <div className="admin-content">
+                        <div className="admin-content-block"></div>
                     </div>
                 </div>
             </div>

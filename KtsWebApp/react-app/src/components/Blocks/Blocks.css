@@ -1,23 +1,23 @@
-.block {
+.blocks {
     margin: 12vh 12vh 0 12vh;
 }
 
 
-.block-group {
+.blocks-group {
     display: flex;
     justify-content: space-between;
 }
 
-.back-block {
+.back-blocks {
     margin: 10vh 0 0 0vw;
     position: relative;
-    height: 15vh;
+    height: 40vh;
     width: 25vw;
     background-color: #C7CED3;
     border-radius: 15px;
 }
 
-.front-block {
+.front-blocks {
     position: relative;
     width: 90%;
     height: 80%;
@@ -27,41 +27,53 @@
     border-radius: 15px;
 }
 
-a.block-link {
+a.blocks-link {
     all: unset;
     cursor: pointer;
     position: absolute;
     inset: 0;
 }
 
-.block-text {
+.blocks-text {
     position: relative;
     left: 2%;
     width: 20vw;
-    height: 8vh;
+    height: 100%;
     top: 0.5%;
     word-wrap: break-word;
     text-overflow: ellipsis;
     pointer-events: none;
 }
 
-.block-title {
+.blocks-title {
     font-size: 3vh;
     color: #0F1938;
     pointer-events: none;
 }
 
-.block-description {
+.blocks-description {
     font-size: 2.2vh;
     color: #3E496A;
 }
 
+.blocks-image {
+    padding-top: 1vh;
+    margin-left: 0.8vh;
+    width: 100%;
+    height: 100%;
+}
+
+.blocks-image-source {
+    width: 100%;
+    height: auto;
+}
+
 @media(max-width: 1650px) {
-    .block-title {
+    .blocks-title {
         font-size: 1.4vw;
     }
 
-    .block-description {
+    .blocks-description {
         font-size: 1.2vw;
     }
 }
