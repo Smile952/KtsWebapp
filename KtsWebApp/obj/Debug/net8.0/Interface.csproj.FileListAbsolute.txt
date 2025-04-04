@@ -25,14 +25,11 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebas
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Interface.props
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Interface.props
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\refint\Interface.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\ref\Interface.dll
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.RazorAssemblyInfo.cache
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.RazorAssemblyInfo.cs
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.csproj.AssemblyReference.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Application.deps.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Application.runtimeconfig.json
@@ -102,3 +99,4 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.c
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\package-lock.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\package.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\public\manifest.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
