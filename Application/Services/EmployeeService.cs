@@ -4,7 +4,7 @@ using Core.Repository;
 
 namespace Application.Services
 {
-    class EmployeeService
+    public class EmployeeService
     {
         EmployeeRepository repository;
         public EmployeeService(EmployeeRepository repo)
@@ -18,7 +18,13 @@ namespace Application.Services
 
         public List<EmployeeDTO> Read()
         {
-            return new List<EmployeeDTO>();
+            List<EmployeeDTO> employeeDTOs = new List<EmployeeDTO>();
+            var employees = repository.Read();
+            foreach (var employee in employees)
+            {
+                employeeDTOs.Add(ModelToDto.ToDTO(employee));
+            }
+            return employeeDTOs;
         }
 
         public EmployeeDTO? ReadById(int id)

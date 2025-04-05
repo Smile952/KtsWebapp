@@ -19,7 +19,7 @@ namespace Application.Services.Common
             return new User()
             {
                 Name = dto.Name,
-                Username = dto.UserName,
+                Email = dto.Email,
                 age = dto.Age,
                 password = dto.Password,
                 registrationDate = dto.RegistrationDate

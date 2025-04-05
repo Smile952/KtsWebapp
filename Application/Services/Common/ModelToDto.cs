@@ -30,7 +30,7 @@ namespace Application.Services.Common
             return new UserDTO()
             {
                 Name = user.Name,
-                UserName = user.Username,
+                Email = user.Email,
                 Age = user.age,
                 Password = user.password,
                 RegistrationDate = user.registrationDate

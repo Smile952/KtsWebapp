@@ -29,7 +29,7 @@ namespace Core.Repository
         {
             var data = context.User.Find(user.Id);
             data.Name = user.Name;
-            data.Username = user.Username;
+            data.Email = user.Email;
             data.password = user.password;
             data.age = user.age;
             context.SaveChanges();

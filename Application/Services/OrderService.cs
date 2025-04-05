@@ -19,7 +19,13 @@ namespace Application.Services
 
         public List<RequestDTO> Read()
         {
-            return new List<RequestDTO>();
+            List<RequestDTO> requestDTOs = new List<RequestDTO>();
+            var requests = repository.Read();
+            foreach (var request in requests) 
+            {
+                requestDTOs.Add(ModelToDto.ToDTO(request));
+            }
+            return requestDTOs;
         }
 
         public RequestDTO? ReadById(int id)

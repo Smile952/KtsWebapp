@@ -18,7 +18,13 @@ namespace Application.Services
 
         public List<UserDTO> Read()
         {
-            return new List<UserDTO>();
+            List<UserDTO> userDTOs = new List<UserDTO>();
+            var users = repository.Read();
+            foreach (var user in users)
+            {
+                userDTOs.Add(ModelToDto.ToDTO(user));
+            }
+            return userDTOs;
         }
 
         public UserDTO? ReadById(int id)
