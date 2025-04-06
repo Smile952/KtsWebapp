@@ -4,6 +4,7 @@ import { RegistrationPage } from './pages/RegistrationPage'
 import { DevTypesPage } from './pages/DevTypesPage'
 import { RequestPage } from './pages/RequestPage'
 import { DevAboutPage } from './pages/DevAboutPage'
+import { AdmPage } from './pages/AdmPage' 
 
 
 export function App() {
@@ -14,6 +15,7 @@ export function App() {
             <Route path='/' element={<DevTypesPage />} />
             <Route path='request' element={<RequestPage />} />
             <Route path='about/:id' element={<DevAboutPage />} />
+            <Route path='admin' element={<AdmPage />} />
         </Routes>
     );
 }

@@ -13,7 +13,7 @@
     position: relative;
     height: 40vh;
     width: 25vw;
-    background-color: #C7CED3;
+    background-color: #c7ced3;
     border-radius: 15px;
 }
 
@@ -23,7 +23,7 @@
     height: 80%;
     top: 10%;
     left: 5%;
-    background-color: #CCEEDD;
+    background-color: #cceedd;
     border-radius: 15px;
 }
 
@@ -47,13 +47,13 @@ a.blocks-link {
 
 .blocks-title {
     font-size: 3vh;
-    color: #0F1938;
+    color: #0f1938;
     pointer-events: none;
 }
 
 .blocks-description {
     font-size: 2.2vh;
-    color: #3E496A;
+    color: #3e496a;
 }
 
 .blocks-image {

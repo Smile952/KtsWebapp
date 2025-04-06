@@ -1,5 +1,5 @@
 .header {
-    background-color: #C7CED3;
+    background-color: #c7ced3;
     height: 8vh;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
 .title {
     font-size: 3.1vh;
     font-weight: thin;
-    color: #3E496A;
+    color: #3e496a;
     white-space: nowrap;
 }
 
@@ -39,7 +39,7 @@
 .nav-link {
     text-decoration: none;
     font-size: inherit;
-    color: #3E496A;
+    color: #3e496a;
 }
 
 .nav-link:visited {
