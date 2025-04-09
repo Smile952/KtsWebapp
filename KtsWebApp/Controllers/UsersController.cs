@@ -1,8 +1,5 @@
-﻿using Application.DTOs;
-using Application.Services;
-using Microsoft.AspNetCore.Http;
+﻿using Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace Interface.Controllers
 {
@@ -13,8 +10,7 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("user_service")] UserService service)
         {
-            var usersJson = JsonSerializer.Serialize(service.Read());
-            return Ok(new { usersJson });
+            return Ok(service.Read());
         }
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("user_service")] UserService service, int id)
@@ -24,13 +20,13 @@ namespace Interface.Controllers
                 return BadRequest("This id is lower then zero. Take higher.");
             }
 
-            var userJson = JsonSerializer.Serialize(service.ReadById(id));
+            var res = service.ReadById(id);
 
-            if (userJson == null)
+            if (res == null)
             {
                 return NotFound("Error on server or this user doesn't exist");
             }
-            return Ok(new { userJson });
+            return Ok(res);
         }
 
         public IActionResult Create([FromKeyedServices("user_service")] UserService service)

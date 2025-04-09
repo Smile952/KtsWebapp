@@ -13,8 +13,7 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService service)
         {
-            var requestsJson = JsonSerializer.Serialize(service.Read());
-            return Ok(new { requestsJson });
+            return Ok(service.Read());
         }
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("order_service")] OrderService service, int id)

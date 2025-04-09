@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import styles from './Blocks.css'
+import './Blocks.css'
 
 export function Blocks() {
     const blocks = [
-        { id: 1, title: 'Web Разработка', desription: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
-        { id: 2, title: 'Android/iOS', desription: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
-        { id: 3, title: 'DevOps и облако', desription: 'Настройка инфраструктуры и автоматизация процессов', photo: '/Images/DevOps/devops.jpg' }
+        { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
+        { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
+        { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: '/Images/DevOps/devops.jpg' }
     ]
 
     const nav = useNavigate()
@@ -22,15 +22,15 @@ export function Blocks() {
                         <div className="front-blocks">
                             <div className='blocks-text'>
                                 <div className="blocks-title">{block.title}</div>
-                                <div className="blocks-description">{block.desription}</div>
+                                <div className="blocks-description">{block.description}</div> {/* Исправьте опечатку: desription -> description */}
                                 <div className="blocks-image">
-                                    <img className="blocks-image-source" src={block.photo}></img>
+                                    <img className="blocks-image-source" src={block.photo} alt={block.title} />
                                 </div>
                             </div>
                         </div>
                     </div>
                 ))}
-            </div >
+            </div>
         </div>
     )
 }

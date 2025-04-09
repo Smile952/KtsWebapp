@@ -62,10 +62,7 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("OrdersTypeEnumId")
+                    b.Property<int>("OrdersTypeEnumId")
                         .HasColumnType("int");
 
                     b.Property<int>("userId")
@@ -107,11 +104,11 @@ namespace Core.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -140,7 +137,9 @@ namespace Core.Migrations
 
                     b.HasOne("Core.Models.OrdersTypeEnum", "OrdersTypeEnum")
                         .WithMany("Orders")
-                        .HasForeignKey("OrdersTypeEnumId");
+                        .HasForeignKey("OrdersTypeEnumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Core.Models.User", "User")
                         .WithMany("Orders")

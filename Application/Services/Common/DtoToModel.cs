@@ -9,8 +9,8 @@ namespace Application.Services.Common
             new Order() 
             { 
                 userId = dto.userId, 
-                EmployeeId = dto.EmployeeId, 
-                OrderTypeId = dto.OrderTypeId, 
+                EmployeeId = dto.EmployeeId,
+                OrdersTypeEnumId = dto.OrderTypeId, 
                 OrderContent = dto.OrderContent
             };
 

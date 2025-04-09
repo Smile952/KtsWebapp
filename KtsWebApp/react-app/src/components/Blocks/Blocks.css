@@ -1,32 +1,60 @@
+/* Контейнер для блока с карточками */
 .blocks {
     margin: 12vh 12vh 0 12vh;
+    width: calc(100% - 24vh);
+    /* Учитываем margin */
+    box-sizing: border-box;
 }
 
-
+/* Группа карточек */
 .blocks-group {
     display: flex;
     justify-content: space-between;
+    gap: 2vw;
+    /* Добавляем небольшой зазор между карточками */
 }
 
+/* Задний слой карточки */
 .back-blocks {
-    margin: 10vh 0 0 0vw;
+    margin: 10vh 0 0 0;
     position: relative;
     height: 40vh;
     width: 25vw;
-    background-color: #c7ced3;
+    background: linear-gradient(135deg, #B0B8C1, #C7CED3);
+    /* Слегка темнее и с градиентом */
     border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Легкая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Плавный переход для эффектов */
 }
 
+/* Эффект при наведении */
+.back-blocks:hover {
+    transform: translateY(-5px);
+    /* Легкий подъем */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Усиливаем тень */
+}
+
+/* Передний слой карточки */
 .front-blocks {
     position: relative;
     width: 90%;
     height: 80%;
     top: 10%;
     left: 5%;
-    background-color: #cceedd;
+    background: linear-gradient(135deg, #A7F3D0, #CCEEDD);
+    /* Ярче и с градиентом */
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* Для корректного размещения текста и изображения */
+    overflow: hidden;
+    /* Убедимся, что контент не выходит за границы */
 }
 
+/* Ссылка (для кликабельности карточки) */
 a.blocks-link {
     all: unset;
     cursor: pointer;
@@ -34,46 +62,124 @@ a.blocks-link {
     inset: 0;
 }
 
+/* Текст внутри карточки */
 .blocks-text {
     position: relative;
-    left: 2%;
-    width: 20vw;
-    height: 100%;
-    top: 0.5%;
+    left: 5%;
+    /* Увеличиваем отступ для "воздуха" */
+    width: 90%;
+    /* Уменьшаем ширину текста */
+    height: auto;
+    /* Подстраиваемся под контент */
+    top: 5%;
     word-wrap: break-word;
     text-overflow: ellipsis;
     pointer-events: none;
 }
 
+/* Заголовок карточки */
 .blocks-title {
     font-size: 3vh;
-    color: #0f1938;
+    color: #1E3A8A;
+    /* Более темный синий для контраста */
+    font-weight: 600;
+    /* Жирный шрифт для акцента */
+    font-family: 'Inter', sans-serif;
     pointer-events: none;
+    margin-bottom: 1vh;
+    /* Отступ снизу */
 }
 
+/* Описание карточки */
 .blocks-description {
     font-size: 2.2vh;
-    color: #3e496a;
+    color: #2D4A6A;
+    /* Более насыщенный цвет для читаемости */
+    font-family: 'Inter', sans-serif;
+    pointer-events: none;
+    margin-bottom: 2vh;
+    /* Отступ снизу */
 }
 
+/* Контейнер для изображения */
 .blocks-image {
     padding-top: 1vh;
-    margin-left: 0.7vw;
+    margin-left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
+    /* Ограничиваем высоту изображения */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Изображение */
 .blocks-image-source {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    /* Масштабируем изображение без искажений */
+    border-radius: 10px;
+    /* Скругленные углы для изображения */
 }
 
-@media(max-width: 1650px) {
+/* Адаптивность */
+@media (max-width: 1650px) {
     .blocks-title {
         font-size: 1.4vw;
     }
 
     .blocks-description {
         font-size: 1.2vw;
+    }
+
+    .back-blocks {
+        width: 30vw;
+        /* Увеличиваем ширину карточек */
+        height: 35vh;
+        /* Уменьшаем высоту */
+    }
+}
+
+@media (max-width: 768px) {
+    .blocks {
+        margin: 6vh 6vh 0 6vh;
+        /* Уменьшаем отступы */
+        width: calc(100% - 12vh);
+    }
+
+    .blocks-group {
+        flex-direction: column;
+        /* Карточки в столбец */
+        gap: 4vh;
+        /* Увеличиваем зазор между карточками */
+    }
+
+    .back-blocks {
+        width: 100%;
+        /* Карточки на всю ширину */
+        height: 30vh;
+        /* Уменьшаем высоту */
+        margin: 0;
+        /* Убираем верхний отступ */
+    }
+
+    .front-blocks {
+        height: 85%;
+        /* Увеличиваем высоту переднего слоя */
+    }
+
+    .blocks-title {
+        font-size: 4vw;
+        /* Масштабируем шрифт */
+    }
+
+    .blocks-description {
+        font-size: 3vw;
+    }
+
+    .blocks-image {
+        height: 40%;
+        /* Уменьшаем высоту изображения */
     }
 }

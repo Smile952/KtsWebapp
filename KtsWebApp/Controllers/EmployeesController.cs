@@ -12,8 +12,7 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("employee_service")] EmployeeService service)
         {
-            var employeeJson = JsonSerializer.Serialize(service.Read());
-            return Ok(new { employeeJson });
+            return Ok(service.Read());
         }
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("employee_service")] EmployeeService service, int id)

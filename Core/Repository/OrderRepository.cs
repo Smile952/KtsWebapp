@@ -28,7 +28,7 @@ namespace Core.Repository
         public void Update(Order order)
         {
             var data = context.Order.Find(order.Id);
-            data.OrderTypeId = order.OrderTypeId;
+            data.OrdersTypeEnumId = order.OrdersTypeEnumId;
             data.OrderContent = order.OrderContent;
             context.SaveChanges();
         }

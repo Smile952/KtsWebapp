@@ -2845,35 +2845,42 @@
     ]
   },
   "packageFolders": {
-    "/Users/kheragacy/.nuget/packages/": {}
+    "C:\\Users\\Kheragacy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kheragacy/Development/kts/KtsWebApp/Interface.csproj",
+      "projectUniqueName": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
       "projectName": "Interface",
-      "projectPath": "/Users/kheragacy/Development/kts/KtsWebApp/Interface.csproj",
-      "packagesPath": "/Users/kheragacy/.nuget/packages/",
-      "outputPath": "/Users/kheragacy/Development/kts/KtsWebApp/obj/",
+      "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\Interface.csproj",
+      "packagesPath": "C:\\Users\\Kheragacy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\KtsWebApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/kheragacy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Kheragacy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/kheragacy/Development/kts/Application/Application.csproj": {
-              "projectPath": "/Users/kheragacy/Development/kts/Application/Application.csproj"
+            "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Application\\Application.csproj"
             },
-            "/Users/kheragacy/Development/kts/Core/Core.csproj": {
-              "projectPath": "/Users/kheragacy/Development/kts/Core/Core.csproj"
+            "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\Core\\Core.csproj"
             }
           }
         }
@@ -2904,20 +2911,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.14, 8.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[8.0.14, 8.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.14, 8.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2926,7 +2919,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
