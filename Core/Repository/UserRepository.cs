@@ -34,5 +34,11 @@ namespace Core.Repository
             data.age = user.age;
             context.SaveChanges();
         }
+
+        public void Delete(int id)
+        {
+            User user = context.User.Find(id);
+            context.User.Remove(user);
+        }
     }
 }

@@ -36,5 +36,10 @@ namespace Application.Services
         {
             repository.Update(DtoToModel.ToModel(dto));
         }
+
+        public void Delete(int id)
+        {
+            if(id < 0) { }
+        }
     }
 }
