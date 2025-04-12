@@ -33,5 +33,11 @@ namespace Core.Repository
             data.Password = employee.Password;
             context.SaveChanges();
         }
+        public void Delete(int id)
+        {
+            Employee employee = context.Employee.Find(id);
+            context.Employee.Remove(employee);
+            context.SaveChanges();
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace Application.Services
 
         public void Delete(int id)
         {
-            if(id < 0) { }
+            repository.Delete(id); 
         }
     }
 }

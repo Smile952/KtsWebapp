@@ -48,7 +48,7 @@
   {
     "ContainingType": "Interface.Controllers.EmployeesController",
     "Method": "Delete",
-    "RelativePath": "api/Employees/id",
+    "RelativePath": "api/Employees/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -56,7 +56,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -109,19 +109,25 @@
   },
   {
     "ContainingType": "Interface.Controllers.OrdersController",
-    "Method": "Delete",
-    "RelativePath": "api/Orders",
-    "HttpMethod": "",
+    "Method": "GetById",
+    "RelativePath": "api/Orders/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Interface.Controllers.OrdersController",
-    "Method": "GetById",
+    "Method": "Delete",
     "RelativePath": "api/Orders/{id}",
-    "HttpMethod": "GET",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -147,27 +153,7 @@
     "ContainingType": "Interface.Controllers.UsersController",
     "Method": "Create",
     "RelativePath": "api/Users",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Interface.Controllers.UsersController",
-    "Method": "Update",
-    "RelativePath": "api/Users",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Interface.Controllers.UsersController",
-    "Method": "Delete",
-    "RelativePath": "api/Users",
-    "HttpMethod": "",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -178,6 +164,38 @@
     "Method": "GetById",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Interface.Controllers.UsersController",
+    "Method": "Update",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Interface.Controllers.UsersController",
+    "Method": "Delete",
+    "RelativePath": "api/Users/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

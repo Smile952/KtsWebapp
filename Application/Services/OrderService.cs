@@ -36,6 +36,10 @@ namespace Application.Services
         public void Update(RequestDTO dto)
         {
             repository.Update(DtoToModel.ToModel(dto));
-        } 
+        }
+        public void Delete(int id)
+        {
+            repository.Delete(id);
+        }
     }
 }

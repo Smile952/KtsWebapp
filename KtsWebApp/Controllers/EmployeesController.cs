@@ -45,10 +45,25 @@ namespace Interface.Controllers
         {
             return Ok(new { message = "All good" });
         }
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public IActionResult Delete([FromKeyedServices("employee_service")] EmployeeService service, int id)
         {
-            return Ok(new { message = "All good" });
+            if (id < 0)
+            {
+                return BadRequest("This id is lower then zero. Take higher.");
+            }
+
+            var res = service.ReadById(id);
+
+            if (res == null)
+            {
+                return NotFound("Error on server or this user doesn't exist");
+            }
+            else
+            {
+                service.Delete(id);
+            }
+            return Ok(new { message = "Delete was succefully" });
         }
     }
 }

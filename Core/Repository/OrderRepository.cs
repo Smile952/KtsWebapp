@@ -32,5 +32,11 @@ namespace Core.Repository
             data.OrderContent = order.OrderContent;
             context.SaveChanges();
         }
+        public void Delete(int id)
+        {
+            Order order = context.Order.Find(id);
+            context.Order.Remove(order);
+            context.SaveChanges();
+        }
     }
 }

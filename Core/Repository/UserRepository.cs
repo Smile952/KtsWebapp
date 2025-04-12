@@ -39,6 +39,7 @@ namespace Core.Repository
         {
             User user = context.User.Find(id);
             context.User.Remove(user);
+            context.SaveChanges();
         }
     }
 }
