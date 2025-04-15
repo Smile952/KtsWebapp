@@ -1,0 +1,70 @@
+.button {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    display: grid;
+    color: #1F2937;
+    grid-template-columns: repeat(auto-fill, 45vw);
+    column-gap: 2vw;
+    justify-content: center;
+}
+
+.delete-button {
+    background: linear-gradient(135deg, #fcc7c8, #f5a3a5);
+    border-radius: 7.5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 5vh;
+    overflow: hidden;
+}
+
+.update-block-form {
+    display: grid;
+}
+
+.update-block-data {
+    margin: 1vh 0 1vh 0;
+    width: 45vw;
+    height: 6vh;
+    border: none;
+    border: solid 1px black;
+}
+
+.update-button {
+    background: linear-gradient(135deg, #e2f5ba, #e6ffb4);
+    border-radius: 7.5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    width: 45vw;
+    height: 5vh;
+    overflow: hidden;
+}
+
+.update-block-title {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.update-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 15px;
+    }
+}
+
+@media (max-height: 468px) {
+    .button {
+        font-size: 12px;
+    }
+}

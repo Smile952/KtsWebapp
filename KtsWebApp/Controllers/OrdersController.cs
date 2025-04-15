@@ -1,7 +1,9 @@
 ﻿using Application.DTOs;
 using Application.Services;
+using Interface.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.Text.Json;
 
 namespace Interface.Controllers
@@ -32,14 +34,47 @@ namespace Interface.Controllers
             return Ok(new { message = "All good" });
         }
 
-        public IActionResult Create([FromKeyedServices("order_service")] OrderService service)
+        [HttpPost]
+        public IActionResult Create([FromKeyedServices("order_service")] OrderService service, [FromBody] OrderModel model)
         {
-            return Ok(new { message = "All good" });
+            if (!model.IsAllData())
+            {
+                return BadRequest("User is empty");
+            }
+            service.Create(new RequestDTO()
+            {
+                userId = model.UserId,
+                EmployeeId = model.EmployeeId,
+                OrderTypeId = model.OrderTypeId,
+                OrderContent = model.OrderContent
+            });
+
+            return Ok(new { message = "User creating status: success" });
         }
 
-        public IActionResult Update([FromKeyedServices("order_service")] OrderService service)
+        [HttpPost("{id}")]
+        public IActionResult Update([FromKeyedServices("order_service")] OrderService service, int id, [FromBody] OrderModel model)
         {
-            return Ok(new { message = "All good" });
+            if (id < 0)
+            {
+                return BadRequest("This id is lower then zero. Take higher.");
+            }
+            if (model.IsPartialData())
+            {
+                return BadRequest("Order is empty");
+            }
+
+            var order = service.ReadById(id);
+
+            if (order == null)
+            {
+                return NotFound("Error find order by id");
+            }
+            else
+            {
+               service.Update(model.SetRequestData(order));
+            }
+            return Ok(new { message = "Order updating status: success" });
         }
 
         [HttpDelete("{id}")]

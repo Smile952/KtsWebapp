@@ -8,6 +8,7 @@ namespace Application.Services.Common
         public static Order ToModel(RequestDTO dto) => 
             new Order() 
             { 
+                Id = dto.Id,
                 userId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
@@ -18,6 +19,7 @@ namespace Application.Services.Common
         {
             return new User()
             {
+                Id = dto.Id,
                 Name = dto.Name,
                 Email = dto.Email,
                 age = dto.Age,
@@ -31,6 +33,7 @@ namespace Application.Services.Common
         {
             return new Employee()
             {
+                Id = dto.Id,
                 Name = dto.Name,
                 Password = dto.Password,
                 Post = dto.Post

@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Services;
+using Interface.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -35,15 +36,43 @@ namespace Interface.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Create([FromKeyedServices("employee_service")] EmployeeService service)
+        public IActionResult Create([FromKeyedServices("employee_service")] EmployeeService service, [FromBody] EmployeeModel model)
         {
+            if (!model.IsAllData())
+            {
+                return BadRequest("User is empty");
+            }
+            service.Create(new EmployeeDTO()
+            {
+                Name = model.Name,
+                Post = model.Post
+            });
 
-            return Ok(new { message = "All good" });
+            return Ok(new { message = "User creating status: success" });
         }
-        [HttpPost]
-        public IActionResult Update([FromKeyedServices("employee_service")] EmployeeService service)
+        [HttpPost("{id}")]
+        public IActionResult Update([FromKeyedServices("employee_service")] EmployeeService service, int id, [FromBody] EmployeeModel model)
         {
-            return Ok(new { message = "All good" });
+            if (id < 0)
+            {
+                return BadRequest("This id is lower then zero. Take higher.");
+            }
+            if (model.IsPartialData())
+            {
+                return BadRequest("Order is empty");
+            }
+
+            var order = service.ReadById(id);
+
+            if (order == null)
+            {
+                return NotFound("Error find order by id");
+            }
+            else
+            {
+                service.Update(model.SetRequestData(order));
+            }
+            return Ok(new { message = "Employee updating status: success" });
         }
         [HttpDelete("{id}")]
         public IActionResult Delete([FromKeyedServices("employee_service")] EmployeeService service, int id)
