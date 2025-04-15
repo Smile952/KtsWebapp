@@ -1,4 +1,5 @@
 ﻿using Application.Services;
+using Interface.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -30,50 +31,48 @@ namespace Interface.Controllers
             return Ok(res);
         }
 
-        [HttpPost]
-        public IActionResult Create([FromKeyedServices("user_service")] UserService service)
+        [HttpPost()]
+        public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, int id)
         {
+
+            if (!model.IsAllData())
+            {
+                return BadRequest("User is empty");
+            }
             service.Create(new Application.DTOs.UserDTO()
             {
-                Name = Request.Form["Name"],
-                Email = Request.Form["Email"],
-                Age = Int32.Parse(Request.Form["Age"]),
-                Password = Request.Form["Password"],
-                RegistrationDate = DateTime.Parse(Request.Form["RegistrationDate"])
+                Name = model.Name,
+                Email = model.Email,
+                Age = model.Age,
+                RegistrationDate = model.RegistrationDate
             });
 
-            return Ok(new { message = "Successfully creating person" });
+            return Ok(new { message = "User creating status: success" });
         }
 
         [HttpPost("{id}")]
-        public IActionResult Update([FromKeyedServices("user_service")] UserService service, int id)
+        public IActionResult Update([FromKeyedServices("user_service")] UserService service, int id, [FromBody] UserModel model)
         {
             if (id < 0)
             {
                 return BadRequest("This id is lower then zero. Take higher.");
             }
+            if (!model.IsPartialData())
+            {
+                return BadRequest("User is empty");
+            }
 
             var user = service.ReadById(id);
-
+            
             if (user == null)
             {
                 return NotFound("Error find user by id");
             }
             else
             {
-                if (!Request.Form["Name"].IsNullOrEmpty()) user.Name = Request.Form["Name"];
-
-                if (!Request.Form["Email"].IsNullOrEmpty()) user.Email = Request.Form["Email"];
-
-                if (!Request.Form["Age"].IsNullOrEmpty()) user.Age = Int32.Parse(Request.Form["Age"]);
-
-                if (!Request.Form["Password"].IsNullOrEmpty()) user.Password = Request.Form["Password"];
-
-                if (!Request.Form["RegistrationDate"].IsNullOrEmpty()) user.RegistrationDate = DateTime.Parse(Request.Form["RegistrationDate"]);
-
-                service.Update(user);
+               service.Update(model.SetUserData(user));
             }
-            return Ok(new { message = "All good" });
+            return Ok(new { message = "User updating status: success" });
         }
 
         [HttpDelete("{id}")]
@@ -94,7 +93,7 @@ namespace Interface.Controllers
             {
                 service.Delete(id);
             }
-            return Ok(new { message = "Delete was succefully" });
+            return Ok(new { message = "User deleting status: success" });
         }
     }
 }

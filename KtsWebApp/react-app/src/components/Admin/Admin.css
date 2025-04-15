@@ -14,7 +14,6 @@
     padding: 1vw;
     border-radius: 16px;
     height: calc(100vh - 4rem - 2vh);
-    overflow: hidden;
     align-items: stretch;
 }
 
@@ -31,7 +30,8 @@
 }
 
 .admin-title {
-    text-align: center;
+    display: grid;
+    grid-template-columns: 90% 10%;
     width: 100%;
     background-color: #E0F2E9;
     padding: 0.8rem;
@@ -43,9 +43,29 @@
 }
 
 .admin-title-text {
-    height: 5vh;
-    margin: 0;
+    text-align: center;
+    justify-self: center;
     line-height: 5vh;
+    margin-top: 1vh;
+}
+
+.admin-button-create {
+    text-align: center;
+    align-self: center;
+    font-size: 4vh;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background-color: #b6f5d8;
+    color: #1A3C34;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.admin-button-create:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .admin-content-block {
@@ -55,30 +75,13 @@
     background-color: #F9FAFB;
     border: none;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #D1D5DB #F9FAFB;
-    overflow-y: auto;
     flex: 1;
-}
-
-.admin-content-block::-webkit-scrollbar {
-    width: 8px;
-}
-
-.admin-content-block::-webkit-scrollbar-track {
-    background: #F9FAFB;
-}
-
-.admin-content-block::-webkit-scrollbar-thumb {
-    background-color: #D1D5DB;
-    border-radius: 20px;
-    border: 2px solid #F9FAFB;
 }
 
 .admin-content-block-text {
     color: #1F2937;
     min-height: 85px;
-    height: auto;
+    height: 15vh;
     border: none;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -88,7 +91,29 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     line-height: 1.5;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.admin-content-block-text::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+.admin-content-block-text::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.admin-content-block-text::-webkit-scrollbar-thumb {
+    background: #a39c9c;
+    border-radius: 4px;
+}
+
+.admin-content-block-text::-webkit-scrollbar-thumb:hover {
+
+    background: #555;
+
 }
 
 .admin-content-block-text:hover {

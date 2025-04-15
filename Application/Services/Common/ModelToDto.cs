@@ -9,6 +9,7 @@ namespace Application.Services.Common
         {
             return new RequestDTO()
             {
+                Id = order.Id,
                 userId = order.userId,
                 EmployeeId = order.EmployeeId,
                 OrderContent = order.OrderContent,
@@ -20,6 +21,7 @@ namespace Application.Services.Common
         {
             return new EmployeeDTO()
             {
+                Id = employee.Id,
                 Name = employee.Name,
                 Password = employee.Password,
                 Post = employee.Post
@@ -29,6 +31,7 @@ namespace Application.Services.Common
         {
             return new UserDTO()
             {
+                Id = user.Id,
                 Name = user.Name,
                 Email = user.Email,
                 Age = user.age,

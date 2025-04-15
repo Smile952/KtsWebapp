@@ -1,6 +1,39 @@
-﻿namespace Interface.Models
+﻿using Application.DTOs;
+
+namespace Interface.Models
 {
     public class OrderModel
     {
+        public int UserId { get; set; }
+        public int EmployeeId { get; set; }
+        public int OrderTypeId { get; set; }
+        public string OrderContent { get; set; } = string.Empty;
+
+        public bool IsAllData()
+        {
+            if (UserId >= 0 && EmployeeId >= 0 && OrderTypeId >= 0 && OrderContent != null)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool IsPartialData()
+        {
+            if (UserId >= 0 || EmployeeId >= 0 || OrderTypeId >= 0 || OrderContent != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public RequestDTO SetRequestData(RequestDTO request)
+        {
+            if (UserId >= 0) request.userId = UserId;
+            if (EmployeeId >= 0) request.EmployeeId = EmployeeId;
+            if (OrderTypeId >= 0) request.OrderTypeId = OrderTypeId;
+            if (OrderContent != null) request.OrderContent = OrderContent;
+
+            return request;
+        }
     }
 }
