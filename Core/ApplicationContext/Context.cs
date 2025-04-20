@@ -1,5 +1,6 @@
 ﻿using Core.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Core.ApplicationContext
 {
@@ -10,9 +11,20 @@ namespace Core.ApplicationContext
         public DbSet<Employee> Employee {get; set;}
         public DbSet<User> User {get; set;}
 
+        public Context()
+        {
+            Database.EnsureCreated();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-6KQLPSL;TrustServerCertificate=true;Database=KTS;User Id=DESKTOP-6KQLPSL\\Kheragacy;Integrated Security=True");
+            var configuration = new ConfigurationBuilder()
+              .AddJsonFile("dbConfig.json")
+              .Build();
+
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            optionsBuilder.UseSqlServer(connectionString);
             base.OnConfiguring(optionsBuilder);
         }
 
