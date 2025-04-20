@@ -10,7 +10,7 @@ namespace Application.Services.Common
             return new RequestDTO()
             {
                 Id = order.Id,
-                userId = order.userId,
+                userId = order.UserId,
                 EmployeeId = order.EmployeeId,
                 OrderContent = order.OrderContent,
                 OrderTypeId = order.OrdersTypeEnumId
@@ -34,9 +34,9 @@ namespace Application.Services.Common
                 Id = user.Id,
                 Name = user.Name,
                 Email = user.Email,
-                Age = user.age,
-                Password = user.password,
-                RegistrationDate = user.registrationDate
+                Age = user.Age,
+                Password = user.Password,
+                RegistrationDate = user.RegistrationDate
             };
         }
     }
