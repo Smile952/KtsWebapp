@@ -1,6 +1,9 @@
 using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
+using Interface;
+
+
 
 var cors = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);

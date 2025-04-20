@@ -9,7 +9,7 @@ namespace Application.Services.Common
             new Order() 
             { 
                 Id = dto.Id,
-                userId = dto.userId, 
+                UserId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
                 OrderContent = dto.OrderContent
@@ -22,9 +22,9 @@ namespace Application.Services.Common
                 Id = dto.Id,
                 Name = dto.Name,
                 Email = dto.Email,
-                age = dto.Age,
-                password = dto.Password,
-                registrationDate = dto.RegistrationDate
+                Age = dto.Age,
+                Password = dto.Password,
+                RegistrationDate = dto.RegistrationDate
             };
 
         }

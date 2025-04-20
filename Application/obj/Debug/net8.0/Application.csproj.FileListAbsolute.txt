@@ -74,3 +74,10 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\Application\obj\Debug\net8.0\refint\Ap
 C:\Users\Kheragacy\source\repos\KtsWebApp\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\Application\obj\Debug\net8.0\Application.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\dbConfig.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\Application\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll

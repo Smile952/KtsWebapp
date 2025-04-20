@@ -30,8 +30,8 @@ namespace Core.Repository
             var data = context.User.Find(user.Id);
             data.Name = user.Name;
             data.Email = user.Email;
-            data.password = user.password;
-            data.age = user.age;
+            data.Password = user.Password;
+            data.Age = user.Age;
             context.SaveChanges();
         }
 
