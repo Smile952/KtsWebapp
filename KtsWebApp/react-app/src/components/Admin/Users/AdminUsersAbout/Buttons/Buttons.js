@@ -6,7 +6,7 @@ export function Buttons({ type }) {
 
     const deleteClick = () => {
         try {
-            const res = fetch(`https://localhost:8080/api/${type[0]}/${type[1]}`, { method: 'DELETE' })
+            fetch(`https://localhost:8080/api/${type[0]}/${type[1]}`, { method: 'DELETE' })
             navigate("/")
         }
         catch (Exception) {

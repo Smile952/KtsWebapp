@@ -13,8 +13,13 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("employee_service")] EmployeeService service)
         {
-            return Ok(service.Read());
+            if (Request.Query["sorting"] == "desc")
+            {
+                return Ok(service.Read().OrderByDescending(x => x.Id));
+            }
+            return Ok(service.Read().OrderBy(x => x.Id));
         }
+
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("employee_service")] EmployeeService service, int id)
         {
