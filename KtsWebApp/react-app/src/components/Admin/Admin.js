@@ -1,41 +1,68 @@
-import './Admin.css'
-import React, { useEffect, useState } from 'react';
-import { AdminRequests } from './Requests/AdminRequests'
+import './Admin.css';
+import React, { useState, useEffect } from 'react';
+import { AdminRequests } from './Requests/AdminRequests';
 import { AdminEmployees } from './Employees/AdminEmployees';
 import { AdminUsers } from './Users/AdminUsers';
 import { useNavigate } from 'react-router-dom';
 
 export function Admin() {
-    const [requestsContent, setRequestsContent] = useState([]);
-    const [usersContent, setUsersContent] = useState([]);
-    const [employeesContent, setEmployeesContent] = useState([]);
+    console.log('test')
+    const [requestsContent, setRequestsContent] = useState([{
+        id: -1,
+        userId: -1,
+        employeeId: -1,
+        orderTypeId: -1,
+        orderContent: 'empty'
+    }]);
+    const [usersContent, setUsersContent] = useState([{
+        id: -1,
+        name: 'empty',
+        email: 'empty@example.com',
+        age: 0,
+        registrationDate: '1000-01-01T00:00:00Z'
+    }]);
+    const [employeesContent, setEmployeesContent] = useState([{
+        id: -1,
+        name: 'empty',
+        post: 'empty'
+    }]);
+
+    const nav = useNavigate();
 
     useEffect(() => {
-        AdminRequests().then(result => {
-            setRequestsContent(result);
-        }).catch(error => {
-            console.error('Error fetching admin requests:', error);
-        });
-        AdminEmployees().then(result => {
-            setEmployeesContent(result)
-        }).catch(error => {
-            console.error('Error fetching admin requests:', error);
-        })
-        AdminUsers().then(result => {
-            setUsersContent(result)
-        }).catch(error => {
-            console.error('Error fetching admin requests:', error);
-        })
+        // Запрос данных заявок
+        AdminRequests()
+            .then(result => setRequestsContent(result))
+            .catch(error => {
+                console.error('Error fetching admin requests:', error);
+            });
+
+        // Запрос данных сотрудников
+        AdminEmployees()
+            .then(result => setEmployeesContent(result))
+            .catch(error => {
+                console.error('Error fetching admin employees:', error);
+            });
+
+        // Запрос данных пользователей
+        AdminUsers()
+            .then(result => setUsersContent(result))
+            .catch(error => {
+                console.error('Error fetching admin users:', error);
+            });
     }, []);
 
-    const nav = useNavigate()
-
     const handler = (type, id, elem) => {
-        nav(`/admin/${type}/${id}`, { state: elem })
-    }
+        nav(`/admin/${type}/${id}`, { state: elem });
+    };
+
     const redirectToCreateField = (type) => {
-        nav(`/admin/${type}/create`)
-    }
+        nav(`/admin/${type}/create`);
+    };
+
+    console.log(usersContent)
+    console.log(employeesContent)
+    console.log(requestsContent)
 
     return (
         <div className='admin'>
@@ -94,5 +121,5 @@ export function Admin() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
