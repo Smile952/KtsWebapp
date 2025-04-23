@@ -12,14 +12,14 @@ namespace Application.Services
         {
             repository = repo;
         }
-        public void Create(RequestDTO dto)
+        public void Create(OrderDTO dto)
         {
             repository.Create(DtoToModel.ToModel(dto));
         }
 
-        public List<RequestDTO> Read()
+        public List<OrderDTO> Read()
         {
-            List<RequestDTO> requestDTOs = new List<RequestDTO>();
+            List<OrderDTO> requestDTOs = new List<OrderDTO>();
             var requests = repository.Read();
             foreach (var request in requests) 
             {
@@ -28,12 +28,12 @@ namespace Application.Services
             return requestDTOs;
         }
 
-        public RequestDTO? ReadById(int id)
+        public OrderDTO? ReadById(int id)
         {
             return ModelToDto.ToDTO(repository.ReadById(id));
         }
 
-        public void Update(RequestDTO dto)
+        public void Update(OrderDTO dto)
         {
             repository.Update(DtoToModel.ToModel(dto));
         }

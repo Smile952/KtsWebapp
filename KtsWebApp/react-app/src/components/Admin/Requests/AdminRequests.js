@@ -14,7 +14,8 @@ export async function AdminRequests() {
                 userId: -1,
                 employeeId: -1,
                 orderTypeId: -1,
-                orderContent: 'empty'
+                orderContent: 'empty',
+                OrderStatus: -1
             }];
         }
         return res;

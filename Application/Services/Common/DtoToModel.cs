@@ -5,14 +5,15 @@ namespace Application.Services.Common
 {
     class DtoToModel
     {
-        public static Order ToModel(RequestDTO dto) => 
+        public static Order ToModel(OrderDTO dto) => 
             new Order() 
             { 
                 Id = dto.Id,
                 UserId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
-                OrderContent = dto.OrderContent
+                OrderContent = dto.OrderContent,
+                OrderStatusId = dto.OrderStatusId
             };
 
         public static User ToModel(UserDTO dto)

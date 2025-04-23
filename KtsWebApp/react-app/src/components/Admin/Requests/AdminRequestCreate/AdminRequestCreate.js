@@ -55,6 +55,9 @@ export function AdminRequestCreate() {
                 <div className='mb-3'>
                     <input className='create-block-data form-control' type='text' name='OrderContent' placeholder='Текст заказа'></input>
                 </div>
+                <div className='mb-3'>
+                    <input type='hidden' className='create-block-data form-control' name='OrderStatus' value={"1"}></input>
+                </div>
                 <div>
                     <input className='create-button' type='submit' value="Create"></input>
                 </div>

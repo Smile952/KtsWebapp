@@ -52,10 +52,10 @@ export function AdminUserCreate() {
                     <input className='create-block-data form-control' type='text' name='Email' placeholder='Email'></input>
                 </div>
                 <div className='mb-3'>
-                    <input className='create-block-data form-control' type='number' name='Age' step="1" min="1" max="100" value="10" id="age"></input>
+                    <input className='create-block-data form-control' type='number' name='Age' placeholder='Age' step="1" min="1" max="100" id="age"></input>
                 </div>
                 <div className='mb-3'>
-                    <input className='create-block-data form-control' type='date' name='RegistrationDate' value="2025-01-01"></input>
+                    <input className='create-block-data form-control' type='date' name='RegistrationDate'></input>
                 </div>
                 <div>
                     <input className='create-button' type='submit' value="Create"></input>

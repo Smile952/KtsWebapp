@@ -79,22 +79,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Interface.Controllers.MainController",
-    "Method": "RequestHandler",
-    "RelativePath": "api/Main/request",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "input",
-        "Type": "Interface.Controllers.MainController\u002BRequestInput",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Interface.Controllers.OrdersController",
     "Method": "Get",
     "RelativePath": "api/Orders",
