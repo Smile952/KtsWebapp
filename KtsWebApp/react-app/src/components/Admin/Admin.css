@@ -1,19 +1,18 @@
 .admin {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 2vh;
     background-color: #F5F7FA;
-    min-height: 100vh;
+    height: 90vh;
 }
 
 .admin-content {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
     gap: 2vw;
-    padding: 1vw;
     border-radius: 16px;
-    height: calc(100vh - 4rem - 2vh);
+    height: calc(80vh - 4rem - 2vh);
     align-items: stretch;
 }
 
@@ -21,12 +20,13 @@
     margin: 0 1vw 0 1vw;
     border: none;
     border-radius: 16px;
-    height: 78.4vh;
+    height: 30vh;
     background-color: #FFFFFF;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .admin-title {
@@ -46,7 +46,6 @@
     text-align: center;
     justify-self: center;
     line-height: 5vh;
-    margin-top: 1vh;
 }
 
 .admin-button-create {
@@ -71,7 +70,7 @@
 .admin-content-block {
     width: 100%;
     padding: 0 0.5vw 0 0.5vw;
-    height: 70vh;
+    height: 30vh;
     background-color: #F9FAFB;
     border: none;
     overflow-y: auto;

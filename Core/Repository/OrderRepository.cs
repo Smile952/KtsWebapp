@@ -30,6 +30,7 @@ namespace Core.Repository
             var data = context.Order.Find(order.Id);
             data.OrdersTypeEnumId = order.OrdersTypeEnumId;
             data.OrderContent = order.OrderContent;
+            data.OrderStatusId = order.OrderStatusId;
             context.SaveChanges();
         }
         public void Delete(int id)

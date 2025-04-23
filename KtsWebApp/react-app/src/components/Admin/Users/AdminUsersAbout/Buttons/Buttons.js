@@ -42,7 +42,6 @@ export function Buttons({ type }) {
             .catch((error) => {
                 console.error('Error:', error);
             });
-
     }
 
     return (
@@ -72,7 +71,11 @@ export function Buttons({ type }) {
                         <input className='update-block-data form-control' type='number' name='Age' step="1" min="1" max="100" value="10" id="age"></input>
                     </div>
                     <div className='mb-3'>
-                        <input className='update-block-data form-control' type='date' name='RegistrationDate' value="2025-01-01"></input>
+                        <input
+                            className='update-block-data form-control'
+                            type='date'
+                            name='RegistrationDate'
+                        />
                     </div>
 
                 </form>

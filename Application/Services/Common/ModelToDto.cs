@@ -5,15 +5,16 @@ namespace Application.Services.Common
 {
     class ModelToDto
     {
-        public static RequestDTO ToDTO(Order order)
+        public static OrderDTO ToDTO(Order order)
         {
-            return new RequestDTO()
+            return new OrderDTO()
             {
                 Id = order.Id,
                 userId = order.UserId,
                 EmployeeId = order.EmployeeId,
                 OrderContent = order.OrderContent,
-                OrderTypeId = order.OrdersTypeEnumId
+                OrderTypeId = order.OrdersTypeEnumId,
+                OrderStatusId = order.OrdersTypeEnumId
             };
         }
 
