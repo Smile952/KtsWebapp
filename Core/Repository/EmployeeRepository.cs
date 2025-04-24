@@ -35,7 +35,7 @@ namespace Core.Repository
         }
         public void Delete(int id)
         {
-            Employee employee = context.Employee.Find(id);
+            Employee? employee = context.Employee.Find(id);
             context.Employee.Remove(employee);
             context.SaveChanges();
         }

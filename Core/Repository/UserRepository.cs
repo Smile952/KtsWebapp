@@ -37,7 +37,7 @@ namespace Core.Repository
 
         public void Delete(int id)
         {
-            User user = context.User.Find(id);
+            User? user = context.User.Find(id);
             context.User.Remove(user);
             context.SaveChanges();
         }

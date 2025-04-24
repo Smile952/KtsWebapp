@@ -35,7 +35,7 @@ namespace Core.Repository
         }
         public void Delete(int id)
         {
-            Order order = context.Order.Find(id);
+            Order? order = context.Order.Find(id);
             context.Order.Remove(order);
             context.SaveChanges();
         }
