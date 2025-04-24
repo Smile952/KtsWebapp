@@ -22,5 +22,6 @@ namespace Core.Models
         public Employee? Employee { get; set; }
         public OrdersTypeEnum? OrdersTypeEnum { get; set; }
         public OrderStatus? OrderStatus { get; set; }
+        public List<Service>? Services { get; set; }
     }
 }
