@@ -8,5 +8,7 @@
         public int OrderTypeId { get; set; }
         public string OrderContent { get; set; } = string.Empty;
         public int OrderStatusId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public int ServiceId { get; set; }
     }
 }

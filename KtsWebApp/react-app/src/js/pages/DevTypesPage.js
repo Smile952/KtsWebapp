@@ -1,12 +1,12 @@
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
-import { Blocks } from "../../components/Blocks/Blocks"
+import { Services } from "../../components/Services/Services"
 
 export function DevTypesPage() {
     return (
         <div>
             <Header text={["КТС-Возможности", "Главная", "Портфолио", "Контакты", "Профиль"]} />
-            <Blocks />
+            <Services />
             <Footer />
         </div>
     )

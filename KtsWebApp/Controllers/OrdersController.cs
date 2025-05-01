@@ -15,11 +15,16 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService service)
         {
-            if (Request.Query["sorting"] == "desc")
+            var orders = service.Read();
+            if (Request.Query["status"] != "" && Int32.TryParse(Request.Query["status"], out int orderStatus))
             {
-                return Ok(service.Read().OrderByDescending(x => x.Id));
+                orders = orders.Where(x => x.OrderStatusId == orderStatus).ToList();
             }
-            return Ok(service.Read().OrderBy(x => x.Id));
+            if (Request.Query["type"] != "" && Int32.TryParse(Request.Query["type"], out int type))
+            {
+                orders = orders.Where(x => x.OrderTypeId == type).ToList();
+            }
+            return Ok(orders);
         }
 
         [HttpGet("{id}")]

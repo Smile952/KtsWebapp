@@ -30,7 +30,5 @@ export async function AdminEmployees() {
             name: 'empty',
             post: 'empty'
         }]
-    } finally {
-        console.log("Trying to find exit");
     }
 }
