@@ -12,9 +12,10 @@ namespace Application.Services.Common
                 Id = order.Id,
                 userId = order.UserId,
                 EmployeeId = order.EmployeeId,
-                OrderContent = order.OrderContent,
                 OrderTypeId = order.OrdersTypeEnumId,
-                OrderStatusId = order.OrdersTypeEnumId
+                OrderStatusId = order.OrdersTypeEnumId,
+                OrderDate = order.OrderDate,
+                ServiceId = order.ServiceId
             };
         }
 

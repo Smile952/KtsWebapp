@@ -6,7 +6,7 @@ export async function AdminRequests() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const res = await response.json();
+        var res = await response.json();
 
         if (!Array.isArray(res) || res.length === 0) {
             res = [{
@@ -35,7 +35,5 @@ export async function AdminRequests() {
             orderTypeId: -1,
             orderContent: 'empty'
         }];
-    } finally {
-        console.log("Trying to find exit");
     }
 }

@@ -101,3 +101,4 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\p
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\public\manifest.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\dbConfig.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\react-app\build\manifest.json

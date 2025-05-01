@@ -12,11 +12,8 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("user_service")] UserService service)
         {
-            if (Request.Query["sorting"] == "desc")
-            {
-                return Ok(service.Read().OrderByDescending(x => x.Id));
-            }
-            return Ok(service.Read().OrderBy(x => x.Id));
+            
+            return Ok(service.Read());
         }
 
         [HttpGet("{id}")]

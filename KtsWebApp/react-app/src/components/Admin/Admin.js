@@ -4,28 +4,45 @@ import { AdminRequests } from './Requests/AdminRequests';
 import { AdminEmployees } from './Employees/AdminEmployees';
 import { AdminUsers } from './Users/AdminUsers';
 import { useNavigate } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 export function Admin() {
-    console.log('test')
-    const [requestsContent, setRequestsContent] = useState([{
-        id: -1,
-        userId: -1,
-        employeeId: -1,
-        orderTypeId: -1,
-        orderContent: 'empty'
-    }]);
-    const [usersContent, setUsersContent] = useState([{
-        id: -1,
-        name: 'empty',
-        email: 'empty@example.com',
-        age: 0,
-        registrationDate: '1000-01-01T00:00:00Z'
-    }]);
-    const [employeesContent, setEmployeesContent] = useState([{
-        id: -1,
-        name: 'empty',
-        post: 'empty'
-    }]);
+    const [requestsContent, setRequestsContent] = useState([]);
+    const [usersContent, setUsersContent] = useState([]);
+    const [employeesContent, setEmployeesContent] = useState([]);
+    const [sortDirection, setSortDirection] = useState();
+    const [open, setOpen] = React.useState(false);
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpen(newOpen);
+    };
+
+
+    const DrawerList = (
+        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+            <List>
+                {['Inbox', 'Starred'].map((text, index) => (
+                    <ListItem key={text} disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    );
 
     const nav = useNavigate();
 
@@ -52,6 +69,7 @@ export function Admin() {
             });
     }, []);
 
+
     const handler = (type, id, elem) => {
         nav(`/admin/${type}/${id}`, { state: elem });
     };
@@ -59,10 +77,18 @@ export function Admin() {
     const redirectToCreateField = (type) => {
         nav(`/admin/${type}/create`);
     };
-
-    console.log(usersContent)
-    console.log(employeesContent)
-    console.log(requestsContent)
+    const requestSort = () => {
+        setRequestsContent([...requestsContent].sort((a, b) => sortDirection === 1 ? b.id - a.id : a.id - b.id))
+        setSortDirection(sortDirection === 1 ? 0 : 1)
+    }
+    const usersSort = () => {
+        setUsersContent([...usersContent].sort((a, b) => sortDirection === 1 ? b.id - a.id : a.id - b.id))
+        setSortDirection(sortDirection === 1 ? 0 : 1)
+    }
+    const employeesSort = () => {
+        setEmployeesContent([...employeesContent].sort((a, b) => sortDirection === 1 ? b.id - a.id : a.id - b.id))
+        setSortDirection(sortDirection === 1 ? 0 : 1)
+    }
 
     return (
         <div className='admin'>
@@ -70,8 +96,14 @@ export function Admin() {
                 {/* Колонка 1: Заявки */}
                 <div className='admin-content-lists'>
                     <div className="admin-title">
-                        <h5 className="admin-title-text">Заявки</h5>
-                        <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                        <div className='admin-title-content'>
+                            <h5 className="admin-title-text">Заявки</h5>
+                            <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                        </div>
+                        <div className='admin-button-display'>
+                            <div className='admin-button-display sort' onClick={requestSort}>sort</div>
+
+                        </div>
                     </div>
                     <div className="admin-content-block">
                         {requestsContent.map((request, index) => (
@@ -87,8 +119,13 @@ export function Admin() {
                 {/* Колонка 2: Пользователи */}
                 <div className='admin-content-lists'>
                     <div className="admin-title">
-                        <h5 className="admin-title-text">Пользователи</h5>
-                        <div className='admin-button-create' onClick={() => redirectToCreateField('user')} title="Создать пользователя">+</div>
+                        <div className='admin-title-content'>
+                            <h5 className="admin-title-text">Заявки</h5>
+                            <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                        </div>
+                        <div className='admin-button-display'>
+                            <button className='admin-button-display sort' onClick={usersSort}>sort</button>
+                        </div>
                     </div>
                     <div className="admin-content-block">
                         {usersContent.map((user, index) => (
@@ -106,8 +143,14 @@ export function Admin() {
                 {/* Колонка 3: Сотрудники */}
                 <div className='admin-content-lists'>
                     <div className="admin-title">
-                        <h5 className="admin-title-text">Сотрудники</h5>
-                        <div className='admin-button-create' onClick={() => redirectToCreateField('employee')} title='Создать сотрудника'>+</div>
+                        <div className='admin-title-content'>
+                            <h5 className="admin-title-text">Заявки</h5>
+                            <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                        </div>
+                        <div className='admin-button-display'>
+                            <button className='admin-button-display sort' onClick={employeesSort}>sort</button>
+
+                        </div>
                     </div>
                     <div className="admin-content-block">
                         {employeesContent.map((emp, index) => (
