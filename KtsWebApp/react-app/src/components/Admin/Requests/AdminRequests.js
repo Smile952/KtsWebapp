@@ -34,8 +34,13 @@ export async function AdminRequests() {
             employeeId: -1,
             orderTypeId: -1,
             orderContent: 'empty'
+        },
+        {
+            id: -2,
+            userId: -2,
+            employeeId: -2,
+            orderTypeId: -2,
+            orderContent: 'empty2'
         }];
-    } finally {
-        console.log("Trying to find exit");
     }
 }

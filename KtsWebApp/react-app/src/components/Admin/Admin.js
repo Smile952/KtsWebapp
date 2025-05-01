@@ -7,25 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 export function Admin() {
     console.log('test')
-    const [requestsContent, setRequestsContent] = useState([{
-        id: -1,
-        userId: -1,
-        employeeId: -1,
-        orderTypeId: -1,
-        orderContent: 'empty'
-    }]);
-    const [usersContent, setUsersContent] = useState([{
-        id: -1,
-        name: 'empty',
-        email: 'empty@example.com',
-        age: 0,
-        registrationDate: '1000-01-01T00:00:00Z'
-    }]);
-    const [employeesContent, setEmployeesContent] = useState([{
-        id: -1,
-        name: 'empty',
-        post: 'empty'
-    }]);
+    const [requestsContent, setRequestsContent] = useState([]);
+    const [usersContent, setUsersContent] = useState([]);
+    const [employeesContent, setEmployeesContent] = useState([]);
 
     const nav = useNavigate();
 
@@ -63,6 +47,9 @@ export function Admin() {
     console.log(usersContent)
     console.log(employeesContent)
     console.log(requestsContent)
+
+    
+
 
     return (
         <div className='admin'>
