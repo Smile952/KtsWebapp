@@ -17,12 +17,9 @@ namespace Core.Models
         [Required]
         public int OrdersTypeEnumId { get; set; }
         public int OrderStatusId { get; set; }
-        public int ServiceId { get; set; }
-        public DateTime OrderDate { get; set; }
         public User? User { get; set; }
         public Employee? Employee { get; set; }
         public OrdersTypeEnum? OrdersTypeEnum { get; set; }
         public OrderStatus? OrderStatus { get; set; }
-        public List<Service>? Services { get; set; }
     }
 }

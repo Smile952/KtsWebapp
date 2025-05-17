@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import './Blocks.css'
+import './Services.css'
 
-export function Blocks() {
+export function Services() {
     const blocks = [
         { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
         { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },

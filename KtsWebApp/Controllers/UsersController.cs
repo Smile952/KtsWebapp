@@ -34,9 +34,9 @@ namespace Interface.Controllers
         }
 
         [HttpPost()]
-        public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, int id)
+        public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
         {
-
+            Console.WriteLine("starting creating user");
             if (!model.IsAllData())
             {
                 return BadRequest("User is empty");

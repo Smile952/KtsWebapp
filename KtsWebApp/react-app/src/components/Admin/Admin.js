@@ -4,58 +4,22 @@ import { AdminRequests } from './Requests/AdminRequests';
 import { AdminEmployees } from './Employees/AdminEmployees';
 import { AdminUsers } from './Users/AdminUsers';
 import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import {TemporaryDrawer} from './TemporaryDrawer'
+import { useSearchParams } from 'react-router-dom';
 
 export function Admin() {
-<<<<<<< HEAD
-    console.log('test')
-    const [requestsContent, setRequestsContent] = useState([]);
-    const [usersContent, setUsersContent] = useState([]);
-    const [employeesContent, setEmployeesContent] = useState([]);
-=======
     const [requestsContent, setRequestsContent] = useState([]);
     const [usersContent, setUsersContent] = useState([]);
     const [employeesContent, setEmployeesContent] = useState([]);
     const [sortDirection, setSortDirection] = useState();
-    const [open, setOpen] = React.useState(false);
-
-    const toggleDrawer = (newOpen) => () => {
-        setOpen(newOpen);
-    };
-
-
-    const DrawerList = (
-        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-            <List>
-                {['Inbox', 'Starred'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
-    );
->>>>>>> 8ffe34525354c0aecc128f69f681bf03fbaeb7ef
+    const [searchParams, setSearchParams] = useSearchParams()
 
     const nav = useNavigate();
 
     useEffect(() => {
+        console.log(searchParams.get('status'))
         // Запрос данных заявок
-        AdminRequests()
+        AdminRequests({type: searchParams.get('type'), status: searchParams.get('status')})
             .then(result => setRequestsContent(result))
             .catch(error => {
                 console.error('Error fetching admin requests:', error);
@@ -74,7 +38,7 @@ export function Admin() {
             .catch(error => {
                 console.error('Error fetching admin users:', error);
             });
-    }, []);
+    }, [searchParams]);
 
 
     const handler = (type, id, elem) => {
@@ -97,9 +61,6 @@ export function Admin() {
         setSortDirection(sortDirection === 1 ? 0 : 1)
     }
 
-    
-
-
     return (
         <div className='admin'>
             <div className='admin-content'>
@@ -112,7 +73,7 @@ export function Admin() {
                         </div>
                         <div className='admin-button-display'>
                             <div className='admin-button-display sort' onClick={requestSort}>sort</div>
-
+                            <TemporaryDrawer/>
                         </div>
                     </div>
                     <div className="admin-content-block">
@@ -130,8 +91,8 @@ export function Admin() {
                 <div className='admin-content-lists'>
                     <div className="admin-title">
                         <div className='admin-title-content'>
-                            <h5 className="admin-title-text">Заявки</h5>
-                            <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                            <h5 className="admin-title-text">Пользователи</h5>
+                            <div className='admin-button-create' onClick={() => redirectToCreateField('user')} title='Создать заявку'>+</div>
                         </div>
                         <div className='admin-button-display'>
                             <button className='admin-button-display sort' onClick={usersSort}>sort</button>
@@ -154,8 +115,8 @@ export function Admin() {
                 <div className='admin-content-lists'>
                     <div className="admin-title">
                         <div className='admin-title-content'>
-                            <h5 className="admin-title-text">Заявки</h5>
-                            <div className='admin-button-create' onClick={() => redirectToCreateField('order')} title='Создать заявку'>+</div>
+                            <h5 className="admin-title-text">Сотрудники</h5>
+                            <div className='admin-button-create' onClick={() => redirectToCreateField('employee')} title='Создать заявку'>+</div>
                         </div>
                         <div className='admin-button-display'>
                             <button className='admin-button-display sort' onClick={employeesSort}>sort</button>

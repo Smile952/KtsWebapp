@@ -11,7 +11,6 @@ namespace Core.ApplicationContext
         public DbSet<Employee> Employee {get; set;}
         public DbSet<User> User {get; set;}
         public DbSet<OrderStatus> OrderStatus { get; set; }
-        public DbSet<Service> Services {get; set;}
 
         public Context()
         {
@@ -57,13 +56,6 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<OrderStatus>()
                             .HasKey(x => x.Id);
            
-            //Услуги
-            modelBuilder.Entity<Service>()
-                            .HasKey(x => x.Id);
-            modelBuilder.Entity<Service>()
-                           .HasMany(x => x.Orders)
-                           .WithMany(x => x.Services);
-
             //Заказы
             modelBuilder.Entity<Order>()
                             .HasKey(x => x.Id);
@@ -78,9 +70,6 @@ namespace Core.ApplicationContext
                             .WithMany(x => x.Orders);
             modelBuilder.Entity<Order>()
                             .HasOne(x => x.OrderStatus)
-                            .WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>()
-                            .HasMany(x => x.Services)
                             .WithMany(x => x.Orders);
 
             //Статусы

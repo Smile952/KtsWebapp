@@ -17,9 +17,8 @@ namespace Core.Repository
             context.SaveChanges();
         }
 
-        public IEnumerable<Order> Read()
+        public List<Order> Read()
         {
-            context.SaveChanges();
             return context.Order.ToList();
         }
         public Order? ReadById(int id)
@@ -31,8 +30,6 @@ namespace Core.Repository
             var data = context.Order.Find(order.Id);
             data.OrdersTypeEnumId = order.OrdersTypeEnumId;
             data.OrderStatusId = order.OrderStatusId;
-            data.OrderDate = order.OrderDate;
-            data.ServiceId = order.ServiceId;
             context.SaveChanges();
         }
         public void Delete(int id)

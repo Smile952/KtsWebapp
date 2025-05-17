@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom'
-import './Block.css'
+import './Service.css'
 
-export function Block() {
+export function Service() {
     const { state } = useLocation();
 
     return (

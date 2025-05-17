@@ -13,9 +13,7 @@ namespace Application.Services.Common
                 userId = order.UserId,
                 EmployeeId = order.EmployeeId,
                 OrderTypeId = order.OrdersTypeEnumId,
-                OrderStatusId = order.OrdersTypeEnumId,
-                OrderDate = order.OrderDate,
-                ServiceId = order.ServiceId
+                OrderStatusId = order.OrdersTypeEnumId
             };
         }
 

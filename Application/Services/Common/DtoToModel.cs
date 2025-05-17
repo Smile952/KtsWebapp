@@ -12,9 +12,7 @@ namespace Application.Services.Common
                 UserId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
-                OrderStatusId = dto.OrderStatusId,
-                OrderDate = dto.OrderDate,
-                ServiceId = dto.ServiceId
+                OrderStatusId = dto.OrderStatusId
             };
 
         public static User ToModel(UserDTO dto)
