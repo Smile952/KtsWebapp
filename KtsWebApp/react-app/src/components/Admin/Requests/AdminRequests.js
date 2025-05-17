@@ -14,7 +14,6 @@ export async function AdminRequests({type, status}) {
                 addr += `status=${status}`
             }
         }
-        console.log(addr)
         const response = await fetch(addr);
 
         if (!response.ok) {

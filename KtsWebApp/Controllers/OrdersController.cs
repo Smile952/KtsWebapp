@@ -51,14 +51,19 @@ namespace Interface.Controllers
             {
                 return BadRequest("User is empty");
             }
-            service.Create(new OrderDTO()
+
+            OrderDTO dto = new OrderDTO()
             {
-                userId = model.UserId,
-                EmployeeId = model.EmployeeId,
-                OrderTypeId = model.OrderTypeId,
+                userId = Int32.Parse(model.UserId),
+                EmployeeId = Int32.Parse(model.EmployeeId),
+                OrderTypeId = Int32.Parse(model.OrderTypeId),
                 OrderContent = model.OrderContent,
                 OrderStatusId = 1
-            });
+            };
+
+            Console.WriteLine(dto.OrderContent);
+
+            service.Create(dto);
 
             return Ok(new { message = "User creating status: success" });
         }

@@ -4,15 +4,15 @@ namespace Interface.Models
 {
     public class OrderModel
     {
-        public int UserId { get; set; }
-        public int EmployeeId { get; set; }
-        public int OrderTypeId { get; set; }
+        public string UserId { get; set; } = string.Empty;
+        public string EmployeeId { get; set; } = string.Empty;
+        public string OrderTypeId { get; set; } = string.Empty;
         public string OrderContent { get; set; } = string.Empty;
-        public int OrderStatusId { get; set; }
+        public string OrderStatusId { get; set; } = string.Empty;
 
         public bool IsAllData()
         {
-            if (UserId >= 0 && EmployeeId >= 0 && OrderTypeId >= 0 && OrderContent != null && OrderStatusId >= 0)
+            if (UserId != null && EmployeeId != null && OrderTypeId != null && OrderContent != null && OrderStatusId != null)
             {
                 return true;
             }
@@ -20,7 +20,7 @@ namespace Interface.Models
         }
         public bool IsPartialData()
         {
-            if (UserId >= 0 || EmployeeId >= 0 || OrderTypeId >= 0 || OrderContent != null || OrderStatusId >= 0)
+            if (UserId != null || EmployeeId != null || OrderTypeId != null || OrderContent != null || OrderStatusId != null)
             {
                 return true;
             }
@@ -29,11 +29,11 @@ namespace Interface.Models
 
         public OrderDTO SetRequestData(OrderDTO request)
         {
-            if (UserId >= 0) request.userId = UserId;
-            if (EmployeeId >= 0) request.EmployeeId = EmployeeId;
-            if (OrderTypeId >= 0) request.OrderTypeId = OrderTypeId;
+            if (UserId != null) request.userId = Int32.Parse(UserId);
+            if (EmployeeId != null) request.EmployeeId = Int32.Parse(EmployeeId);
+            if (OrderTypeId != null) request.OrderTypeId = Int32.Parse(OrderTypeId);
             if (OrderContent != null) request.OrderContent = OrderContent;
-            if(OrderStatusId >= 0) request.OrderStatusId = OrderStatusId;
+            if (OrderStatusId != null) request.OrderStatusId = Int32.Parse(OrderStatusId);
 
             return request;
         }

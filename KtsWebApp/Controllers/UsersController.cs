@@ -33,10 +33,9 @@ namespace Interface.Controllers
             return Ok(res);
         }
 
-        [HttpPost()]
+        [HttpPost]
         public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
         {
-            Console.WriteLine("starting creating user");
             if (!model.IsAllData())
             {
                 return BadRequest("User is empty");
@@ -45,7 +44,7 @@ namespace Interface.Controllers
             {
                 Name = model.Name,
                 Email = model.Email,
-                Age = model.Age,
+                Age = Int32.Parse(model.Age),
                 RegistrationDate = model.RegistrationDate
             });
 
