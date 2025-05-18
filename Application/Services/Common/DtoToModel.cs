@@ -12,7 +12,6 @@ namespace Application.Services.Common
                 UserId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
-                OrderContent = dto.OrderContent,
                 OrderStatusId = dto.OrderStatusId
             };
 

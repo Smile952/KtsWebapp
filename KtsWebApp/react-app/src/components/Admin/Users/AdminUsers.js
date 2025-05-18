@@ -6,7 +6,7 @@ export async function AdminUsers() {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const res = await response.json()
+        var res = await response.json()
 
         if (!Array.isArray(res) || res.length === 0) {
             res = [{
@@ -34,7 +34,5 @@ export async function AdminUsers() {
             age: 0,
             registrationDate: '1000-01-01T00:00:00Z'
         }]
-    } finally {
-        console.log("Trying to fix it")
     }
 }

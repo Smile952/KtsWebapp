@@ -17,7 +17,7 @@ namespace Core.Repository
             context.SaveChanges();
         }
 
-        public IEnumerable<Order> Read()
+        public List<Order> Read()
         {
             return context.Order.ToList();
         }
@@ -29,7 +29,6 @@ namespace Core.Repository
         {
             var data = context.Order.Find(order.Id);
             data.OrdersTypeEnumId = order.OrdersTypeEnumId;
-            data.OrderContent = order.OrderContent;
             data.OrderStatusId = order.OrderStatusId;
             context.SaveChanges();
         }

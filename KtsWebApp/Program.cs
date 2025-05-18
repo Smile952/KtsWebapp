@@ -1,45 +1,51 @@
 using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
-using Interface;
+using System.IO;
+using Microsoft.AspNetCore.Hosting; 
 
+using Microsoft.AspNetCore.Builder;
 
-
-var cors = "_myAllowSpecificOrigins";
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddCors(options =>
+internal class Program
 {
-    options.AddPolicy(name: cors,
-        policy =>
+    private static void Main(string[] args)
+    {
+        var cors = "_myAllowSpecificOrigins";
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddCors(options =>
         {
-            policy.WithOrigins("http://localhost:3000")
-                .AllowAnyHeader()
-                .AllowAnyMethod();
+            options.AddPolicy(name: cors,
+                policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
         });
-});
 
-builder.Services.AddScoped<Context>();
+        builder.Services.AddScoped<Context>();
 
-builder.Services.AddScoped<OrderRepository>();
-builder.Services.AddKeyedScoped<OrderService>("order_service");
+        builder.Services.AddScoped<OrderRepository>();
+        builder.Services.AddKeyedScoped<OrderService>("order_service");
 
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddKeyedScoped<UserService>("user_service");
+        builder.Services.AddScoped<UserRepository>();
+        builder.Services.AddKeyedScoped<UserService>("user_service");
 
-builder.Services.AddScoped<EmployeeRepository>();
-builder.Services.AddKeyedScoped<EmployeeService>("employee_service");
+        builder.Services.AddScoped<EmployeeRepository>();
+        builder.Services.AddKeyedScoped<EmployeeService>("employee_service");
 
-builder.Services.AddControllers();
+        builder.Services.AddControllers();
 
-var app = builder.Build();
+        var app = builder.Build();
 
-app.UseRouting(); 
-app.UseCors(cors); 
-app.UseStaticFiles();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers(); 
-});
+        app.UseRouting();
+        app.UseCors(cors);
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
 
-app.Run();
+        app.Run();
+    }
+}

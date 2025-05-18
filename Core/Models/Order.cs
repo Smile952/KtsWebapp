@@ -16,12 +16,10 @@ namespace Core.Models
         public int EmployeeId { get; set; }
         [Required]
         public int OrdersTypeEnumId { get; set; }
-        public string OrderContent { get; set; } = string.Empty;
         public int OrderStatusId { get; set; }
         public User? User { get; set; }
         public Employee? Employee { get; set; }
         public OrdersTypeEnum? OrdersTypeEnum { get; set; }
         public OrderStatus? OrderStatus { get; set; }
-        public List<Service>? Services { get; set; }
     }
 }

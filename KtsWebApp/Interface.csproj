@@ -4,11 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseStaticWebAssets>false</UseStaticWebAssets>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="react-app\src\index.css" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />

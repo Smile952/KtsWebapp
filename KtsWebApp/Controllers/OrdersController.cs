@@ -15,11 +15,16 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService service)
         {
-            if (Request.Query["sorting"] == "desc")
+            var orders = service.Read();
+            if (Request.Query["status"] != "" && Int32.TryParse(Request.Query["status"], out int orderStatus))
             {
-                return Ok(service.Read().OrderByDescending(x => x.Id));
+                orders = orders.Where(x => x.OrderStatusId == orderStatus).ToList();
             }
-            return Ok(service.Read().OrderBy(x => x.Id));
+            if (Request.Query["type"] != "" && Int32.TryParse(Request.Query["type"], out int type))
+            {
+                orders = orders.Where(x => x.OrderTypeId == type).ToList();
+            }
+            return Ok(orders);
         }
 
         [HttpGet("{id}")]
@@ -46,14 +51,19 @@ namespace Interface.Controllers
             {
                 return BadRequest("User is empty");
             }
-            service.Create(new OrderDTO()
+
+            OrderDTO dto = new OrderDTO()
             {
-                userId = model.UserId,
-                EmployeeId = model.EmployeeId,
-                OrderTypeId = model.OrderTypeId,
+                userId = Int32.Parse(model.UserId),
+                EmployeeId = Int32.Parse(model.EmployeeId),
+                OrderTypeId = Int32.Parse(model.OrderTypeId),
                 OrderContent = model.OrderContent,
                 OrderStatusId = 1
-            });
+            };
+
+            Console.WriteLine(dto.OrderContent);
+
+            service.Create(dto);
 
             return Ok(new { message = "User creating status: success" });
         }

@@ -12,11 +12,8 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("user_service")] UserService service)
         {
-            if (Request.Query["sorting"] == "desc")
-            {
-                return Ok(service.Read().OrderByDescending(x => x.Id));
-            }
-            return Ok(service.Read().OrderBy(x => x.Id));
+            
+            return Ok(service.Read());
         }
 
         [HttpGet("{id}")]
@@ -36,10 +33,9 @@ namespace Interface.Controllers
             return Ok(res);
         }
 
-        [HttpPost()]
-        public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, int id)
+        [HttpPost]
+        public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
         {
-
             if (!model.IsAllData())
             {
                 return BadRequest("User is empty");
@@ -48,7 +44,7 @@ namespace Interface.Controllers
             {
                 Name = model.Name,
                 Email = model.Email,
-                Age = model.Age,
+                Age = Int32.Parse(model.Age),
                 RegistrationDate = model.RegistrationDate
             });
 
