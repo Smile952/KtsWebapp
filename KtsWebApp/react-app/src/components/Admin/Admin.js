@@ -1,11 +1,12 @@
 import './Admin.css';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AdminRequests } from './Requests/AdminRequests';
 import { AdminEmployees } from './Employees/AdminEmployees';
 import { AdminUsers } from './Users/AdminUsers';
 import { useNavigate } from 'react-router-dom';
-import {TemporaryDrawer} from './TemporaryDrawer'
+import { TemporaryDrawer } from './TemporaryDrawer'
 import { useSearchParams } from 'react-router-dom';
+
 
 export function Admin() {
     const [requestsContent, setRequestsContent] = useState([]);
@@ -19,7 +20,7 @@ export function Admin() {
     useEffect(() => {
         console.log(searchParams.get('status'))
         // Запрос данных заявок
-        AdminRequests({type: searchParams.get('type'), status: searchParams.get('status')})
+        AdminRequests({ type: searchParams.get('type'), status: searchParams.get('status') })
             .then(result => setRequestsContent(result))
             .catch(error => {
                 console.error('Error fetching admin requests:', error);
@@ -73,7 +74,7 @@ export function Admin() {
                         </div>
                         <div className='admin-button-display'>
                             <div className='admin-button-display sort' onClick={requestSort}>sort</div>
-                            <TemporaryDrawer/>
+                            <TemporaryDrawer />
                         </div>
                     </div>
                     <div className="admin-content-block">
@@ -104,7 +105,6 @@ export function Admin() {
                                 <span>Имя: {user.name}</span>
                                 <span>Email: {user.email}</span>
                                 <span>Возраст: {user.age}</span>
-                                <span>Пароль: <span className="password">[скрыто]</span></span>
                                 <span>Дата регистрации: {new Date(user.registrationDate).toLocaleDateString()}</span>
                             </div>
                         ))}

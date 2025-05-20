@@ -6,11 +6,29 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseStaticWebAssets>false</UseStaticWebAssets>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+
+  <Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
+    <ReadLinesFromFile File="version.txt">
+      <Output TaskParameter="Lines" PropertyName="MyVersion" />
+    </ReadLinesFromFile>
+
+    <PropertyGroup>
+      <AssemblyVersion>$(MyVersion)</AssemblyVersion>
+      <FileVersion>$(MyVersion)</FileVersion>
+      <Version>$(MyVersion)</Version>
+    </PropertyGroup>
+  </Target>
+
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

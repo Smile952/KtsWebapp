@@ -2,9 +2,15 @@ import { useNavigate } from 'react-router-dom'
 import { Footer } from '../../../Footer/Footer'
 import { Header } from '../../../Header/Header'
 import './AdminUserCreate.css'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { useState } from 'react';
+
 
 export function AdminUserCreate() {
     const navigate = useNavigate()
+    const { date, setDate } = useState()
     const updateClick = (event) => {
         event.preventDefault();
 
@@ -55,7 +61,18 @@ export function AdminUserCreate() {
                     <input className='create-block-data form-control' type='number' name='Age' placeholder='Age' step="1" min="1" max="100" id="age"></input>
                 </div>
                 <div className='mb-3'>
-                    <input className='create-block-data form-control' type='date' name='RegistrationDate'></input>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DatePicker
+                            label="Helper text example"
+                            slotProps={{
+                                textField: {
+                                    helperText: 'MM/DD/YYYY',
+                                },
+                            }}
+                            onChange={setDate}
+                            name='RegistrationDate'
+                        />
+                    </LocalizationProvider>
                 </div>
                 <div>
                     <input className='create-button' type='submit' value="Create"></input>

@@ -5,8 +5,19 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+  <Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
+    <ReadLinesFromFile File="version.txt">
+      <Output TaskParameter="Lines" PropertyName="MyVersion" />
+    </ReadLinesFromFile>
 
+    <PropertyGroup>
+      <AssemblyVersion>$(MyVersion)</AssemblyVersion>
+      <FileVersion>$(MyVersion)</FileVersion>
+      <Version>$(MyVersion)</Version>
+    </PropertyGroup>
+  </Target>
   <ItemGroup>
     <Content Include="dbConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

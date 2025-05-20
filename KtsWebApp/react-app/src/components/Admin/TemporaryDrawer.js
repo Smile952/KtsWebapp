@@ -21,8 +21,8 @@ export function TemporaryDrawer() {
     setOpen(newOpen);
   };
   const [formData, setFormData] = useState({
-    type:"",
-    status:''
+    type: "",
+    status: ''
   });
 
   const handleChange = (e) => {
@@ -32,12 +32,12 @@ export function TemporaryDrawer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     var addr = '?'
-    if(formData['type'] !== null && formData['type'] !== ''){
-      addr = addr+ `type=${formData['type']}`
+    if (formData['type'] !== null && formData['type'] !== '') {
+      addr = addr + `type=${formData['type']}`
     }
-    if(formData['status'] !== null && formData['status'] !== ''){
+    if (formData['status'] !== null && formData['status'] !== '') {
       console.log(formData['status'])
-      if(formData['type'] !== null && formData['type'] !== ''){
+      if (formData['type'] !== null && formData['type'] !== '') {
         addr = addr + '&'
       }
       addr = addr + `status=${formData['status']}`
@@ -50,74 +50,75 @@ export function TemporaryDrawer() {
     <div>
       <Button onClick={toggleDrawer(true)}>Open drawer</Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
-      <Box sx={{ width: 250 }} role="presentation" >
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <Box
-                sx={{
-                  maxWidth: 400,
-                  mx: 'auto',
-                  mt: 4,
-                  p: 3,
-                  bgcolor: 'background.paper',
-                  borderRadius: 2,
-                  boxShadow: 3
-                }}
-              >
-                <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-                  <Typography>
-                    Select order type
-                  </Typography>
-                  <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="female"
-                    name="type"
-                    onChange={handleChange}
-                  >
-                    <FormControlLabel value="1" control={<Radio />} label="Female" />
-                    <FormControlLabel value="2" control={<Radio />} label="Male" />
-                    <FormControlLabel value="3" control={<Radio />} label="Other" />
-                  </RadioGroup>
-                  <Divider
-                    sx={{ 
-                      borderColor: '#1976d2', // Цвет линии (например, синий)
-                      borderWidth: '2px', // Увеличенная толщина
-                      borderStyle: 'solid', // Сплошная линия
-                      my: 2, // Отступы сверху и снизу
-                      opacity: 1, // Полная непрозрачность
-                      // Дополнительно: можно добавить тень или градиент
-                      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
-                    }}/>
-                  <Typography>
-                    Select order status
-                  </Typography>
-                  <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="female"
-                    name="status"
-                    onChange={handleChange}
-                  >
-                    <FormControlLabel value="1" control={<Radio />} label="Female" />
-                    <FormControlLabel value="2" control={<Radio />} label="Male" />
-                    <FormControlLabel value="3" control={<Radio />} label="Other" />
-                  </RadioGroup>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="secondary"
-                    sx={{ mt: 2 }}
-                  >
-                    Применить
-                  </Button>
+        <Box sx={{ width: 250 }} role="presentation" >
+          <List>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <Box
+                  sx={{
+                    maxWidth: 400,
+                    mx: 'auto',
+                    mt: 4,
+                    p: 3,
+                    bgcolor: 'background.paper',
+                    borderRadius: 2,
+                    boxShadow: 3
+                  }}
+                >
+                  <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
+                    <Typography>
+                      Select order type
+                    </Typography>
+                    <RadioGroup
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue="female"
+                      name="type"
+                      onChange={handleChange}
+                    >
+                      <FormControlLabel value="1" control={<Radio />} label="Mobile" />
+                      <FormControlLabel value="2" control={<Radio />} label="Web" />
+                      <FormControlLabel value="3" control={<Radio />} label="DevOps" />
+                    </RadioGroup>
+                    <Divider
+                      sx={{
+                        borderColor: '#1976d2',
+                        borderWidth: '2px',
+                        borderStyle: 'solid',
+                        my: 2,
+                        opacity: 1,
+                        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
+                      }} />
+                    <Typography>
+                      Select order status
+                    </Typography>
+                    <RadioGroup
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue="female"
+                      name="status"
+                      onChange={handleChange}
+                    >
+                      <FormControlLabel value="1" control={<Radio />} label="draft" />
+                      <FormControlLabel value="2" control={<Radio />} label="deleted" />
+                      <FormControlLabel value="3" control={<Radio />} label="created" />
+                      <FormControlLabel value="4" control={<Radio />} label="completed" />
+                      <FormControlLabel value="5" control={<Radio />} label="cancelled" />
+                    </RadioGroup>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="secondary"
+                      sx={{ mt: 2 }}
+                    >
+                      Применить
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            </ListItemButton>
-          </ListItem>
+              </ListItemButton>
+            </ListItem>
 
-      </List>
-      <Divider />
-    </Box>
+          </List>
+          <Divider />
+        </Box>
       </Drawer>
     </div>
   );
