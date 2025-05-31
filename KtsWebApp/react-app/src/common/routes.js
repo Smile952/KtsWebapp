@@ -13,9 +13,9 @@ import { RequestPage } from "../js/pages/RequestPage";
 
 // Уровни доступа
 export const ACCESS_LEVELS = {
-    PUBLIC: 0,
-    USER: 1,
-    ADMIN: 2
+    PUBLIC: 1,
+    USER: 2,
+    ADMIN: 3
 };
 
 // Конфигурация всех маршрутов

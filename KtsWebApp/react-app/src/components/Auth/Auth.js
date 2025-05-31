@@ -2,9 +2,9 @@
 import { Button } from '../Button/Button'
 import './Auth.css'
 import { getToken } from './login'
-
+import {useNavigate} from 'react-router-dom'
 export function Auth() {
-
+    const nav = useNavigate()
     const updateClick = async (event) => {
         event.preventDefault();
 
@@ -20,10 +20,14 @@ export function Auth() {
             .then(tokenData => {
                 localStorage.setItem('token', tokenData['token'])
                 localStorage.setItem('role', tokenData['role'])
+                nav('/')
             })
             .catch(error => {
                 console.error('Error:', error);
             });
+        if(localStorage.getItem('token')){
+            nav('/')
+        }
     }
 
     return (
