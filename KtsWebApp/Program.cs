@@ -1,10 +1,15 @@
 using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
-using System.IO;
-using Microsoft.AspNetCore.Hosting; 
-
+using Interface;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting; 
+using Microsoft.IdentityModel.Tokens;
+using System.IO;
+using System.Text;
 
 internal class Program
 {
@@ -24,7 +29,24 @@ internal class Program
                 });
         });
 
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true, // Включи проверку подписи
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680")) // Укажи секретный ключ
+            };
+        });
+
+        builder.Services.AddAuthorization();
+
+
         builder.Services.AddScoped<Context>();
+
+        builder.Services.AddScoped<TokenProvider>();
 
         builder.Services.AddScoped<OrderRepository>();
         builder.Services.AddKeyedScoped<OrderService>("order_service");
@@ -39,7 +61,9 @@ internal class Program
 
         var app = builder.Build();
 
+        app.UseAuthentication();
         app.UseRouting();
+        app.UseAuthorization();
         app.UseCors(cors);
         app.UseEndpoints(endpoints =>
         {

@@ -13,7 +13,7 @@ namespace Application.Services.Common
                 userId = order.UserId,
                 EmployeeId = order.EmployeeId,
                 OrderTypeId = order.OrdersTypeEnumId,
-                OrderStatusId = order.OrdersTypeEnumId
+                OrderStatusId = order.OrderStatusId
             };
         }
 
@@ -24,7 +24,8 @@ namespace Application.Services.Common
                 Id = employee.Id,
                 Name = employee.Name,
                 Password = employee.Password,
-                Post = employee.Post
+                Post = employee.Post,
+                PermissionId = employee.PermissionId,
             };
         }
         public static UserDTO ToDTO(User user)
@@ -36,7 +37,8 @@ namespace Application.Services.Common
                 Email = user.Email,
                 Age = user.Age,
                 Password = user.Password,
-                RegistrationDate = user.RegistrationDate
+                RegistrationDate = user.RegistrationDate,
+                PermissionId = user.PermissionId
             };
         }
     }

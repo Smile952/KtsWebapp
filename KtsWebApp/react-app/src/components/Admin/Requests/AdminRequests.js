@@ -1,20 +1,26 @@
-export async function AdminRequests({type, status}) {
+export async function AdminRequests({ type, status }) {
     var addr = 'https://localhost:8080/api/orders'
     try {
-        if(type !== null || type !== '' || status !== null || status !== '' || type !== undefined || status !== undefined){
-            
+        if (type !== null || type !== '' || status !== null || status !== '' || type !== undefined || status !== undefined) {
+
             addr += '?';
-            if(type !== null && type !== ''){
+            if (type !== null && type !== '') {
                 addr += `type=${type}`
             }
-            if(status !== null && status !== ''){
-                if(type !== null && type !== ''){
+            if (status !== null && status !== '') {
+                if (type !== null && type !== '') {
                     addr += `&`
                 }
                 addr += `status=${status}`
             }
         }
-        const response = await fetch(addr);
+        const token = localStorage.getItem('token')
+        const response = await fetch(addr, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -26,7 +32,9 @@ export async function AdminRequests({type, status}) {
             res = [{
                 id: -1,
                 userId: -1,
+                userName: 'empty',
                 employeeId: -1,
+                employeeName: 'empty',
                 orderTypeId: -1,
                 orderContent: 'empty',
                 OrderStatus: -1

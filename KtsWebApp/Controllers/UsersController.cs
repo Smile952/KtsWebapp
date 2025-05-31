@@ -1,14 +1,19 @@
 ﻿using Application.Services;
 using Interface.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using System.Text.Json;
 
 namespace Interface.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
+
+        
+
         [HttpGet]
         public IActionResult Get([FromKeyedServices("user_service")] UserService service)
         {
@@ -16,6 +21,7 @@ namespace Interface.Controllers
             return Ok(service.Read());
         }
 
+        
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("user_service")] UserService service, int id)
         {
@@ -32,6 +38,8 @@ namespace Interface.Controllers
             }
             return Ok(res);
         }
+
+        
 
         [HttpPost]
         public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)

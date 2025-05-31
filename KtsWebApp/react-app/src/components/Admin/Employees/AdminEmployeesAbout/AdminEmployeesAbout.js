@@ -10,7 +10,6 @@ export function AdminEmployeesAbout() {
             <div>
                 <div className="admin-content-block-text">
                     <span>Имя: {state.name}</span>
-                    <span>Пароль: <span className="password">[скрыто]</span></span>
                     <span>Должность: {state.post}</span>
                 </div>
                 <Buttons type={['employees', state.id]} />
@@ -22,7 +21,6 @@ export function AdminEmployeesAbout() {
         <div>
             <div className="admin-content-block-text">
                 <span>Имя: </span>
-                <span>Пароль: <span className="password"></span></span>
                 <span>Должность: </span>
             </div>
         </div>

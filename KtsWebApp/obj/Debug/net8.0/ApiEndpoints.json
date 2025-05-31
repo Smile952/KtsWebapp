@@ -79,6 +79,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Interface.Controllers.MinioController",
+    "Method": "Get",
+    "RelativePath": "api/Minio/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Interface.Controllers.OrdersController",
     "Method": "Get",
     "RelativePath": "api/Orders",

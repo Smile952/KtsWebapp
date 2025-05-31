@@ -45,7 +45,7 @@
 
 .admin-title-content {
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 85% 15%;
 }
 
 .admin-title-text {
@@ -65,7 +65,8 @@
     color: #1A3C34;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    height: 45px;
+    height: 50px;
+    width: 50px;
 }
 
 .admin-button-create:hover {
@@ -142,9 +143,7 @@
 .sidebar {
     position: absolute;
     top: 100%;
-    /* Меню появляется под кнопкой */
     left: -200px;
-    /* Скрыто слева */
     width: 200px;
     background-color: #333;
     color: white;
@@ -156,7 +155,6 @@
 
 .sidebar.open {
     left: 0;
-    /* Показываем меню */
 }
 
 .sidebar-list {
@@ -214,14 +212,6 @@
     margin-bottom: 0.4rem;
 }
 
-.admin-content-block-text .password {
-    color: #6B7280;
-    font-family: monospace;
-    display: inline-block;
-    background-color: #E5E7EB;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-}
 
 @media (max-width: 768px) {
     .admin-content {

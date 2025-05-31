@@ -1,9 +1,17 @@
 import { useLocation } from 'react-router-dom'
 import './Service.css'
+import { links } from '../../common/links';
+import { useEffect, useState } from 'react'
 
 export function Service() {
     const { state } = useLocation();
-
+    const [isAuthorized, setIsAuthorized] = useState(false);
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            setIsAuthorized(true)
+        }
+    }, [])
     return (
         <div className='block'>
             <div className='block-group'>
@@ -18,11 +26,12 @@ export function Service() {
                         </div>
                     </div>
                 </div>
-                <div className='block-button'>
-                    <a className='block-button-link' href='/devTypes'>
-                        <div className='block-button-link-text'>Back to нищая жизнь</div>
-                    </a>
-                </div>
+                <a className='block-button' href={links['Заявка']}>
+                    <div className='block-button-link-text'>Создать данную заявку</div>
+                </a>
+                <a className='block-button' href={links['Главная']}>
+                    <div className='block-button-link-text'>Вернуться к списку услуг</div>
+                </a>
             </div>
         </div>
     );

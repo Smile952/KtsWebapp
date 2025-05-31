@@ -1,46 +1,33 @@
-/* Контейнер для блока */
 .block {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2vh 0;
-    /* Добавим отступы */
 }
 
-/* Группа элементов (карточка + кнопка) */
 .block-group {
     display: grid;
     gap: 2vh;
-    /* Зазор между карточкой и кнопкой */
     width: 100%;
     max-width: 600px;
-    /* Ограничиваем максимальную ширину */
 }
 
-/* Задний слой карточки */
 .back-block {
     margin: 0;
-    /* Убираем верхний отступ */
     position: relative;
     height: 50vh;
     width: 100%;
-    /* Занимаем всю доступную ширину */
     background: linear-gradient(135deg, #B0B8C1, #C7CED3);
-    /* Соответствует карточкам из .blocks */
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Легкая тень */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Плавный переход */
 }
 
-/* Эффект при наведении */
 .back-block:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Передний слой карточки */
 .front-block {
     position: relative;
     width: 90%;
@@ -48,26 +35,15 @@
     top: 10%;
     left: 5%;
     background: linear-gradient(135deg, #A7F3D0, #CCEEDD);
-    /* Соответствует карточкам из .blocks */
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
-/* Ссылка (для кликабельности карточки) */
-a.block-link {
-    all: unset;
-    cursor: pointer;
-    position: absolute;
-    inset: 0;
-}
-
-/* Текст внутри карточки */
 .block-text {
     position: relative;
     left: 5%;
-    /* Увеличиваем отступ */
     width: 90%;
     height: auto;
     top: 5%;
@@ -76,28 +52,23 @@ a.block-link {
     pointer-events: none;
 }
 
-/* Заголовок карточки */
 .block-title {
     font-size: 3vh;
     color: #1E3A8A;
-    /* Более темный синий для контраста */
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     pointer-events: none;
     margin-bottom: 1vh;
 }
 
-/* Описание карточки */
 .block-description {
     font-size: 2.2vh;
     color: #2D4A6A;
-    /* Более насыщенный цвет */
     font-family: 'Inter', sans-serif;
     pointer-events: none;
     margin-bottom: 2vh;
 }
 
-/* Контейнер для изображения */
 .block-image {
     display: flex;
     justify-content: center;
@@ -105,59 +76,37 @@ a.block-link {
     margin-top: 3vh;
     width: 100%;
     height: 50%;
-    /* Ограничиваем высоту изображения */
 }
 
-/* Изображение */
 .block-image-source {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Масштабируем без искажений */
     border-radius: 10px;
 }
 
-/* Кнопка */
 .block-button {
-    width: 100%;
+    cursor: pointer;
+    font-size: 2vh;
+    color: #1E3A8A;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     padding: 1rem;
     background: linear-gradient(135deg, #A7F3D0, #CCEEDD);
-    /* Мятный градиент */
-    border: none;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, transform 0.3s ease;
     text-align: center;
 }
 
-/* Эффект при наведении на кнопку */
 .block-button:hover {
     background: linear-gradient(135deg, #6EE7B7, #A7F3D0);
-    /* Чуть ярче */
     transform: translateY(-2px);
 }
 
-/* Ссылка внутри кнопки */
-.block-button-link {
-    all: unset;
-    cursor: pointer;
-    font-size: 2vh;
-    color: #1E3A8A;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-/* Эффект при наведении на ссылку */
-.block-button-link:hover {
-    color: #065F46;
-    /* Мятный цвет для связи с дизайном */
-}
-
-/* Адаптивность */
 @media (max-width: 1650px) {
     .block-title {
-        font-size: 1.4vw;
+        font-size: 2vw;
     }
 
     .block-description {
@@ -166,7 +115,6 @@ a.block-link {
 
     .back-block {
         height: 45vh;
-        /* Уменьшаем высоту */
     }
 }
 

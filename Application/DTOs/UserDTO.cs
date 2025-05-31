@@ -8,5 +8,6 @@
         public int Age { get; set; }
         public string Password { get; set; } = string.Empty;
         public DateTime RegistrationDate { get; set; }
+        public int PermissionId { get; set; }
     }
 }

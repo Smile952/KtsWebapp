@@ -1,18 +1,45 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import './Services.css'
+import { synchronizeToken } from "../../common/synchronizeToken.js";
+import { UnauthorizedPage } from '../../js/pages/UnauthorizedPage.js';
 
 export function Services() {
-    const blocks = [
-        { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
-        { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
-        { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: '/Images/DevOps/devops.jpg' }
-    ]
-
+    const [isAuthorized, setIsAuthorized] = useState(false);
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            setIsAuthorized(true)
+        }
+    }, [])
     const nav = useNavigate()
 
+    const [blocks, setBlocks] = useState([
+        { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '' },
+        { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '' },
+        { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: '' }
+    ]);
+
+    useEffect(() => {
+        getImagesNames()
+            .then(result => {
+                const updated = [...blocks];
+                updated[1].photo = result["ImagesData"][0]['ImageURL'];
+                updated[2].photo = result["ImagesData"][1]['ImageURL'];
+                updated[0].photo = result["ImagesData"][2]['ImageURL'];
+                setBlocks(updated);
+            })
+            .catch(error => console.log('Ошибка при получении изображений: ', error));
+    }, [])
+    const token = localStorage.getItem('token')
+    const validate = synchronizeToken(token)
+    if (!validate) {
+        return <UnauthorizedPage />
+    }
     const handler = (id, block) => {
         nav(`/about/${id}`, { state: block })
     }
+
 
     return (
         <div className='blocks'>
@@ -22,7 +49,7 @@ export function Services() {
                         <div className="front-blocks">
                             <div className='blocks-text'>
                                 <div className="blocks-title">{block.title}</div>
-                                <div className="blocks-description">{block.description}</div> {/* Исправьте опечатку: desription -> description */}
+                                <div className="blocks-description">{block.description}</div>
                                 <div className="blocks-image">
                                     <img className="blocks-image-source" src={block.photo} alt={block.title} />
                                 </div>
@@ -34,3 +61,16 @@ export function Services() {
         </div>
     )
 }
+
+async function getImagesNames() {
+    var token = localStorage.getItem('token')
+    var res = await fetch("https://localhost:8080/api/minio/images", {
+        method: "GET",
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    var ans = await res.json()
+    return ans
+}
+

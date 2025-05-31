@@ -15,12 +15,18 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.9.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
     "dayjs": "^1.11.13",
-    "minio": "^8.0.5",
+    "mobx": "^6.13.7",
+    "mobx-react-lite": "^4.1.0",
+    "path-browserify": "^1.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
+    "timers-browserify": "^2.0.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "stream-browserify": "^3.0.0"
   }
 }

@@ -39,12 +39,17 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PermissionId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Post")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PermissionId");
 
                     b.ToTable("Employee");
                 });
@@ -59,10 +64,6 @@ namespace Core.Migrations
 
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
-
-                    b.Property<string>("OrderContent")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OrderStatusId")
                         .HasColumnType("int");
@@ -121,7 +122,7 @@ namespace Core.Migrations
                     b.ToTable("OrdersTypeEnum");
                 });
 
-            modelBuilder.Entity("Core.Models.Service", b =>
+            modelBuilder.Entity("Core.Models.Permissions", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,13 +134,26 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
+                    b.ToTable("Permissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Public"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "User"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Private"
+                        });
                 });
 
             modelBuilder.Entity("Core.Models.User", b =>
@@ -165,27 +179,28 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PermissionId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PermissionId");
+
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("OrderService", b =>
+            modelBuilder.Entity("Core.Models.Employee", b =>
                 {
-                    b.Property<int>("OrdersId")
-                        .HasColumnType("int");
+                    b.HasOne("Core.Models.Permissions", "Permission")
+                        .WithMany("Employee")
+                        .HasForeignKey("PermissionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.Property<int>("ServicesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("OrdersId", "ServicesId");
-
-                    b.HasIndex("ServicesId");
-
-                    b.ToTable("OrderService");
+                    b.Navigation("Permission");
                 });
 
             modelBuilder.Entity("Core.Models.Order", b =>
@@ -223,19 +238,15 @@ namespace Core.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("OrderService", b =>
+            modelBuilder.Entity("Core.Models.User", b =>
                 {
-                    b.HasOne("Core.Models.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("Core.Models.Permissions", "Permission")
+                        .WithMany("User")
+                        .HasForeignKey("PermissionId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Core.Models.Service", null)
-                        .WithMany()
-                        .HasForeignKey("ServicesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Permission");
                 });
 
             modelBuilder.Entity("Core.Models.Employee", b =>
@@ -251,6 +262,13 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.Models.OrdersTypeEnum", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Core.Models.Permissions", b =>
+                {
+                    b.Navigation("Employee");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Models.User", b =>

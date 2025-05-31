@@ -1,23 +1,44 @@
 import './Request.css'
 import './RadioButtons.css'
 import { Button } from '../Button/Button.js'
-
+import { synchronizeToken } from "../../common/synchronizeToken.js";
 function sendData(formData) {
-    fetch('https://localhost:8080/api/main/request', {
+    const token = localStorage.getItem('token')
+    fetch('https://localhost:8080/api/orders', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
         },
         body: JSON.stringify({
             devType: formData.get('devType'),
             text: formData.get('text')
         })
     })
-
+        .then(response => {
+            if (response.status === 401) {
+                // Перенаправляем на страницу Unauthorized
+                window.location.href = '/unauthorized'; // или ваш путь к UnauthorizedPage.jsx
+                return Promise.reject('Unauthorized');
+            }
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Обработка успешного ответа
+            console.log('Success:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Дополнительная обработка других ошибок
+        });
 }
 
-
+const token = localStorage.getItem('token')
+synchronizeToken(token)
 export function Request() {
     return (
         <div className="request">

@@ -1,6 +1,7 @@
 ﻿using Application.DTOs;
 using Application.Services;
 using Interface.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -8,6 +9,7 @@ namespace Interface.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EmployeesController : ControllerBase
     {
         [HttpGet]

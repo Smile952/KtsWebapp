@@ -24,7 +24,8 @@ namespace Application.Services.Common
                 Email = dto.Email,
                 Age = dto.Age,
                 Password = dto.Password,
-                RegistrationDate = dto.RegistrationDate
+                RegistrationDate = dto.RegistrationDate,
+                PermissionId = dto.PermissionId
             };
 
         }
@@ -36,7 +37,8 @@ namespace Application.Services.Common
                 Id = dto.Id,
                 Name = dto.Name,
                 Password = dto.Password,
-                Post = dto.Post
+                Post = dto.Post,
+                PermissionId= dto.PermissionId
             };
         }
     }

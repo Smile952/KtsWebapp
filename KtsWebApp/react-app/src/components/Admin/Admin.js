@@ -6,7 +6,7 @@ import { AdminUsers } from './Users/AdminUsers';
 import { useNavigate } from 'react-router-dom';
 import { TemporaryDrawer } from './TemporaryDrawer'
 import { useSearchParams } from 'react-router-dom';
-
+import { Unauthorized } from '../Unauthorized/Unauthorized';
 
 export function Admin() {
     const [requestsContent, setRequestsContent] = useState([]);
@@ -18,7 +18,6 @@ export function Admin() {
     const nav = useNavigate();
 
     useEffect(() => {
-        console.log(searchParams.get('status'))
         // Запрос данных заявок
         AdminRequests({ type: searchParams.get('type'), status: searchParams.get('status') })
             .then(result => setRequestsContent(result))
@@ -61,7 +60,13 @@ export function Admin() {
         setEmployeesContent([...employeesContent].sort((a, b) => sortDirection === 1 ? b.id - a.id : a.id - b.id))
         setSortDirection(sortDirection === 1 ? 0 : 1)
     }
-
+    const [isAuthorized, setIsAuthorized] = useState(false);
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            setIsAuthorized(true)
+        }
+    }, [])
     return (
         <div className='admin'>
             <div className='admin-content'>
@@ -80,7 +85,8 @@ export function Admin() {
                     <div className="admin-content-block">
                         {requestsContent.map((request, index) => (
                             <div key={index} onClick={() => handler('order', request.id, request)} className="admin-content-block-text">
-                                <span>Заявка: {request.userId}, {request.employeeId}</span>
+                                <span>Заявка от: {request.userName}</span>
+                                <span>Исполнитель: {request.employeeName}</span>
                                 <span>Тип заказа: {request.orderTypeId}</span>
                                 <span>Содержимое: {request.orderContent}</span>
                             </div>

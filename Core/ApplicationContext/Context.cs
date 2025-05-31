@@ -1,6 +1,7 @@
 ﻿using Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Abstractions;
 
 namespace Core.ApplicationContext
 {
@@ -11,6 +12,7 @@ namespace Core.ApplicationContext
         public DbSet<Employee> Employee {get; set;}
         public DbSet<User> User {get; set;}
         public DbSet<OrderStatus> OrderStatus { get; set; }
+        public DbSet<Permissions> Permissions { get; set; }
 
         public Context()
         {
@@ -37,6 +39,12 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<Employee>()
                             .HasMany(x => x.Orders)
                             .WithOne(x => x.Employee);
+            modelBuilder.Entity<Employee>()
+                            .HasOne(x => x.Permission)
+                            .WithMany(x => x.Employee)
+                            .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Employee>().HasIndex(x => x.PermissionId).IsUnique(false);
+            
 
             //Перечисление типов заказов
             modelBuilder.Entity<OrdersTypeEnum>()
@@ -51,6 +59,11 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<User>()
                            .HasMany(x => x.Orders)
                            .WithOne(x => x.User);
+            modelBuilder.Entity<User>()
+                            .HasOne(x => x.Permission)
+                            .WithMany(x => x.User)
+                            .OnDelete(DeleteBehavior.Restrict); ;
+            modelBuilder.Entity<User>().HasIndex(x => x.PermissionId).IsUnique(false);
 
             //Перечисление статусов заказов
             modelBuilder.Entity<OrderStatus>()
@@ -78,6 +91,15 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<OrderStatus>()
                             .HasMany(x => x.Orders)
                             .WithOne(x => x.OrderStatus);
+
+            //Права доступа
+            modelBuilder.Entity<Permissions>()
+                            .HasKey(x => x.Id);
+            modelBuilder.Entity<Permissions>().HasData(
+                new Permissions { Id = 1, Name="Public"},
+                new Permissions { Id = 2, Name="User"},
+                new Permissions { Id = 3, Name="Private"}
+            );
 
             base.OnModelCreating(modelBuilder);
         }

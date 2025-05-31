@@ -4,7 +4,7 @@ import { Registration } from "../../components/Registration/Registration"
 export function RegistrationPage() {
     return (
         <div>
-            <Header text={["КТС-Регистрация"]} />
+            <Header text={["КТС-Регистрация", "Главная", 'Авторизация']} />
             <Registration />
             <Footer />
         </div>

@@ -1,21 +1,24 @@
 ﻿using Application.DTOs;
 using Application.Services;
+using Application.Services.Common;
 using Interface.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using System.Text.Json;
 
 namespace Interface.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OrdersController : ControllerBase
     {
         [HttpGet]
-        public IActionResult Get([FromKeyedServices("order_service")] OrderService service)
+        public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, [FromKeyedServices("user_service")] UserService uService, [FromKeyedServices("employee_service")] EmployeeService eService)
         {
-            var orders = service.Read();
+            var orders = oService.Read();
+            var users = uService.Read();
+            var employees = eService.Read();
             if (Request.Query["status"] != "" && Int32.TryParse(Request.Query["status"], out int orderStatus))
             {
                 orders = orders.Where(x => x.OrderStatusId == orderStatus).ToList();
@@ -24,7 +27,21 @@ namespace Interface.Controllers
             {
                 orders = orders.Where(x => x.OrderTypeId == type).ToList();
             }
-            return Ok(orders);
+            var result = from order in orders
+                         join user in users on order.userId equals user.Id
+                         join employee in employees on order.EmployeeId equals employee.Id
+                         select new
+                         {
+                             id = order.Id,
+                             userId = user.Id,
+                             userName = user.Name,
+                             employeeId = employee.Id,
+                             employeeName = employee.Name,
+                             orderTypeId = order.OrderTypeId,
+                             orderStatus = order.OrderStatusId
+                         };
+                        
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
@@ -57,11 +74,8 @@ namespace Interface.Controllers
                 userId = Int32.Parse(model.UserId),
                 EmployeeId = Int32.Parse(model.EmployeeId),
                 OrderTypeId = Int32.Parse(model.OrderTypeId),
-                OrderContent = model.OrderContent,
                 OrderStatusId = 1
             };
-
-            Console.WriteLine(dto.OrderContent);
 
             service.Create(dto);
 
@@ -115,3 +129,8 @@ namespace Interface.Controllers
         }
     }
 }
+
+
+
+
+

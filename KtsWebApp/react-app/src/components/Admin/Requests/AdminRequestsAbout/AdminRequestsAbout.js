@@ -10,7 +10,8 @@ export function AdminRequestsAbout() {
         return (
             <div>
                 <div className="admin-content-block-text">
-                    <span>Заявка: {state.userId}, {state.employeeId}</span>
+                    <span>Заявка от: {state.userName}</span>
+                    <span>Исполнитель: {state.employeeName}</span>
                     <span>Тип заказа: {state.orderTypeId}</span>
                     <span>Содержимое: {state.orderContent}</span>
                 </div>

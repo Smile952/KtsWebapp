@@ -262,8 +262,6 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Application
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Core.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.csproj.AssemblyReference.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.AssemblyInfoInputs.cache
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.AssemblyInfo.cs
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.csproj.CoreCompileInputs.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.sourcelink.json
@@ -272,10 +270,13 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebas
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.csproj.Up2Date
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\refint\Interface.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\Interface.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net8.0\ref\Interface.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\CommunityToolkit.HighPerformance.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\Minio.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net8.0\System.Reactive.dll

@@ -141,8 +141,6 @@ C:/Users/Kheragacy/source/repos/KtsWebApp/Core/bin/Debug/net8.0/runtimes/browser
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.csproj.AssemblyReference.cache
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.AssemblyInfoInputs.cache
-C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.AssemblyInfo.cs
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.csproj.CoreCompileInputs.cache
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.sourcelink.json
 C:/Users/Kheragacy/source/repos/KtsWebApp/Core/obj/Debug/net8.0/Core.csproj.Up2Date
@@ -468,8 +466,6 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\Core\bin\Debug\net8.0\runtimes\browser
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
-C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.sourcelink.json
 C:\Users\Kheragacy\source\repos\KtsWebApp\Core\obj\Debug\net8.0\Core.csproj.Up2Date

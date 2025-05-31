@@ -9,6 +9,7 @@ namespace Interface.Models
         public string Email { get; set; } = string.Empty;
         public string Age { get; set; } = string.Empty;
         public DateTime RegistrationDate { get; set; }
+        public string Password { get; set; }
 
         public bool IsAllData()
         {

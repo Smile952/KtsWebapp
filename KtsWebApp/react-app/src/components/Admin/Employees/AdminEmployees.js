@@ -1,6 +1,12 @@
 export async function AdminEmployees() {
     try {
-        const response = await fetch('https://localhost:8080/api/employees')
+        const token = localStorage.getItem('token')
+        const response = await fetch('https://localhost:8080/api/employees', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
