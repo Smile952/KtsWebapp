@@ -59,17 +59,32 @@ internal class Program
 
         builder.Services.AddControllers();
 
-        var app = builder.Build();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
+        var app = builder.Build();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
         app.UseAuthentication();
         app.UseRouting();
+        app.UseEndpoints(endpoint =>
+        {
+            endpoint.MapControllerRoute(
+                name: "default",
+                pattern: "swagger/index.html",
+                defaults: null
+                );
+        });
         app.UseAuthorization();
         app.UseCors(cors);
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
         });
-
+        
         app.Run();
     }
 }
