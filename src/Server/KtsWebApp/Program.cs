@@ -4,7 +4,6 @@ using Core.Repository;
 using Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using StackExchange.Redis;
 using System.Text;
 
 internal class Program

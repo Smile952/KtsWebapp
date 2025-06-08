@@ -2,13 +2,18 @@ version: '3.9'
 
 services:
   db:
-    image: mssql-database:1.0.2
+    image: geny952/mssql-database:latest
     container_name: mssql_db
     ports:
       - "1433:1433"
-
+  minio:
+    image: geny952/minio_storage:latest
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
   webapp:
-    image: backend:latest
+    image: geny952/dotnet_app:latest
     container_name: aspnet_webapp
     ports:
       - "8080:8080"
@@ -16,7 +21,7 @@ services:
       db:
         condition: service_healthy
   ui:
-    image: frontend:latest
+    image: geny952/react-app:latest
     container_name: react-app 
     ports:
       - "3000:3000"

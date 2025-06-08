@@ -1,7 +1,6 @@
 ﻿using Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Abstractions;
 
 namespace Core.ApplicationContext
 {

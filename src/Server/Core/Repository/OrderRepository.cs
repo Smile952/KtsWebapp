@@ -1,6 +1,5 @@
 ﻿using Core.Models;
 using Core.ApplicationContext;
-using Microsoft.EntityFrameworkCore;
 
 namespace Core.Repository
 {
