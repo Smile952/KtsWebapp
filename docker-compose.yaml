@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  db:
+    image: mssql-database:1.0.2
+    container_name: mssql_db
+    ports:
+      - "1433:1433"
+
+  webapp:
+    image: backend:latest
+    container_name: aspnet_webapp
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+  ui:
+    image: frontend:latest
+    container_name: react-app 
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - webapp
+
+networks:
+  default:
+    driver: bridge

@@ -1,0 +1,5 @@
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\linux-x64\Interface.csproj.AssemblyReference.cache
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\linux-x64\Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\linux-x64\Interface.csproj.CoreCompileInputs.cache
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\linux-x64\Interface.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\linux-x64\Interface.sourcelink.json

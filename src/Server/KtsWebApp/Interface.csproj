@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseStaticWebAssets>false</UseStaticWebAssets>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>preview</LangVersion>
+    <UserSecretsId>b8ce1c88-d03c-4d9e-9d64-5a93694abd93</UserSecretsId>
+  </PropertyGroup>
+
+  <Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
+    <ReadLinesFromFile File="version.txt">
+      <Output TaskParameter="Lines" PropertyName="MyVersion" />
+    </ReadLinesFromFile>
+
+    <PropertyGroup>
+      <AssemblyVersion>$(MyVersion)</AssemblyVersion>
+      <FileVersion>$(MyVersion)</FileVersion>
+      <Version>$(MyVersion)</Version>
+    </PropertyGroup>
+  </Target>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" />
+    <PackageReference Include="minio" Version="6.0.4" />
+    <PackageReference Include="NRedisStack" Version="1.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+</Project>

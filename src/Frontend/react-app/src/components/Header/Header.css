@@ -1,0 +1,92 @@
+.header {
+    background: linear-gradient(135deg, #B0B8C1, #C7CED3);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.content {
+    margin: 0 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+}
+
+.title {
+    font-size: 3.1vh;
+    font-weight: thin;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #1E3A8A;
+    font-family: 'Inter', sans-serif;
+}
+
+.link-block {
+    display: flex;
+}
+
+.nav {
+    gap: 1.5vw;
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    font-size: 2vh;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: inherit;
+    color: #1E3A8A;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:visited {
+    color: #4862B3;
+}
+
+.nav-link:hover {
+    color: #065F46;
+    /* Мятный цвет, чтобы связать с дизайном колонок */
+    transform: translateY(-2px);
+    /* Легкий подъем */
+    display: inline-block;
+    /* Для корректной работы transform */
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    .header {
+        height: 10vh;
+        /* Увеличиваем высоту для маленьких экранов */
+    }
+
+    .content {
+        height: 10vh;
+        margin: 0 3vw;
+        /* Уменьшаем отступы */
+    }
+
+    .title {
+        font-size: 2.5vh;
+        /* Уменьшаем размер шрифта */
+    }
+
+    .nav-item {
+        font-size: 1.8vh;
+        /* Уменьшаем размер шрифта навигации */
+    }
+
+    .nav {
+        gap: 1vw;
+        /* Уменьшаем расстояние между ссылками */
+    }
+}
