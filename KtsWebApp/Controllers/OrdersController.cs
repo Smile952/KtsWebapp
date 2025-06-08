@@ -4,6 +4,7 @@ using Application.Services.Common;
 using Interface.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 
 namespace Interface.Controllers
@@ -13,9 +14,22 @@ namespace Interface.Controllers
     [Authorize]
     public class OrdersController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, [FromKeyedServices("user_service")] UserService uService, [FromKeyedServices("employee_service")] EmployeeService eService)
+        public RedisHandler Redis { get; set; }
+        public OrdersController(RedisHandler redis)
         {
+            Redis = redis;
+        }
+        [HttpGet]
+        public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, 
+                                 [FromKeyedServices("user_service")] UserService uService, 
+                                 [FromKeyedServices("employee_service")] EmployeeService eService)
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            };
+
             var orders = oService.Read();
             var users = uService.Read();
             var employees = eService.Read();
@@ -40,8 +54,10 @@ namespace Interface.Controllers
                              orderTypeId = order.OrderTypeId,
                              orderStatus = order.OrderStatusId
                          };
-                        
-            return Ok(result);
+            string data = JsonSerializer.Serialize(result, options);
+            Console.WriteLine(data);
+            Redis.SetData("orders", data);
+            return Ok(data);
         }
 
         [HttpGet("{id}")]
