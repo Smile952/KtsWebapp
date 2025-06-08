@@ -2,13 +2,9 @@ using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
 using Interface;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.OAuth;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting; 
 using Microsoft.IdentityModel.Tokens;
-using System.IO;
+using StackExchange.Redis;
 using System.Text;
 
 internal class Program
@@ -36,8 +32,8 @@ internal class Program
                 ValidateIssuer = false,
                 ValidateAudience = false,
                 ValidateLifetime = true,
-                ValidateIssuerSigningKey = true, // Включи проверку подписи
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680")) // Укажи секретный ключ
+                ValidateIssuerSigningKey = true, 
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680")) 
             };
         });
 
@@ -47,6 +43,8 @@ internal class Program
         builder.Services.AddScoped<Context>();
 
         builder.Services.AddScoped<TokenProvider>();
+
+        builder.Services.AddScoped<RedisHandler>();
 
         builder.Services.AddScoped<OrderRepository>();
         builder.Services.AddKeyedScoped<OrderService>("order_service");
@@ -68,8 +66,12 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        app.UseAuthentication();
+
         app.UseRouting();
+
+
+        app.UseAuthentication();
+        app.UseAuthorization();
         app.UseEndpoints(endpoint =>
         {
             endpoint.MapControllerRoute(
@@ -78,12 +80,8 @@ internal class Program
                 defaults: null
                 );
         });
-        app.UseAuthorization();
+
         app.UseCors(cors);
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-        });
         
         app.Run();
     }

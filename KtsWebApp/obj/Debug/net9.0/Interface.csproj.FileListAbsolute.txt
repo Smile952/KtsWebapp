@@ -266,3 +266,7 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\Swashbuckle
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\obj\Debug\net9.0\Interface.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\NetTopologySuite.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\NRedisStack.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\KtsWebApp\bin\Debug\net9.0\StackExchange.Redis.dll
