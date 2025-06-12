@@ -13,8 +13,9 @@ namespace Core.ApplicationContext
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Permissions> Permissions { get; set; }
 
-        public Context()
+        public Context(string connectionString)
         {
+            Database.SetConnectionString(connectionString);
             Database.EnsureCreated();
         }
 

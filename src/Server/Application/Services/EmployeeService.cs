@@ -7,7 +7,7 @@ namespace Application.Services
     public class EmployeeService
     {
         EmployeeRepository repository;
-        public EmployeeService(EmployeeRepository repo, string fakeString)
+        public EmployeeService(EmployeeRepository repo)
         {
             repository = repo;
         }

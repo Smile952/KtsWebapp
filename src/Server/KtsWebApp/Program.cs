@@ -1,11 +1,12 @@
 using Application.Services;
 using Core.ApplicationContext;
 using Core.Repository;
-using Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetEnv;
+using Interface.Providers;
+using Microsoft.EntityFrameworkCore;
 
 internal class Program
 {
@@ -19,8 +20,14 @@ internal class Program
         string token = Env.GetString("TOKEN");
         string addr = Env.GetString("LISTENING_ADDR");
 
+        string db_addr = Env.GetString("DATABASE_ADDR");
+        string db_user = Env.GetString("DATABASE_USER");
+        string db_password = Env.GetString("DATABASE_PASSWORD");
+
         var cors = "_myAllowSpecificOrigins";
         var builder = WebApplication.CreateBuilder(args);
+
+        string connectionString = $"Server={db_addr},1433;TrustServerCertificate=true;Database=KTS;User Id=sa;Password=1qaz@WSX";
 
         builder.Services.AddCors(options =>
         {
@@ -47,11 +54,9 @@ internal class Program
 
         builder.Services.AddAuthorization();
 
-
-        builder.Services.AddScoped<Context>();
-
         builder.Services.AddScoped<TokenProvider>();
 
+        builder.Services.AddSingleton(typeof(Context), new Context(connectionString));
 
         builder.Services.AddScoped<OrderRepository>();
         builder.Services.AddKeyedScoped<OrderService>("order_service");

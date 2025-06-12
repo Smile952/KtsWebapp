@@ -5,7 +5,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Interface
+namespace Interface.Providers
 {
     public class TokenProvider (IConfiguration configuration)
     {
