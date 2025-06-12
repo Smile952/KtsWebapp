@@ -6,7 +6,7 @@ import { JSX } from "react";
 export function DevTypesPage(): JSX.Element {
     return (
         <div>
-            <Header text={["КТС-Возможности", "Портфолио", "Контакты", "Профиль", "Регистрация"]} />
+            <Header text={["КТС-Возможности", "Портфолио", "Мои заявки", "Профиль", "Регистрация"]} />
             <Services />
             <Footer />
         </div>

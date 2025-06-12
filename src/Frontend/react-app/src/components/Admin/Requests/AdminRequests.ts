@@ -1,3 +1,5 @@
+import { rout } from "common/addr";
+
 interface Request {
   id: number;
   userId: number;
@@ -10,7 +12,7 @@ interface Request {
 }
 
 export async function AdminRequests(type?: string | null, status?: string | null): Promise<Request[]> {
-  let addr = 'http://localhost:8080/api/orders';
+  let addr = rout + '/orders';
 
   if ((type && type !== '') || (status && status !== '')) {
     addr += '?';

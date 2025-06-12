@@ -1,3 +1,5 @@
+import { rout } from "common/addr";
+
 interface Employee {
     id: number;
     name: string;
@@ -7,7 +9,7 @@ interface Employee {
 export async function AdminEmployees(): Promise<Employee[]> {
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:8080/api/employees', {
+        const response = await fetch(rout + '/employees', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,

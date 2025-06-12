@@ -1,3 +1,5 @@
+import { rout } from "./addr";
+
 export async function synchronizeToken(): Promise<boolean> {
   const token = localStorage.getItem('token')
   if (!token) {
@@ -5,7 +7,7 @@ export async function synchronizeToken(): Promise<boolean> {
   }
 
   try {
-    const response = await fetch('http://localhost:8080/api/token', {
+    const response = await fetch(rout + '/token', {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + token,

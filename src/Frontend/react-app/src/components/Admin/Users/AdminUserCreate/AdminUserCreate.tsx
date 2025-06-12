@@ -7,6 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from 'react';
 import { Dayjs } from 'dayjs';
+import { rout } from 'common/addr';
 
 export function AdminUserCreate() {
     const navigate = useNavigate();
@@ -50,7 +51,7 @@ export function AdminUserCreate() {
                 onSubmit={updateClick}
                 className="create-block-form"
                 method="post"
-                action="http://localhost:8080/api/users"
+                action={rout + '/users'}
                 encType="application/json"
             >
                 <div className="mb-3">

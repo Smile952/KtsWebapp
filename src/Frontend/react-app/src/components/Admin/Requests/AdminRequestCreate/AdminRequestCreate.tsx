@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Footer } from '../../../Footer/Footer';
 import { Header } from '../../../Header/Header';
 import './AdminRequestCreate.css';
+import { rout } from 'common/addr';
 
 export function AdminRequestCreate() {
     const navigate = useNavigate();
@@ -44,7 +45,7 @@ export function AdminRequestCreate() {
                 onSubmit={updateClick}
                 className="create-block-form"
                 method="post"
-                action="http://localhost:8080/api/orders"
+                action={rout + "/orders"}
                 encType="application/json"
             >
                 <div className="mb-3">

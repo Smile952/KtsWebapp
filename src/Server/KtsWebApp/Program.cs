@@ -5,11 +5,20 @@ using Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DotNetEnv;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        string directory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName).FullName).FullName;
+
+        Env.Load(directory + "/.env");
+
+
+        string token = Env.GetString("TOKEN");
+        string addr = Env.GetString("LISTENING_ADDR");
+
         var cors = "_myAllowSpecificOrigins";
         var builder = WebApplication.CreateBuilder(args);
 
@@ -32,7 +41,7 @@ internal class Program
                 ValidateAudience = false,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true, 
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680")) 
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(token)) 
             };
         });
 
@@ -58,16 +67,18 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.WebHost.UseUrls("http://0.0.0.0:8080");
+        builder.WebHost.UseUrls(addr);
 
         var app = builder.Build();
+
+        app.UseCors(cors);
+        
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
         }
 
-        app.UseCors(cors);
         app.UseRouting();
 
 

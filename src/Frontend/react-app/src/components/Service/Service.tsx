@@ -11,7 +11,6 @@ interface ServiceState {
 
 export function Service() {
     const { state } = useLocation();
-    const [isAuthorized, setIsAuthorized] = useState(false);
 
     // Приводим state к типу ServiceState или даем дефолт
     const serviceState = (state as ServiceState) || {
@@ -19,11 +18,6 @@ export function Service() {
         description: '',
         photo: '',
     };
-
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        setIsAuthorized(!!token);
-    }, []);
 
     return (
         <div className="block">

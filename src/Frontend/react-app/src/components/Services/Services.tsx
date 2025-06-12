@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Services.css';
+import { rout } from 'common/addr';
 
 interface Block {
     id: number;
@@ -19,27 +20,26 @@ interface ImagesResponse {
 
 export function Services() {
     const [blocks, setBlocks] = useState<Block[]>([
-        { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '' },
-        { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '' },
-        { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: '' }
+        { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
+        { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
+        { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: 'Images/DevOps/devops.jpg' }
     ]);
 
     const nav = useNavigate();
 
-    useEffect(() => {
-        getImagesNames()
-            .then(result => {
-                const updated = [...blocks];
-                if (result?.ImagesData?.length >= 3) {
-                    updated[1].photo = result.ImagesData[0].ImageURL;
-                    updated[2].photo = result.ImagesData[1].ImageURL;
-                    updated[0].photo = result.ImagesData[2].ImageURL;
-                    setBlocks(updated);
-                }
-            })
-            .catch(error => console.log('Ошибка при получении изображений: ', error));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // useEffect(() => {
+    //     getImagesNames()
+    //         .then(result => {
+    //             const updated = [...blocks];
+    //             if (result?.ImagesData?.length >= 3) {
+    //                 updated[1].photo = result.ImagesData[0].ImageURL;
+    //                 updated[2].photo = result.ImagesData[1].ImageURL;
+    //                 updated[0].photo = result.ImagesData[2].ImageURL;
+    //                 // setBlocks(updated);
+    //             }
+    //         })
+    //         .catch(error => console.log('Ошибка при получении изображений: ', error));
+    // }, []);
 
     const handler = (id: number, block: Block) => {
         nav(`/about/${id}`, { state: block });
@@ -68,7 +68,7 @@ export function Services() {
 
 async function getImagesNames(): Promise<ImagesResponse> {
     const token = localStorage.getItem('token');
-    const res = await fetch("http://localhost:8080/api/minio/images", {
+    const res = await fetch(rout + "/minio/images", {
         method: "GET",
         headers: {
             'Authorization': 'Bearer ' + token,
