@@ -2,6 +2,7 @@ import React from 'react';
 import './Request.css';
 import './RadioButtons.css';
 import { Button } from '../Button/Button';
+import { rout } from 'common/addr';
 
 function sendData(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -9,7 +10,7 @@ function sendData(event: React.FormEvent<HTMLFormElement>) {
     const formData = new FormData((event.currentTarget));
     const token = localStorage.getItem('token');
 
-    fetch('http://localhost:8080/api/orders', {
+    fetch(rout + '/orders', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

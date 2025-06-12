@@ -1,6 +1,7 @@
 import { FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Buttons.css'
+import { rout } from 'common/addr'
 
 interface ButtonsProps {
     type: [string, string | number]
@@ -11,7 +12,7 @@ export function Buttons({ type }: ButtonsProps) {
 
     const deleteClick = async () => {
         try {
-            await fetch(`http://localhost:8080/api/${type[0]}/${type[1]}`, { method: 'DELETE' })
+            await fetch(`${rout}/${type[0]}/${type[1]}`, { method: 'DELETE' })
             navigate('/')
         } catch (Exception) {
             console.log(Exception)
@@ -60,7 +61,7 @@ export function Buttons({ type }: ButtonsProps) {
                     className="update-block-form"
                     onSubmit={updateClick}
                     method="post"
-                    action={`http://localhost:8080/api/${type[0]}/${type[1]}`}
+                    action={`${rout}/${type[0]}/${type[1]}`}
                     encType="application/json"
                 >
                     <div>

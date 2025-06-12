@@ -3,6 +3,7 @@ import { Button } from '../Button/Button';
 import './Auth.css';
 import { getToken } from './login';
 import { useNavigate } from 'react-router-dom';
+import { rout } from 'common/addr';
 interface FormDataObject {
     [key: string]: FormDataEntryValue;
 }
@@ -27,6 +28,7 @@ export function Auth() {
             if (tokenData) {
                 localStorage.setItem('token', tokenData['token']);
                 localStorage.setItem('role', tokenData['role']);
+                localStorage.setItem('userId', tokenData['userId']);
                 nav('/')
             }
             else {
@@ -44,7 +46,7 @@ export function Auth() {
                 <div className="autorization-form-block">
                     <form
                         className='autorization-form'
-                        action='http://localhost:8080/api/users/token'
+                        action={rout + '/users/token'}
                         method='post'
                         onSubmit={updateClick}
                     >

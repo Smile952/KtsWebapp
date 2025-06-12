@@ -9,4 +9,5 @@ export const links: Record<string, string> = {
   'Админ-панель': '/admin',
   'Регистрация': '/signup',
   'Авторизация': '/signin',
+  'Мои заявки': '/user-orders'
 };

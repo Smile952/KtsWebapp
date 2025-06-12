@@ -7,7 +7,7 @@ export function RequestPage(): JSX.Element {
 
     return (
         <div>
-            <Header text={["КТС-Заявка", "Главная", "Контакты", "Профиль"]} />
+            <Header text={["КТС-Заявка", "Главная", "Мои заявки", "Профиль"]} />
             <Request />
             <Footer />
         </div>

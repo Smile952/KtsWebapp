@@ -53,7 +53,7 @@ namespace Interface.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById([FromKeyedServices("order_service")] OrderService service, int id)
+        public IActionResult GetByOrderId([FromKeyedServices("order_service")] OrderService service, int id)
         {
             if(id < 0)
             {
@@ -67,6 +67,17 @@ namespace Interface.Controllers
             }
 
             return Ok(new { message = "All good" });
+        }
+
+        [HttpGet("user_orders/{user_id}")]
+        public IActionResult GetByUserId([FromKeyedServices("order_service")] OrderService service, int user_id)
+        {
+            if (user_id < 0)
+            {
+                return BadRequest("User id must be higher then 0");
+            }
+            var orders = service.Read().Where(x => x.userId == user_id);
+            return Ok(orders);
         }
 
         [HttpPost]

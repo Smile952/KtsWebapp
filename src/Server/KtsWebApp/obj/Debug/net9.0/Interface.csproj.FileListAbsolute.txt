@@ -463,3 +463,6 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Debug\net9.0\
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Debug\net9.0\Interface.pdb
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Debug\net9.0\Interface.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Debug\net9.0\ref\Interface.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\bin\Debug\net9.0\DotNetEnv.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\bin\Debug\net9.0\Sprache.dll

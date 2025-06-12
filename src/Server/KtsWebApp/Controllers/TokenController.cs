@@ -35,7 +35,7 @@ namespace Interface.Controllers
             var role = users.Select(x => x.PermissionId).FirstOrDefault();
             string token = _tokenProvider.Create(service, model);
             var res = JsonSerializer.Serialize(token);
-            return Ok(new { Token = token, Role = users.Select(x => x.PermissionId).FirstOrDefault() });
+            return Ok(new { Token = token, Role = users.Select(x => x.PermissionId).FirstOrDefault(), UserId=users.Select(x => x.Id).FirstOrDefault() });
         }
     }
 }
