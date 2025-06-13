@@ -5,14 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
 
-        
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get([FromKeyedServices("user_service")] UserService service)
         {
@@ -20,7 +20,7 @@ namespace Interface.Controllers
             return Ok(service.Read());
         }
 
-        
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetById([FromKeyedServices("user_service")] UserService service, int id)
         {
@@ -38,8 +38,6 @@ namespace Interface.Controllers
             return Ok(res);
         }
 
-        
-
         [HttpPost]
         public IActionResult Create([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
         {
@@ -51,13 +49,14 @@ namespace Interface.Controllers
             {
                 Name = model.Name,
                 Email = model.Email,
-                Age = Int32.Parse(model.Age),
-                RegistrationDate = model.RegistrationDate
+                Password = model.Password,
+                PermissionId = model.Permission
             });
 
             return Ok(new { message = "User creating status: success" });
         }
 
+        [Authorize]
         [HttpPost("{id}")]
         public IActionResult Update([FromKeyedServices("user_service")] UserService service, int id, [FromBody] UserModel model)
         {
@@ -83,6 +82,7 @@ namespace Interface.Controllers
             return Ok(new { message = "User updating status: success" });
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete([FromKeyedServices("user_service")] UserService service, int id)
         {

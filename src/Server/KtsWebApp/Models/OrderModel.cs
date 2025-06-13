@@ -4,10 +4,17 @@ namespace Interface.Models
 {
     public class OrderModel
     {
-        public string UserId { get; set; } = string.Empty;
-        public string EmployeeId { get; set; } = string.Empty;
-        public string OrderTypeId { get; set; } = string.Empty;
-        public string OrderStatusId { get; set; } = string.Empty;
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; } = string.Empty;
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; } = string.Empty;
+        public int OrderTypeId { get; set; }
+        public string OrderTypeName { get; set; } = string.Empty;   
+        public int OrderStatusId { get; set; }
+        public string OrderStatusName { get; set; } = string.Empty;
+
+
 
         public bool IsAllData()
         {
@@ -28,12 +35,17 @@ namespace Interface.Models
 
         public OrderDTO SetRequestData(OrderDTO request)
         {
-            if (UserId != null) request.userId = Int32.Parse(UserId);
-            if (EmployeeId != null) request.EmployeeId = Int32.Parse(EmployeeId);
-            if (OrderTypeId != null) request.OrderTypeId = Int32.Parse(OrderTypeId);
-            if (OrderStatusId != null) request.OrderStatusId = Int32.Parse(OrderStatusId);
+            if (UserId != null) request.userId = UserId;
+            if (EmployeeId != null) request.EmployeeId = EmployeeId;
+            if (OrderTypeId != null) request.OrderTypeId = OrderTypeId;
+            if (OrderStatusId != null) request.OrderStatusId = OrderStatusId;
 
             return request;
+        }
+
+        public OrderModel getJsonOrderModel()
+        {
+            return null;
         }
     }
 }

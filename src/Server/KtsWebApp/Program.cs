@@ -7,6 +7,8 @@ using System.Text;
 using DotNetEnv;
 using Interface.Providers;
 using Microsoft.EntityFrameworkCore;
+using Interface;
+using System.Reflection.Metadata.Ecma335;
 
 internal class Program
 {
@@ -53,10 +55,12 @@ internal class Program
         });
 
         builder.Services.AddAuthorization();
-
+        
         builder.Services.AddScoped<TokenProvider>();
 
-        builder.Services.AddSingleton(typeof(Context), new Context(connectionString));
+        builder.Services.AddScoped(typeof(Context), provider => new Context(connectionString));
+
+        builder.Services.AddScoped<RedisHandler>();
 
         builder.Services.AddScoped<OrderRepository>();
         builder.Services.AddKeyedScoped<OrderService>("order_service");
