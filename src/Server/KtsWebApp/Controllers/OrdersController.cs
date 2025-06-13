@@ -1,5 +1,7 @@
 ﻿using Application.DTOs;
 using Application.Services;
+using Core.Models;
+using Interface.Controllers.common;
 using Interface.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +15,12 @@ namespace Interface.Controllers
     [Authorize]
     public class OrdersController : ControllerBase
     {
+
+        /*public RedisHandler redis;
+        public OrdersController(RedisHandler redis)
+        {
+            this.redis = redis;
+        }*/
        
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, 
@@ -24,7 +32,7 @@ namespace Interface.Controllers
                 WriteIndented = true,
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
             };
-
+            
             var orders = oService.Read();
             var users = uService.Read();
             var employees = eService.Read();
@@ -36,7 +44,8 @@ namespace Interface.Controllers
             {
                 orders = orders.Where(x => x.OrderTypeId == type).ToList();
             }
-            var result = from order in orders
+            var result = JsonSerializer.Serialize(            
+                from order in orders
                          join user in users on order.userId equals user.Id
                          join employee in employees on order.EmployeeId equals employee.Id
                          select new
@@ -48,7 +57,11 @@ namespace Interface.Controllers
                              employeeName = employee.Name,
                              orderTypeId = order.OrderTypeId,
                              orderStatus = order.OrderStatusId
-                         };
+                         }, options);
+
+            //redis.SetData($"order?{Request.Query}", result);
+            //Console.WriteLine(redis.GetData($"order?{Request.Query}"));
+
             return Ok(result);
         }
 
@@ -70,14 +83,35 @@ namespace Interface.Controllers
         }
 
         [HttpGet("user_orders/{user_id}")]
-        public IActionResult GetByUserId([FromKeyedServices("order_service")] OrderService service, int user_id)
+        public IActionResult GetByUserId([FromKeyedServices("order_service")] OrderService oService,
+                                         [FromKeyedServices("employee_service")] EmployeeService eService, int user_id)
         {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            };
             if (user_id < 0)
             {
                 return BadRequest("User id must be higher then 0");
             }
-            var orders = service.Read().Where(x => x.userId == user_id);
-            return Ok(orders);
+            var employees = eService.Read();
+            var orders = oService.Read().Where(x => x.userId == user_id);
+            var result = JsonSerializer.Serialize(from order in orders
+                                                  join employee in employees on order.EmployeeId equals employee.Id
+                                                  select new
+                                                  {
+                                                      id = order.Id,
+                                                      userId = order.userId,
+                                                      employeeId = employee.Id,
+                                                      employeeName = employee.Name,
+                                                      orderTypeId = order.OrderTypeId,
+                                                      orderTypeName = OrdersTypes.ordersType[order.OrderTypeId],
+                                                      orderStatusId = order.OrderStatusId,
+                                                      orderStatusName = OrdersStatuses.orderStatuses[order.OrderStatusId]
+                                                  }, options);
+
+            return Ok(result);
         }
 
         [HttpPost]
@@ -90,9 +124,9 @@ namespace Interface.Controllers
 
             OrderDTO dto = new OrderDTO()
             {
-                userId = Int32.Parse(model.UserId),
-                EmployeeId = Int32.Parse(model.EmployeeId),
-                OrderTypeId = Int32.Parse(model.OrderTypeId),
+                userId = model.UserId,
+                EmployeeId = model.EmployeeId,
+                OrderTypeId = model.OrderTypeId,
                 OrderStatusId = 1
             };
 

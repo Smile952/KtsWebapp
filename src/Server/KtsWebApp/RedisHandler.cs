@@ -4,12 +4,7 @@ namespace Interface
 {
     public class RedisHandler
     {
-        private IDatabase _database;
-        public IDatabase Database
-        {
-            get;
-            set;
-        }
+        public IDatabase Database { get; set; }
         
         public RedisHandler()
         {
