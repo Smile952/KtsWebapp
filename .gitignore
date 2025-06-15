@@ -7,4 +7,5 @@
 README.md
 KtsWebApp.pdf
 LICENSE
-.env
+**/.env
+**/certs/

@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   db:
     platform: linux/x86_64
@@ -7,13 +5,15 @@ services:
     container_name: mssql_db
     ports:
       - "1433:1433"
+    command: 
+
     healthcheck:
-      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 1qaz@WSX -Q \"SELECT 1\""]
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 1qaz@WSX -C -Q \"SELECT 1\""]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 2
     restart: unless-stopped
-  minio:
+  minio:  
     platform: linux/x86_64
     image: geny952/minio_storage:latest
     container_name: minio
@@ -23,17 +23,23 @@ services:
     restart: unless-stopped
   webapp: 
     platform: linux/x86_64
-    image: geny952/dotnet_app:2.0.0
+    image: geny952/dotnet_app:2.0.2
     container_name: aspnet_webapp
     ports:
       - "8080:8080"
+    environment:
+      - DATABASE_ADDR=mssql_db
+      - DATABASE_USER=sa
+      - DATABASE_PASSWORD=1qaz@WSX
+      - LISTENING_ADDR=http://0.0.0.0:8080
+      - TOKEN=53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680
     depends_on:
       db:
         condition: service_healthy
     restart: always
   ui:
     platform: linux/x86_64
-    image: geny952/react-app:2.0.0
+    image: geny952/react-app:2.0.1
     container_name: react-app 
     ports:
       - "3000:3000"

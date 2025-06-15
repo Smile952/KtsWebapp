@@ -1,4 +1,4 @@
-const addrToApis = 'https://localhost:8080/api'
+const addrToApis = 'http://localhost:8080/api'
 
 export const apiControllers: Record<string, string> = {
     UsersController: `${addrToApis}/users`,

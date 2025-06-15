@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../Button/Button';
 import './Auth.css';
-import { getToken } from './login';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser, tokenSelector, UserData, userSelector } from 'store/authSlice';
+import { apiControllers } from 'common/addr';
+import { AppDispatch } from 'store/store';
 import { useNavigate } from 'react-router-dom';
-import { rout } from 'common/addr';
+import { links } from 'common/links';
 interface FormDataObject {
     [key: string]: FormDataEntryValue;
 }
 
 export function Auth() {
     const [error, setError] = useState<string | null>(null);
-    const nav = useNavigate();
+    const dispatch = useDispatch<AppDispatch>();
+    const token = useSelector(tokenSelector)
+    const user = useSelector(userSelector)
+    const nav = useNavigate()
+
+    useEffect(() => {
+        if (token && user) {
+            nav(links['Главная'])
+        }
+    }, [token, user, nav])
+
     const updateClick = async (event: React.FormEvent<HTMLFormElement>) => {
         setError(null);
         event.preventDefault();
@@ -23,17 +36,17 @@ export function Auth() {
             formDataObject[key] = value;
         });
 
+        const userData: UserData = {
+            id: null,
+            name: String(formDataObject['name']),
+            email: String(formDataObject['email']),
+            age: parseInt(String(formDataObject['age'])),
+            password: String(formDataObject['password']),
+            permissionId: parseInt(String(formDataObject['permissionId']))
+        }
+
         try {
-            const tokenData = await getToken(formDataObject);
-            if (tokenData) {
-                localStorage.setItem('token', tokenData['token']);
-                localStorage.setItem('role', tokenData['role']);
-                localStorage.setItem('userId', tokenData['userId']);
-                nav('/')
-            }
-            else {
-                nav('/signup')
-            }
+            await dispatch(loginUser(userData));
         } catch (error) {
             console.error('Error:', error);
             setError('Ошибка авторизации. Попробуйте снова.');
@@ -46,7 +59,7 @@ export function Auth() {
                 <div className="autorization-form-block">
                     <form
                         className='autorization-form'
-                        action={rout + '/users/token'}
+                        action={apiControllers.TokenController}
                         method='post'
                         onSubmit={updateClick}
                     >

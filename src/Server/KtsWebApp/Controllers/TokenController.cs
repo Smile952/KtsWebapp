@@ -27,15 +27,14 @@ namespace Interface.Controllers
         [HttpPost]
         public IActionResult GetToken([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, IConfiguration configuration)
         {
-            var users = service.Read().Where(x => x.Email == model.Email && x.Password == model.Password);
+            var userData = service.Read().Where(x => x.Email == model.Email && x.Password == model.Password);
 
-            if (users.Count() == 0)
+            if (userData.Count() == 0)
             {
                 return BadRequest("This user was not registrated");
             }
             string token = _tokenProvider.Create(service, model);
-            var res = JsonSerializer.Serialize(new { token, users });
-            return Ok(res);
+            return Ok(new {token, userData });
         }
     }
 }

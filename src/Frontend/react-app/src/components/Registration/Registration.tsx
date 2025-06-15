@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { Button } from '../Button/Button';
 import './Registration.css';
 import { useNavigate } from 'react-router-dom';
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
 import { links } from 'common/links';
 
 export function Registration(): JSX.Element {
@@ -31,7 +31,7 @@ export function Registration(): JSX.Element {
         const { password2, ...dataToSend } = formDataObject;
 
         try {
-            const response = await fetch(rout + '/users', {
+            const response = await fetch(apiControllers.UsersController, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

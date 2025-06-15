@@ -1,4 +1,4 @@
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
 import './Buttons.css';
 
 interface ButtonsProps {
@@ -8,7 +8,7 @@ interface ButtonsProps {
 export function Buttons({ type }: ButtonsProps) {
     const deleteClick = async () => {
         try {
-            const res = await fetch(`${rout}/${type[0]}/${type[1]}`, {
+            const res = await fetch(`${apiControllers.OrdersController}/${type[0]}/${type[1]}`, {
                 method: 'DELETE',
             });
             console.log(await res.text());
@@ -25,7 +25,7 @@ export function Buttons({ type }: ButtonsProps) {
                     id="form"
                     className="update-block-form"
                     method="post"
-                    action={`${rout}/${type[0]}/${type[1]}`}
+                    action={`${apiControllers.OrdersController}/${type[0]}/${type[1]}`}
                 >
                     <div>
                         <input className="update-button" type="submit" value="Update" />
