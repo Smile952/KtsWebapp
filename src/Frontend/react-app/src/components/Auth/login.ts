@@ -1,4 +1,6 @@
-import { rout } from "common/addr";
+import { apiControllers } from "common/addr";
+import { useEffect } from "react";
+
 
 interface TokenResponse {
     token: string;
@@ -7,7 +9,7 @@ interface TokenResponse {
 }
 
 export async function getToken(data: Record<string, unknown>): Promise<TokenResponse> {
-    const response = await fetch(rout + '/token', {
+    const response = await fetch(apiControllers.TokenController, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
