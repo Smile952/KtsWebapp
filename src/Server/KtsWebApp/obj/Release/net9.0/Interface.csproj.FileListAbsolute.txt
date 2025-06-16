@@ -95,3 +95,9 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\Interface.genruntimeconfig.cache
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\ref\Interface.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\bin\Release\net9.0\DotNetEnv.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\bin\Release\net9.0\Sprache.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\rpswa.dswa.cache.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\rjimswa.dswa.cache.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\rjsmcshtml.dswa.cache.json

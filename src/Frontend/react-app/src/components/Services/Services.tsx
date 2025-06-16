@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Services.css';
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
 import { useEffect } from 'react';
 
 interface Block {
@@ -40,7 +40,7 @@ export function Services() {
                 }
             })
             .catch(error => console.log('Ошибка при получении изображений: ', error));
-    }, []);
+    }, [blocks]);
 
     const handler = (id: number, block: Block) => {
         nav(`/about/${id}`, { state: block });
@@ -69,7 +69,7 @@ export function Services() {
 
 async function getImagesNames(): Promise<ImagesResponse> {
     const token = localStorage.getItem('token');
-    const res = await fetch(rout + "/minio/images", {
+    const res = await fetch(apiControllers.MinioController + '/images', {
         method: "GET",
         headers: {
             'Authorization': 'Bearer ' + token,

@@ -1,4 +1,4 @@
-import { rout } from "common/addr";
+import { apiControllers } from "common/addr";
 
 interface Employee {
     id: number;
@@ -9,7 +9,7 @@ interface Employee {
 export async function AdminEmployees(): Promise<Employee[]> {
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch(rout + '/employees', {
+        const response = await fetch(apiControllers.EmployeesController, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
