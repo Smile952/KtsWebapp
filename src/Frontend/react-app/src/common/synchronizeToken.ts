@@ -1,4 +1,4 @@
-import { rout } from "./addr";
+import { apiControllers } from "./addr";
 
 export async function synchronizeToken(): Promise<boolean> {
   const token = localStorage.getItem('token')
@@ -7,7 +7,7 @@ export async function synchronizeToken(): Promise<boolean> {
   }
 
   try {
-    const response = await fetch(rout + '/token', {
+    const response = await fetch(apiControllers.TokenController, {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer ' + token,

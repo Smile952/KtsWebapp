@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../store';
-import { verifyToken, selectAuth } from '../store/slice';
 import { UnauthorizedPage } from '../ts/pages/UnauthorizedPage';
+import axios from 'axios';
+import { addrToApis, apiControllers } from './addr';
+import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux';
+import { tokenSelector, userSelector } from 'store/authSlice';
 
 interface AuthProps {
     children: React.ReactNode;
@@ -9,18 +11,33 @@ interface AuthProps {
 }
 
 export function CheckAuth({ children, accessLevel }: AuthProps) {
-    const dispatch = useAppDispatch();
-    const { token, role, isLoading } = useAppSelector(selectAuth);
+    const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
+
+    const user = useSelector(userSelector)
+    const token = useSelector(tokenSelector)
+
+    console.log(user)
 
     useEffect(() => {
-        dispatch(verifyToken());
-    }, [dispatch]);
+        axios.create({
+            baseURL: addrToApis,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        })
+            .get(apiControllers.TokenController)
+            .then(() => {
+                const level = user?.permissionId || 0;
+                setIsAuthorized(level >= accessLevel);
+            })
+            .catch(() => {
+                setIsAuthorized(false);
+            });
+    }, [accessLevel]);
 
-    if (isLoading) return <div>Loading...</div>;
-    if (!token) return <UnauthorizedPage />;
-
-    const permission = role ? parseInt(role) : -1;
-    if (permission < accessLevel) return <UnauthorizedPage />;
-
-    return <>{children}</>;
+    if (isAuthorized === null) {
+        return <UnauthorizedPage />;
+    }
+    return isAuthorized ? <>{children}</> : <UnauthorizedPage />;
 }

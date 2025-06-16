@@ -14,18 +14,31 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string directory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).FullName).FullName).FullName;
+        string directory = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
 
-        Env.Load(directory + "/.env");
+        string envPath = Path.Combine(directory, ".env");
+        string token, addr, db_addr, db_user, db_password = "";
+        
+        if (File.Exists(envPath))
+        {
+            Env.Load(directory + "/.env");
+            token = Env.GetString("TOKEN");
+            addr = Env.GetString("LISTENING_ADDR");
 
+            db_addr = Env.GetString("DATABASE_ADDR");
+            db_user = Env.GetString("DATABASE_USER");
+            db_password = Env.GetString("DATABASE_PASSWORD");
+        }
+        else
+        {
+            token = Environment.GetEnvironmentVariable("TOKEN");
+            addr = Environment.GetEnvironmentVariable("LISTENING_ADDR");
 
-        string token = Env.GetString("TOKEN");
-        string addr = Env.GetString("LISTENING_ADDR");
-
-        string db_addr = Env.GetString("DATABASE_ADDR");
-        string db_user = Env.GetString("DATABASE_USER");
-        string db_password = Env.GetString("DATABASE_PASSWORD");
-
+            db_addr = Environment.GetEnvironmentVariable("DATABASE_ADDR");
+            db_user = Environment.GetEnvironmentVariable("DATABASE_USER");
+            db_password = Environment.GetEnvironmentVariable("DATABASE_PASSWORD");
+        }
+        
         var cors = "_myAllowSpecificOrigins";
         var builder = WebApplication.CreateBuilder(args);
 

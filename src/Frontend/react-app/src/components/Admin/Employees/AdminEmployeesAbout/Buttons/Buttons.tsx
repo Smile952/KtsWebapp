@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Buttons.css';
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
 
 interface ButtonsProps {
     type: [string, string]; // [resource, id]
@@ -11,7 +11,7 @@ export function Buttons({ type }: ButtonsProps) {
 
     const deleteClick = async () => {
         try {
-            await fetch(`${rout}/${type[0]}/${type[1]}`, { method: 'DELETE' });
+            await fetch(`${apiControllers.EmployeesController}/${type[0]}/${type[1]}`, { method: 'DELETE' });
             navigate('/');
         } catch (error) {
             console.error(error);
@@ -26,7 +26,7 @@ export function Buttons({ type }: ButtonsProps) {
                     id="form"
                     className="update-block-form"
                     method="post"
-                    action={`${rout}/${type[0]}/${type[1]}`}
+                    action={`${apiControllers.EmployeesController}/${type[0]}/${type[1]}`}
                 >
                     <div>
                         <input className="update-button" type="submit" value="Update" />

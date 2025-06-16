@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Orders.module.css';
-import { rout } from '../../common/addr';
+import { apiControllers } from '../../common/addr';
 
 interface Order {
     id: number;
@@ -24,7 +24,7 @@ export function Orders() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch(`${rout}/orders/user_orders/${userId}`, {
+                const response = await fetch(`${apiControllers.OrdersController}/user_orders/${userId}`, {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${token}`,
