@@ -40,7 +40,7 @@ export function Services() {
                 }
             })
             .catch(error => console.log('Ошибка при получении изображений: ', error));
-    }, []);
+    }, [blocks]);
 
     const handler = (id: number, block: Block) => {
         nav(`/about/${id}`, { state: block });

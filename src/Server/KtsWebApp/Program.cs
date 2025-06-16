@@ -14,7 +14,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string directory = Directory.GetCurrentDirectory();
+        string directory = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
 
         string envPath = Path.Combine(directory, ".env");
         string token, addr, db_addr, db_user, db_password = "";
