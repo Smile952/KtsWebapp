@@ -13,26 +13,12 @@ services:
       timeout: 5s
       retries: 2
     restart: unless-stopped
-  minio:  
-    platform: linux/x86_64
-    image: geny952/minio_storage:latest
-    container_name: minio
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    restart: unless-stopped
   webapp: 
     platform: linux/x86_64
     image: geny952/dotnet_app:2.0.2
-    container_name: aspnet_webapp
+    container_name: kts_backend
     ports:
       - "8080:8080"
-    environment:
-      - DATABASE_ADDR=mssql_db
-      - DATABASE_USER=sa
-      - DATABASE_PASSWORD=1qaz@WSX
-      - LISTENING_ADDR=http://0.0.0.0:8080
-      - TOKEN=53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680
     depends_on:
       db:
         condition: service_healthy
@@ -40,7 +26,7 @@ services:
   ui:
     platform: linux/x86_64
     image: geny952/react-app:2.0.1
-    container_name: react-app 
+    container_name: kts_frontend 
     ports:
       - "3000:3000"
     depends_on:
