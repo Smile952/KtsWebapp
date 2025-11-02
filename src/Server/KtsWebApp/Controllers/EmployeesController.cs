@@ -15,11 +15,13 @@ namespace Interface.Controllers
         [HttpGet]
         public IActionResult Get([FromKeyedServices("employee_service")] EmployeeService service)
         {
+            List<EmployeeDTO> employees = service.Read();
             if (Request.Query["sorting"] == "desc")
             {
-                return Ok(service.Read().OrderByDescending(x => x.Id));
+                employees = employees.OrderByDescending(x => x.Id).ToList();
             }
-            return Ok(service.Read().OrderBy(x => x.Id));
+            employees = employees.OrderBy(x => x.Id).ToList();
+            return Ok(employees);
         }
 
         [HttpGet("{id}")]
@@ -38,8 +40,7 @@ namespace Interface.Controllers
             }
             else
             {
-                var employeeJson = JsonSerializer.Serialize(employee);
-                return Ok(employeeJson);
+                return Ok(employee);
             }
         }
         [HttpPost]
