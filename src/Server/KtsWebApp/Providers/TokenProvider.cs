@@ -12,7 +12,7 @@ namespace Interface.Providers
 
         public string Create (UserService service, UserModel model)
         {
-            var users = service.Read().Where(x => x.Email == model.Email && x.Password == model.Password);
+            var users = service.Read().Where(x => x.Email == model.Email && x.Password == model.PasswordHash);
             var claims = new List<Claim> { new Claim(ClaimTypes.Name, model.Name) };
             var secretKey = "53db4fdf8da5212b2896c62a738794c35fb9ba73c8b6d9adc73a489ba1241149e1f569a2e244c244e8a5ae6b5de5fea6c12e4c190b9c0178b274a52e0bf62680";
             var jwt = new JwtSecurityToken(

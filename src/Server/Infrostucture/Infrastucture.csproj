@@ -1,19 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Library</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<UseStaticWebAssets>false</UseStaticWebAssets>
-	<EnableDefaultContentItems>false</EnableDefaultContentItems>
-	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
-
 
 	<Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
 		<ReadLinesFromFile File="version.txt">

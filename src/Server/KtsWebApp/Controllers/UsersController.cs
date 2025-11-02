@@ -49,7 +49,7 @@ namespace Interface.Controllers
             {
                 Name = model.Name,
                 Email = model.Email,
-                Password = model.Password,
+                Password = model.PasswordHash,
                 PermissionId = model.Permission
             });
 
@@ -102,6 +102,11 @@ namespace Interface.Controllers
                 service.Delete(id);
             }
             return Ok(new { message = "User deleting status: success" });
+        }
+
+        public IActionResult Register([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
+        {
+            return Ok();
         }
     }
 }

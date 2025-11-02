@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eG3v09nIse8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kheragacy\\source\\repos\\KtsWebApp\\src\\Server\\Infrostucture\\Infrastucture.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kheragacy\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

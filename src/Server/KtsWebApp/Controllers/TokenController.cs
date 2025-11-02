@@ -27,7 +27,7 @@ namespace Interface.Controllers
         [HttpPost]
         public IActionResult GetToken([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, IConfiguration configuration)
         {
-            var userData = service.Read().Where(x => x.Email == model.Email && x.Password == model.Password);
+            var userData = service.Read().Where(x => x.Email == model.Email && x.Password == model.PasswordHash);
 
             if (userData.Count() == 0)
             {
