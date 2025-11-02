@@ -14,14 +14,7 @@ namespace Interface.Controllers
     [ApiController]
     [Authorize]
     public class OrdersController : ControllerBase
-    {
-
-        /*public RedisHandler redis;
-        public OrdersController(RedisHandler redis)
-        {
-            this.redis = redis;
-        }*/
-       
+    {       
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, 
                                  [FromKeyedServices("user_service")] UserService uService, 
@@ -58,9 +51,6 @@ namespace Interface.Controllers
                              orderTypeId = order.OrderTypeId,
                              orderStatus = order.OrderStatusId
                          }, options);
-
-            //redis.SetData($"order?{Request.Query}", result);
-            //Console.WriteLine(redis.GetData($"order?{Request.Query}"));
 
             return Ok(result);
         }
