@@ -30,7 +30,7 @@ namespace Core.ApplicationContext
               .AddJsonFile("dbConfig.json")
               .Build();
 
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            var connectionString = configuration.GetConnectionString("DefaultLocalConnection");
 
             optionsBuilder.UseSqlServer(connectionString);
             base.OnConfiguring(optionsBuilder);
