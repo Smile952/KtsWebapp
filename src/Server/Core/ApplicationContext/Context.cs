@@ -13,6 +13,11 @@ namespace Core.ApplicationContext
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Permissions> Permissions { get; set; }
 
+        public Context()
+        {
+            Database.EnsureCreated();
+        }
+
         public Context(string connectionString)
         {
             Database.SetConnectionString(connectionString);
@@ -43,7 +48,11 @@ namespace Core.ApplicationContext
                             .HasOne(x => x.Permission)
                             .WithMany(x => x.Employee)
                             .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<Employee>().HasIndex(x => x.PermissionId).IsUnique(false);
+            modelBuilder.Entity<Employee>()
+                            .HasIndex(x => x.PermissionId)
+                            .IsUnique(false);
+            modelBuilder.Entity<Employee>()
+                            .Property(e => e.Id).UseIdentityColumn(1, 1);
             
 
             //Перечисление типов заказов
@@ -63,7 +72,12 @@ namespace Core.ApplicationContext
                             .HasOne(x => x.Permission)
                             .WithMany(x => x.User)
                             .OnDelete(DeleteBehavior.Restrict); ;
-            modelBuilder.Entity<User>().HasIndex(x => x.PermissionId).IsUnique(false);
+            modelBuilder.Entity<User>()
+                            .HasIndex(x => x.PermissionId)
+                            .IsUnique(false);
+            modelBuilder.Entity<User>()
+                            .Property(e => e.Id)
+                            .UseIdentityColumn(1, 1);
 
             //Перечисление статусов заказов
             modelBuilder.Entity<OrderStatus>()
@@ -84,6 +98,9 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<Order>()
                             .HasOne(x => x.OrderStatus)
                             .WithMany(x => x.Orders);
+            modelBuilder.Entity<Order>()
+                            .Property(e => e.Id)
+                            .UseIdentityColumn(1, 1);
 
             //Статусы
             modelBuilder.Entity<OrderStatus>()

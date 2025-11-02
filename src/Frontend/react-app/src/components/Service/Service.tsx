@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Service.css';
 import { links } from '../../common/links';
@@ -12,7 +11,6 @@ interface ServiceState {
 export function Service() {
     const { state } = useLocation();
 
-    // Приводим state к типу ServiceState или даем дефолт
     const serviceState = (state as ServiceState) || {
         title: '',
         description: '',
@@ -28,7 +26,7 @@ export function Service() {
                             <div className="block-title">{serviceState.title}</div>
                             <div className="block-description">{serviceState.description}</div>
                             <div className="block-image">
-                                <img className="block-image-source" src={serviceState.photo} alt={serviceState.title} />
+                                <img className="block-image-source" src={serviceState.photo} alt='Сайт КТС' />
                             </div>
                         </div>
                     </div>

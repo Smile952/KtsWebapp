@@ -1,4 +1,4 @@
-import { rout } from "common/addr";
+import { apiControllers } from "common/addr";
 
 interface Request {
   id: number;
@@ -12,7 +12,7 @@ interface Request {
 }
 
 export async function AdminRequests(type?: string | null, status?: string | null): Promise<Request[]> {
-  let addr = rout + '/orders';
+  let addr = apiControllers.OrdersController;
 
   if ((type && type !== '') || (status && status !== '')) {
     addr += '?';

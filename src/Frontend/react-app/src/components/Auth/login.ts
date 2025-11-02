@@ -1,24 +1,18 @@
-import { rout } from "common/addr";
+import axios from "axios";
+import { apiControllers } from "common/addr";
+import { useSelector } from "react-redux";
+import { loginUser } from "store/authSlice";
 
-interface TokenResponse {
-    token: string;
-    role: string;
-    userId: string;
-}
 
-export async function getToken(data: Record<string, unknown>): Promise<TokenResponse> {
-    const response = await fetch(rout + '/token', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
 
-    if (!response.ok) {
-        throw new Error("Authorization wasn't successful");
+export async function getToken(data: Record<string, unknown>) {
+    const credentials = {
+        email: data.email,
+        password: data.password
     }
-
-    const json = await response.json();
-    return json as TokenResponse;
+    const response = axios.post(
+        apiControllers.TokenController,
+        credentials
+    )
+    console.log((await response).data)
 }

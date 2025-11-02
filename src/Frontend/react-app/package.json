@@ -16,6 +16,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.10.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
     "dayjs": "^1.11.13",
@@ -28,6 +29,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0",
     "redux-thunk": "^3.1.0",
     "timers-browserify": "^2.0.12",
     "web-vitals": "^2.1.4"

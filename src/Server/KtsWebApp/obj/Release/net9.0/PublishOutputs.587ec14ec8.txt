@@ -12,6 +12,7 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Azure.Core.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Azure.Identity.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\CommunityToolkit.HighPerformance.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\DotNetEnv.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
@@ -43,6 +44,7 @@ C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\NetTopologySuite.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\NRedisStack.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Pipelines.Sockets.Unofficial.dll
+C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Sprache.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\StackExchange.Redis.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Kheragacy\source\repos\KtsWebApp\src\Server\KtsWebApp\obj\Release\net9.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll

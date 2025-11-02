@@ -23,6 +23,7 @@
  - React вынесен из Backend
  - Добавлен Redux и Redis
  - Frontend перенесен на TS
+ - Добавлена страница заявок
 
 ## Author
 - [Kheragacy aka Шелепов Денис](https://github.com/Smile952)

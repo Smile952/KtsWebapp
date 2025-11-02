@@ -1,43 +1,76 @@
-import { JSX } from "react"
-import { useState, useEffect } from "react";
-import './Orders.css';
-import { rout } from '../../common/addr'
-
+import { useState, useEffect } from 'react';
+import styles from './Orders.module.css';
+import { apiControllers } from '../../common/addr';
 
 interface Order {
     id: number;
-    title: string;
-    body: string;
-    [key: string]: any;
+    userId: number;
+    employeeId: number;
+    employeeName: string;
+    orderTypeId: number;
+    orderTypeName: string;
+    orderStatusId: number;
+    orderStatusName: string;
 }
 
-export function Orders(): JSX.Element {
-    const userId = localStorage.getItem('userId')
+export function Orders() {
+    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token');
+
     const [orders, setOrders] = useState<Order[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchOrders = async () => {
             try {
-                const response = await fetch(rout + '/orders?user_id=' + userId);
+                const response = await fetch(`${apiControllers.OrdersController}/user_orders/${userId}`, {
+                    method: 'GET',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+
                 if (!response.ok) {
-                    throw new Error('Failed to fetch data');
+                    throw new Error(`Ошибка загрузки: ${response.statusText}`);
                 }
-                const jsonData = await response.json();
-                setOrders(jsonData);
-            } catch (err) {
-                console.error("Error fetching: " + err)
+
+                const data = await response.json();
+                setOrders(data);
+            } catch (err: any) {
+                setError(err.message || 'Неизвестная ошибка');
+            } finally {
+                setLoading(false);
             }
         };
 
-        fetchData();
-    }, []);
-    return <div className="orders">
-        <div className="orders__list">
-            {orders.map(order => (
-                <div key={order.id} className="orders__item">
-                    <h3 className="orders__title">{order.title}</h3>
-                    <p className="orders__content">{order.description}</p>
-                </div>
-            ))}
+        fetchOrders();
+    }, [userId, token]);
+
+    if (loading) return <div className={styles.status}>Загрузка заказов...</div>;
+    if (error) return <div className={styles.error}>Ошибка: {error}</div>;
+
+    return (
+        <div className={styles.orders}>
+            <h2 className={styles.heading}>Мои заказы</h2>
+            <div className={styles.list}>
+                {orders.length === 0 ? (
+                    <p className={styles.empty}>Нет заказов</p>
+                ) : (
+                    orders.map(order => (
+                        <div key={order.id} className={styles.item}>
+                            <h3 className={styles.title}>Заказ №{order.id}</h3>
+                            <ul className={styles.details}>
+                                <li><strong>Исполнитель:</strong> {order.employeeName}</li>
+                                <li><strong>ИД исполнителя:</strong> {order.employeeId}</li>
+                                <li><strong>Order Type ID:</strong> {order.orderTypeName}</li>
+                                <li><strong>Status ID:</strong> {order.orderStatusName}</li>
+                            </ul>
+                        </div>
+                    ))
+                )}
+            </div>
         </div>
-    </div>
+    );
+
 }

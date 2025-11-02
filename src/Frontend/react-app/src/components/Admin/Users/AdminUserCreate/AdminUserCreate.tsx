@@ -7,7 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from 'react';
 import { Dayjs } from 'dayjs';
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
 
 export function AdminUserCreate() {
     const navigate = useNavigate();
@@ -51,7 +51,7 @@ export function AdminUserCreate() {
                 onSubmit={updateClick}
                 className="create-block-form"
                 method="post"
-                action={rout + '/users'}
+                action={apiControllers.UsersController}
                 encType="application/json"
             >
                 <div className="mb-3">

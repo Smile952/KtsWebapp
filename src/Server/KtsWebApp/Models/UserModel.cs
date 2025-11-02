@@ -9,11 +9,12 @@ namespace Interface.Models
         public string Email { get; set; } = string.Empty;
         public string Age { get; set; } = string.Empty;
         public DateTime RegistrationDate { get; set; }
+        public int Permission { get; set; }
         public string Password { get; set; }
 
         public bool IsAllData()
         {
-            if (Name != null && Email != null && Age != null && RegistrationDate != DateTime.MinValue)
+            if (Name != null && Email != null && Password != null && Permission != 0)
             {
                 return true;
             }

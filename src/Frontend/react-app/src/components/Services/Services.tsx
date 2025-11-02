@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Services.css';
-import { rout } from 'common/addr';
+import { apiControllers } from 'common/addr';
+import { useEffect } from 'react';
 
 interface Block {
     id: number;
@@ -27,19 +28,19 @@ export function Services() {
 
     const nav = useNavigate();
 
-    // useEffect(() => {
-    //     getImagesNames()
-    //         .then(result => {
-    //             const updated = [...blocks];
-    //             if (result?.ImagesData?.length >= 3) {
-    //                 updated[1].photo = result.ImagesData[0].ImageURL;
-    //                 updated[2].photo = result.ImagesData[1].ImageURL;
-    //                 updated[0].photo = result.ImagesData[2].ImageURL;
-    //                 // setBlocks(updated);
-    //             }
-    //         })
-    //         .catch(error => console.log('Ошибка при получении изображений: ', error));
-    // }, []);
+    useEffect(() => {
+        getImagesNames()
+            .then(result => {
+                const updated = [...blocks];
+                if (result?.ImagesData?.length >= 3) {
+                    updated[1].photo = result.ImagesData[0].ImageURL;
+                    updated[2].photo = result.ImagesData[1].ImageURL;
+                    updated[0].photo = result.ImagesData[2].ImageURL;
+                    // setBlocks(updated);
+                }
+            })
+            .catch(error => console.log('Ошибка при получении изображений: ', error));
+    }, [blocks]);
 
     const handler = (id: number, block: Block) => {
         nav(`/about/${id}`, { state: block });
@@ -68,7 +69,7 @@ export function Services() {
 
 async function getImagesNames(): Promise<ImagesResponse> {
     const token = localStorage.getItem('token');
-    const res = await fetch(rout + "/minio/images", {
+    const res = await fetch(apiControllers.MinioController + '/images', {
         method: "GET",
         headers: {
             'Authorization': 'Bearer ' + token,
