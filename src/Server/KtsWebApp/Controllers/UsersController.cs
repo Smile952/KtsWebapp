@@ -1,4 +1,5 @@
 ﻿using Application.Services;
+using Infrastucture;
 using Interface.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,12 @@ namespace Interface.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+
+        PasswordHasher _hasher;
+        public UsersController(PasswordHasher hasher)
+        {
+            _hasher = hasher;
+        }
 
 
         [Authorize]
@@ -45,12 +52,15 @@ namespace Interface.Controllers
             {
                 return BadRequest("User is empty");
             }
+
+            string passwordHash = _hasher.GenerateHashPassword(model.Password);
+
             service.Create(new Application.DTOs.UserDTO()
             {
                 Name = model.Name,
                 Email = model.Email,
-                Password = model.PasswordHash,
-                PermissionId = model.Permission
+                PasswordHash = passwordHash,
+                PermissionId = model.PermissionId
             });
 
             return Ok(new { message = "User creating status: success" });
@@ -104,9 +114,28 @@ namespace Interface.Controllers
             return Ok(new { message = "User deleting status: success" });
         }
 
+        [HttpPost("sign_up")]
         public IActionResult Register([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
         {
-            return Ok();
+            if (model.IsAllData())
+            {
+                var temp = service.Read().Any(u => u.Email == model.Email && u.Name == model.Name);
+                if (temp) return BadRequest("User with this Name and Email already exists");
+
+                model.Password = _hasher.GenerateHashPassword(model.Password);
+
+                var userDto = new Application.DTOs.UserDTO()
+                {
+                    Name = model.Name,
+                    Email = model.Email,
+                    PasswordHash = model.Password,
+                    PermissionId = model.PermissionId
+                };
+
+                service.Create(userDto);
+                return Ok($"User \"${userDto.Name}\" successfully registered");
+            }
+            return BadRequest("User data is not fulfilled");
         }
     }
 }

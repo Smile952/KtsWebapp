@@ -40,7 +40,7 @@ export function AdminRequestCreate() {
 
     return (
         <div>
-            <Header text={['Ктс-Создание (запрос)']} />
+            <Header title={'Ктс-Создание (запрос)'} text={[]} />
             <form
                 onSubmit={updateClick}
                 className="create-block-form"

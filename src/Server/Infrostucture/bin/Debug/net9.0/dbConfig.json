@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-6KQLPSL;TrustServerCertificate=true;Database=KTS;User Id=sa;Password=1qaz@WSX; Trusted_Connection=false;",
+    "DefaultLocalConnection": "Server=DESKTOP-6KQLPSL;TrustServerCertificate=true;Database=KTS; Trusted_Connection=true;"
+  }
+}

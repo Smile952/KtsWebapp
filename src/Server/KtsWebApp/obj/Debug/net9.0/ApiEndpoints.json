@@ -303,5 +303,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Interface.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/Users/sign_up",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Interface.Models.UserModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

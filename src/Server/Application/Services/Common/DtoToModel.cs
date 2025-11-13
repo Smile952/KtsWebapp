@@ -23,7 +23,7 @@ namespace Application.Services.Common
                 Name = dto.Name,
                 Email = dto.Email,
                 Age = dto.Age,
-                Password = dto.Password,
+                PasswordHash = dto.PasswordHash,
                 RegistrationDate = dto.RegistrationDate,
                 PermissionId = dto.PermissionId
             };

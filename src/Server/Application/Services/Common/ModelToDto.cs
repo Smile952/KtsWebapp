@@ -36,7 +36,7 @@ namespace Application.Services.Common
                 Name = user.Name,
                 Email = user.Email,
                 Age = user.Age,
-                Password = user.Password,
+                PasswordHash = user.PasswordHash,
                 RegistrationDate = user.RegistrationDate,
                 PermissionId = user.PermissionId
             };

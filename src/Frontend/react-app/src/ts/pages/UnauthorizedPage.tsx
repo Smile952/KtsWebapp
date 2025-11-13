@@ -6,7 +6,7 @@ import { JSX } from 'react'
 export function UnauthorizedPage(): JSX.Element {
     return (
         <div>
-            <Header text={["КТС-Не зарегестрирован", "Портфолио", "Контакты", "Профиль", "Регистрация"]} />
+            <Header title={"КТС-Не зарегестрирован"} text={["Портфолио", "Контакты", "Профиль"]} />
             <Unauthorized />
             <Footer />
         </div>

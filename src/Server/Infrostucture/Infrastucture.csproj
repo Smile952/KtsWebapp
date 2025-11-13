@@ -4,21 +4,17 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <UseStaticWebAssets>false</UseStaticWebAssets>
+	  <EnableDefaultContentItems>false</EnableDefaultContentItems>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
 
-	<Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
-		<ReadLinesFromFile File="version.txt">
-			<Output TaskParameter="Lines" PropertyName="MyVersion" />
-		</ReadLinesFromFile>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
 
-		<PropertyGroup>
-			<AssemblyVersion>$(MyVersion)</AssemblyVersion>
-			<FileVersion>$(MyVersion)</FileVersion>
-			<Version>$(MyVersion)</Version>
-		</PropertyGroup>
-	</Target>
 </Project>

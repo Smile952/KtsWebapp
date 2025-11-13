@@ -36,7 +36,6 @@ export function Services() {
                     updated[1].photo = result.ImagesData[0].ImageURL;
                     updated[2].photo = result.ImagesData[1].ImageURL;
                     updated[0].photo = result.ImagesData[2].ImageURL;
-                    // setBlocks(updated);
                 }
             })
             .catch(error => console.log('Ошибка при получении изображений: ', error));

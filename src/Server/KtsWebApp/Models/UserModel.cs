@@ -1,5 +1,4 @@
 ﻿using Application.DTOs;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Interface.Models
 {
@@ -9,12 +8,12 @@ namespace Interface.Models
         public string Email { get; set; } = string.Empty;
         public string Age { get; set; } = string.Empty;
         public DateTime RegistrationDate { get; set; }
-        public int Permission { get; set; }
-        public string PasswordHash { get; set; }
+        public int PermissionId { get; set; }
+        public string Password { get; set; }
 
         public bool IsAllData()
         {
-            if (Name != null && Email != null && PasswordHash != null && Permission != 0)
+            if (Name != null && Email != null && Password != null && PermissionId != 0)
             {
                 return true;
             }

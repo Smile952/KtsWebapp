@@ -6,25 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <UseStaticWebAssets>false</UseStaticWebAssets>
+	  <EnableDefaultContentItems>false</EnableDefaultContentItems>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <Target Name="ReadVersionFromFile" BeforeTargets="BeforeBuild">
-    <ReadLinesFromFile File="version.txt">
-      <Output TaskParameter="Lines" PropertyName="MyVersion" />
-    </ReadLinesFromFile>
-
-    <PropertyGroup>
-      <AssemblyVersion>$(MyVersion)</AssemblyVersion>
-      <FileVersion>$(MyVersion)</FileVersion>
-      <Version>$(MyVersion)</Version>
-    </PropertyGroup>
-  </Target>
-  <ItemGroup>
-    <Content Include="dbConfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
@@ -34,6 +19,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.10" />
 	<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
 	<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dbConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

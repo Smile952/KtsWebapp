@@ -5,22 +5,19 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetEnv;
-using Interface.Providers;
-using Microsoft.EntityFrameworkCore;
-using Interface;
-using System.Reflection.Metadata.Ecma335;
+using Infrastucture;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        string directory = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
+        string directory = Directory.GetCurrentDirectory();
 
         string envPath = Path.Combine(directory, ".env");
-        string token, addr, db_addr, db_user, db_password = "";
-
+        string secretKey, addr, db_addr, db_user, db_password;
         Env.Load(directory + "/.env");
-        token = Env.GetString("TOKEN");
+
+        secretKey = Env.GetString("SECRET_KEY");
         addr = Env.GetString("LISTENING_ADDR");
 
         db_addr = Env.GetString("DATABASE_ADDR");
@@ -29,7 +26,7 @@ internal class Program
 
         var cors = "_myAllowSpecificOrigins";
         var builder = WebApplication.CreateBuilder(args);
-
+        var a = Environment.GetEnvironmentVariables();
         string connectionString = $"Server={db_addr},1433;TrustServerCertificate=true;Database=KTS;User Id=sa;Password=1qaz@WSX";
 
         builder.Services.AddCors(options =>
@@ -51,14 +48,13 @@ internal class Program
                 ValidateAudience = false,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true, 
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(token)) 
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+                ClockSkew = TimeSpan.Zero
             };
         });
 
         builder.Services.AddAuthorization();
         
-        builder.Services.AddScoped<TokenProvider>();
-
         builder.Services.AddScoped(typeof(Context), provider => new Context(connectionString));
 
         builder.Services.AddScoped<OrderRepository>();
@@ -69,6 +65,10 @@ internal class Program
 
         builder.Services.AddScoped<EmployeeRepository>();
         builder.Services.AddKeyedScoped<EmployeeService>("employee_service");
+
+        builder.Services.AddSingleton<PasswordHasher>();
+
+        builder.Services.AddScoped(typeof(TokenBuilder), service => new TokenBuilder(secretKey));
 
         builder.Services.AddControllers();
 

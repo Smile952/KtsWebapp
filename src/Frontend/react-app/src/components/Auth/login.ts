@@ -1,7 +1,5 @@
 import axios from "axios";
 import { apiControllers } from "common/addr";
-import { useSelector } from "react-redux";
-import { loginUser } from "store/authSlice";
 
 
 

@@ -38,7 +38,7 @@ export function AdminEmployeeCreate() {
 
     return (
         <div>
-            <Header text={['Ктс-Создание (сотрудник)']} />
+            <Header title={'Ктс-Создание (сотрудник)'} text={[]} />
             <form
                 onSubmit={updateClick}
                 className="create-block-form"

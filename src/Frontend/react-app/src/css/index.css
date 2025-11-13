@@ -8,6 +8,12 @@ body {
   overflow: hidden;
 }
 
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

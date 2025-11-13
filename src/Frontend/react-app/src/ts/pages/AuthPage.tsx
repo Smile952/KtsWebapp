@@ -5,7 +5,7 @@ import { Auth } from "../../components/Auth/Auth";
 export function AuthPage() {
     return (
         <div>
-            <Header text={["КТС-Авторизация", 'Главная', 'Регистрация']} />
+            <Header title={"КТС-Авторизация"} text={['Главная']} />
             <Auth />
             <Footer />
         </div>
