@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{01BFF695-68EB-4B93-900C-F52B31789D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrostucture\Infrastucture.csproj", "{64BD0039-A212-456E-9319-35E0173A4734}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrаstucture\Infrastucture.csproj", "{64BD0039-A212-456E-9319-35E0173A4734}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

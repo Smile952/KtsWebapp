@@ -1,15 +1,12 @@
 import styles from './Header.module.css';
 import { links } from '../../common/links';
-import { useState } from 'react';
-import { LoginRegisterForm } from 'components/Authorization/LoginRegisterForm';
+import { Account } from 'components/Account/Account';
 
 
 export function Header({title, text }: {title:string, text: string[] }) {
-    const [user, setUser] = useState<{ name: string } | null>(null);
+    
     var navTexts = Array.isArray(text) ? text : [];
-    if (user) {
-        navTexts = navTexts.slice(1, navTexts.length - 1);
-    }
+    
     const navLinks = navTexts
         .filter(linkText => linkText)
         .map((linkText, index) => (
@@ -26,13 +23,8 @@ export function Header({title, text }: {title:string, text: string[] }) {
                 <div className={`d-flex ${styles.link_block}`}>
                     <ul className={styles.nav}>
                         {navLinks}
-                        <li>
-                            <a href='*' className={styles.nav_link}>
-                                {user?.name}
-                            </a>
-                        </li>
+                        <Account/>        
                     </ul>
-                    <LoginRegisterForm/>
                 </div>
             </div>
         </header>

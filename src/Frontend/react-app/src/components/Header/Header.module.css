@@ -1,5 +1,5 @@
 .header {
-    background: linear-gradient(135deg, #2ca87098 0%, #36d88f96 100%);
+    background: var(--gradient-header-footer);
     height: 8vh;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
     font-weight: thin;
     white-space: nowrap;
     font-weight: 600;
-    color: #1E3A8A;
+    color: var(--color-main-text);
     font-family: 'Inter', sans-serif;
 }
 
@@ -38,6 +38,8 @@
     gap: 1vw;
     margin: 0;
     margin-right: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav_item {
