@@ -14,3 +14,8 @@ LICENSE
 
 **/bin/
 **/obj/
+
+**/.cache/
+**/.eslintcache/
+**/.npm/
+**/npminstall/
