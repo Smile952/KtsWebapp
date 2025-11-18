@@ -92,10 +92,7 @@ internal class Program
 
         app.UseAuthentication();
         app.UseAuthorization();
-        app.UseEndpoints(endpoint =>
-        {
-            endpoint.MapControllers();
-        });
+        app.MapControllers();
 
         
         app.Run();
