@@ -65,6 +65,10 @@ namespace Core.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("OrderContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("OrderStatusId")
                         .HasColumnType("int");
 

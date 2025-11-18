@@ -21,6 +21,7 @@ namespace Infrastucture
             if (user == null) return null;
 
             var claims = new List<Claim> {
+                new Claim("id", user.Id.ToString()),
                 new Claim("name", user.Name),
                 new Claim("role", user.PermissionId.ToString()),
                 new Claim("email", user.Email)

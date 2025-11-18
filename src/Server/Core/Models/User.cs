@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Core.Models
 {
@@ -15,5 +16,14 @@ namespace Core.Models
         public int PermissionId { get; set; }
         public List<Order>? Orders { get; set; }
         public Permissions Permission { get; set; }
+
+        public bool checkUserDataIsEmpty()
+        {
+            return Id != 0 
+                && Name != string.Empty 
+                && Email != string.Empty
+                && PermissionId != 0
+                && Age != 0;
+        }
     }
 }

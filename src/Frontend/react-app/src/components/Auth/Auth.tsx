@@ -55,7 +55,7 @@ export function Auth() {
 
                 const parts = (data.token as string).split('.');
                 const payload = JSON.parse(atob(parts[1]));
-                const userData: UserEntity = {Name: payload.name, Email: payload.email, PermissionId: payload.role, Token: data.token, Password: null} 
+                const userData: UserEntity = {Id:payload.id, Name: payload.name, Email: payload.email, PermissionId: payload.role, Token: data.token} 
                 
                 localStorage.setItem('token', (data.token as string));
                 localStorage.setItem('user', JSON.stringify(userData));

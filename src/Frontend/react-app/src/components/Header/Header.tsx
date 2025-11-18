@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { links } from '../../common/links';
-import { Account } from 'components/Account/Account';
+import { AccountBlock } from 'components/AccountBlock/AccountBlock/AccountBlock';
 
 
 export function Header({title, text }: {title:string, text: string[] }) {
@@ -23,7 +23,7 @@ export function Header({title, text }: {title:string, text: string[] }) {
                 <div className={`d-flex ${styles.link_block}`}>
                     <ul className={styles.nav}>
                         {navLinks}
-                        <Account/>        
+                        <AccountBlock/>        
                     </ul>
                 </div>
             </div>
