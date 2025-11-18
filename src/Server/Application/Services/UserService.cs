@@ -32,6 +32,16 @@ namespace Application.Services
             return ModelToDto.ToDTO(repository.ReadById(id));
         }
 
+        public UserDTO? ReadByEmail(string email)
+        {
+            var user = repository.ReadByEmail(email);
+            if (user.checkUserDataIsEmpty())
+            {
+                return null;
+            }
+            return ModelToDto.ToDTO(user);
+        }
+
         public void Update(UserDTO dto)
         {
             repository.Update(DtoToModel.ToModel(dto));

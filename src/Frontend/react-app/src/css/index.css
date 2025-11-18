@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  --gradient-header-footer: linear-gradient(135deg, #2ca87098 0%, #36d88f96 100%);
+  --color-main-text: #1E3A8A;
 }
 
 a:active,

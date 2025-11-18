@@ -4,12 +4,13 @@ namespace Interface.Models
 {
     public class UserModel
     {
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public string Age { get; set; } = string.Empty;
+        public int Age { get; set; }
         public DateTime RegistrationDate { get; set; }
         public int PermissionId { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         public bool IsAllData()
         {
@@ -21,7 +22,7 @@ namespace Interface.Models
         }
         public bool IsPartialData()
         {
-            if (Name != null || Email != null || Age != null|| RegistrationDate != DateTime.MinValue)
+            if (Name != null || Email != null || Age > 0 || RegistrationDate != DateTime.MinValue)
             {
                 return true;
             }
@@ -32,7 +33,7 @@ namespace Interface.Models
         {
             if(user.Name != null) user.Name = Name;
             if(user.Email != null) user.Email = Email;
-            if(user.Age != null) user.Age = Int32.Parse(Age);
+            if(user.Age > 0) user.Age = Age;
             if(user.RegistrationDate > DateTime.MinValue) user.RegistrationDate = RegistrationDate;
 
             return user;
