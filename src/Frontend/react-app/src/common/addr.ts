@@ -5,6 +5,13 @@ export const apiControllers: Record<string, string> = {
     UsersControllerSignUp: `${addrToApis}/users/sign_up`,
     TokenController: `${addrToApis}/token`,
     EmployeesController: `${addrToApis}/employees`,
+    
     OrdersController: `${addrToApis}/orders`,
+
+
     MinioController: `${addrToApis}/minio`,
+}
+
+export const urlWayModification ={
+    UserOrders: 'user_orders'
 }

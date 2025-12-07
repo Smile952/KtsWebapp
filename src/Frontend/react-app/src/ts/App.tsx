@@ -14,8 +14,7 @@ import { AdmAboutRequestPage } from "./pages/AdmAboutRequestPage";
 import { AdminRequestCreate } from "components/Admin/Requests/AdminRequestCreate/AdminRequestCreate";
 import { AdmAboutEmployeePage } from "./pages/AdmAboutEmployeePage";
 import { CheckAuth } from "../common/CheckAuth";
-import { OrdersPage } from "./pages/OrdersPage";
-import { AccountPage } from "./pages/AccountPage";
+import { UserOrdersPage } from "./pages/UserOrdersPage";
 
 
 export function App(): JSX.Element {
@@ -39,12 +38,7 @@ export function App(): JSX.Element {
             } />
             <Route path="/user-orders" element={
                 <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
-                    <OrdersPage />
-                </CheckAuth>
-            } />
-            <Route path="/account" element={
-                <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
-                    <AccountPage />
+                    <UserOrdersPage />
                 </CheckAuth>
             } />
 

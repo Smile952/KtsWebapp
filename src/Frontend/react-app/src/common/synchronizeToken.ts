@@ -5,7 +5,11 @@ import { UserEntity } from "./Entityes/UserEntity/UserEntity";
 export async function SynchronizeToken({accessLevel}: {accessLevel: number}): Promise<boolean> {
   let isAuthorized = false;
   const token = localStorage.getItem('token')
+  if (accessLevel === 1) {
+      return true;
+    }
   if (!token) {
+    
     return isAuthorized;
   }
 

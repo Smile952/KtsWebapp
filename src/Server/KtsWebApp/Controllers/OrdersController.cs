@@ -71,7 +71,7 @@ namespace Interface.Controllers
             return Ok(new { message = "All good" });
         }
 
-        [HttpGet("user_orders/{email}")]
+        [HttpGet("user_orders")]
         public IActionResult GetByUserId([FromKeyedServices("order_service")] OrderService oService,
                                          [FromKeyedServices("employee_service")] EmployeeService eService,
                                          [FromKeyedServices("user_service")] UserService uService, 
@@ -108,7 +108,8 @@ namespace Interface.Controllers
                                                       orderTypeId = order.OrderTypeId,
                                                       orderTypeName = OrdersTypes.ordersType[order.OrderTypeId],
                                                       orderStatusId = order.OrderStatusId,
-                                                      orderStatusName = OrdersStatuses.orderStatuses[order.OrderStatusId]
+                                                      orderStatusName = OrdersStatuses.orderStatuses[order.OrderStatusId],
+                                                      content = order.OrderContent
                                                   }, options);
 
             return Ok(result);

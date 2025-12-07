@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { links } from '../../common/links';
-import { AccountBlock } from 'components/AccountBlock/AccountBlock/AccountBlock';
+import { AccountBlock } from 'components/Account/AccountBlock/AccountBlock';
 
 
 export function Header({title, text }: {title:string, text: string[] }) {

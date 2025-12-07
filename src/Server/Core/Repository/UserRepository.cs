@@ -49,7 +49,7 @@ namespace Core.Repository
 
         public User ReadByEmail(string email)
         {
-            return context.User.Find(email) ?? new User();
+            return context.User.Where(u => u.Email == email).FirstOrDefault() ?? new User();
         }
     }
 }

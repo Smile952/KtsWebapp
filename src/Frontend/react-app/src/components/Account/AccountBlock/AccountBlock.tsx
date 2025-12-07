@@ -2,11 +2,9 @@ import { ReactNode, useEffect, useState } from 'react'
 import styles from './AccountBlock.module.css'
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 import { LoginRegisterForm } from '../Authorization/LoginRegisterForm';
-import { useNavigate } from 'react-router-dom';
 
 export function AccountBlock(){
     const [userName, setUserName] = useState<string | null>(null);
-    const nav = useNavigate()
     useEffect(() => {
         const user = localStorage.getItem('user');
         if(user){
@@ -25,6 +23,6 @@ export function AccountBlock(){
 
     const accountForm : ReactNode = userName ? (<p className={styles.account_name}>{userName}</p>) : (<LoginRegisterForm/>)
 
-    return <div className={styles.account} onClick={() => nav('/account')}>{accountForm}</div>
+    return <div className={styles.account}>{accountForm}</div>
 
 }

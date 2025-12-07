@@ -1,15 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import './Services.css';
+import styles from'./Services.module.css';
 import { apiControllers } from 'common/addr';
 import { useEffect } from 'react';
+import { OrderServiceBlock } from 'common/Entityes/OrderEntity/OrderServiceBlock';
 
-interface Block {
-    id: number;
-    title: string;
-    description: string;
-    photo: string;
-}
+
 
 interface ImagesDataItem {
     ImageURL: string;
@@ -20,7 +16,7 @@ interface ImagesResponse {
 }
 
 export function Services() {
-    const [blocks, setBlocks] = useState<Block[]>([
+    const [blocks, setBlocks] = useState<OrderServiceBlock[]>([
         { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
         { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
         { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: 'Images/DevOps/devops.jpg' }
@@ -41,21 +37,21 @@ export function Services() {
             .catch(error => console.log('Ошибка при получении изображений: ', error));
     }, [blocks]);
 
-    const handler = (id: number, block: Block) => {
+    const handler = (id: number, block: OrderServiceBlock) => {
         nav(`/about/${id}`, { state: block });
     };
 
     return (
-        <div className='blocks'>
-            <div className='blocks-group'>
+        <div className={styles.blocks}>
+            <div className={styles.blocks_group}>
                 {blocks.map(block => (
-                    <div key={block.id} onClick={() => handler(block.id, block)} className='back-blocks'>
-                        <div className="front-blocks">
-                            <div className='blocks-text'>
-                                <div className="blocks-title">{block.title}</div>
-                                <div className="blocks-description">{block.description}</div>
-                                <div className="blocks-image">
-                                    <img className="blocks-image-source" src={block.photo} alt={block.title} />
+                    <div key={block.id} onClick={() => handler(block.id, block)} className={styles.back_blocks}>
+                        <div className={styles.front_blocks}>
+                            <div className={styles.block_text}>
+                                <div className={styles.blocks_title}>{block.title}</div>
+                                <div className={styles.blocks_description}>{block.description}</div>
+                                <div className={styles.blocks_description}>
+                                    <img className={styles.blocks_image_source} src={block.photo} alt={block.title} />
                                 </div>
                             </div>
                         </div>
