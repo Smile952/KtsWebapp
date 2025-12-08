@@ -4,13 +4,13 @@ import { OrderEntity } from "common/Entityes/OrderEntity/OrderEntity"
 import { UserEntity } from "common/Entityes/UserEntity/UserEntity"
 import { useEffect, useState } from "react"
 
-export function useGetOrdersAsync(){
+export function useGetOrdersAsync() {
     const [userOrders, setUserOrders] = useState<OrderEntity[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
-    useEffect(()=> {
+    useEffect(() => {
         const getOrders = async () => {
-            try{
+            try {
                 setIsLoading(true)
                 const user = localStorage.getItem('user')
                 const userEntity = JSON.parse(user as string) as UserEntity
@@ -18,28 +18,28 @@ export function useGetOrdersAsync(){
                 const request = axios.create({
                     baseURL: addrToApis,
                     headers: {
-                        "Content-Type" : "Application/JSON",
+                        "Content-Type": "Application/JSON",
                         'Authorization': 'Bearer ' + token
                     }
                 })
                 const url = `${apiControllers.OrdersController}/${urlWayModification.UserOrders}?email=${userEntity.Email}`
-                
+
                 const response = await request.get<OrderEntity[]>(url)
-                
+
                 const orders = response.data
-                for(let i = 0; i < 10; i++){
+                for (let i = 0; i < 10; i++) {
                     orders.push(...orders)
                 }
                 setUserOrders(orders)
                 setIsLoading(false)
             }
-            catch(err){
+            catch (err) {
                 setIsLoading(false)
                 console.log(err)
                 throw err;
             }
         }
-       getOrders()
+        getOrders()
     }, [])
-    return {userOrders, isLoading}
-} 
+    return { userOrders, isLoading }
+}
