@@ -19,3 +19,5 @@ LICENSE
 **/.eslintcache/
 **/.npm/
 **/npminstall/
+
+mssql-database/

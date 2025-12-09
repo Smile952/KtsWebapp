@@ -1,6 +1,6 @@
 import axios from "axios"
 
-import { addrToApis, apiControllers, urlWayModification } from "common/addr"
+import { addrToApis, apiControllers, urlWayModification } from "common/Constants/addr"
 
 import { OrderEntity } from "common/Entityes/OrderEntity/OrderEntity"
 import { UserEntity } from "common/Entityes/UserEntity/UserEntity"

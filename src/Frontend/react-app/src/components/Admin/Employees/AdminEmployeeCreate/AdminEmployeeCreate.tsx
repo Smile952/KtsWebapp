@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Footer } from '../../../Footer/Footer';
 import { Header } from '../../../Header/Header';
 import './AdminEmployeeCreate.css';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 
 export function AdminEmployeeCreate() {
     const navigate = useNavigate();

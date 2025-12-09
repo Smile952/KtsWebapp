@@ -1,4 +1,4 @@
-import { UnauthorizedPage } from '../ts/pages/UnauthorizedPage';
+import { UnauthorizedPage } from '../ts/pages/PublicPages';
 import { useState, useEffect } from 'react'
 import { SynchronizeToken } from './SynchronizeToken';
 import { LoadingSpinner } from './LoadingSpinner';
@@ -21,10 +21,10 @@ export function CheckAuth({ children, accessLevel }:
         return <LoadingSpinner />;
     }
 
-    if (!isAuthorized) {
-        localStorage.clear();
-        return <UnauthorizedPage />;
-    }
+    // if (!isAuthorized) {
+    //     localStorage.clear();
+    //     return <UnauthorizedPage />;
+    // }
 
     return <>{children}</>;
 }

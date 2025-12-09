@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import { links } from '../../common/links';
+import { links } from '../../common/Constants/links';
 import { AccountBlock } from 'components/Account/AccountBlock/AccountBlock';
 
 

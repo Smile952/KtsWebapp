@@ -2,8 +2,8 @@ import { JSX } from 'react';
 import { Button } from '../Button/Button';
 import './Registration.css';
 import { useNavigate } from 'react-router-dom';
-import { apiControllers } from 'common/addr';
-import { links } from 'common/links';
+import { apiControllers } from 'common/Constants/addr';
+import { links } from 'common/Constants/links';
 
 export function Registration(): JSX.Element {
 

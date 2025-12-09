@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import styles from'./Services.module.css';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 import { useEffect } from 'react';
 import { OrderServiceBlock } from 'common/Entityes/OrderEntity/OrderServiceBlock';
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button/Button';
 import './Auth.css';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 import { useNavigate } from 'react-router-dom';
-import { links } from 'common/links';
+import { links } from 'common/Constants/links';
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 interface FormDataObject {
     [key: string]: FormDataEntryValue;

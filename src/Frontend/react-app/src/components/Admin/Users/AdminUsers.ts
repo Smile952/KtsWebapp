@@ -1,4 +1,4 @@
-import { apiControllers } from "common/addr"
+import { apiControllers } from "common/Constants/addr"
 
 export interface User {
     id: number

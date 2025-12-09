@@ -55,6 +55,14 @@ namespace Interface.Controllers
 
             string passwordHash = _hasher.GenerateHashPassword(model.Password);
 
+            var dto = new Application.DTOs.UserDTO()
+            {
+                Name = model.Name,
+                Email = model.Email,
+                PasswordHash = passwordHash,
+                PermissionId = model.PermissionId
+            };
+            
             service.Create(new Application.DTOs.UserDTO()
             {
                 Name = model.Name,

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { addrToApis, apiControllers } from "./addr";
+import { addrToApis, apiControllers } from "./Constants/addr";
 import { UserEntity } from "./Entityes/UserEntity/UserEntity";
 
 export async function SynchronizeToken({accessLevel}: {accessLevel: number}): Promise<boolean> {

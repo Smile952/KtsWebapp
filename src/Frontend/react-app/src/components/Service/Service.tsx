@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import './Service.css';
-import { links } from '../../common/links';
+import { links } from '../../common/Constants/links';
 
 interface ServiceState {
     title: string;
