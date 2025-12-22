@@ -2,6 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 src/Frontend/react-app/node_modules
+
+.vs/
+.vscode/
 **/.vs/
 **/.vscode/
 
