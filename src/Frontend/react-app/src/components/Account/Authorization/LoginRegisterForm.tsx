@@ -1,7 +1,5 @@
 import styles from "./LoginRegisterForm.module.css"
 
-//TODO: Add "My account" page
-
 export function LoginRegisterForm(){
     return(
         <div className={styles.login_register_form}>

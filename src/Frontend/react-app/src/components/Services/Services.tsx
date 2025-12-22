@@ -4,6 +4,8 @@ import styles from'./Services.module.css';
 import { apiControllers } from 'common/Constants/addr';
 import { useEffect } from 'react';
 import { OrderServiceBlock } from 'common/Entityes/OrderEntity/OrderServiceBlock';
+import { FetchParams } from 'common/Entityes/FetchParams';
+import { useFetch } from 'common/Hooks/useFetch';
 
 
 
@@ -21,6 +23,19 @@ export function Services() {
         { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
         { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: 'Images/DevOps/devops.jpg' }
     ]);
+
+    const token = localStorage.getItem('token')
+    
+            const fetchParams: FetchParams = {
+                url: apiControllers.UsersController + '/users',
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            }
+    
+            const {data, isLoading} = useFetch<any>({params: fetchParams});
+            console.log(data);
 
     const nav = useNavigate();
 

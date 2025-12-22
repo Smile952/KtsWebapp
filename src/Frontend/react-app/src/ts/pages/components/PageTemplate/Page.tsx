@@ -7,7 +7,7 @@ export function Page({ header, children }:
     { 
         header: ReactElement<unknown, JSXElementConstructor<any>>, 
         children: ReactElement<unknown, JSXElementConstructor<any>> 
-    })
+    }) : JSX.Element
 {
     return (
         <div className={styles.page_container}>

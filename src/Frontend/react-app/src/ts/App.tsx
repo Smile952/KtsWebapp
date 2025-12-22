@@ -11,21 +11,21 @@ export function App(): JSX.Element {
             {/* ===== Публичные маршруты ===== */}
             {
                 PublicRoutes.map(p => (
-                    <Route path={p.path} element={p.element} />
+                    <Route key={p.path} path={p.path} element={p.element} />
                 ))
             }
 
             {/* ===== Приватные маршруты ===== */}
             {
                 UserRoutes.map(u => (
-                    <Route path={u.path} element={u.element}/>
+                    <Route key={u.path} path={u.path} element={u.element}/>
                 ))
             }
 
             {/* ===== Админские маршруты ===== */}
             {
                 AdminRoutes.map(a => (
-                    <Route path={a.path} element={a.element}/>
+                    <Route key={a.path} path={a.path} element={a.element}/>
                 ))
             }
         </Routes>

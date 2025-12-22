@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import { JSX, ReactNode } from "react";
 
 export interface RouteEntity {
     path: string;
