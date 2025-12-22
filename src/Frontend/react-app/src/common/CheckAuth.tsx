@@ -1,43 +1,30 @@
 import { UnauthorizedPage } from '../ts/pages/UnauthorizedPage';
-import axios from 'axios';
-import { addrToApis, apiControllers } from './addr';
 import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux';
-import { tokenSelector, userSelector } from 'store/authSlice';
+import { SynchronizeToken } from './SynchronizeToken';
+import { LoadingSpinner } from './LoadingSpinner';
 
-interface AuthProps {
-    children: React.ReactNode;
-    accessLevel: number;
-}
-
-export function CheckAuth({ children, accessLevel }: AuthProps) {
+export function CheckAuth({ children, accessLevel }: 
+                          {children: React.ReactNode; accessLevel: number}) 
+    {
     const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
-
-    const user = useSelector(userSelector)
-    const token = useSelector(tokenSelector)
-
-    console.log(user)
-
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    
     useEffect(() => {
-        axios.create({
-            baseURL: addrToApis,
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + token
-            }
-        })
-            .get(apiControllers.TokenController)
-            .then(() => {
-                const level = user?.permissionId || 0;
-                setIsAuthorized(level >= accessLevel);
-            })
-            .catch(() => {
-                setIsAuthorized(false);
-            });
+        (async () => {
+            setIsAuthorized(await SynchronizeToken({ accessLevel }));
+            setIsLoading(false);
+        })();
+
     }, [accessLevel]);
 
-    if (isAuthorized === null) {
+    if (isLoading) {
+        return <LoadingSpinner />;
+    }
+
+    if (!isAuthorized) {
+        localStorage.clear();
         return <UnauthorizedPage />;
     }
-    return isAuthorized ? <>{children}</> : <UnauthorizedPage />;
+
+    return <>{children}</>;
 }

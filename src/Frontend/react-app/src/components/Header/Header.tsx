@@ -1,40 +1,29 @@
-import './Header.css';
+import styles from './Header.module.css';
 import { links } from '../../common/links';
-import { useSelector } from 'react-redux';
-import { userSelector } from 'store/authSlice';
+import { AccountBlock } from 'components/AccountBlock/AccountBlock/AccountBlock';
 
-interface HeaderProps {
-    text: string[];  // ожидаем массив строк
-}
 
-export function Header({ text }: HeaderProps) {
-    const title = text[0] || '';
-    const user = useSelector(userSelector)
+export function Header({title, text }: {title:string, text: string[] }) {
+    
     var navTexts = Array.isArray(text) ? text : [];
-    if (user) {
-        navTexts = navTexts.slice(1, navTexts.length - 1)
-    }
+    
     const navLinks = navTexts
         .filter(linkText => linkText)
         .map((linkText, index) => (
-            <li className="nav-item" key={index}>
-                <a href={links[linkText]} className="nav-link">
+            <li className={styles.nav_item} key={index}>
+                <a href={links[linkText]} className={styles.nav_link}>
                     {linkText}
                 </a>
             </li>
         ));
     return (
-        <header className="header">
-            <div className="d-flex content">
-                <div className="title">{title}</div>
-                <div className="d-flex link-block">
-                    <ul className="nav">
+        <header className={styles.header}>
+            <div className={`d-flex ${styles.content}`}>
+                <div className={styles.title}>{title}</div>
+                <div className={`d-flex ${styles.link_block}`}>
+                    <ul className={styles.nav}>
                         {navLinks}
-                        <li>
-                            <a href='*' className='nav-link'>
-                                {user?.name}
-                            </a>
-                        </li>
+                        <AccountBlock/>        
                     </ul>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import { Orders } from "components/Orders/Orders";
 
 export function OrdersPage() {
     return <div>
-        <Header text={["КТС-МоиЗаявки", "Главная", "Авторизация"]} />
+        <Header title={"КТС-МоиЗаявки"} text={["Главная"]} />
         <Orders />
         <Footer />
     </div>

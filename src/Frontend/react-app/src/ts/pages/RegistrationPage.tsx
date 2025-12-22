@@ -6,7 +6,7 @@ import { JSX } from 'react'
 export function RegistrationPage(): JSX.Element {
     return (
         <div>
-            <Header text={["КТС-Регистрация", "Главная", "Авторизация"]} />
+            <Header title={"КТС-Регистрация"} text={["Главная"]} />
             <Registration />
             <Footer />
         </div>

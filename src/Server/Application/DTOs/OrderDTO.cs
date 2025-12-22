@@ -7,5 +7,6 @@
         public int EmployeeId { get; set; }
         public int OrderTypeId { get; set; }
         public int OrderStatusId { get; set; }
+        public string OrderContent { get; set; } = string.Empty;
     }
 }

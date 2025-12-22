@@ -5,7 +5,7 @@ export function DevAboutPage() {
 
     return (
         <div>
-            <Header text={["КТС-Возможности", "Главная", "Мои заявки", "Профиль"]} />
+            <Header title={"КТС-Возможности"} text={[ "Главная", "Мои заявки"]} />
             <Service />
             <Footer />
         </div>

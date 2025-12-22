@@ -1,11 +1,13 @@
 ﻿using Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Core.ApplicationContext
 {
     public class Context : DbContext
     {
+        private string _connectionString;
         public DbSet<Order> Order { get; set; }
         public DbSet<OrdersTypeEnum> OrdersTypeEnum { get; set; }
         public DbSet<Employee> Employee {get; set;}
@@ -20,19 +22,22 @@ namespace Core.ApplicationContext
 
         public Context(string connectionString)
         {
-            Database.SetConnectionString(connectionString);
+            _connectionString = connectionString;
             Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var configuration = new ConfigurationBuilder()
-              .AddJsonFile("dbConfig.json")
-              .Build();
+            if (string.IsNullOrEmpty(_connectionString))
+            {
+                var configuration = new ConfigurationBuilder()
+                    .AddJsonFile("dbConfig.json")
+                    .Build();
 
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
-
-            optionsBuilder.UseSqlServer(connectionString);
+                _connectionString = configuration.GetConnectionString("DefaultConnection");
+            }
+           
+            optionsBuilder.UseSqlServer(_connectionString);
             base.OnConfiguring(optionsBuilder);
         }
 

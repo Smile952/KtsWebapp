@@ -15,73 +15,75 @@ import { AdminRequestCreate } from "components/Admin/Requests/AdminRequestCreate
 import { AdmAboutEmployeePage } from "./pages/AdmAboutEmployeePage";
 import { CheckAuth } from "../common/CheckAuth";
 import { OrdersPage } from "./pages/OrdersPage";
-import { Provider } from "react-redux";
-import { store } from 'store/store'
+import { AccountPage } from "./pages/AccountPage";
 
 
 export function App(): JSX.Element {
     return (
-        <Provider store={store}>
-            <Routes>
-                {/* ===== Публичные маршруты ===== */}
-                <Route path="/" element={<DevTypesPage />} />
-                <Route path="/signin" element={<AuthPage />} />
-                <Route path="/signup" element={<RegistrationPage />} />
+        <Routes>
+            {/* ===== Публичные маршруты ===== */}
+            <Route path="/" element={<DevTypesPage />} />
+            <Route path="/signin" element={<AuthPage />} />
+            <Route path="/signup" element={<RegistrationPage />} />
 
-                {/* ===== Приватные маршруты ===== */}
-                <Route path="/request" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
-                        <RequestPage />
-                    </CheckAuth>
-                } />
-                <Route path="/about/:id" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
-                        <DevAboutPage />
-                    </CheckAuth>
-                } />
-                <Route path="/user-orders" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
-                        <OrdersPage />
-                    </CheckAuth>
-                } />
+            {/* ===== Приватные маршруты ===== */}
+            <Route path="/request" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
+                    <RequestPage />
+                </CheckAuth>
+            } />
+            <Route path="/about/:id" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
+                    <DevAboutPage />
+                </CheckAuth>
+            } />
+            <Route path="/user-orders" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
+                    <OrdersPage />
+                </CheckAuth>
+            } />
+            <Route path="/account" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.USER}>
+                    <AccountPage />
+                </CheckAuth>
+            } />
 
-                {/* ===== Админские маршруты ===== */}
-                <Route path="/admin" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdmPage />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/user/:id/*" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdmAboutUserPage />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/user/create" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdminUserCreate />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/employee/:id/*" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdmAboutEmployeePage />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/employee/create" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdminEmployeeCreate />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/order/:id" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdmAboutRequestPage />
-                    </CheckAuth>
-                } />
-                <Route path="/admin/order/create" element={
-                    <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
-                        <AdminRequestCreate />
-                    </CheckAuth>
-                } />
-            </Routes>
-        </Provider>
+            {/* ===== Админские маршруты ===== */}
+            <Route path="/admin" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdmPage />
+                </CheckAuth>
+            } />
+            <Route path="/admin/user/:id/*" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdmAboutUserPage />
+                </CheckAuth>
+            } />
+            <Route path="/admin/user/create" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdminUserCreate />
+                </CheckAuth>
+            } />
+            <Route path="/admin/employee/:id/*" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdmAboutEmployeePage />
+                </CheckAuth>
+            } />
+            <Route path="/admin/employee/create" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdminEmployeeCreate />
+                </CheckAuth>
+            } />
+            <Route path="/admin/order/:id" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdmAboutRequestPage />
+                </CheckAuth>
+            } />
+            <Route path="/admin/order/create" element={
+                <CheckAuth accessLevel={ACCESS_LEVELS.ADMIN}>
+                    <AdminRequestCreate />
+                </CheckAuth>
+            } />
+        </Routes>
     );
 }

@@ -4,7 +4,7 @@ import { Header } from "../../components/Header/Header";
 export function AdmAboutRequestPage() {
     return (
         <div>
-            <Header text={['КТС-Заказ', 'Админ-панель']} />
+            <Header title={'КТС-Заказ'} text={['Админ-панель']} />
             <AdminRequestsAbout />
             <Footer />
         </div>

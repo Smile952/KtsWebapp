@@ -5,7 +5,7 @@ import { Header } from "../../components/Header/Header";
 export function AdmAboutEmployeePage() {
     return (
         <div>
-            <Header text={['КТС-Сотрудник', 'Админ-панель']} />
+            <Header title={'КТС-Сотрудник'} text={[ 'Админ-панель']} />
             <AdminEmployeesAbout />
             <Footer />
         </div>

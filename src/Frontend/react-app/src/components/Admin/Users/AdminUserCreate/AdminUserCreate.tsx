@@ -46,7 +46,7 @@ export function AdminUserCreate() {
 
     return (
         <div>
-            <Header text={['Ктс-Создание (пользователь)']} />
+            <Header title={'Ктс-Создание (пользователь)'} text={[]} />
             <form
                 onSubmit={updateClick}
                 className="create-block-form"

@@ -5,7 +5,7 @@ import { Admin } from '../../components/Admin/Admin';
 export function AdmPage() {
     return (
         <div>
-            <Header text={['КТС-Администрация', 'Главная']} />
+            <Header title={'КТС-Администрация'} text={['Главная']} />
             <Admin />
             <Footer />
         </div>

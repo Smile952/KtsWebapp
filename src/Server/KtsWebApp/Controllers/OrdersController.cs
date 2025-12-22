@@ -1,6 +1,5 @@
 ﻿using Application.DTOs;
 using Application.Services;
-using Core.Models;
 using Interface.Controllers.common;
 using Interface.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -14,14 +13,7 @@ namespace Interface.Controllers
     [ApiController]
     [Authorize]
     public class OrdersController : ControllerBase
-    {
-
-        /*public RedisHandler redis;
-        public OrdersController(RedisHandler redis)
-        {
-            this.redis = redis;
-        }*/
-       
+    {       
         [HttpGet]
         public IActionResult Get([FromKeyedServices("order_service")] OrderService oService, 
                                  [FromKeyedServices("user_service")] UserService uService, 
@@ -59,9 +51,6 @@ namespace Interface.Controllers
                              orderStatus = order.OrderStatusId
                          }, options);
 
-            //redis.SetData($"order?{Request.Query}", result);
-            //Console.WriteLine(redis.GetData($"order?{Request.Query}"));
-
             return Ok(result);
         }
 
@@ -82,27 +71,38 @@ namespace Interface.Controllers
             return Ok(new { message = "All good" });
         }
 
-        [HttpGet("user_orders/{user_id}")]
+        [HttpGet("user_orders/{email}")]
         public IActionResult GetByUserId([FromKeyedServices("order_service")] OrderService oService,
-                                         [FromKeyedServices("employee_service")] EmployeeService eService, int user_id)
+                                         [FromKeyedServices("employee_service")] EmployeeService eService,
+                                         [FromKeyedServices("user_service")] UserService uService, 
+                                         string email)
         {
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
             };
-            if (user_id < 0)
+            if (string.IsNullOrEmpty(email))
             {
-                return BadRequest("User id must be higher then 0");
+                return BadRequest("User email must be higher then 0");
             }
+
+            
+            var userDto = uService.ReadByEmail(email);
+            if (userDto == null)
+            {
+                return NotFound($"User with email: {email} wasn't find");
+            }
+            
+            var orders = oService.Read().Where(x => x.userId == userDto.Id);
+
             var employees = eService.Read();
-            var orders = oService.Read().Where(x => x.userId == user_id);
+
             var result = JsonSerializer.Serialize(from order in orders
                                                   join employee in employees on order.EmployeeId equals employee.Id
                                                   select new
                                                   {
-                                                      id = order.Id,
-                                                      userId = order.userId,
+                                                      orderId = order.Id,
                                                       employeeId = employee.Id,
                                                       employeeName = employee.Name,
                                                       orderTypeId = order.OrderTypeId,
@@ -127,7 +127,8 @@ namespace Interface.Controllers
                 userId = model.UserId,
                 EmployeeId = model.EmployeeId,
                 OrderTypeId = model.OrderTypeId,
-                OrderStatusId = 1
+                OrderStatusId = 1,
+                OrderContent = model.OrderContent
             };
 
             service.Create(dto);

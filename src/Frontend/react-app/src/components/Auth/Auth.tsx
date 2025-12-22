@@ -1,57 +1,72 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button/Button';
 import './Auth.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, tokenSelector, UserData, userSelector } from 'store/authSlice';
 import { apiControllers } from 'common/addr';
-import { AppDispatch } from 'store/store';
 import { useNavigate } from 'react-router-dom';
 import { links } from 'common/links';
+import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 interface FormDataObject {
     [key: string]: FormDataEntryValue;
 }
 
 export function Auth() {
+    const [token, setToken] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const dispatch = useDispatch<AppDispatch>();
-    const token = useSelector(tokenSelector)
-    const user = useSelector(userSelector)
     const nav = useNavigate()
 
     useEffect(() => {
-        if (token && user) {
+        setToken(localStorage.getItem('token'));
+        const user = localStorage.getItem('user');
+        
+        if (token !== null && token !== 'null' && user !== undefined && user !== 'undefined') {
             nav(links['Главная'])
         }
-    }, [token, user, nav])
+    }, [token])
 
     const updateClick = async (event: React.FormEvent<HTMLFormElement>) => {
         setError(null);
         event.preventDefault();
-
+        
         const form = event.currentTarget;
         const formData = new FormData(form);
-
+        
         const formDataObject: FormDataObject = {};
         formData.forEach((value, key) => {
             formDataObject[key] = value;
         });
-
-        const userData: UserData = {
-            id: null,
-            name: String(formDataObject['name']),
-            email: String(formDataObject['email']),
-            age: parseInt(String(formDataObject['age'])),
-            password: String(formDataObject['password']),
-            permissionId: parseInt(String(formDataObject['permissionId']))
-        }
-
+        
         try {
-            await dispatch(loginUser(userData));
+            const response = await fetch(apiControllers.TokenController, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(formDataObject),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            else{
+                const data = await response.json();
+
+                setToken(data.token);
+
+                const parts = (data.token as string).split('.');
+                const payload = JSON.parse(atob(parts[1]));
+                const userData: UserEntity = {Id:payload.id, Name: payload.name, Email: payload.email, PermissionId: payload.role, Token: data.token} 
+                
+                localStorage.setItem('token', (data.token as string));
+                localStorage.setItem('user', JSON.stringify(userData));
+            }
+
         } catch (error) {
             console.error('Error:', error);
             setError('Ошибка авторизации. Попробуйте снова.');
         }
     };
+    
 
     return (
         <div className={`autorization ${error ? 'autorization-error' : ''}`}>

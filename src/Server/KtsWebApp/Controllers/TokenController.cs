@@ -1,9 +1,8 @@
 ﻿using Application.Services;
+using Infrastucture;
 using Interface.Models;
-using Interface.Providers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace Interface.Controllers
 {
@@ -11,10 +10,12 @@ namespace Interface.Controllers
     [ApiController]
     public class TokenController : Controller
     {
-        private readonly TokenProvider _tokenProvider;
-        public TokenController(TokenProvider tokenProvider)
+        private readonly TokenBuilder _tokenBuilder;
+        private readonly PasswordHasher _hasher;
+        public TokenController(TokenBuilder tokenProvider, PasswordHasher hasher)
         {
-            _tokenProvider = tokenProvider;
+            _tokenBuilder = tokenProvider;
+            _hasher = hasher;
         }
 
         [Authorize]
@@ -27,14 +28,16 @@ namespace Interface.Controllers
         [HttpPost]
         public IActionResult GetToken([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, IConfiguration configuration)
         {
-            var userData = service.Read().Where(x => x.Email == model.Email && x.Password == model.Password);
+            var userData = service.Read().FirstOrDefault(x => x.Email == model.Email && _hasher.VerifyPassword(model.Password, x.PasswordHash));
 
-            if (userData.Count() == 0)
+            if (userData == null)
             {
-                return BadRequest("This user was not registrated");
+                return BadRequest("This user was not registred");
             }
-            string token = _tokenProvider.Create(service, model);
-            return Ok(new {token, userData });
+            
+            string token = _tokenBuilder.Create(service, model.Email, model.Password);
+            
+            return Ok(new {token });
         }
     }
 }

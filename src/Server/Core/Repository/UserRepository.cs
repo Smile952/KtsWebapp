@@ -28,18 +28,28 @@ namespace Core.Repository
         public void Update(User user)
         {
             var data = context.User.Find(user.Id);
-            data.Name = user.Name;
-            data.Email = user.Email;
-            data.Password = user.Password;
-            data.Age = user.Age;
-            context.SaveChanges();
+            if (data != null) {
+                data.Name = user.Name;
+                data.Email = user.Email;
+                data.PasswordHash = user.PasswordHash;
+                data.Age = user.Age;
+                context.SaveChanges();
+            }
         }
 
         public void Delete(int id)
         {
             User? user = context.User.Find(id);
-            context.User.Remove(user);
-            context.SaveChanges();
+            if (!user.checkUserDataIsEmpty())
+            {
+                context.User.Remove(user);
+                context.SaveChanges();
+            }
+        }
+
+        public User ReadByEmail(string email)
+        {
+            return context.User.Find(email) ?? new User();
         }
     }
 }

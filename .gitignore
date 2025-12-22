@@ -1,12 +1,14 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
+src/Server/.vs
 
 /.vs
-.gitgub
-README.md
+
+.github
 KtsWebApp.pdf
 LICENSE
+
 **/.env
 **/certs/
 

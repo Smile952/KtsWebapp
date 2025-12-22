@@ -11,7 +11,6 @@ export function Registration(): JSX.Element {
     const RegistrationQuery = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-
         const form = event.currentTarget;
         const formData = new FormData(form);
 
@@ -31,7 +30,7 @@ export function Registration(): JSX.Element {
         const { password2, ...dataToSend } = formDataObject;
 
         try {
-            const response = await fetch(apiControllers.UsersController, {
+            const response = await fetch(apiControllers.UsersControllerSignUp, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

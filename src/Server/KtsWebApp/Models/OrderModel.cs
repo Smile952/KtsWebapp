@@ -13,7 +13,7 @@ namespace Interface.Models
         public string OrderTypeName { get; set; } = string.Empty;   
         public int OrderStatusId { get; set; }
         public string OrderStatusName { get; set; } = string.Empty;
-
+        public string OrderContent { get; set; } = string.Empty;
 
 
         public bool IsAllData()

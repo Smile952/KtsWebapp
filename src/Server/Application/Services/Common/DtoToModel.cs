@@ -12,7 +12,8 @@ namespace Application.Services.Common
                 UserId = dto.userId, 
                 EmployeeId = dto.EmployeeId,
                 OrdersTypeEnumId = dto.OrderTypeId, 
-                OrderStatusId = dto.OrderStatusId
+                OrderStatusId = dto.OrderStatusId,
+                OrderContent = dto.OrderContent
             };
 
         public static User ToModel(UserDTO dto)
@@ -23,7 +24,7 @@ namespace Application.Services.Common
                 Name = dto.Name,
                 Email = dto.Email,
                 Age = dto.Age,
-                Password = dto.Password,
+                PasswordHash = dto.PasswordHash,
                 RegistrationDate = dto.RegistrationDate,
                 PermissionId = dto.PermissionId
             };
