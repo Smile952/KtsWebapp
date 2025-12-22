@@ -1,9 +1,8 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-src/Server/.vs
-
-/.vs
+src/Frontend/react-app/node_modules
+**/.vs/
 
 .github
 KtsWebApp.pdf
