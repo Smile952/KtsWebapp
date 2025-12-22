@@ -9,3 +9,10 @@ KtsWebApp.pdf
 LICENSE
 **/.env
 **/certs/
+
+bin/
+obj/
+**/bin/
+**/obj/
+
+.DS_Store
