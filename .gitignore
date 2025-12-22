@@ -3,6 +3,7 @@
 ################################################################################
 src/Frontend/react-app/node_modules
 **/.vs/
+**/.vscode/
 
 .github
 KtsWebApp.pdf
