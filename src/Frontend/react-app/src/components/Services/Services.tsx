@@ -1,56 +1,15 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import styles from'./Services.module.css';
-import { apiControllers } from 'common/Constants/addr';
-import { useEffect } from 'react';
 import { OrderServiceBlock } from 'common/Entityes/OrderEntity/OrderServiceBlock';
-import { FetchParams } from 'common/Entityes/FetchParams';
-import { useFetch } from 'common/Hooks/useFetch';
-
-
-
-interface ImagesDataItem {
-    ImageURL: string;
-}
-
-interface ImagesResponse {
-    ImagesData: ImagesDataItem[];
-}
 
 export function Services() {
-    const [blocks, setBlocks] = useState<OrderServiceBlock[]>([
+    const blocks: OrderServiceBlock[] = [
         { id: 1, title: 'Web Разработка', description: 'Создание и разработка современных сайтов и приложений', photo: '/Images/WebDev/web-development.jpg' },
         { id: 2, title: 'Android/iOS', description: 'Разработка приложений для iOS и Android', photo: '/Images/Mobile/android.jpg' },
         { id: 3, title: 'DevOps и облако', description: 'Настройка инфраструктуры и автоматизация процессов', photo: 'Images/DevOps/devops.jpg' }
-    ]);
-
-    const token = localStorage.getItem('token')
-    
-            const fetchParams: FetchParams = {
-                url: apiControllers.UsersController + '/users',
-                method: 'GET',
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            }
-    
-            const {data, isLoading} = useFetch<any>({params: fetchParams});
-            console.log(data);
+    ]
 
     const nav = useNavigate();
-
-    useEffect(() => {
-        getImagesNames()
-            .then(result => {
-                const updated = [...blocks];
-                if (result?.ImagesData?.length >= 3) {
-                    updated[1].photo = result.ImagesData[0].ImageURL;
-                    updated[2].photo = result.ImagesData[1].ImageURL;
-                    updated[0].photo = result.ImagesData[2].ImageURL;
-                }
-            })
-            .catch(error => console.log('Ошибка при получении изображений: ', error));
-    }, [blocks]);
 
     const handler = (id: number, block: OrderServiceBlock) => {
         nav(`/about/${id}`, { state: block });
@@ -75,21 +34,4 @@ export function Services() {
             </div>
         </div>
     );
-}
-
-async function getImagesNames(): Promise<ImagesResponse> {
-    const token = localStorage.getItem('token');
-    const res = await fetch(apiControllers.MinioController + '/images', {
-        method: "GET",
-        headers: {
-            'Authorization': 'Bearer ' + token,
-        },
-    });
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch images');
-    }
-
-    const ans = await res.json();
-    return ans;
 }

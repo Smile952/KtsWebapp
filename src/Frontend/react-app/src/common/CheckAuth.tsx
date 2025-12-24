@@ -4,7 +4,6 @@ import { LoadingSpinner } from './LoadingSpinner';
 import { useFetch } from './Hooks/useFetch';
 import { FetchParams } from './Entityes/FetchParams';
 import { apiControllers } from './Constants/addr';
-import { UserEntity } from './Entityes/UserEntity/UserEntity';
 
 export function CheckAuth({ children, accessLevel }: 
                           {children: JSX.Element; accessLevel: number}) : JSX.Element
@@ -18,18 +17,14 @@ export function CheckAuth({ children, accessLevel }:
           'Authorization': 'Bearer ' + token
         }
       }
-    const {data, isLoading} = useFetch<boolean>({params});
-
-    const user = localStorage.getItem('user')
-    const userObject = JSON.parse(user as string) as UserEntity
-    const level = userObject?.PermissionId || 0;
-
+      
+    const {data, isLoading, isTokenValid} = useFetch<boolean>({params});   
+    
     if (isLoading) {
         return <LoadingSpinner />;
     }
 
-    if (!data && level >= accessLevel) {
-        localStorage.clear();
+    if (!isTokenValid) {
         return <>{UnauthorizedPage}</>;
     }
 

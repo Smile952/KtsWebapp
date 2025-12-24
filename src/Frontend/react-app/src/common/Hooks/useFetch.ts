@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FetchParams } from "../Entityes/FetchParams";
+import { HttpStatusCode } from "axios";
 
 
 export function useFetch<T>({ params }: 
@@ -12,22 +13,29 @@ export function useFetch<T>({ params }:
         const fetchData = async () => {
             setIsLoading(true);
             try{
-                console.log(params)
                 const request = await fetch(params.url, {
                     method: params.method,
                     headers: params.headers,
                     body: params.body ? JSON.stringify(params.body) : null,
                 });
                 
-                console.log('Fetch response status: ', request.status);
-                if(request.status == 401){
+                if(request.status === HttpStatusCode.Unauthorized){
                     setData(null)
                     setIsLoading(false)
+                    setIsTokenValid(false)
+                    localStorage.clear();
                     throw new Error(`Token is not valid`)
-                }
+                }                
                 else if(!request.ok){
                     setData(null)
+                    setIsLoading(false)
+                    setIsTokenValid(false)
                     throw new Error(`Ошибка при запросе: ${request.statusText}`);
+                }
+                else if (request.status === HttpStatusCode.NoContent){
+                    setData(null)
+                    setIsLoading(false)
+                    setIsTokenValid(true)
                 }
                 else {
                     const response: T = await request.json()

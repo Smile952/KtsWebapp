@@ -1,6 +1,4 @@
 import { apiControllers } from "common/Constants/addr"
-import { FetchParams } from "common/Entityes/FetchParams"
-import { useFetch } from "common/Hooks/useFetch"
 
 export interface User {
     id: number
