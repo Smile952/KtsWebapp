@@ -27,3 +27,4 @@ obj/
 **/npminstall/
 
 mssql-database/
+.DS_Store

@@ -17,7 +17,7 @@ namespace KTS.Configuration
             string envPath = Path.Combine(directory, ".env");
             Env.Load(directory + "/.env");
 
-            SecretKey = Env.GetString("SECRET_KEY");
+            SecretKey = Env.GetString("TOKEN");
             Addr = Env.GetString("LISTENING_ADDR");
 
             DbAddr = Env.GetString("DATABASE_ADDR");

@@ -20,9 +20,9 @@ export function Registration(): JSX.Element {
                 formDataObject[key] = value;
             }
         });
-        formDataObject['permission'] = '1';
+        formDataObject['PermissionId'] = '1';
 
-        if (formDataObject.password !== formDataObject.password2) {
+        if (formDataObject.Password !== formDataObject.password2) {
             alert("Пароли не совпадают!");
             return;
         }
@@ -30,14 +30,14 @@ export function Registration(): JSX.Element {
         const { password2, ...dataToSend } = formDataObject;
 
         try {
-            const response = await fetch(apiControllers.UsersControllerSignUp, {
+            const response = await fetch(apiControllers.UsersController, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(dataToSend),
             });
-
+            console.log(dataToSend)
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }
@@ -59,7 +59,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="text"
-                                name="name"
+                                name="Name"
                                 required
                                 placeholder="Имя:"
                             />
@@ -68,7 +68,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="email"
-                                name="email"
+                                name="Email"
                                 id="email"
                                 required
                                 placeholder="Email"
@@ -78,7 +78,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="password"
-                                name="password"
+                                name="Password"
                                 id="password"
                                 required
                                 placeholder="Пароль"
