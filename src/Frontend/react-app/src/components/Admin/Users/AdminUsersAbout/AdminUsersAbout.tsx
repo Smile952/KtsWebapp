@@ -8,7 +8,6 @@ interface LocationState {
     email: string
     age: number
     registrationDate: string | Date
-    // пароль тут не передаётся, поэтому не включаем
 }
 
 export function AdminUsersAbout() {

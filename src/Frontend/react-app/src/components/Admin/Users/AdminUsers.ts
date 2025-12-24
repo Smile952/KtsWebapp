@@ -1,4 +1,6 @@
-import { apiControllers } from "common/addr"
+import { apiControllers } from "common/Constants/addr"
+import { FetchParams } from "common/Entityes/FetchParams"
+import { useFetch } from "common/Hooks/useFetch"
 
 export interface User {
     id: number
@@ -11,6 +13,7 @@ export interface User {
 export async function AdminUsers(): Promise<User[]> {
     try {
         const token = localStorage.getItem('token')
+
         const response = await fetch(apiControllers.UsersController + '/users', {
             method: 'GET',
             headers: {

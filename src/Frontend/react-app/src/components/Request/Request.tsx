@@ -1,7 +1,7 @@
 import React from 'react';
 import radioButtonsStyle from './RadioButtons.module.css'
 import requestStyle from './Request.module.css'
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 
 async function sendData(event: React.FormEvent<HTMLFormElement>) {

@@ -7,7 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from 'react';
 import { Dayjs } from 'dayjs';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 
 export function AdminUserCreate() {
     const navigate = useNavigate();
