@@ -11,23 +11,22 @@ export function Registration(): JSX.Element {
     const RegistrationQuery = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const form = event.currentTarget;
-        const formData = new FormData(form);
+        const formData = new FormData(event.currentTarget);
 
-        const formDataObject: Record<string, string> = {};
-        formData.forEach((value, key) => {
-            if (typeof value === 'string') {
-                formDataObject[key] = value;
-            }
-        });
-        formDataObject['PermissionId'] = '1';
+        const Password: string = formData.get('Password') as string;
+        const Password2: string = formData.get('password2') as string;
 
-        if (formDataObject.Password !== formDataObject.password2) {
+        if (Password !== Password2) {
             alert("Пароли не совпадают!");
             return;
         }
 
-        const { password2, ...dataToSend } = formDataObject;
+        const userRedisterEntity: UserRegistrEntity = {
+            Name: formData.get('Name') as string,
+            Email: formData.get('Email') as string,
+            Password: Password,
+            PermissionId: 1
+        }
 
         try {
             const response = await fetch(apiControllers.UsersController, {
@@ -35,9 +34,9 @@ export function Registration(): JSX.Element {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(dataToSend),
+                body: JSON.stringify(userRedisterEntity),
             });
-            console.log(dataToSend)
+
             if (!response.ok) {
                 throw new Error(`Ошибка HTTP: ${response.status}`);
             }

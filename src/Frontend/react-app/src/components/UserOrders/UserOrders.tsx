@@ -1,21 +1,18 @@
 import { OrderEntity } from 'common/Entityes/OrderEntity/OrderEntity';
 import styles from './UserOrders.module.css';
 import { LoadingSpinner } from 'common/LoadingSpinner';
-import { useGetOrdersAsync } from 'services/useGetUserOrders';
 import { useFetch } from 'common/Hooks/useFetch';
 import { FetchParams } from 'common/Entityes/FetchParams';
 import { apiControllers, urlWayModification } from 'common/Constants/addr';
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 
 export function UserOrders() {
-    //const {userOrders, isLoading} = useGetOrdersAsync()
 
     const token = localStorage.getItem("token")
     const user = localStorage.getItem('user')
     const userEntity = JSON.parse(user as string) as UserEntity
 
-    const params: FetchParams ={
-        url: `${apiControllers.OrdersController}/${urlWayModification.UserOrders}?email=${userEntity.Email}`,
+    const init: RequestInit = {
         method: "GET",
         headers: {
             "Content-Type": "Application/JSON",
@@ -23,7 +20,12 @@ export function UserOrders() {
         }
     }
 
-    const {data, isLoading, isTokenValid} = useFetch<OrderEntity[]>({params});
+    const params: FetchParams ={
+        url: `${apiControllers.OrdersController}/${urlWayModification.UserOrders}?email=${userEntity.email}`,
+        init: init
+    }
+
+    const [data, isLoading, isTokenValid] = useFetch<OrderEntity[]>({params});
     if(isLoading) return <LoadingSpinner></LoadingSpinner>
 
     return (

@@ -1,0 +1,3 @@
+interface UserSignInEntity extends IdentityEntity{
+    
+}

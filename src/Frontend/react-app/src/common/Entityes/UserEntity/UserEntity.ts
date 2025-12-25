@@ -1,7 +1,9 @@
 export interface UserEntity{
-    Id: number,
-    Name: string;
-    Email: string;
-    PermissionId: number;
-    Token: string;
+    id: number,
+    name: string;
+    email: string;
+    permissionId: number;
+    token: string;
+    age: number|null;
+    registrationDate: string|null;
 }

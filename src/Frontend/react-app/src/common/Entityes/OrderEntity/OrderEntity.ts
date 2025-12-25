@@ -1,9 +1,16 @@
 export interface OrderEntity{
+    id:number;
+
+    userId:number;
+    userName: string|null;
+    
     orderId: number;
+    
     employeeId: number;
-    employeeName: string;
+    employeeName: string|null;
+    
     orderTypeId: number;
-    orderTypeName: string;
+    orderTypeName: string|null;
     orderStatusId: number;
     orderStatusName: string;
     orderContent: string;

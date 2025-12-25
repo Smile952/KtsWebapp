@@ -16,7 +16,7 @@ async function sendData(event: React.FormEvent<HTMLFormElement>) {
     console.log(formData.get('text') as string)
 
     const payload = {
-        UserId: userData.Id,
+        UserId: userData.id,
         OrderTypeId: Number(formData.get('devType')),
         OrderContent: formData.get('text') as string,
         EmployeeId: 1

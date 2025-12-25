@@ -6,20 +6,25 @@ import { FetchParams } from './Entityes/FetchParams';
 import { apiControllers } from './Constants/addr';
 
 export function CheckAuth({ children, accessLevel }: 
-                          {children: JSX.Element; accessLevel: number}) : JSX.Element
-{
+                          { children: JSX.Element; accessLevel: number }) : JSX.Element{
+
     const token = localStorage.getItem('token')
-    const params: FetchParams = {
-        url: apiControllers.TokenController,
+
+    const init: RequestInit = {
         method: "GET",
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token
         }
+    }
+
+    const params: FetchParams = {
+        url: apiControllers.TokenController,
+        init: init
       }
       
-    const {data, isLoading, isTokenValid} = useFetch<boolean>({params});   
-    
+    const [data, isLoading, isTokenValid] = useFetch<boolean>({params});   
+    console.log(isTokenValid)
     if (isLoading) {
         return <LoadingSpinner />;
     }

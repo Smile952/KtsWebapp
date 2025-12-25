@@ -14,7 +14,8 @@ export function Auth() {
     useEffect(() => {
         setToken(localStorage.getItem('token'));
         const user = localStorage.getItem('user');
-        
+        console.log(token)
+        console.log(user)
         if (token !== null && token !== 'null' && user !== undefined && user !== 'undefined') {
             nav(links['Главная'])
         }
@@ -51,7 +52,7 @@ export function Auth() {
 
                 const parts = (data.token as string).split('.');
                 const payload = JSON.parse(atob(parts[1]));
-                const userData: UserEntity = { Id:payload.id, Name: payload.name, Email: payload.email, PermissionId: payload.role, Token: data.token } 
+                const userData: UserEntity = { id:payload.id, name: payload.name, email: payload.email, permissionId: payload.role, token: data.token, registrationDate: null, age: null} 
                 
                 localStorage.setItem('token', (data.token as string));
                 localStorage.setItem('user', JSON.stringify(userData));

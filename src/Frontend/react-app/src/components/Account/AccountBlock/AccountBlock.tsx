@@ -11,7 +11,7 @@ export function AccountBlock(){
             try{
                 const userObject = JSON.parse(user as string) as UserEntity
         
-                const name = (userObject?.Name) 
+                const name = (userObject?.name) 
                 
                 setUserName(name);
             }

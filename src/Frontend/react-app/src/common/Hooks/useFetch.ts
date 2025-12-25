@@ -4,7 +4,8 @@ import { HttpStatusCode } from "axios";
 
 
 export function useFetch<T>({ params }: 
-                            { params: FetchParams }): {data: T|null, isLoading: boolean, isTokenValid: boolean}{
+                            { params: FetchParams }): [data: T|null, isLoading: boolean, isTokenValid: boolean]{
+
     const [data, setData] = useState<T|null>({} as T);
     const [isLoading, setIsLoading] = useState<boolean>(true);    
     const [isTokenValid, setIsTokenValid] = useState<boolean>(false);
@@ -13,12 +14,8 @@ export function useFetch<T>({ params }:
         const fetchData = async () => {
             setIsLoading(true);
             try{
-                const request = await fetch(params.url, {
-                    method: params.method,
-                    headers: params.headers,
-                    body: params.body ? JSON.stringify(params.body) : null,
-                });
-                
+                const request = await fetch(params.url, params.init);
+                console.log(request)
                 if(request.status === HttpStatusCode.Unauthorized){
                     setData(null)
                     setIsLoading(false)
@@ -52,5 +49,5 @@ export function useFetch<T>({ params }:
         fetchData();
     }, [])
     
-    return {data, isLoading, isTokenValid};
+    return [data, isLoading, isTokenValid];
 }

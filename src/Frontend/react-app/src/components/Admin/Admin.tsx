@@ -1,57 +1,46 @@
 import './Admin.css';
-import { useState, useEffect } from 'react';
-import { AdminRequests } from './Requests/AdminRequests';
-import { AdminEmployees } from './Employees/AdminEmployees';
-import { AdminUsers, User } from './Users/AdminUsers';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TemporaryDrawer } from './TemporaryDrawer';
-import { useSearchParams } from 'react-router-dom';
+import { OrderEntity } from 'common/Entityes/OrderEntity/OrderEntity';
+import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
+import { useFetch } from 'common/Hooks/useFetch';
+import { FetchParams } from 'common/Entityes/FetchParams';
+import { apiControllers } from 'common/Constants/addr';
+import { LoadingSpinner } from 'common/LoadingSpinner';
 
-interface Request {
-    id: number;
-    userId: number;
-    userName?: string;
-    employeeId: number;
-    employeeName?: string;
-    orderTypeId: number;
-    orderContent: string;
-    OrderStatus?: number;
-}
-
-interface Employee {
-    id: number;
-    name: string;
-    post: string;
-}
 
 export function Admin() {
-    const [requestsContent, setRequestsContent] = useState<Request[]>([]);
-    const [usersContent, setUsersContent] = useState<User[]>([]);
-    const [employeesContent, setEmployeesContent] = useState<Employee[]>([]);
+    const [ordersContent, setOrdersContent] = useState<OrderEntity[]>([]);
+    const [usersContent, setUsersContent] = useState<UserEntity[]>([]);
+    const [employeesContent, setEmployeesContent] = useState<EmployeeEntity[]>([]);
     const [sortDirection, setSortDirection] = useState<number | undefined>(undefined);
-    const [searchParams, setSearchParams] = useSearchParams();
 
     const nav = useNavigate();
 
-    useEffect(() => {
-        AdminRequests(searchParams.get('type'), searchParams.get('status'))
-            .then(result => setRequestsContent(result))
-            .catch(error => {
-                console.error('Error fetching admin requests:', error);
-            });
+    const token = localStorage.getItem('token')
 
-        AdminEmployees()
-            .then(result => setEmployeesContent(result))
-            .catch(error => {
-                console.error('Error fetching admin employees:', error);
-            });
+    const init: RequestInit = {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        } 
 
-        AdminUsers()
-            .then(result => setUsersContent(result))
-            .catch(error => {
-                console.error('Error fetching admin users:', error);
-            });
-    }, [searchParams]);
+    let params: FetchParams = {
+        url: `https://localhost:8080/api/orders`,
+        init: init
+    }
+    const [orderData, isOrderLoading] = useFetch<OrderEntity[]>({params})
+    console.log(orderData)
+
+
+    // params.url = `${apiControllers.UsersController}/users`
+    // const [userData, isUserLoading] = useFetch<UserEntity[]>({params})
+
+    // params.url = `${apiControllers.EmployeeController}/employees`
+    // const [employeeData, isEmployeeLoading] = useFetch<EmployeeEntity[]>({params})
 
     const handler = (type: string, id: number, elem: any) => {
         nav(`/admin/${type}/${id}`, { state: elem });
@@ -62,7 +51,7 @@ export function Admin() {
     };
 
     const requestSort = () => {
-        setRequestsContent([...requestsContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+        setOrdersContent([...ordersContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
@@ -100,23 +89,25 @@ export function Admin() {
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {requestsContent.map((request, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('order', request.id, request)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Заявка от: {request.userName}</span>
-                                <span>Исполнитель: {request.employeeName}</span>
-                                <span>Тип заказа: {request.orderTypeId}</span>
-                                <span>Содержимое: {request.orderContent}</span>
-                            </div>
-                        ))}
+                        {isOrderLoading ? <LoadingSpinner/> :
+                            orderData?.map((order) => (
+                                <div
+                                    key={order.id}
+                                    onClick={() => handler('order', order.id, order)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Заявка от: {order.userName}</span>
+                                    <span>Исполнитель: {order.employeeName}</span>
+                                    <span>Тип заказа: {order.orderTypeId}</span>
+                                    <span>Содержимое: {order.orderContent}</span>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
 
                 {/* Колонка 2: Пользователи */}
-                <div className="admin-content-lists">
+                {/* <div className="admin-content-lists">
                     <div className="admin-title">
                         <div className="admin-title-content">
                             <h5 className="admin-title-text">Пользователи</h5>
@@ -135,23 +126,25 @@ export function Admin() {
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {usersContent.map((user, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('user', user.id, user)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Имя: {user.name}</span>
-                                <span>Email: {user.email}</span>
-                                <span>Возраст: {user.age}</span>
-                                <span>Дата регистрации: {new Date(user.registrationDate).toLocaleDateString()}</span>
-                            </div>
-                        ))}
+                        {isUserLoading ? <LoadingSpinner/> : 
+                            (userData as UserEntity[]).map((user, index) => (
+                                <div
+                                    key={index}
+                                    onClick={() => handler('user', user.id, user)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Имя: {user.name}</span>
+                                    <span>Email: {user.email}</span>
+                                    <span>Возраст: {user.age}</span>
+                                    <span>Дата регистрации: {new Date(user.registrationDate as string).toLocaleDateString()}</span>
+                                </div>
+                            ))
+                        }
                     </div>
-                </div>
+                </div> */}
 
                 {/* Колонка 3: Сотрудники */}
-                <div className="admin-content-lists">
+                {/* <div className="admin-content-lists">
                     <div className="admin-title">
                         <div className="admin-title-content">
                             <h5 className="admin-title-text">Сотрудники</h5>
@@ -170,22 +163,25 @@ export function Admin() {
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {employeesContent.map((emp, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('employee', emp.id, emp)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Имя: {emp.name}</span>
-                                <span>
-                                    Пароль: <span className="password">[скрыто]</span>
-                                </span>
-                                <span>Должность: {emp.post}</span>
-                            </div>
-                        ))}
+                        {isEmployeeLoading ? <LoadingSpinner/> : 
+                            (employeeData as EmployeeEntity[]).map((emp) => (
+                                <div
+                                    key={emp.id}
+                                    onClick={() => handler('employee', emp.id, emp)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Имя: {emp.name}</span>
+                                    <span>
+                                        Пароль: <span className="password">[скрыто]</span>
+                                    </span>
+                                    <span>Должность: {emp.post}</span>
+                                </div>
+                            ))
+                        }
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
 }
+
