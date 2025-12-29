@@ -1,16 +1,12 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using KTS.Extensions;
-using KTS.Configuration;
 
 internal class Program
 {
-    private static void Main(string[] args)
-    {
-        EnvConfiguration.LoadEnvironmentVariables();
+        private static void Main(string[] args)
+        {
+                EnvConfiguration.LoadEnvironmentVariables();
 
-        var builder = WebApplication.CreateBuilder(args);
+                var builder = WebApplication.CreateBuilder(args);
 
                 builder.AddServices();
 
