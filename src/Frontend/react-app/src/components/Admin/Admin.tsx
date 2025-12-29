@@ -28,19 +28,24 @@ export function Admin() {
             }
         } 
 
-    let params: FetchParams = {
+    const orderParams: FetchParams = {
         url: `https://localhost:8080/api/orders`,
         init: init
     }
-    const [orderData, isOrderLoading] = useFetch<OrderEntity[]>({params})
-    console.log(orderData)
+    const [orderData, isOrderLoading] = useFetch<OrderEntity[]>([orderParams])
+
+    const userParams: FetchParams = {
+        url: `${apiControllers.UsersController}`,
+        init: init
+    }
+    const [userData, isUserLoading] = useFetch<UserEntity[]>([userParams])
 
 
-    // params.url = `${apiControllers.UsersController}/users`
-    // const [userData, isUserLoading] = useFetch<UserEntity[]>({params})
-
-    // params.url = `${apiControllers.EmployeeController}/employees`
-    // const [employeeData, isEmployeeLoading] = useFetch<EmployeeEntity[]>({params})
+    const employeeParams: FetchParams = {
+        url: `${apiControllers.EmployeesController}`,
+        init: init
+    }
+    const [employeeData, isEmployeeLoading] = useFetch<EmployeeEntity[]>([employeeParams])
 
     const handler = (type: string, id: number, elem: any) => {
         nav(`/admin/${type}/${id}`, { state: elem });
@@ -82,7 +87,7 @@ export function Admin() {
                             </div>
                         </div>
                         <div className="admin-button-display">
-                            <div className="admin-button-display sort" onClick={requestSort}>
+                            <div className="admin-button-display sort" onClick={() => orderData?.sort((a, b) => (sortDirection === 1 ? b.id - a.id: a.id - b.id))}>
                                 sort
                             </div>
                             <TemporaryDrawer />
@@ -107,7 +112,7 @@ export function Admin() {
                 </div>
 
                 {/* Колонка 2: Пользователи */}
-                {/* <div className="admin-content-lists">
+                <div className="admin-content-lists">
                     <div className="admin-title">
                         <div className="admin-title-content">
                             <h5 className="admin-title-text">Пользователи</h5>
@@ -141,10 +146,10 @@ export function Admin() {
                             ))
                         }
                     </div>
-                </div> */}
+                </div>
 
                 {/* Колонка 3: Сотрудники */}
-                {/* <div className="admin-content-lists">
+                <div className="admin-content-lists">
                     <div className="admin-title">
                         <div className="admin-title-content">
                             <h5 className="admin-title-text">Сотрудники</h5>
@@ -157,7 +162,7 @@ export function Admin() {
                             </div>
                         </div>
                         <div className="admin-button-display">
-                            <button className="admin-button-display sort" onClick={employeesSort}>
+                            <button className="admin-button-display sort" onClick={() => employeeData?.sort((a, b) => (sortDirection === 1 ? b.id - a.id: a.id - b.id))}>
                                 sort
                             </button>
                         </div>
@@ -179,7 +184,7 @@ export function Admin() {
                             ))
                         }
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );

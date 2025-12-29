@@ -25,7 +25,7 @@ export function UserOrders() {
         init: init
     }
 
-    const [data, isLoading, isTokenValid] = useFetch<OrderEntity[]>({params});
+    const [data, isLoading, isTokenValid] = useFetch<OrderEntity[]>([params]);
     if(isLoading) return <LoadingSpinner></LoadingSpinner>
 
     return (

@@ -23,8 +23,7 @@ export function CheckAuth({ children, accessLevel }:
         init: init
       }
       
-    const [data, isLoading, isTokenValid] = useFetch<boolean>({params});   
-    console.log(isTokenValid)
+    const [data, isLoading, isTokenValid] = useFetch<boolean>([params]);
     if (isLoading) {
         return <LoadingSpinner />;
     }

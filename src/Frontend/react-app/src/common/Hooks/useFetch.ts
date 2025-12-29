@@ -3,10 +3,10 @@ import { FetchParams } from "../Entityes/FetchParams";
 import { HttpStatusCode } from "axios";
 
 
-export function useFetch<T>({ params }: 
-                            { params: FetchParams }): [data: T|null, isLoading: boolean, isTokenValid: boolean]{
+export function useFetch<T>([ params ] : 
+                            [ params: FetchParams ]): [data: T|null, isLoading: boolean, isTokenValid: boolean]{
 
-    const [data, setData] = useState<T|null>({} as T);
+    const [data, setData] = useState<T|null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);    
     const [isTokenValid, setIsTokenValid] = useState<boolean>(false);
 
@@ -15,7 +15,6 @@ export function useFetch<T>({ params }:
             setIsLoading(true);
             try{
                 const request = await fetch(params.url, params.init);
-                console.log(request)
                 if(request.status === HttpStatusCode.Unauthorized){
                     setData(null)
                     setIsLoading(false)
