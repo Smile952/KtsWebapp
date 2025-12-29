@@ -2,9 +2,14 @@ import { ReactNode, useEffect, useState } from 'react'
 import styles from './AccountBlock.module.css'
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 import { LoginRegisterForm } from '../Authorization/LoginRegisterForm';
+import { useLocation } from 'react-router-dom';
 
 export function AccountBlock(){
-    const [userName, setUserName] = useState<string | null>(null);
+    const [userName, setUserName] = useState<string|null>()
+   
+
+    const location = useLocation()
+    
     useEffect(() => {
         const user = localStorage.getItem('user');
         if(user){
@@ -19,7 +24,7 @@ export function AccountBlock(){
                 console.log('Error parsing user data from local storage', err)
             }
         }        
-    }, [])
+    }, [location])
 
     const accountForm : ReactNode = userName ? (<p className={styles.account_name}>{userName}</p>) : (<LoginRegisterForm/>)
 

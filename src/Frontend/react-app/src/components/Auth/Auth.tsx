@@ -14,8 +14,6 @@ export function Auth() {
     useEffect(() => {
         setToken(localStorage.getItem('token'));
         const user = localStorage.getItem('user');
-        console.log(token)
-        console.log(user)
         if (token !== null && token !== 'null' && user !== undefined && user !== 'undefined') {
             nav(links['Главная'])
         }

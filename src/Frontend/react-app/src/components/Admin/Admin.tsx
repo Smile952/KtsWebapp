@@ -11,10 +11,7 @@ import { LoadingSpinner } from 'common/LoadingSpinner';
 
 
 export function Admin() {
-    const [ordersContent, setOrdersContent] = useState<OrderEntity[]>([]);
-    const [usersContent, setUsersContent] = useState<UserEntity[]>([]);
-    const [employeesContent, setEmployeesContent] = useState<EmployeeEntity[]>([]);
-    const [sortDirection, setSortDirection] = useState<number | undefined>(undefined);
+    const [sortDirection, setSortDirection] = useState<number | undefined>(0);
 
     const nav = useNavigate();
 
@@ -55,18 +52,18 @@ export function Admin() {
         nav(`/admin/${type}/create`);
     };
 
-    const requestSort = () => {
-        setOrdersContent([...ordersContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+    const ordersSort = () => {
+        orderData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
     const usersSort = () => {
-        setUsersContent([...usersContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+        userData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
     const employeesSort = () => {
-        setEmployeesContent([...employeesContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+        employeeData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
@@ -87,7 +84,7 @@ export function Admin() {
                             </div>
                         </div>
                         <div className="admin-button-display">
-                            <div className="admin-button-display sort" onClick={() => orderData?.sort((a, b) => (sortDirection === 1 ? b.id - a.id: a.id - b.id))}>
+                            <div className="admin-button-display sort" onClick={ordersSort}>
                                 sort
                             </div>
                             <TemporaryDrawer />
@@ -162,7 +159,7 @@ export function Admin() {
                             </div>
                         </div>
                         <div className="admin-button-display">
-                            <button className="admin-button-display sort" onClick={() => employeeData?.sort((a, b) => (sortDirection === 1 ? b.id - a.id: a.id - b.id))}>
+                            <button className="admin-button-display sort" onClick={employeesSort}>
                                 sort
                             </button>
                         </div>

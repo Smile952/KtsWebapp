@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using KTS.Extensions;
+using KTS.Configuration;
 
 internal class Program
 {
