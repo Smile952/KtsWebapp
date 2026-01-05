@@ -8,14 +8,17 @@ import { useFetch } from 'common/Hooks/useFetch';
 import { FetchParams } from 'common/Entityes/FetchParams';
 import { apiControllers } from 'common/Constants/addr';
 import { LoadingSpinner } from 'common/LoadingSpinner';
+import { UserDataAndTokenStore } from 'store/store';
 
 
 export function Admin() {
     const [sortDirection, setSortDirection] = useState<number | undefined>(0);
-
+    const userStore = UserDataAndTokenStore.getState().UserEntity
     const nav = useNavigate();
 
-    const token = localStorage.getItem('token')
+
+
+    const token = userStore.token
 
     const init: RequestInit = {
             method: "GET",

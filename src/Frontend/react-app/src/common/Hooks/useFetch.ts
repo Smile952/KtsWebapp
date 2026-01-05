@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FetchParams } from "../Entityes/FetchParams";
 import { HttpStatusCode } from "axios";
+import { UserDataAndTokenStore } from "store/store";
 
 
 export function useFetch<T>([ params ] : 
@@ -19,7 +20,8 @@ export function useFetch<T>([ params ] :
                     setData(null)
                     setIsLoading(false)
                     setIsTokenValid(false)
-                    localStorage.clear();
+                    UserDataAndTokenStore.setState(UserDataAndTokenStore.getInitialState())
+                    console.log(UserDataAndTokenStore.getState().UserEntity)
                     throw new Error(`Token is not valid`)
                 }                
                 else if(!request.ok){

@@ -1,22 +1,21 @@
 import { ReactNode, useEffect, useState } from 'react'
 import styles from './AccountBlock.module.css'
-import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
 import { LoginRegisterForm } from '../Authorization/LoginRegisterForm';
 import { useLocation } from 'react-router-dom';
+import { UserDataAndTokenStore } from 'store/store';
 
 export function AccountBlock(){
     const [userName, setUserName] = useState<string|null>()
-   
+    const userStore = UserDataAndTokenStore.getState().UserEntity
 
     const location = useLocation()
     
     useEffect(() => {
-        const user = localStorage.getItem('user');
+        const user = userStore
+
         if(user){
             try{
-                const userObject = JSON.parse(user as string) as UserEntity
-        
-                const name = (userObject?.name) 
+                const name = (user?.name) 
                 
                 setUserName(name);
             }

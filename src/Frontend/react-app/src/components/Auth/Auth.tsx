@@ -5,16 +5,20 @@ import { apiControllers } from 'common/Constants/addr';
 import { useNavigate } from 'react-router-dom';
 import { links } from 'common/Constants/links'
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
+import { UserDataAndTokenStore } from 'store/store';
 
 export function Auth() {
     const [token, setToken] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
     const nav = useNavigate()
 
+    const userStore = UserDataAndTokenStore.getState().UserEntity
+
     useEffect(() => {
-        setToken(localStorage.getItem('token'));
-        const user = localStorage.getItem('user');
-        if (token !== null && token !== 'null' && user !== undefined && user !== 'undefined') {
+        setToken(userStore.token);
+        const user = userStore
+        console.log(userStore.token)
+        if (token !== null && token !== undefined && user !== undefined) {
             nav(links['Главная'])
         }
     }, [token])
@@ -51,9 +55,7 @@ export function Auth() {
                 const parts = (data.token as string).split('.');
                 const payload = JSON.parse(atob(parts[1]));
                 const userData: UserEntity = { id:payload.id, name: payload.name, email: payload.email, permissionId: payload.role, token: data.token, registrationDate: null, age: null} 
-                
-                localStorage.setItem('token', (data.token as string));
-                localStorage.setItem('user', JSON.stringify(userData));
+                UserDataAndTokenStore.getState().setEntity(userData)
             }
 
         } catch (error) {

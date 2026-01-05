@@ -4,13 +4,14 @@ import { LoadingSpinner } from 'common/LoadingSpinner';
 import { useFetch } from 'common/Hooks/useFetch';
 import { FetchParams } from 'common/Entityes/FetchParams';
 import { apiControllers, urlWayModification } from 'common/Constants/addr';
-import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
+import { UserDataAndTokenStore } from 'store/store';
 
 export function UserOrders() {
 
-    const token = localStorage.getItem("token")
-    const user = localStorage.getItem('user')
-    const userEntity = JSON.parse(user as string) as UserEntity
+    const userStore = UserDataAndTokenStore.getState().UserEntity
+
+    const token = userStore.token
+    const user = userStore
 
     const init: RequestInit = {
         method: "GET",
@@ -21,7 +22,7 @@ export function UserOrders() {
     }
 
     const params: FetchParams ={
-        url: `${apiControllers.OrdersController}/${urlWayModification.UserOrders}?email=${userEntity.email}`,
+        url: `${apiControllers.OrdersController}/${urlWayModification.UserOrders}?email=${user.email}`,
         init: init
     }
 

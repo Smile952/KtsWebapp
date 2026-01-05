@@ -14,7 +14,7 @@ export function Services() {
     const handler = (id: number, block: OrderServiceBlock) => {
         nav(`/about/${id}`, { state: block });
     };
-
+    
     return (
         <div className={styles.blocks}>
             <div className={styles.blocks_group}>
