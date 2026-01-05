@@ -20,10 +20,9 @@ namespace Interface.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult Sync()
-        {
-            return Ok("Sync success");
-        }
+        public IActionResult Sync() => 
+            NoContent();
+        
 
         [HttpPost]
         public IActionResult GetToken([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model, IConfiguration configuration)

@@ -1,29 +1,40 @@
-import { UnauthorizedPage } from '../ts/pages/UnauthorizedPage';
-import { useState, useEffect } from 'react'
-import { SynchronizeToken } from './SynchronizeToken';
+import { UnauthorizedPage } from '../ts/pages/PublicPages';
+import { JSX } from 'react'
 import { LoadingSpinner } from './LoadingSpinner';
+import { useFetch } from './Hooks/useFetch';
+import { FetchParams } from './Entityes/FetchParams';
+import { apiControllers } from './Constants/addr';
+import { UserDataAndTokenStore } from 'store/store';
 
 export function CheckAuth({ children, accessLevel }: 
-                          {children: React.ReactNode; accessLevel: number}) 
-    {
-    const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    
-    useEffect(() => {
-        (async () => {
-            setIsAuthorized(await SynchronizeToken({ accessLevel }));
-            setIsLoading(false);
-        })();
+                          { children: JSX.Element; accessLevel: number }) : JSX.Element{
 
-    }, [accessLevel]);
+    const userStore = UserDataAndTokenStore.getState().UserEntity
+    const token = userStore.token;
+    const userPermissions = userStore.permissionId
+
+    const init: RequestInit = {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        }
+    }
+
+    const params: FetchParams = {
+        url: apiControllers.TokenController,
+        init: init
+      }
+      
+    const [data, isLoading, isTokenValid] = useFetch<boolean>([params]);
 
     if (isLoading) {
         return <LoadingSpinner />;
     }
-
-    if (!isAuthorized) {
-        localStorage.clear();
-        return <UnauthorizedPage />;
+    if (!isTokenValid || accessLevel > userPermissions) {
+        console.log(accessLevel)
+        console.log(userPermissions)
+        return <>{UnauthorizedPage}</>;
     }
 
     return <>{children}</>;

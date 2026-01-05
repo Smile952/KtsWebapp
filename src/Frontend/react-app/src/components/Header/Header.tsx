@@ -1,12 +1,11 @@
 import styles from './Header.module.css';
-import { links } from '../../common/links';
-import { AccountBlock } from 'components/AccountBlock/AccountBlock/AccountBlock';
-
+import { links } from '../../common/Constants/links';
+import { AccountBlock } from 'components/Account/AccountBlock/AccountBlock';
 
 export function Header({title, text }: {title:string, text: string[] }) {
-    
     var navTexts = Array.isArray(text) ? text : [];
-    
+
+
     const navLinks = navTexts
         .filter(linkText => linkText)
         .map((linkText, index) => (
@@ -16,6 +15,8 @@ export function Header({title, text }: {title:string, text: string[] }) {
                 </a>
             </li>
         ));
+
+
     return (
         <header className={styles.header}>
             <div className={`d-flex ${styles.content}`}>
@@ -23,7 +24,7 @@ export function Header({title, text }: {title:string, text: string[] }) {
                 <div className={`d-flex ${styles.link_block}`}>
                     <ul className={styles.nav}>
                         {navLinks}
-                        <AccountBlock/>        
+                        <AccountBlock/>     
                     </ul>
                 </div>
             </div>

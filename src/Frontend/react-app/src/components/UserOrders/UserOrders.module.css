@@ -1,0 +1,22 @@
+.account_block{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.account_order_block{
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 30vw;
+}
+
+.order_info{
+    margin-bottom: 10px;
+}
+

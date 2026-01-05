@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button/Button';
 import './Auth.css';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 import { useNavigate } from 'react-router-dom';
-import { links } from 'common/links';
+import { links } from 'common/Constants/links'
 import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
-interface FormDataObject {
-    [key: string]: FormDataEntryValue;
-}
+import { UserDataAndTokenStore } from 'store/store';
 
 export function Auth() {
     const [token, setToken] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
     const nav = useNavigate()
 
+    const userStore = UserDataAndTokenStore.getState().UserEntity
+
     useEffect(() => {
-        setToken(localStorage.getItem('token'));
-        const user = localStorage.getItem('user');
-        
-        if (token !== null && token !== 'null' && user !== undefined && user !== 'undefined') {
+        setToken(userStore.token);
+        const user = userStore
+        console.log(userStore.token)
+        if (token !== null && token !== undefined && user !== undefined) {
             nav(links['Главная'])
         }
     }, [token])
@@ -26,15 +26,14 @@ export function Auth() {
     const updateClick = async (event: React.FormEvent<HTMLFormElement>) => {
         setError(null);
         event.preventDefault();
+
+        const formData = new FormData(event.currentTarget);
         
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-        
-        const formDataObject: FormDataObject = {};
-        formData.forEach((value, key) => {
-            formDataObject[key] = value;
-        });
-        
+        const userLoginEntity: UserLoginEntity = {
+            Email: formData.get("email") as string,
+            Password: formData.get("password") as string
+        };
+
         try {
             const response = await fetch(apiControllers.TokenController, {
                 method: 'POST',
@@ -42,7 +41,7 @@ export function Auth() {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
                 },
-                body: JSON.stringify(formDataObject),
+                body: JSON.stringify(userLoginEntity),
             });
 
             if (!response.ok) {
@@ -55,10 +54,8 @@ export function Auth() {
 
                 const parts = (data.token as string).split('.');
                 const payload = JSON.parse(atob(parts[1]));
-                const userData: UserEntity = {Id:payload.id, Name: payload.name, Email: payload.email, PermissionId: payload.role, Token: data.token} 
-                
-                localStorage.setItem('token', (data.token as string));
-                localStorage.setItem('user', JSON.stringify(userData));
+                const userData: UserEntity = { id:payload.id, name: payload.name, email: payload.email, permissionId: payload.role, token: data.token, registrationDate: null, age: null} 
+                UserDataAndTokenStore.getState().setEntity(userData)
             }
 
         } catch (error) {
@@ -67,7 +64,6 @@ export function Auth() {
         }
     };
     
-
     return (
         <div className={`autorization ${error ? 'autorization-error' : ''}`}>
             <div className="autorization-back">

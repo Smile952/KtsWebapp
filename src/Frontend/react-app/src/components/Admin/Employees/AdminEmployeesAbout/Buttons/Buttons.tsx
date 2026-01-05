@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './Buttons.css';
-import { apiControllers } from 'common/addr';
+import { apiControllers } from 'common/Constants/addr';
 
 interface ButtonsProps {
     type: [string, string]; // [resource, id]

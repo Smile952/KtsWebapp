@@ -2,8 +2,8 @@ import { JSX } from 'react';
 import { Button } from '../Button/Button';
 import './Registration.css';
 import { useNavigate } from 'react-router-dom';
-import { apiControllers } from 'common/addr';
-import { links } from 'common/links';
+import { apiControllers } from 'common/Constants/addr';
+import { links } from 'common/Constants/links';
 
 export function Registration(): JSX.Element {
 
@@ -11,31 +11,30 @@ export function Registration(): JSX.Element {
     const RegistrationQuery = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const form = event.currentTarget;
-        const formData = new FormData(form);
+        const formData = new FormData(event.currentTarget);
 
-        const formDataObject: Record<string, string> = {};
-        formData.forEach((value, key) => {
-            if (typeof value === 'string') {
-                formDataObject[key] = value;
-            }
-        });
-        formDataObject['permission'] = '1';
+        const Password: string = formData.get('Password') as string;
+        const Password2: string = formData.get('password2') as string;
 
-        if (formDataObject.password !== formDataObject.password2) {
+        if (Password !== Password2) {
             alert("Пароли не совпадают!");
             return;
         }
 
-        const { password2, ...dataToSend } = formDataObject;
+        const userRedisterEntity: UserRegistrEntity = {
+            Name: formData.get('Name') as string,
+            Email: formData.get('Email') as string,
+            Password: Password,
+            PermissionId: 1
+        }
 
         try {
-            const response = await fetch(apiControllers.UsersControllerSignUp, {
+            const response = await fetch(apiControllers.UsersController, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(dataToSend),
+                body: JSON.stringify(userRedisterEntity),
             });
 
             if (!response.ok) {
@@ -59,7 +58,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="text"
-                                name="name"
+                                name="Name"
                                 required
                                 placeholder="Имя:"
                             />
@@ -68,7 +67,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="email"
-                                name="email"
+                                name="Email"
                                 id="email"
                                 required
                                 placeholder="Email"
@@ -78,7 +77,7 @@ export function Registration(): JSX.Element {
                             <input
                                 className="registration-input"
                                 type="password"
-                                name="password"
+                                name="Password"
                                 id="password"
                                 required
                                 placeholder="Пароль"

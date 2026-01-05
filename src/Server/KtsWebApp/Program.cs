@@ -1,96 +1,61 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using DotNetEnv;
-using Infrastucture;
+using KTS.Extensions;
+using KTS.Configuration;
 
 internal class Program
 {
-    private static void Main(string[] args)
-    {
-        string directory = Directory.GetCurrentDirectory();
-
-        string envPath = Path.Combine(directory, ".env");
-        string secretKey, addr, db_addr, db_user, db_password;
-        Env.Load(directory + "/.env");
-
-        secretKey = Env.GetString("SECRET_KEY");
-        addr = Env.GetString("LISTENING_ADDR");
-
-        db_addr = Env.GetString("DATABASE_ADDR");
-        db_user = Env.GetString("DATABASE_USER");
-        db_password = Env.GetString("DATABASE_PASSWORD");
-
-        var cors = "_myAllowSpecificOrigins";
-        var builder = WebApplication.CreateBuilder(args);
-        var a = Environment.GetEnvironmentVariables();
-        string connectionString = $"Server={db_addr},1433;TrustServerCertificate=true;Database=KTS;User Id=sa;Password=1qaz@WSX";
-
-        builder.Services.AddCors(options =>
+        private static void Main(string[] args)
         {
-            options.AddPolicy(name: cors,
-                policy =>
+                EnvConfiguration.LoadEnvironmentVariables();
+
+                var builder = WebApplication.CreateBuilder(args);
+
+                builder.AddServices();
+
+                builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
                 {
-                    policy.WithOrigins("http://localhost:3000")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                                ValidateIssuer = false,
+                                ValidateAudience = false,
+                                ValidateLifetime = true,
+                                ValidateIssuerSigningKey = true,
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(EnvConfiguration.SecretKey)),
+                                ClockSkew = TimeSpan.Zero
+                        };
                 });
-        });
 
-        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-        {
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-                ClockSkew = TimeSpan.Zero
-            };
-        });
+                builder.Services.AddAuthorization();
 
-        builder.Services.AddAuthorization();
+                builder.AddCustomServices();
 
-        builder.Services.AddScoped(typeof(Context), provider => new Context(connectionString));
+                builder.Services.AddControllers();
 
-        builder.Services.AddScoped<OrderRepository>();
-        builder.Services.AddKeyedScoped<OrderService>("order_service");
+                builder.Services.AddEndpointsApiExplorer();
+                builder.Services.AddSwaggerGen();
 
-        builder.Services.AddScoped<UserRepository>();
-        builder.Services.AddKeyedScoped<UserService>("user_service");
+                builder.WebHost.UseUrls(EnvConfiguration.Addr);
 
-        builder.Services.AddScoped<EmployeeRepository>();
-        builder.Services.AddKeyedScoped<EmployeeService>("employee_service");
+                var app = builder.Build();
 
-        builder.Services.AddSingleton<PasswordHasher>();
+                const string corsName = "_ktsWebAppCors";
+                app.UseCors(corsName);
 
-        builder.Services.AddScoped(typeof(TokenBuilder), service => new TokenBuilder(secretKey));
+                if (app.Environment.IsDevelopment())
+                {
+                        app.UseSwagger();
+                        app.UseSwaggerUI();
+                }
 
-        builder.Services.AddControllers();
+                app.UseRouting();
 
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+                app.UseAuthentication();
+                app.UseAuthorization();
 
-        var app = builder.Build();
+                app.MapControllers();
 
-        app.UseCors(cors);
-
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+                app.Run();
         }
-
-        app.UseRouting();
-
-
-        app.UseAuthentication();
-        app.UseAuthorization();
-        app.UseEndpoints(endpoint =>
-        {
-            endpoint.MapControllers();
-        });
-
-
-        app.Run();
-    }
 }

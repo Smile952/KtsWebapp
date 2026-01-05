@@ -5,6 +5,9 @@ import './css/index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './ts/App';
 
+//TODO: Add chat for AI assistant
+//TODO: Add zustand as state manager
+
 const rootElement = document.getElementById('root');
 
 if (!rootElement) {

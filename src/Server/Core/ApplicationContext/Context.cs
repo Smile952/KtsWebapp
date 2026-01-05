@@ -10,8 +10,8 @@ namespace Core.ApplicationContext
         private string _connectionString;
         public DbSet<Order> Order { get; set; }
         public DbSet<OrdersTypeEnum> OrdersTypeEnum { get; set; }
-        public DbSet<Employee> Employee {get; set;}
-        public DbSet<User> User {get; set;}
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Permissions> Permissions { get; set; }
 
@@ -36,7 +36,7 @@ namespace Core.ApplicationContext
 
                 _connectionString = configuration.GetConnectionString("DefaultConnection");
             }
-           
+
             optionsBuilder.UseSqlServer(_connectionString);
             base.OnConfiguring(optionsBuilder);
         }
@@ -58,7 +58,7 @@ namespace Core.ApplicationContext
                             .IsUnique(false);
             modelBuilder.Entity<Employee>()
                             .Property(e => e.Id).UseIdentityColumn(1, 1);
-            
+
 
             //Перечисление типов заказов
             modelBuilder.Entity<OrdersTypeEnum>()
@@ -87,7 +87,7 @@ namespace Core.ApplicationContext
             //Перечисление статусов заказов
             modelBuilder.Entity<OrderStatus>()
                             .HasKey(x => x.Id);
-           
+
             //Заказы
             modelBuilder.Entity<Order>()
                             .HasKey(x => x.Id);
@@ -118,9 +118,9 @@ namespace Core.ApplicationContext
             modelBuilder.Entity<Permissions>()
                             .HasKey(x => x.Id);
             modelBuilder.Entity<Permissions>().HasData(
-                new Permissions { Id = 1, Name="Public"},
-                new Permissions { Id = 2, Name="User"},
-                new Permissions { Id = 3, Name="Private"}
+                new Permissions { Id = 1, Name = "Public" },
+                new Permissions { Id = 2, Name = "User" },
+                new Permissions { Id = 3, Name = "Private" }
             );
 
             base.OnModelCreating(modelBuilder);

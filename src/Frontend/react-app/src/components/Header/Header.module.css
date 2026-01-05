@@ -64,6 +64,22 @@
     display: inline-block;
 }
 
+
+.account_name{
+    margin: 0;
+    color: #9C27B0;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.account_name:hover{
+    cursor: pointer;
+    color:#7B1FA2;
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+
 @media (max-width: 768px) {
     .header {
         height: 10vh;

@@ -21,3 +21,10 @@ obj/
 **/obj/
 
 .DS_Store
+**/.cache/
+**/.eslintcache/
+**/.npm/
+**/npminstall/
+
+mssql-database/
+.DS_Store

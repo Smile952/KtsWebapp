@@ -1,57 +1,51 @@
 import './Admin.css';
-import { useState, useEffect } from 'react';
-import { AdminRequests } from './Requests/AdminRequests';
-import { AdminEmployees } from './Employees/AdminEmployees';
-import { AdminUsers, User } from './Users/AdminUsers';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TemporaryDrawer } from './TemporaryDrawer';
-import { useSearchParams } from 'react-router-dom';
+import { OrderEntity } from 'common/Entityes/OrderEntity/OrderEntity';
+import { UserEntity } from 'common/Entityes/UserEntity/UserEntity';
+import { useFetch } from 'common/Hooks/useFetch';
+import { FetchParams } from 'common/Entityes/FetchParams';
+import { apiControllers } from 'common/Constants/addr';
+import { LoadingSpinner } from 'common/LoadingSpinner';
+import { UserDataAndTokenStore } from 'store/store';
 
-interface Request {
-    id: number;
-    userId: number;
-    userName?: string;
-    employeeId: number;
-    employeeName?: string;
-    orderTypeId: number;
-    orderContent: string;
-    OrderStatus?: number;
-}
-
-interface Employee {
-    id: number;
-    name: string;
-    post: string;
-}
 
 export function Admin() {
-    const [requestsContent, setRequestsContent] = useState<Request[]>([]);
-    const [usersContent, setUsersContent] = useState<User[]>([]);
-    const [employeesContent, setEmployeesContent] = useState<Employee[]>([]);
-    const [sortDirection, setSortDirection] = useState<number | undefined>(undefined);
-    const [searchParams, setSearchParams] = useSearchParams();
-
+    const [sortDirection, setSortDirection] = useState<number | undefined>(0);
+    const userStore = UserDataAndTokenStore.getState().UserEntity
     const nav = useNavigate();
 
-    useEffect(() => {
-        AdminRequests(searchParams.get('type'), searchParams.get('status'))
-            .then(result => setRequestsContent(result))
-            .catch(error => {
-                console.error('Error fetching admin requests:', error);
-            });
 
-        AdminEmployees()
-            .then(result => setEmployeesContent(result))
-            .catch(error => {
-                console.error('Error fetching admin employees:', error);
-            });
 
-        AdminUsers()
-            .then(result => setUsersContent(result))
-            .catch(error => {
-                console.error('Error fetching admin users:', error);
-            });
-    }, [searchParams]);
+    const token = userStore.token
+
+    const init: RequestInit = {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        } 
+
+    const orderParams: FetchParams = {
+        url: `https://localhost:8080/api/orders`,
+        init: init
+    }
+    const [orderData, isOrderLoading] = useFetch<OrderEntity[]>([orderParams])
+
+    const userParams: FetchParams = {
+        url: `${apiControllers.UsersController}`,
+        init: init
+    }
+    const [userData, isUserLoading] = useFetch<UserEntity[]>([userParams])
+
+
+    const employeeParams: FetchParams = {
+        url: `${apiControllers.EmployeesController}`,
+        init: init
+    }
+    const [employeeData, isEmployeeLoading] = useFetch<EmployeeEntity[]>([employeeParams])
 
     const handler = (type: string, id: number, elem: any) => {
         nav(`/admin/${type}/${id}`, { state: elem });
@@ -61,18 +55,18 @@ export function Admin() {
         nav(`/admin/${type}/create`);
     };
 
-    const requestSort = () => {
-        setRequestsContent([...requestsContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+    const ordersSort = () => {
+        orderData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
     const usersSort = () => {
-        setUsersContent([...usersContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+        userData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
     const employeesSort = () => {
-        setEmployeesContent([...employeesContent].sort((a, b) => (sortDirection === 1 ? b.id - a.id : a.id - b.id)));
+        employeeData?.sort((a, b) => sortDirection === 1 ? a.id-b.id : b.id - a.id)
         setSortDirection(sortDirection === 1 ? 0 : 1);
     };
 
@@ -93,25 +87,27 @@ export function Admin() {
                             </div>
                         </div>
                         <div className="admin-button-display">
-                            <div className="admin-button-display sort" onClick={requestSort}>
+                            <div className="admin-button-display sort" onClick={ordersSort}>
                                 sort
                             </div>
                             <TemporaryDrawer />
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {requestsContent.map((request, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('order', request.id, request)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Заявка от: {request.userName}</span>
-                                <span>Исполнитель: {request.employeeName}</span>
-                                <span>Тип заказа: {request.orderTypeId}</span>
-                                <span>Содержимое: {request.orderContent}</span>
-                            </div>
-                        ))}
+                        {isOrderLoading ? <LoadingSpinner/> :
+                            orderData?.map((order) => (
+                                <div
+                                    key={order.id}
+                                    onClick={() => handler('order', order.id, order)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Заявка от: {order.userName}</span>
+                                    <span>Исполнитель: {order.employeeName}</span>
+                                    <span>Тип заказа: {order.orderTypeId}</span>
+                                    <span>Содержимое: {order.orderContent}</span>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
 
@@ -135,18 +131,20 @@ export function Admin() {
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {usersContent.map((user, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('user', user.id, user)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Имя: {user.name}</span>
-                                <span>Email: {user.email}</span>
-                                <span>Возраст: {user.age}</span>
-                                <span>Дата регистрации: {new Date(user.registrationDate).toLocaleDateString()}</span>
-                            </div>
-                        ))}
+                        {isUserLoading ? <LoadingSpinner/> : 
+                            (userData as UserEntity[]).map((user, index) => (
+                                <div
+                                    key={index}
+                                    onClick={() => handler('user', user.id, user)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Имя: {user.name}</span>
+                                    <span>Email: {user.email}</span>
+                                    <span>Возраст: {user.age}</span>
+                                    <span>Дата регистрации: {new Date(user.registrationDate as string).toLocaleDateString()}</span>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
 
@@ -170,22 +168,25 @@ export function Admin() {
                         </div>
                     </div>
                     <div className="admin-content-block">
-                        {employeesContent.map((emp, index) => (
-                            <div
-                                key={index}
-                                onClick={() => handler('employee', emp.id, emp)}
-                                className="admin-content-block-text"
-                            >
-                                <span>Имя: {emp.name}</span>
-                                <span>
-                                    Пароль: <span className="password">[скрыто]</span>
-                                </span>
-                                <span>Должность: {emp.post}</span>
-                            </div>
-                        ))}
+                        {isEmployeeLoading ? <LoadingSpinner/> : 
+                            (employeeData as EmployeeEntity[]).map((emp) => (
+                                <div
+                                    key={emp.id}
+                                    onClick={() => handler('employee', emp.id, emp)}
+                                    className="admin-content-block-text"
+                                >
+                                    <span>Имя: {emp.name}</span>
+                                    <span>
+                                        Пароль: <span className="password">[скрыто]</span>
+                                    </span>
+                                    <span>Должность: {emp.post}</span>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+
