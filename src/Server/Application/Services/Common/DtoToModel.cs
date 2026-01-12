@@ -42,5 +42,17 @@ namespace Application.Services.Common
                 PermissionId= dto.PermissionId
             };
         }
+
+        public static Message ToModel(MessageDTO dto)
+        {
+            return new Message()
+            {
+                Id = dto.Id,
+                SendedAt = dto.SendedAt,
+                SenderId = dto.SenderId,
+                ReceiverId = dto.ReceiverId,
+                IsReaded = dto.IsReaded,
+            };
+        }
     }
 }
