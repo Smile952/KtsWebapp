@@ -1,6 +1,7 @@
 import { Footer } from "components/Footer/Footer";
 import styles from "./Page.module.css"
 import { JSX, JSXElementConstructor, ReactElement } from "react";
+import { Chat } from "components/Chat/chat";
 
 
 export function Page({ header, children }: 
@@ -17,8 +18,9 @@ export function Page({ header, children }:
             
             <main className={styles.main_content}>
                 {children}
+                <Chat/>
             </main>
-
+            
             <Footer />
         </div>
     )
