@@ -30,6 +30,5 @@ node_modules/
 **/.env
 **/certs/
 .github
-.DS_Store
+**/.DS_Store
 mssql-database/
-.DS_Store
