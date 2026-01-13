@@ -6,6 +6,7 @@ import { FetchParams } from './Entityes/FetchParams';
 import { apiControllers } from './Constants/addr';
 import { UserDataAndTokenStore } from 'store/store';
 import { UserEntity } from './Entityes/UserEntity/UserEntity';
+import { ACCESS_LEVELS } from './Constants/AccessLevels';
 
 export function CheckAuth({ children, accessLevel }: 
                           { children: JSX.Element; accessLevel: number }) : JSX.Element{
@@ -32,11 +33,11 @@ export function CheckAuth({ children, accessLevel }:
     if (isLoading) {
         return <LoadingSpinner />;
     }
-    if (!isTokenValid || accessLevel > userPermissions) {
-        console.log(accessLevel)
-        console.log(userPermissions)
-        UserDataAndTokenStore.getState().UserEntity = {} as UserEntity;
-        return <>{UnauthorizedPage}</>;
+    if(accessLevel !== ACCESS_LEVELS.PUBLIC){
+        if (!isTokenValid || accessLevel > userPermissions) {
+            UserDataAndTokenStore.getState().UserEntity = {} as UserEntity;
+            return <>{UnauthorizedPage}</>;
+        }
     }
 
     return <>{children}</>;
