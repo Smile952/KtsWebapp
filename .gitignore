@@ -1,32 +1,35 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
+#asp.net core
+**/wwwroot/lib/
 src/Frontend/react-app/node_modules
-
-.vs/
-.vscode/
-**/.vs/
-**/.vscode/
-
-.github
-KtsWebApp.pdf
-LICENSE
-
-**/.env
-**/certs/
-
 bin/
 obj/
 **/bin/
 **/obj/
 
-.DS_Store
+#python
+**/venv/
+**/__pycache__
+
+#node
+node_modules/
 **/.cache/
 **/.eslintcache/
 **/.npm/
 **/npminstall/
 
+#vscode
+.vs/
+.vscode/
+**/.vs/
+**/.vscode/
+
+#global
+**/.env
+**/certs/
+.github
+.DS_Store
 mssql-database/
 .DS_Store
-
-**/venv/
