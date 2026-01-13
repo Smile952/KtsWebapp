@@ -1,0 +1,13 @@
+syntax="proto3";
+
+option csharp_namespace="MessageExchange";
+
+// Proto file for message exchange between User and AI Worker
+service MessageExchange{
+    // RPC method for AI Worker to send a response message
+    rpc GetAIResponse(Message) returns (Message);
+}
+
+message Message{
+    string content = 1;
+}

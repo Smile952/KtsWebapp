@@ -1,6 +1,6 @@
 ﻿using Application.DTOs;
 
-namespace Interface.Models
+namespace KTS.Models
 {
     public class EmployeeModel
     {

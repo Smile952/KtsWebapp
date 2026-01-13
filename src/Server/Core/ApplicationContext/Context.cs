@@ -1,7 +1,9 @@
-﻿using Core.Models;
+﻿using Core.ModelConfigs;
+using Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System;
 
 namespace Core.ApplicationContext
 {
@@ -14,6 +16,7 @@ namespace Core.ApplicationContext
         public DbSet<User> User { get; set; }
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Permissions> Permissions { get; set; }
+        public DbSet<Message> Message { get; set; } 
 
         public Context()
         {
@@ -44,21 +47,16 @@ namespace Core.ApplicationContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Сотрудники
-            modelBuilder.Entity<Employee>()
-                            .HasKey(x => x.Id);
-            modelBuilder.Entity<Employee>()
-                            .HasMany(x => x.Orders)
-                            .WithOne(x => x.Employee);
-            modelBuilder.Entity<Employee>()
-                            .HasOne(x => x.Permission)
-                            .WithMany(x => x.Employee)
-                            .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<Employee>()
-                            .HasIndex(x => x.PermissionId)
-                            .IsUnique(false);
-            modelBuilder.Entity<Employee>()
-                            .Property(e => e.Id).UseIdentityColumn(1, 1);
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
 
+            //Заказы
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+
+            //Пользователи
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+
+            //Сообщения
+            modelBuilder.ApplyConfiguration(new MessageConfiguration());
 
             //Перечисление типов заказов
             modelBuilder.Entity<OrdersTypeEnum>()
@@ -67,45 +65,11 @@ namespace Core.ApplicationContext
                            .HasMany(x => x.Orders)
                            .WithOne(x => x.OrdersTypeEnum);
 
-            //Пользователи
-            modelBuilder.Entity<User>()
-                            .HasKey(x => x.Id);
-            modelBuilder.Entity<User>()
-                           .HasMany(x => x.Orders)
-                           .WithOne(x => x.User);
-            modelBuilder.Entity<User>()
-                            .HasOne(x => x.Permission)
-                            .WithMany(x => x.User)
-                            .OnDelete(DeleteBehavior.Restrict); ;
-            modelBuilder.Entity<User>()
-                            .HasIndex(x => x.PermissionId)
-                            .IsUnique(false);
-            modelBuilder.Entity<User>()
-                            .Property(e => e.Id)
-                            .UseIdentityColumn(1, 1);
+            
 
             //Перечисление статусов заказов
             modelBuilder.Entity<OrderStatus>()
                             .HasKey(x => x.Id);
-
-            //Заказы
-            modelBuilder.Entity<Order>()
-                            .HasKey(x => x.Id);
-            modelBuilder.Entity<Order>()
-                            .HasOne(x => x.Employee)
-                            .WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>()
-                            .HasOne(x => x.User)
-                            .WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>()
-                            .HasOne(x => x.OrdersTypeEnum)
-                            .WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>()
-                            .HasOne(x => x.OrderStatus)
-                            .WithMany(x => x.Orders);
-            modelBuilder.Entity<Order>()
-                            .Property(e => e.Id)
-                            .UseIdentityColumn(1, 1);
 
             //Статусы
             modelBuilder.Entity<OrderStatus>()
@@ -117,6 +81,7 @@ namespace Core.ApplicationContext
             //Права доступа
             modelBuilder.Entity<Permissions>()
                             .HasKey(x => x.Id);
+
             modelBuilder.Entity<Permissions>().HasData(
                 new Permissions { Id = 1, Name = "Public" },
                 new Permissions { Id = 2, Name = "User" },

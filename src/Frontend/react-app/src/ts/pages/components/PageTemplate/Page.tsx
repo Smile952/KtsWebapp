@@ -1,7 +1,7 @@
 import { Footer } from "components/Footer/Footer";
 import styles from "./Page.module.css"
 import { JSX, JSXElementConstructor, ReactElement } from "react";
-import { Chat } from "components/Chat/chat";
+import { Chat } from "components/Chat/Chat";
 
 
 export function Page({ header, children }: 

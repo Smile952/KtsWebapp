@@ -54,6 +54,39 @@ namespace Core.Migrations
                     b.ToTable("Employee");
                 });
 
+            modelBuilder.Entity("Core.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsReaded")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SendedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Message");
+                });
+
             modelBuilder.Entity("Core.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -175,6 +208,9 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsBot")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -205,6 +241,25 @@ namespace Core.Migrations
                         .IsRequired();
 
                     b.Navigation("Permission");
+                });
+
+            modelBuilder.Entity("Core.Models.Message", b =>
+                {
+                    b.HasOne("Core.Models.User", "Receiver")
+                        .WithMany("ReceivedMessages")
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Core.Models.User", "Sender")
+                        .WithMany("SendedMessages")
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("Core.Models.Order", b =>
@@ -278,6 +333,10 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.Models.User", b =>
                 {
                     b.Navigation("Orders");
+
+                    b.Navigation("ReceivedMessages");
+
+                    b.Navigation("SendedMessages");
                 });
 #pragma warning restore 612, 618
         }

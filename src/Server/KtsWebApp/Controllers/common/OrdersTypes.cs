@@ -1,4 +1,4 @@
-﻿namespace Interface.Controllers.common
+﻿namespace KTS.Controllers.common
 {
     public class OrdersTypes
     {

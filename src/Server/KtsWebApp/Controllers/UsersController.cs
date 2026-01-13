@@ -1,10 +1,10 @@
 ﻿using Application.Services;
 using Infrastucture;
-using Interface.Models;
+using KTS.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Interface.Controllers
+namespace KTS.Controllers
 {
     
     [Route("api/[controller]")]
@@ -54,21 +54,14 @@ namespace Interface.Controllers
             }
 
             string passwordHash = _hasher.GenerateHashPassword(model.Password);
-
-            var dto = new Application.DTOs.UserDTO()
-            {
-                Name = model.Name,
-                Email = model.Email,
-                PasswordHash = passwordHash,
-                PermissionId = model.PermissionId
-            };
-            
+                        
             service.Create(new Application.DTOs.UserDTO()
             {
                 Name = model.Name,
                 Email = model.Email,
                 PasswordHash = passwordHash,
-                PermissionId = model.PermissionId
+                PermissionId = model.PermissionId,
+                IsBot = model.IsBot            
             });
 
             return Ok(new { message = "User creating status: success" });
@@ -120,30 +113,6 @@ namespace Interface.Controllers
                 service.Delete(id);
             }
             return Ok(new { message = "User deleting status: success" });
-        }
-
-        [HttpPost("sign_up")]
-        public IActionResult Register([FromKeyedServices("user_service")] UserService service, [FromBody] UserModel model)
-        {
-            if (model.IsAllData())
-            {
-                var temp = service.Read().Any(u => u.Email == model.Email && u.Name == model.Name);
-                if (temp) return BadRequest("User with this Name and Email already exists");
-
-                model.Password = _hasher.GenerateHashPassword(model.Password);
-
-                var userDto = new Application.DTOs.UserDTO()
-                {
-                    Name = model.Name,
-                    Email = model.Email,
-                    PasswordHash = model.Password,
-                    PermissionId = model.PermissionId
-                };
-
-                service.Create(userDto);
-                return Ok($"User \"${userDto.Name}\" successfully registered");
-            }
-            return BadRequest("User data is not fulfilled");
         }
     }
 }

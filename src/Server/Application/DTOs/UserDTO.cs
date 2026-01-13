@@ -9,5 +9,6 @@
         public string PasswordHash { get; set; } = string.Empty;
         public DateTime RegistrationDate { get; set; }
         public int PermissionId { get; set; }
+        public bool IsBot { get; set; }
     }
 }

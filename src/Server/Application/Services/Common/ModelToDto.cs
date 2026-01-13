@@ -39,7 +39,21 @@ namespace Application.Services.Common
                 Age = user.Age,
                 PasswordHash = user.PasswordHash,
                 RegistrationDate = user.RegistrationDate,
-                PermissionId = user.PermissionId
+                PermissionId = user.PermissionId,
+                IsBot = user.IsBot
+            };
+        }
+
+        public static MessageDTO ToDTO(Message message)
+        {
+            return new MessageDTO()
+            {
+                Id = message.Id,
+                SendedAt = message.SendedAt,
+                SenderId = message.SenderId,
+                ReceiverId = message.ReceiverId,
+                Text = message.Text,
+                IsReaded = message.IsReaded            
             };
         }
     }

@@ -1,9 +1,10 @@
 ﻿using Core.ApplicationContext;
+using Core.Interfaces;
 using Core.Models;
 
 namespace Core.Repository
 {
-    public class EmployeeRepository
+    public class EmployeeRepository : IRepository<Employee>
     {
         Context context;
         public EmployeeRepository(Context context)

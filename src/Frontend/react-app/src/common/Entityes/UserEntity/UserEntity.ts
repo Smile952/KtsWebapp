@@ -6,4 +6,5 @@ export interface UserEntity{
     token: string;
     age: number|null;
     registrationDate: string|null;
+    isBot: boolean;
 }
