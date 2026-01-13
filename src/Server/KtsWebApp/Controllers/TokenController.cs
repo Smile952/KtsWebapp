@@ -1,10 +1,10 @@
 ﻿using Application.Services;
 using Infrastucture;
-using Interface.Models;
+using KTS.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Interface.Controllers
+namespace KTS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

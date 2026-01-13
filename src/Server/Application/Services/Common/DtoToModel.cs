@@ -26,7 +26,8 @@ namespace Application.Services.Common
                 Age = dto.Age,
                 PasswordHash = dto.PasswordHash,
                 RegistrationDate = dto.RegistrationDate,
-                PermissionId = dto.PermissionId
+                PermissionId = dto.PermissionId,
+                IsBot = dto.IsBot
             };
 
         }
@@ -48,6 +49,7 @@ namespace Application.Services.Common
             return new Message()
             {
                 Id = dto.Id,
+                Text = dto.Text,
                 SendedAt = dto.SendedAt,
                 SenderId = dto.SenderId,
                 ReceiverId = dto.ReceiverId,

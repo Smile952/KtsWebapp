@@ -54,7 +54,7 @@ export function Auth() {
 
                 const parts = (data.token as string).split('.');
                 const payload = JSON.parse(atob(parts[1]));
-                const userData: UserEntity = { id:payload.id, name: payload.name, email: payload.email, permissionId: payload.role, token: data.token, registrationDate: null, age: null} 
+                const userData: UserEntity = { id:payload.id, name: payload.name, email: payload.email, permissionId: payload.role, token: data.token, registrationDate: null, age: null, isBot: false} 
                 UserDataAndTokenStore.getState().setEntity(userData)
             }
 

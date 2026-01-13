@@ -5,6 +5,7 @@ import { useFetch } from './Hooks/useFetch';
 import { FetchParams } from './Entityes/FetchParams';
 import { apiControllers } from './Constants/addr';
 import { UserDataAndTokenStore } from 'store/store';
+import { UserEntity } from './Entityes/UserEntity/UserEntity';
 
 export function CheckAuth({ children, accessLevel }: 
                           { children: JSX.Element; accessLevel: number }) : JSX.Element{
@@ -34,6 +35,7 @@ export function CheckAuth({ children, accessLevel }:
     if (!isTokenValid || accessLevel > userPermissions) {
         console.log(accessLevel)
         console.log(userPermissions)
+        UserDataAndTokenStore.getState().UserEntity = {} as UserEntity;
         return <>{UnauthorizedPage}</>;
     }
 

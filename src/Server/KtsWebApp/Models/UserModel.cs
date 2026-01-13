@@ -1,6 +1,6 @@
 ﻿using Application.DTOs;
 
-namespace Interface.Models
+namespace KTS.Models
 {
     public class UserModel
     {
@@ -11,6 +11,7 @@ namespace Interface.Models
         public DateTime RegistrationDate { get; set; }
         public int PermissionId { get; set; }
         public string Password { get; set; } = string.Empty;
+        public bool IsBot { get; set; }
 
         public bool IsAllData()
         {

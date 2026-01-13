@@ -15,8 +15,7 @@ namespace Core.Models
         public string PasswordHash { get; set; } = string.Empty;
         
         public DateTime RegistrationDate { get; set; }
-
-        public bool IsActive { get; set; }
+        public bool IsBot { get; set; } = false;
        
         [DefaultValue(1)]
         public int PermissionId { get; set; }

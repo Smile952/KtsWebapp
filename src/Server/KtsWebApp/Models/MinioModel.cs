@@ -1,16 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using Minio;
-using Minio.ApiEndpoints;
-using Minio.DataModel;
+﻿using Minio;
 using Minio.DataModel.Args;
 using Minio.Exceptions;
-using System;
-using System.Net;
-using System.Net.Sockets;
-using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Interface.Models
+namespace KTS.Models
 {
     public class MinioModel
     {

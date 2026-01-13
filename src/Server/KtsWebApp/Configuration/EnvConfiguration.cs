@@ -10,6 +10,7 @@ namespace KTS.Configuration
         public static string DbUser { get; private set; } = string.Empty;
         public static string DbPassword { get; private set; } = string.Empty;
         public static string ConnectionString { get; private set; } = string.Empty;
+        public static int GrpcPort { get; private set; }
 
         public static void LoadEnvironmentVariables()
         {
@@ -23,6 +24,8 @@ namespace KTS.Configuration
             DbAddr = Env.GetString("DATABASE_ADDR");
             DbUser = Env.GetString("DATABASE_USER");
             DbPassword = Env.GetString("DATABASE_PASSWORD");
+
+            GrpcPort = Env.GetInt("GRPC_PORT");
 
             ConnectionString = $"Server={DbAddr},1433;TrustServerCertificate=true;Database=KTS;User Id={DbUser};Password={DbPassword}";
         }

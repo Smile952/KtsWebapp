@@ -7,8 +7,9 @@ export const apiControllers: Record<string, string> = {
     
     OrdersController: `${addrToApis}/orders`,
 
-
     MinioController: `${addrToApis}/minio`,
+
+    MessageController: `${addrToApis}/messages`
 }
 
 export const urlWayModification ={

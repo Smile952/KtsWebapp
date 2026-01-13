@@ -2,6 +2,7 @@
 using Core.Interfaces;
 using Core.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Core.Repository
 {
@@ -16,6 +17,7 @@ namespace Core.Repository
         public void Create(Message dto)
         {
             context.Message.Add(dto);
+            context.SaveChanges();
         }
 
         public void Delete(int id)

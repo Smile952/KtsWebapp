@@ -39,7 +39,8 @@ namespace Application.Services.Common
                 Age = user.Age,
                 PasswordHash = user.PasswordHash,
                 RegistrationDate = user.RegistrationDate,
-                PermissionId = user.PermissionId
+                PermissionId = user.PermissionId,
+                IsBot = user.IsBot
             };
         }
 

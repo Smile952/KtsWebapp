@@ -28,3 +28,5 @@ obj/
 
 mssql-database/
 .DS_Store
+
+**/venv/
