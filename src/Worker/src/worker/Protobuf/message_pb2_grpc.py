@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-from worker.Protobuf import message_pb2 as message__pb2
+import worker.Protobuf.message_pb2 as message__pb2
 
 GRPC_GENERATED_VERSION = '1.76.0'
 GRPC_VERSION = grpc.__version__
@@ -25,7 +25,7 @@ if _version_not_supported:
     )
 
 
-class MessageExchangeStub(object):
+class ChatAssistantStub(object):
     """Proto file for message exchange between User and AI Worker
     """
 
@@ -35,18 +35,18 @@ class MessageExchangeStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.GetAIResponse = channel.unary_unary(
-                '/MessageExchange/GetAIResponse',
-                request_serializer=message__pb2.Message.SerializeToString,
-                response_deserializer=message__pb2.Message.FromString,
+        self.GenerateResponse = channel.unary_unary(
+                '/ChatAssistant/GenerateResponse',
+                request_serializer=message__pb2.ChatRequest.SerializeToString,
+                response_deserializer=message__pb2.ChatReply.FromString,
                 _registered_method=True)
 
 
-class MessageExchangeServicer(object):
+class ChatAssistantServicer(object):
     """Proto file for message exchange between User and AI Worker
     """
 
-    def GetAIResponse(self, request, context):
+    def GenerateResponse(self, request, context):
         """RPC method for AI Worker to send a response message
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -54,27 +54,27 @@ class MessageExchangeServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_MessageExchangeServicer_to_server(servicer, server):
+def add_ChatAssistantServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetAIResponse': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetAIResponse,
-                    request_deserializer=message__pb2.Message.FromString,
-                    response_serializer=message__pb2.Message.SerializeToString,
+            'GenerateResponse': grpc.unary_unary_rpc_method_handler(
+                    servicer.GenerateResponse,
+                    request_deserializer=message__pb2.ChatRequest.FromString,
+                    response_serializer=message__pb2.ChatReply.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'MessageExchange', rpc_method_handlers)
+            'ChatAssistant', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('MessageExchange', rpc_method_handlers)
+    server.add_registered_method_handlers('ChatAssistant', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
-class MessageExchange(object):
+class ChatAssistant(object):
     """Proto file for message exchange between User and AI Worker
     """
 
     @staticmethod
-    def GetAIResponse(request,
+    def GenerateResponse(request,
             target,
             options=(),
             channel_credentials=None,
@@ -87,9 +87,9 @@ class MessageExchange(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/MessageExchange/GetAIResponse',
-            message__pb2.Message.SerializeToString,
-            message__pb2.Message.FromString,
+            '/ChatAssistant/GenerateResponse',
+            message__pb2.ChatRequest.SerializeToString,
+            message__pb2.ChatReply.FromString,
             options,
             channel_credentials,
             insecure,

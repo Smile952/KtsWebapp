@@ -34,7 +34,7 @@ export function CheckAuth({ children, accessLevel }:
         return <LoadingSpinner />;
     }
     if(accessLevel !== ACCESS_LEVELS.PUBLIC){
-        if (!isTokenValid || accessLevel > userPermissions) {
+        if (!isTokenValid) {
             UserDataAndTokenStore.getState().UserEntity = {} as UserEntity;
             return <>{UnauthorizedPage}</>;
         }

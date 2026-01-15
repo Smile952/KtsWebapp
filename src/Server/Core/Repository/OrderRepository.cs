@@ -21,6 +21,12 @@ namespace Core.Repository
         {
             return context.Order.ToList();
         }
+
+        public List<Order> ReadByUserId(int userId)
+        {
+            return context.Order.Where(o => o.UserId == userId).ToList();
+        }
+
         public Order? ReadById(int id)
         {
             return context.Order.Find(id);
