@@ -1,13 +1,26 @@
-syntax="proto3";
+syntax = "proto3";
 
 option csharp_namespace="MessageExchange";
 
 // Proto file for message exchange between User and AI Worker
-service MessageExchange{
+service ChatAssistant {
     // RPC method for AI Worker to send a response message
-    rpc GetAIResponse(Message) returns (Message);
+    rpc GenerateResponse (ChatRequest) returns (ChatReply) {}
 }
 
-message Message{
-    string content = 1;
+message ChatRequest {
+  string user_name = 1;          
+  string user_message = 2;       
+  repeated string chat_history = 3;
+  repeated Order orders = 4;
+}
+
+message Order {
+  string content = 1;
+  string status = 2;
+  string type = 3;
+}
+
+message ChatReply {
+  string assistant_message = 1;
 }

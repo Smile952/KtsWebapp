@@ -1,12 +1,11 @@
 ﻿using Application.DTOs;
 using Application.Services;
-using Grpc.Net.Client;
-using KTS.Configuration;
+using KTS.Controllers.common;
 using KTS.Models;
-using Microsoft.AspNetCore.Authorization;
+using MessageExchange;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using MessageExchageClient = MessageExchange.MessageExchange.MessageExchangeClient;
+using ChatAssistantClient = MessageExchange.ChatAssistant.ChatAssistantClient;
+//using MessageExchageClient = MessageExchange.MessageExchange.MessageExchangeClient;
 
 
 namespace KTS.Controllers
@@ -16,9 +15,9 @@ namespace KTS.Controllers
     //[Authorize]
     public class MessagesController : ControllerBase
     {
-        private readonly MessageExchageClient _client;
+        private readonly ChatAssistantClient _client;
 
-        public MessagesController(MessageExchageClient client)
+        public MessagesController(ChatAssistantClient client)
         {
             _client = client;
         }
@@ -32,14 +31,25 @@ namespace KTS.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromKeyedServices("message_service")] MessageService mService, [FromKeyedServices("user_service")] UserService uService, [FromBody] MessageModel model)
+        public async Task<IActionResult> Post([FromKeyedServices("message_service")] MessageService mService, 
+                                              [FromKeyedServices("user_service")] UserService uService, 
+                                              [FromKeyedServices("order_service")] OrderService oService, 
+                                              [FromBody] MessageModel model)
         {
 
             if(!model.IsALlData()) return BadRequest("Message is empty");
+            
+            
 
             bool IsReceiverBot = uService.ReadById(model.ReceiverId).IsBot;
             if (IsReceiverBot)
             {
+                var user = uService.ReadById(model.SenderId);
+
+                var userOrders = oService.ReadByUserId(user.Id);
+
+                var messages = mService.Read();
+
                 mService.Create(new MessageDTO()
                 {
                     Text = model.Text,
@@ -49,8 +59,31 @@ namespace KTS.Controllers
                     SendedAt = model.SendedAt
                 });
 
-                var reply = await _client.GetAIResponseAsync(new MessageExchange.Message { Content = model.Text });
-                var ans = reply.Content;
+                var request = new ChatRequest
+                {
+                    UserName = user.Name,
+                    UserMessage = model.Text
+                };
+
+                var ordersProto = userOrders.Select(x => new Order
+                {
+                    Content = x.OrderContent,
+                    Status = OrdersTypes.ordersType
+                        .Where(ot => ot.Key == x.OrderTypeId)
+                        .Select(ot => ot.Value)
+                        .FirstOrDefault() ?? string.Empty,
+                    Type = OrdersStatuses.orderStatuses
+                        .Where(os => os.Key == x.OrderStatusId)
+                        .Select(os => os.Value)
+                        .FirstOrDefault() ?? string.Empty
+                }).ToList();
+
+                request.Orders.AddRange(ordersProto);
+                request.ChatHistory.AddRange(messages.Select(x => x.Text).ToList());
+
+                var reply = await _client.GenerateResponseAsync(request);
+
+                var ans = reply.AssistantMessage;
 
                 mService.Create(new MessageDTO()
                 {

@@ -1,21 +1,29 @@
 from mistralai import Mistral
-from config import MISTRAL_API_KEY, PROMPT
+from worker.config import MISTRAL_API_KEY, PROMPT
 import logging
 
 client = Mistral(api_key=MISTRAL_API_KEY)
 
 async def get_response(
-    user_message: str,
-    client_full_name: str
+    chat_context: dict
 ) -> str:
     try:
-        
+        user_message = chat_context["user_message"]
+        client_full_name = chat_context["user_name"]
+        client_chat_history = chat_context["chat_history"]
+        client_orders = chat_context["orders"]
+
+        result_prompt = PROMPT + f"""
+        \nИстория общения пользователя:
+        {chr(10).join(client_chat_history) if client_chat_history else "Истории нет"}
+        Заказы пользователя:
+        {chr(10).join([f"- тип заказа: {order.type}текстовое описание {order.content} (статус: {order.status})" for order in client_orders]) if client_orders else "Заказов нет"}"""
 
         messages = [
-            {"role": "system", "content": f"{PROMPT} {client_full_name}".strip()}
+            {"role": "system", "content": f"{result_prompt} client name: {client_full_name}".strip()},
+            {"role": "user", "content": user_message}
         ]
-        messages.append({"role": "user", "content": user_message})
-        print("Messages sent to Mistral:", messages)
+        
         response = await client.chat.complete_async(
             model="mistral-small-2506",
             messages=messages

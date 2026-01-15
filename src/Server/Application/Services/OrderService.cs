@@ -28,6 +28,17 @@ namespace Application.Services
             return orderDTOs;
         }
 
+        public List<OrderDTO> ReadByUserId(int id)
+        {
+            List<OrderDTO> orderDTOs = new List<OrderDTO>();
+            var requests = repository.ReadByUserId(id);
+            foreach (var request in requests)
+            {
+                orderDTOs.Add(ModelToDto.ToDTO(request));
+            }
+            return orderDTOs;
+        }
+
         public OrderDTO? ReadById(int id)
         {
             return ModelToDto.ToDTO(repository.ReadById(id));

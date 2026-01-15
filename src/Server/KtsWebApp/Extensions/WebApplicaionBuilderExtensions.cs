@@ -3,6 +3,7 @@ using Core.ApplicationContext;
 using Core.Repository;
 using Infrastucture;
 using KTS.Configuration;
+using MessageExchange;
 using System.Net;
 
 namespace KTS.Extensions
@@ -36,7 +37,7 @@ namespace KTS.Extensions
 
             builder.Services.AddGrpc();
 
-            builder.Services.AddGrpcClient<MessageExchange.MessageExchange.MessageExchangeClient>(client =>
+            builder.Services.AddGrpcClient<ChatAssistant.ChatAssistantClient>(client =>
             {
                 HttpClient.DefaultProxy = new WebProxy();
                 client.Address = new Uri($"http://localhost:50051");

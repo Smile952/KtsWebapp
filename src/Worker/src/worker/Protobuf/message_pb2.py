@@ -24,15 +24,19 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rmessage.proto\"\x1a\n\x07Message\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t26\n\x0fMessageExchange\x12#\n\rGetAIResponse\x12\x08.Message\x1a\x08.Messageb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rmessage.proto\"d\n\x0b\x43hatRequest\x12\x11\n\tuser_name\x18\x01 \x01(\t\x12\x14\n\x0cuser_message\x18\x02 \x01(\t\x12\x14\n\x0c\x63hat_history\x18\x03 \x03(\t\x12\x16\n\x06orders\x18\x04 \x03(\x0b\x32\x06.Order\"6\n\x05Order\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\"&\n\tChatReply\x12\x19\n\x11\x61ssistant_message\x18\x01 \x01(\t2?\n\rChatAssistant\x12.\n\x10GenerateResponse\x12\x0c.ChatRequest\x1a\n.ChatReply\"\x00\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'message_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_MESSAGE']._serialized_start=17
-  _globals['_MESSAGE']._serialized_end=43
-  _globals['_MESSAGEEXCHANGE']._serialized_start=45
-  _globals['_MESSAGEEXCHANGE']._serialized_end=99
+  _globals['_CHATREQUEST']._serialized_start=17
+  _globals['_CHATREQUEST']._serialized_end=117
+  _globals['_ORDER']._serialized_start=119
+  _globals['_ORDER']._serialized_end=173
+  _globals['_CHATREPLY']._serialized_start=175
+  _globals['_CHATREPLY']._serialized_end=213
+  _globals['_CHATASSISTANT']._serialized_start=215
+  _globals['_CHATASSISTANT']._serialized_end=278
 # @@protoc_insertion_point(module_scope)
