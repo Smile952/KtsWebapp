@@ -8,8 +8,9 @@
 
 ## Tech stack
 - **Backend:** C#, ASP.NET, Entity Framework
-- **Frontend:** JavaScript, React
+- **Frontend:** TypeScript, React
 - **База данных:** Microsoft SQL Server (MSSQL)
+- **Сервис ИИ-ассистента(Worker):** Python
 
 ## Stages of work
  - Создание страницы оформления заявки
